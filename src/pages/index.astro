@@ -11,21 +11,22 @@ const latestPosts = posts.slice(0, 3);
 ---
 
 <BaseLayout>
-  <!-- Hero -->
-  <section class="px-6 pt-8 pb-8 lg:px-8 lg:pt-10 lg:pb-10">
-    <div class="mx-auto max-w-4xl text-center">
-      <p class="font-display text-xs font-semibold uppercase tracking-[0.3em] text-[var(--color-warm-gray)]">
-        For those who refuse to look away
+  <!-- Hero — full-bleed dark -->
+  <section class="bg-[var(--color-ink)] px-6 py-28 md:py-40 lg:px-8 lg:py-48">
+    <div class="mx-auto max-w-5xl text-center">
+      <p class="font-display text-xs font-semibold uppercase tracking-[0.35em] text-[var(--color-cream)]/50">
+        Drew Reitzel
       </p>
-      <h1 class="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
-        The Church is not drifting.<br />It is choosing.
+      <h1 class="mt-8 font-display text-5xl font-extrabold leading-[1.0] tracking-tight text-[var(--color-cream)] md:text-7xl lg:text-8xl">
+        The Church is<br />not drifting.<br />It is choosing.
       </h1>
-      <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-[var(--color-charcoal-light)]">
-        Drew Reitzel writes and speaks on what the Church has traded away — and what it still can become. This is not condemnation. It is a call home.
+      <p class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-[var(--color-cream)]/60">
+        Prophetic writer and speaker calling the Church back to biblical fidelity in an age of cultural compromise.
       </p>
-      <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <a href="/book/" class="btn btn-filled">Explore the Book</a>
-        <a href="/about/" class="btn">About Drew</a>
+      <div class="mt-12">
+        <a href="/book/" class="btn border-[var(--color-cream)] text-[var(--color-cream)] hover:bg-[var(--color-cream)] hover:text-[var(--color-ink)]">
+          Explore the Book
+        </a>
       </div>
     </div>
   </section>
