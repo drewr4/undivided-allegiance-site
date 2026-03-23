@@ -99,8 +99,8 @@ a.skip-to-content:focus {
 /* Section dividers — editorial style */
 .section-divider {
   border-top: 1px solid var(--color-border);
-  padding-top: 4rem;
-  margin-top: 4rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
 /* Section headers with accent underline */
