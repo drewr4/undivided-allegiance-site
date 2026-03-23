@@ -1,0 +1,66 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  excerpt?: string;
+  publishDate: Date;
+  updatedDate?: Date;
+  category: string;
+  tags: string[];
+}
+
+const { title, excerpt, publishDate, updatedDate, category, tags } = Astro.props;
+
+const formattedDate = publishDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<BaseLayout title={title} description={excerpt}>
+  <article class="section-padding">
+    <div class="container-narrow">
+      <header class="mb-16">
+        <div class="flex items-center gap-4 mb-6">
+          <span class="text-red uppercase text-sm font-semibold tracking-widest">{category}</span>
+          <span class="text-muted">·</span>
+          <time class="text-muted text-sm" datetime={publishDate.toISOString()}>{formattedDate}</time>
+        </div>
+        <h1 class="mb-6">{title}</h1>
+        {excerpt && <p class="text-xl text-muted-light leading-relaxed">{excerpt}</p>}
+        {updatedDate && (
+          <p class="text-sm text-muted mt-4">Updated {formattedUpdatedDate}</p>
+        )}
+        <div class="divider mt-8"></div>
+      </header>
+
+      <div class="prose-custom">
+        <slot />
+      </div>
+
+      {tags.length > 0 && (
+        <footer class="mt-16 pt-8 border-t border-charcoal">
+          <div class="flex flex-wrap gap-3">
+            {tags.map((tag) => (
+              <span class="px-4 py-1.5 bg-charcoal text-muted text-sm rounded-sm">{tag}</span>
+            ))}
+          </div>
+        </footer>
+      )}
+
+      <div class="mt-12">
+        <a href="/blog/" class="btn-secondary inline-flex items-center gap-2">
+          <span>&larr;</span> Back to Blog
+        </a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

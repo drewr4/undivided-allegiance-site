@@ -1,36 +1,37 @@
 ---
 interface Props {
   heading?: string;
-  text?: string;
+  subtext?: string;
+  variant?: 'default' | 'inline';
 }
 
 const {
-  heading = 'Stay Rooted',
-  text = 'Receive new articles, book updates, and speaking announcements. No spam. No compromise.',
+  heading = 'Join the Remnant',
+  subtext = 'New essays, podcast episodes, and resources — delivered when they matter. No spam. Unsubscribe anytime.',
+  variant = 'default',
 } = Astro.props;
 ---
 
-<section class="bg-[var(--color-ink)] px-6 py-16 text-center md:py-20">
-  <div class="mx-auto max-w-xl">
-    <h2 class="font-display text-2xl font-bold text-[var(--color-cream)] md:text-3xl">
-      {heading}
-    </h2>
-    <p class="mt-4 text-sm leading-relaxed text-[var(--color-cream)]/70">
-      {text}
-    </p>
-    <form class="mt-8 flex flex-col gap-3 sm:flex-row" action="#" method="POST">
-      <label class="sr-only" for="email-capture">Email address</label>
+<section class:list={[
+  variant === 'default' ? 'section-padding bg-charcoal' : '',
+]}>
+  <div class="container mx-auto px-6 text-center max-w-2xl">
+    <h2 class="mb-4">{heading}</h2>
+    <div class="divider mx-auto mb-6"></div>
+    <p class="text-muted text-lg leading-relaxed mb-10">{subtext}</p>
+
+    <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" data-email-form>
       <input
-        id="email-capture"
         type="email"
-        name="email"
+        placeholder="Enter your email"
         required
-        placeholder="Your email address"
-        class="flex-1 border-[var(--color-charcoal)] bg-[var(--color-charcoal)] text-[var(--color-cream)] placeholder:text-[var(--color-cream)]/40 focus:border-[var(--color-cream)]"
+        class="flex-1 px-5 py-4 bg-black border border-cream/10 text-cream placeholder:text-muted focus:outline-none focus:border-red transition-colors text-sm"
       />
-      <button type="submit" class="btn border-[var(--color-cream)] text-[var(--color-cream)] hover:bg-[var(--color-cream)] hover:text-[var(--color-ink)]">
+      <button type="submit" class="btn-primary whitespace-nowrap">
         Subscribe
       </button>
     </form>
+
+    <p class="text-muted/50 text-xs mt-4">We respect your inbox. Unsubscribe anytime.</p>
   </div>
 </section>

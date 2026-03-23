@@ -1,84 +1,69 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import EmailCapture from '@/components/EmailCapture.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const videos = [
   {
-    title: 'The Church Is Choosing — Book Trailer',
-    description: 'A short introduction to You Can\'t Serve Two Masters and the heart behind the message.',
-    category: 'Book',
+    title: 'The Church Is Choosing — Introduction',
+    description: 'A short introduction to the message of Undivided Allegiance and why this conversation matters now.',
+    category: 'Introduction',
   },
   {
-    title: 'What Does Biblical Fidelity Look Like Today?',
-    description: 'Drew explores what it means for the Church to remain faithful to Scripture in a culture that demands accommodation.',
+    title: 'Why Comfort Became the Gospel',
+    description: 'How the pursuit of a painless faith created a Church that cannot confront the darkness.',
     category: 'Teaching',
   },
   {
-    title: 'Undivided Allegiance — The Call to Repentance',
-    description: 'A message on repentance, grace, and the road back to faithfulness for the American Church.',
-    category: 'Message',
-  },
-  {
-    title: 'Why I Wrote This Book',
-    description: 'Drew shares the personal conviction and burden that led to writing You Can\'t Serve Two Masters.',
-    category: 'Behind the Scenes',
-  },
-  {
-    title: 'The Cost of Following Christ',
-    description: 'What does Jesus actually ask of those who claim to follow Him? A look at the demands of discipleship.',
-    category: 'Teaching',
-  },
-  {
-    title: 'A Word to Pastors',
-    description: 'An honest, compassionate word to pastors navigating the tension between cultural pressure and biblical truth.',
-    category: 'Message',
+    title: 'The Remnant Is Not Alone',
+    description: 'A word for those who feel isolated in their conviction. You are not alone. You are not wrong.',
+    category: 'Encouragement',
   },
 ];
 ---
 
-<BaseLayout
-  title="Video"
-  description="Watch videos from Drew Reitzel on biblical fidelity, cultural compromise, and the call to undivided allegiance to Christ."
->
-  <section class="px-6 py-20 lg:px-8">
-    <div class="mx-auto max-w-7xl">
-      <p class="section-heading">Video</p>
-      <h1 class="mt-2 font-display text-4xl font-bold tracking-tight md:text-5xl">
-        Watch
-      </h1>
-      <p class="mt-4 max-w-2xl text-base leading-relaxed text-[var(--color-charcoal-light)]">
-        Messages, teachings, and conversations on faith and the call to follow Christ without compromise.
-      </p>
-
-      <!-- Subscribe button -->
-      <div class="mt-8">
-        <a href="#" target="_blank" rel="noopener noreferrer" class="btn text-xs">
+<BaseLayout title="Video" description="Watch video content from Undivided Allegiance — teaching, conversations, and prophetic messages.">
+  <!-- Hero -->
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="fade-in">
+        <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-6">Video</span>
+        <h1 class="mb-6">Watch</h1>
+        <div class="divider mb-6"></div>
+        <p class="text-muted-light text-xl leading-relaxed max-w-2xl">
+          Teaching, conversations, and prophetic messages — in video form.
+        </p>
+        <a
+          href="https://youtube.com/@UndividedAllegiance"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-secondary mt-8 inline-flex"
+        >
           Subscribe on YouTube
         </a>
       </div>
+    </div>
+  </section>
 
-      <!-- Video grid -->
-      <div class="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-        {videos.map(video => (
-          <article class="group">
-            <!-- Video thumbnail placeholder -->
-            <div class="aspect-video w-full bg-[var(--color-cream-dark)] border border-[var(--color-border)] flex items-center justify-center">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="text-[var(--color-border)]">
-                <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2" />
-                <path d="M20 16L34 24L20 32V16Z" fill="currentColor" />
-              </svg>
+  <!-- Videos -->
+  <section class="section-padding bg-charcoal">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {videos.map((video) => (
+          <article class="bg-black border border-cream/5 overflow-hidden fade-in group">
+            <div class="aspect-video bg-charcoal flex items-center justify-center relative">
+              <div class="absolute inset-0 bg-red/5"></div>
+              <div class="relative flex flex-col items-center gap-3">
+                <div class="w-16 h-16 rounded-full bg-red/20 flex items-center justify-center group-hover:bg-red/30 transition-colors">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-cream)" class="ml-1">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <span class="text-muted text-xs uppercase tracking-wider">Coming Soon</span>
+              </div>
             </div>
-
-            <div class="mt-4">
-              <span class="font-display text-xs font-semibold uppercase tracking-widest text-[var(--color-warm-gray)]">
-                {video.category}
-              </span>
-              <h2 class="mt-2 font-display text-lg font-bold text-[var(--color-ink)] group-hover:text-[var(--color-charcoal-light)] transition-colors">
-                {video.title}
-              </h2>
-              <p class="mt-2 text-sm leading-relaxed text-[var(--color-charcoal-light)]">
-                {video.description}
-              </p>
+            <div class="p-6">
+              <span class="text-red text-xs font-semibold uppercase tracking-widest block mb-2">{video.category}</span>
+              <h3 class="text-lg mb-2 font-heading font-bold">{video.title}</h3>
+              <p class="text-muted text-sm leading-relaxed">{video.description}</p>
             </div>
           </article>
         ))}
@@ -86,5 +71,22 @@ const videos = [
     </div>
   </section>
 
-  <EmailCapture heading="Get Video Updates" text="Be notified when new videos and messages are published." />
+  <!-- CTA -->
+  <section class="section-padding bg-black text-center">
+    <div class="container mx-auto px-6 max-w-2xl fade-in">
+      <h2 class="mb-4">More Content Coming</h2>
+      <div class="divider mx-auto mb-6"></div>
+      <p class="text-muted-light text-lg leading-relaxed mb-8">
+        Subscribe to the YouTube channel to be notified when new videos are published.
+      </p>
+      <a
+        href="https://youtube.com/@UndividedAllegiance"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary"
+      >
+        Subscribe on YouTube
+      </a>
+    </div>
+  </section>
 </BaseLayout>

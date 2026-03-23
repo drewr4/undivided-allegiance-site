@@ -1,0 +1,46 @@
+---
+interface Props {
+  videoSrc?: string;
+  posterSrc?: string;
+  fallbackImage?: string;
+  overlay?: boolean;
+  overlayOpacity?: number;
+}
+
+const {
+  videoSrc,
+  posterSrc,
+  fallbackImage,
+  overlay = true,
+  overlayOpacity = 0.7,
+} = Astro.props;
+---
+
+<div class="absolute inset-0 overflow-hidden">
+  {videoSrc ? (
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      poster={posterSrc}
+      class="absolute inset-0 w-full h-full object-cover"
+    >
+      <source src={videoSrc} type="video/mp4" />
+    </video>
+  ) : fallbackImage ? (
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style={`background-image: url('${fallbackImage}')`}
+    ></div>
+  ) : null}
+
+  {overlay && (
+    <div
+      class="absolute inset-0 bg-black"
+      style={`opacity: ${overlayOpacity}`}
+    ></div>
+  )}
+
+  <slot />
+</div>

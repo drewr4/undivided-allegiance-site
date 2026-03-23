@@ -1,70 +1,54 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import PostCard from '@/components/PostCard.astro';
-import { getSortedPosts, getCategories } from '@/utils/content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { getSortedPosts, getCategories } from '../../utils/content';
 
 const posts = await getSortedPosts();
 const categories = await getCategories();
 ---
 
-<BaseLayout
-  title="Blog"
-  description="Articles on biblical fidelity, cultural compromise, and the call to undivided allegiance to Christ."
->
-  <section class="px-6 py-20 lg:px-8">
-    <div class="mx-auto max-w-7xl">
-      <!-- Page header -->
-      <div class="max-w-2xl">
-        <p class="section-heading">Articles</p>
-        <h1 class="mt-2 font-display text-4xl font-bold tracking-tight md:text-5xl">
-          Blog
-        </h1>
-        <p class="mt-4 text-base leading-relaxed text-[var(--color-charcoal-light)]">
-          Writing on faith, culture, and the cost of following Christ without compromise.
+<BaseLayout title="Blog" description="Essays on faith, culture, and the call to biblical fidelity.">
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mb-16 fade-in">
+        <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-6">Blog</span>
+        <h1 class="mb-6">Writing for the Remnant</h1>
+        <div class="divider mb-6"></div>
+        <p class="text-muted-light text-lg leading-relaxed">
+          Essays on faith, culture, and the cost of compromise. Written for those who refuse to look away.
         </p>
       </div>
 
-      <!-- Category filters -->
-      <div class="mt-10 flex flex-wrap gap-3">
-        <button
-          class="category-filter active font-display text-xs font-semibold uppercase tracking-widest border-b-2 border-[var(--color-ink)] pb-1 text-[var(--color-ink)]"
-          data-category="all"
-        >
-          All
-        </button>
-        {categories.map(cat => (
-          <button
-            class="category-filter font-display text-xs font-semibold uppercase tracking-widest border-b-2 border-transparent pb-1 text-[var(--color-warm-gray)] transition-colors hover:text-[var(--color-ink)]"
-            data-category={cat}
-          >
-            {cat}
+      {categories.length > 1 && (
+        <div class="flex flex-wrap gap-3 mb-12 fade-in">
+          <button class="px-4 py-2 text-sm font-semibold uppercase tracking-wider bg-red text-cream category-filter active" data-category="all">
+            All
           </button>
-        ))}
-      </div>
+          {categories.map((category) => (
+            <button class="px-4 py-2 text-sm font-semibold uppercase tracking-wider bg-charcoal text-muted hover:text-cream transition-colors category-filter" data-category={category}>
+              {category}
+            </button>
+          ))}
+        </div>
+      )}
 
-      <!-- Posts grid — editorial magazine style -->
-      <div class="mt-12 grid gap-x-12 gap-y-14 md:grid-cols-2 lg:grid-cols-3" id="posts-grid">
-        {posts.map(post => (
-          <div class="post-item border-t border-[var(--color-border)] pt-8" data-category={post.data.category}>
-            <PostCard
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="blog-grid">
+        {posts.map((post) => (
+          <div class="fade-in" data-post-category={post.data.category}>
+            <BlogCard
               title={post.data.title}
               excerpt={post.data.excerpt}
-              date={post.data.publishDate}
-              category={post.data.category}
               slug={post.id}
+              publishDate={post.data.publishDate}
+              category={post.data.category}
             />
           </div>
         ))}
       </div>
 
       {posts.length === 0 && (
-        <div class="py-24 text-center">
-          <p class="font-display text-xl text-[var(--color-warm-gray)]">
-            Articles coming soon.
-          </p>
-          <p class="mt-2 text-sm text-[var(--color-warm-gray)]">
-            Subscribe below to be notified when new content is published.
-          </p>
+        <div class="text-center py-20">
+          <p class="text-muted text-lg">New content coming soon.</p>
         </div>
       )}
     </div>
@@ -73,25 +57,25 @@ const categories = await getCategories();
 
 <script>
   const filters = document.querySelectorAll('.category-filter');
-  const items = document.querySelectorAll('.post-item');
+  const posts = document.querySelectorAll('[data-post-category]');
 
-  filters.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const cat = (btn as HTMLElement).dataset.category;
+  filters.forEach((filter) => {
+    filter.addEventListener('click', () => {
+      const category = filter.getAttribute('data-category');
 
-      filters.forEach(f => {
-        f.classList.remove('active', 'border-[var(--color-ink)]', 'text-[var(--color-ink)]');
-        f.classList.add('border-transparent', 'text-[var(--color-warm-gray)]');
+      filters.forEach((f) => {
+        f.classList.remove('bg-red', 'text-cream', 'active');
+        f.classList.add('bg-charcoal', 'text-muted');
       });
-      btn.classList.add('active', 'border-[var(--color-ink)]', 'text-[var(--color-ink)]');
-      btn.classList.remove('border-transparent', 'text-[var(--color-warm-gray)]');
+      filter.classList.remove('bg-charcoal', 'text-muted');
+      filter.classList.add('bg-red', 'text-cream', 'active');
 
-      items.forEach(item => {
-        const el = item as HTMLElement;
-        if (cat === 'all' || el.dataset.category === cat) {
-          el.style.display = '';
+      posts.forEach((post) => {
+        const postCategory = post.getAttribute('data-post-category');
+        if (category === 'all' || postCategory === category) {
+          (post as HTMLElement).style.display = '';
         } else {
-          el.style.display = 'none';
+          (post as HTMLElement).style.display = 'none';
         }
       });
     });

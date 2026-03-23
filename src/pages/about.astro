@@ -1,57 +1,90 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import EmailCapture from '@/components/EmailCapture.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout
-  title="About Drew Reitzel"
-  description="Drew Reitzel is a prophetic writer and speaker calling the Church back to biblical fidelity. Learn about the voice behind Undivided Allegiance."
->
-  <section class="px-6 py-20 lg:px-8">
-    <div class="mx-auto max-w-7xl">
-      <div class="grid items-start gap-16 md:grid-cols-5 lg:gap-24">
-        <!-- Headshot placeholder -->
-        <div class="md:col-span-2">
-          <div class="aspect-[3/4] w-full bg-[var(--color-cream-dark)] border border-[var(--color-border)] flex items-center justify-center">
-            <span class="text-sm text-[var(--color-warm-gray)]">Author Photo</span>
-          </div>
-        </div>
+<BaseLayout title="About" description="Learn about Drew Reitzel and the mission of Undivided Allegiance — calling the Church back to biblical fidelity.">
+  <!-- Hero -->
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="fade-in">
+        <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-6">About</span>
+        <h1 class="mb-8">The Voice Behind the Message</h1>
+        <div class="divider mb-8"></div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Bio -->
-        <div class="md:col-span-3">
-          <p class="section-heading">About the Author</p>
-          <h1 class="mt-2 font-display text-4xl font-bold tracking-tight md:text-5xl">
-            Drew Reitzel
-          </h1>
-
-          <div class="mt-8 space-y-6 text-base leading-relaxed text-[var(--color-charcoal)]">
-            <p>
-              Drew Reitzel holds a degree in theology and served for several years in pastoral ministry before spending the last twenty-five years in the marketplace. He writes not from a distance but from the middle of the road — as someone who has known the mountaintop and the valley, who has carried his own cross, and who understands what it means to love God and still struggle to obey Him.
-            </p>
-            <p>
-              This book was not written from a place of arrival. It was written from a place of conviction — by a man who has seen enough of his own failure to know that repentance is not theory, and enough of God's mercy to know that it is always available.
-            </p>
-            <p>
-              His heart is for the Church, for the lost, and for a nation that still has time to turn.
-            </p>
-          </div>
-
-          <div class="mt-12 border-t border-[var(--color-border)] pt-8">
-            <h2 class="font-display text-xl font-bold">The Mission</h2>
-            <p class="mt-4 leading-relaxed text-[var(--color-charcoal)]">
-              Undivided Allegiance exists to call the Church back to what it was always meant to be — a community of believers whose loyalty to Christ is not negotiable, not partial, and not contingent on cultural approval. Through writing, speaking, and media, Drew seeks to challenge, convict, and encourage believers to examine whether their allegiance truly belongs to the One they claim to follow.
-            </p>
-          </div>
-
-          <div class="mt-10 flex flex-wrap gap-4">
-            <a href="/book/" class="btn">Read the Book</a>
-            <a href="/speaking/" class="btn">Invite Drew to Speak</a>
-            <a href="/contact/" class="btn">Get in Touch</a>
-          </div>
+  <!-- Bio -->
+  <section class="section-padding bg-charcoal">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="fade-in">
+        <h2 class="text-3xl mb-8">Drew Reitzel</h2>
+        <div class="space-y-6 text-muted-light text-lg leading-relaxed">
+          <p>
+            Drew Reitzel is a prophetic writer and speaker whose work sits at the intersection
+            of faith, culture, and biblical truth. His writing does not seek to be popular —
+            it seeks to be faithful.
+          </p>
+          <p>
+            In a time when the Church has learned to speak in softer tones to avoid offending
+            the world, Drew writes with the conviction that truth spoken in love is never cruel —
+            but silence in the face of compromise always is.
+          </p>
+          <p>
+            His debut book, <em>You Can't Serve Two Masters</em>, examines the American Church's
+            steady exchange of biblical authority for cultural approval. It is not a condemnation.
+            It is a mirror — and a call to come home.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <EmailCapture />
+  <!-- Mission -->
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="fade-in">
+        <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-4">The Mission</span>
+        <h2 class="mb-8">Why Undivided Allegiance Exists</h2>
+        <div class="divider mb-8"></div>
+        <div class="space-y-6 text-muted-light text-lg leading-relaxed">
+          <p>
+            Undivided Allegiance exists for the remnant — the believers who sense that something
+            has gone deeply wrong in the modern Church but struggle to find voices willing to
+            name it clearly.
+          </p>
+          <p>
+            This is not about being right. It is about being faithful. The darkness of the hour
+            is real — but so is the light that refuses to go out.
+          </p>
+          <p>
+            Every essay, every episode, every word published here serves one purpose: to call
+            the Church back to the standard it was given and the God it was made for.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section-padding bg-charcoal">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="fade-in">
+        <h2 class="mb-12 text-center">What We Stand On</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[
+            { title: 'Biblical Authority', text: 'Scripture is not a suggestion. It is the immovable foundation on which everything else must be tested.' },
+            { title: 'Prophetic Honesty', text: 'We speak what is true, not what is comfortable. Love without truth is sentimentality. Truth without love is cruelty.' },
+            { title: 'Cultural Clarity', text: 'We name what the culture celebrates and what Scripture confronts — without apology and without malice.' },
+            { title: 'Remnant Identity', text: 'This is for those who have counted the cost. The narrow road is narrow for a reason.' },
+          ].map((value) => (
+            <div class="p-8 border border-cream/5">
+              <h3 class="text-xl mb-4 text-cream">{value.title}</h3>
+              <p class="text-muted leading-relaxed">{value.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
 </BaseLayout>

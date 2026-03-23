@@ -1,0 +1,105 @@
+---
+interface Props {
+  images: { src: string; alt: string }[];
+  autoplay?: boolean;
+  interval?: number;
+}
+
+const { images, autoplay = true, interval = 5000 } = Astro.props;
+---
+
+<div class="relative overflow-hidden group" data-carousel data-autoplay={autoplay} data-interval={interval}>
+  <div class="flex transition-transform duration-700 ease-in-out" data-carousel-track>
+    {images.map((image, index) => (
+      <div class="w-full flex-shrink-0" data-carousel-slide>
+        <img
+          src={image.src}
+          alt={image.alt}
+          class="w-full h-full object-cover"
+          loading={index === 0 ? 'eager' : 'lazy'}
+        />
+      </div>
+    ))}
+  </div>
+
+  {images.length > 1 && (
+    <>
+      <button
+        class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 text-cream flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+        data-carousel-prev
+        aria-label="Previous slide"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+      <button
+        class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 text-cream flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+        data-carousel-next
+        aria-label="Next slide"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2" data-carousel-dots>
+        {images.map((_, index) => (
+          <button
+            class:list={[
+              'w-2 h-2 rounded-full transition-all duration-300',
+              index === 0 ? 'bg-cream w-6' : 'bg-cream/40',
+            ]}
+            data-carousel-dot={index}
+            aria-label={`Go to slide ${index + 1}`}
+          ></button>
+        ))}
+      </div>
+    </>
+  )}
+</div>
+
+<script>
+  document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const track = carousel.querySelector('[data-carousel-track]') as HTMLElement;
+    const slides = carousel.querySelectorAll('[data-carousel-slide]');
+    const prevBtn = carousel.querySelector('[data-carousel-prev]');
+    const nextBtn = carousel.querySelector('[data-carousel-next]');
+    const dots = carousel.querySelectorAll('[data-carousel-dot]');
+    const shouldAutoplay = carousel.getAttribute('data-autoplay') === 'true';
+    const interval = parseInt(carousel.getAttribute('data-interval') || '5000');
+
+    let current = 0;
+    let autoplayTimer: ReturnType<typeof setInterval>;
+
+    function goTo(index: number) {
+      current = ((index % slides.length) + slides.length) % slides.length;
+      if (track) track.style.transform = `translateX(-${current * 100}%)`;
+      dots.forEach((dot, i) => {
+        const el = dot as HTMLElement;
+        el.style.width = i === current ? '1.5rem' : '0.5rem';
+        el.style.backgroundColor = i === current ? '#F5F0E8' : 'rgba(245,240,232,0.4)';
+      });
+    }
+
+    prevBtn?.addEventListener('click', () => { goTo(current - 1); resetAutoplay(); });
+    nextBtn?.addEventListener('click', () => { goTo(current + 1); resetAutoplay(); });
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        goTo(parseInt((dot as HTMLElement).getAttribute('data-carousel-dot') || '0'));
+        resetAutoplay();
+      });
+    });
+
+    function resetAutoplay() {
+      if (shouldAutoplay) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(() => goTo(current + 1), interval);
+      }
+    }
+
+    if (shouldAutoplay) {
+      autoplayTimer = setInterval(() => goTo(current + 1), interval);
+    }
+  });
+</script>

@@ -1,119 +1,102 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import EmailCapture from '@/components/EmailCapture.astro';
-import bookCover from '@/assets/book-cover.png';
+import bookCover from '../assets/book-cover.png';
 ---
 
-<BaseLayout
-  title="You Can't Serve Two Masters"
-  description="Undivided Allegiance to Christ in an Age of Cultural Compromise. A prophetic call to the American Church by Drew Reitzel."
->
-  <!-- Book Hero -->
-  <section class="px-6 py-20 lg:px-8">
-    <div class="mx-auto max-w-7xl">
-      <div class="grid items-center gap-16 md:grid-cols-2 lg:gap-24">
-        <!-- Cover -->
-        <div class="flex items-center justify-center">
-          <Image
-            src={bookCover}
-            alt="You Can't Serve Two Masters by Drew Reitzel — book cover"
-            class="w-full max-w-md shadow-2xl"
-            widths={[400, 600, 800, 1000]}
-            sizes="(max-width: 768px) 90vw, 450px"
-          />
-        </div>
-
-        <!-- Info -->
-        <div>
-          <p class="font-display text-xs font-semibold uppercase tracking-widest text-[var(--color-red)]">
-            Now Available
-          </p>
-          <h1 class="mt-4 font-display text-4xl font-bold tracking-tight md:text-5xl">
-            You Can't Serve<br />Two Masters
-          </h1>
-          <p class="mt-2 text-lg italic text-[var(--color-charcoal-light)]">
-            Undivided Allegiance to Christ in an Age of Cultural Compromise
-          </p>
-          <p class="mt-2 text-sm text-[var(--color-warm-gray)]">
-            By Drew Reitzel &bull; ISBN 979-8-2786-09926
-          </p>
-
-          <div class="mt-8 flex flex-wrap gap-4">
-            <a href="#" class="btn btn-red-filled">Order on Amazon</a>
-            <a href="#" class="btn btn-red">Buy Direct</a>
+<BaseLayout title="The Book" description="You Can't Serve Two Masters — a prophetic call to the American Church by Drew Reitzel.">
+  <!-- Hero -->
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="flex justify-center lg:justify-start fade-in">
+          <div class="relative">
+            <div class="absolute -inset-6 bg-red/10 blur-3xl"></div>
+            <Image
+              src={bookCover}
+              alt="You Can't Serve Two Masters — by Drew Reitzel"
+              class="relative w-80 md:w-96 shadow-2xl"
+              widths={[384, 512]}
+              sizes="(max-width: 768px) 320px, 384px"
+            />
           </div>
         </div>
+        <div class="fade-in">
+          <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-4">The Book</span>
+          <h1 class="mb-6">You Can't Serve Two Masters</h1>
+          <div class="divider mb-6"></div>
+          <p class="text-xl text-muted-light leading-relaxed mb-4">
+            By Drew Reitzel
+          </p>
+          <p class="text-muted-light leading-relaxed mb-8">
+            The American Church has made its choice. Slowly, deliberately, and with full knowledge,
+            it has exchanged the authority of Scripture for the approval of culture.
+            This book holds up a mirror — not to condemn, but to call the Church home.
+          </p>
+          <a
+            href="https://amazon.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+          >
+            Order on Amazon
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Back Cover Description -->
-  <section class="section-divider px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl">
-      <p class="section-heading" style="border-bottom-color: var(--color-red);">About the Book</p>
-      <div class="mt-6 space-y-6 text-base leading-relaxed text-[var(--color-charcoal)]">
-        <p>
-          Something has gone wrong in the American Church — and most of us can feel it.
-        </p>
-        <p>
-          We live in a time when the lines between biblical Christianity and cultural religion have become so blurred that many believers no longer know the difference. The gospel has been softened. Truth has become negotiable. And the call to take up our cross and follow Christ has been quietly replaced by a call to be comfortable, accepted, and affirmed.
-        </p>
-        <p>
-          <em>You Can't Serve Two Masters</em> is a prophetic call to the Church to stop straddling the fence. Drawing from Scripture, cultural analysis, and raw personal conviction, Drew Reitzel walks through the ways the modern Church has compromised its witness — from the redefinition of love and tolerance, to the embrace of ideologies that stand in direct opposition to the Word of God.
-        </p>
-        <p>
-          This is not a book about politics. It is not a book about culture wars. It is a book about allegiance — and whether the Church in America is willing to give hers fully to Christ, even when it costs everything.
-        </p>
-
-        <blockquote class="border-l-4 border-[var(--color-red)] pl-6 italic">
-          <p>"No one can serve two masters. Either you will hate the one and love the other, or you will be devoted to the one and despise the other."</p>
-          <cite class="mt-2 block text-sm not-italic text-[var(--color-warm-gray)]">— Matthew 6:24</cite>
-        </blockquote>
-
-        <p>
-          If you have ever looked at the state of the Church and thought, <em>"This is not what it was supposed to be"</em> — this book was written for you.
-        </p>
+  <!-- What's Inside -->
+  <section class="section-padding bg-charcoal">
+    <div class="container mx-auto px-6 max-w-4xl fade-in">
+      <h2 class="text-center mb-4">What This Book Confronts</h2>
+      <div class="divider mx-auto mb-12"></div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {[
+          { title: 'The Language of Drift', text: 'Why we comfort ourselves with passive language — and why it must stop.' },
+          { title: 'The Cost of Comfort', text: 'How the pursuit of cultural acceptance has hollowed out the gospel.' },
+          { title: 'The Silence of Leaders', text: 'What happens when shepherds choose safety over faithfulness.' },
+          { title: 'The Remnant\'s Role', text: 'What it means to hold the line when the institution will not.' },
+          { title: 'The Way Back', text: 'Repentance is always available. The door is never closed.' },
+          { title: 'Undivided Allegiance', text: 'You cannot serve two masters. The call to choose — and choose well.' },
+        ].map((chapter) => (
+          <div class="p-6 border-l-2 border-red">
+            <h3 class="text-lg mb-2 text-cream">{chapter.title}</h3>
+            <p class="text-muted text-sm leading-relaxed">{chapter.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- Endorsements -->
-  <section class="section-divider px-6 lg:px-8">
-    <div class="mx-auto max-w-5xl">
-      <p class="section-heading text-center" style="border-bottom-color: var(--color-red);">What Others Are Saying</p>
-      <div class="mt-8 grid gap-10 md:grid-cols-2">
-        <div class="border-l-2 border-[var(--color-border)] pl-6">
-          <p class="italic leading-relaxed text-[var(--color-charcoal)]">
-            "A bold and necessary word for the American Church. Drew writes with the urgency of a prophet and the heart of a pastor."
-          </p>
-          <p class="mt-4 text-sm font-semibold text-[var(--color-ink)]">— Endorsement Placeholder</p>
-        </div>
-        <div class="border-l-2 border-[var(--color-border)] pl-6">
-          <p class="italic leading-relaxed text-[var(--color-charcoal)]">
-            "This is not a comfortable book — and that is exactly why the Church needs it. Reitzel holds nothing back."
-          </p>
-          <p class="mt-4 text-sm font-semibold text-[var(--color-ink)]">— Endorsement Placeholder</p>
-        </div>
-      </div>
+  <!-- Quote -->
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6 text-center max-w-3xl fade-in">
+      <blockquote>
+        <p class="text-2xl md:text-3xl font-heading text-cream leading-snug italic mb-8">
+          "The Church is not drifting. It is choosing. And the only question is whether it will choose differently."
+        </p>
+        <cite class="text-muted text-sm uppercase tracking-widest not-italic">— Drew Reitzel</cite>
+      </blockquote>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="px-6 py-20 text-center lg:px-8">
-    <div class="mx-auto max-w-2xl">
-      <h2 class="font-display text-3xl font-bold md:text-4xl">
-        Ready to Read?
-      </h2>
-      <p class="mt-4 text-[var(--color-charcoal-light)]">
-        Order your copy today and join a growing movement of believers who refuse to divide their allegiance.
+  <section class="section-padding bg-charcoal text-center">
+    <div class="container mx-auto px-6 max-w-2xl fade-in">
+      <h2 class="mb-4">Ready to Read?</h2>
+      <div class="divider mx-auto mb-6"></div>
+      <p class="text-muted-light text-lg leading-relaxed mb-10">
+        Available now on Amazon in paperback and Kindle.
       </p>
-      <div class="mt-8 flex flex-wrap justify-center gap-4">
-        <a href="#" class="btn btn-red-filled">Order on Amazon</a>
-        <a href="#" class="btn btn-red">Buy Direct</a>
-      </div>
+      <a
+        href="https://amazon.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary"
+      >
+        Order Your Copy
+      </a>
     </div>
   </section>
-
-  <EmailCapture heading="Get Book Updates" text="Be the first to hear about new releases, bulk ordering, and reading guides." />
 </BaseLayout>
