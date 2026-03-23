@@ -1,0 +1,90 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import EmailCapture from '@/components/EmailCapture.astro';
+
+const videos = [
+  {
+    title: 'The Church Is Choosing — Book Trailer',
+    description: 'A short introduction to You Can\'t Serve Two Masters and the heart behind the message.',
+    category: 'Book',
+  },
+  {
+    title: 'What Does Biblical Fidelity Look Like Today?',
+    description: 'Drew explores what it means for the Church to remain faithful to Scripture in a culture that demands accommodation.',
+    category: 'Teaching',
+  },
+  {
+    title: 'Undivided Allegiance — The Call to Repentance',
+    description: 'A message on repentance, grace, and the road back to faithfulness for the American Church.',
+    category: 'Message',
+  },
+  {
+    title: 'Why I Wrote This Book',
+    description: 'Drew shares the personal conviction and burden that led to writing You Can\'t Serve Two Masters.',
+    category: 'Behind the Scenes',
+  },
+  {
+    title: 'The Cost of Following Christ',
+    description: 'What does Jesus actually ask of those who claim to follow Him? A look at the demands of discipleship.',
+    category: 'Teaching',
+  },
+  {
+    title: 'A Word to Pastors',
+    description: 'An honest, compassionate word to pastors navigating the tension between cultural pressure and biblical truth.',
+    category: 'Message',
+  },
+];
+---
+
+<BaseLayout
+  title="Video"
+  description="Watch videos from Drew Reitzel on biblical fidelity, cultural compromise, and the call to undivided allegiance to Christ."
+>
+  <section class="px-6 py-20 lg:px-8">
+    <div class="mx-auto max-w-7xl">
+      <p class="section-heading">Video</p>
+      <h1 class="mt-2 font-display text-4xl font-bold tracking-tight md:text-5xl">
+        Watch
+      </h1>
+      <p class="mt-4 max-w-2xl text-base leading-relaxed text-[var(--color-charcoal-light)]">
+        Messages, teachings, and conversations on faith and the call to follow Christ without compromise.
+      </p>
+
+      <!-- Subscribe button -->
+      <div class="mt-8">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn text-xs">
+          Subscribe on YouTube
+        </a>
+      </div>
+
+      <!-- Video grid -->
+      <div class="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+        {videos.map(video => (
+          <article class="group">
+            <!-- Video thumbnail placeholder -->
+            <div class="aspect-video w-full bg-[var(--color-cream-dark)] border border-[var(--color-border)] flex items-center justify-center">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" class="text-[var(--color-border)]">
+                <circle cx="24" cy="24" r="23" stroke="currentColor" stroke-width="2" />
+                <path d="M20 16L34 24L20 32V16Z" fill="currentColor" />
+              </svg>
+            </div>
+
+            <div class="mt-4">
+              <span class="font-display text-xs font-semibold uppercase tracking-widest text-[var(--color-warm-gray)]">
+                {video.category}
+              </span>
+              <h2 class="mt-2 font-display text-lg font-bold text-[var(--color-ink)] group-hover:text-[var(--color-charcoal-light)] transition-colors">
+                {video.title}
+              </h2>
+              <p class="mt-2 text-sm leading-relaxed text-[var(--color-charcoal-light)]">
+                {video.description}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <EmailCapture heading="Get Video Updates" text="Be notified when new videos and messages are published." />
+</BaseLayout>

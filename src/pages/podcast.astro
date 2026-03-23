@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import EmailCapture from '@/components/EmailCapture.astro';
+
+const episodes = [
+  {
+    number: 3,
+    title: 'Why the Church Struggles with Repentance',
+    description: "We say we believe in repentance. But what happens when the call to repent lands on the things we've grown comfortable with?",
+    date: 'Coming Soon',
+    duration: '~35 min',
+  },
+  {
+    number: 2,
+    title: 'The Difference Between Conviction and Condemnation',
+    description: "How do we know the difference between the Holy Spirit's conviction and the enemy's condemnation? And why does it matter for the life of the Church?",
+    date: 'Coming Soon',
+    duration: '~30 min',
+  },
+  {
+    number: 1,
+    title: 'What Does Undivided Allegiance Actually Look Like?',
+    description: 'The first episode explores the core question behind the book and the ministry: what does it look like to follow Christ without compromise in an age that demands it?',
+    date: 'Coming Soon',
+    duration: '~40 min',
+  },
+];
+---
+
+<BaseLayout
+  title="Podcast"
+  description="Listen to the Undivided Allegiance podcast with Drew Reitzel. Conversations on faith, biblical fidelity, and the cost of following Christ."
+>
+  <section class="px-6 py-20 lg:px-8">
+    <div class="mx-auto max-w-4xl">
+      <p class="section-heading">Podcast</p>
+      <h1 class="mt-2 font-display text-4xl font-bold tracking-tight md:text-5xl">
+        Undivided Allegiance
+      </h1>
+      <p class="mt-4 text-base leading-relaxed text-[var(--color-charcoal-light)]">
+        Conversations on faith, biblical fidelity, and the cost of following Christ without compromise. New episodes coming soon.
+      </p>
+
+      <!-- Podcast platforms (placeholder) -->
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#" class="btn text-xs">Apple Podcasts</a>
+        <a href="#" class="btn text-xs">Spotify</a>
+        <a href="#" class="btn text-xs">YouTube</a>
+      </div>
+
+      <!-- Episodes -->
+      <div class="mt-16 space-y-0">
+        {episodes.map(ep => (
+          <article class="border-t border-[var(--color-border)] py-10">
+            <div class="flex items-start gap-6">
+              <!-- Episode number -->
+              <div class="hidden flex-shrink-0 sm:block">
+                <span class="font-display text-3xl font-bold text-[var(--color-cream-dark)]">
+                  {String(ep.number).padStart(2, '0')}
+                </span>
+              </div>
+
+              <div class="flex-1">
+                <div class="flex items-center gap-3 text-xs text-[var(--color-warm-gray)]">
+                  <span>Episode {ep.number}</span>
+                  <span>&middot;</span>
+                  <span>{ep.duration}</span>
+                  <span>&middot;</span>
+                  <span>{ep.date}</span>
+                </div>
+                <h2 class="mt-2 font-display text-xl font-bold text-[var(--color-ink)]">
+                  {ep.title}
+                </h2>
+                <p class="mt-3 text-sm leading-relaxed text-[var(--color-charcoal-light)]">
+                  {ep.description}
+                </p>
+
+                <!-- Audio player placeholder -->
+                <div class="mt-4 flex h-12 items-center gap-4 bg-[var(--color-cream-dark)] px-4">
+                  <button class="flex h-8 w-8 items-center justify-center border border-[var(--color-border)] text-[var(--color-charcoal)]" aria-label={`Play episode ${ep.number}`}>
+                    <svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor">
+                      <path d="M0 0L12 7L0 14V0Z" />
+                    </svg>
+                  </button>
+                  <div class="h-1 flex-1 bg-[var(--color-border)]">
+                    <div class="h-full w-0 bg-[var(--color-charcoal)]"></div>
+                  </div>
+                  <span class="text-xs text-[var(--color-warm-gray)]">0:00</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <EmailCapture heading="Never Miss an Episode" text="Subscribe to get new episodes and show notes delivered to your inbox." />
+</BaseLayout>

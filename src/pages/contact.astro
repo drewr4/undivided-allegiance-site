@@ -1,0 +1,62 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with Drew Reitzel. For speaking inquiries, media requests, or general correspondence."
+>
+  <section class="px-6 py-20 lg:px-8">
+    <div class="mx-auto max-w-3xl">
+      <p class="section-heading">Contact</p>
+      <h1 class="mt-2 font-display text-4xl font-bold tracking-tight md:text-5xl">
+        Get in Touch
+      </h1>
+      <p class="mt-4 text-base leading-relaxed text-[var(--color-charcoal-light)]">
+        For speaking inquiries, media requests, or general correspondence. For speaking engagements specifically, please use the <a href="/speaking/" class="underline underline-offset-2 hover:text-[var(--color-ink)]">speaking inquiry form</a>.
+      </p>
+
+      <form class="mt-12 space-y-6" action="#" method="POST">
+        <div class="grid gap-6 md:grid-cols-2">
+          <div>
+            <label for="first-name" class="block text-sm font-semibold text-[var(--color-ink)]">
+              First Name
+            </label>
+            <input type="text" id="first-name" name="first_name" required class="mt-2" />
+          </div>
+          <div>
+            <label for="last-name" class="block text-sm font-semibold text-[var(--color-ink)]">
+              Last Name
+            </label>
+            <input type="text" id="last-name" name="last_name" required class="mt-2" />
+          </div>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-semibold text-[var(--color-ink)]">
+            Email Address
+          </label>
+          <input type="email" id="email" name="email" required class="mt-2" />
+        </div>
+
+        <div>
+          <label for="subject" class="block text-sm font-semibold text-[var(--color-ink)]">
+            Subject
+          </label>
+          <input type="text" id="subject" name="subject" required class="mt-2" />
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-semibold text-[var(--color-ink)]">
+            Message
+          </label>
+          <textarea id="message" name="message" rows="6" required class="mt-2" placeholder="How can we help?"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-filled">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

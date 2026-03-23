@@ -1,0 +1,37 @@
+---
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import '@/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  pageType?: 'website' | 'article';
+  publishDate?: Date;
+}
+
+const { title, description, image, pageType, publishDate } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      image={image}
+      pageType={pageType}
+      publishDate={publishDate}
+    />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <a class="skip-to-content" href="#main-content">Skip to content</a>
+    <Header />
+    <main id="main-content" class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

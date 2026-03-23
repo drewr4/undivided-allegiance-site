@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostCard from '@/components/PostCard.astro';
+import { getSortedPosts, getCategories } from '@/utils/content';
+
+const posts = await getSortedPosts();
+const categories = await getCategories();
+---
+
+<BaseLayout
+  title="Blog"
+  description="Articles on biblical fidelity, cultural compromise, and the call to undivided allegiance to Christ."
+>
+  <section class="px-6 py-20 lg:px-8">
+    <div class="mx-auto max-w-7xl">
+      <!-- Page header -->
+      <div class="max-w-2xl">
+        <p class="section-heading">Articles</p>
+        <h1 class="mt-2 font-display text-4xl font-bold tracking-tight md:text-5xl">
+          Blog
+        </h1>
+        <p class="mt-4 text-base leading-relaxed text-[var(--color-charcoal-light)]">
+          Writing on faith, culture, and the cost of following Christ without compromise.
+        </p>
+      </div>
+
+      <!-- Category filters -->
+      <div class="mt-10 flex flex-wrap gap-3">
+        <button
+          class="category-filter active font-display text-xs font-semibold uppercase tracking-widest border-b-2 border-[var(--color-ink)] pb-1 text-[var(--color-ink)]"
+          data-category="all"
+        >
+          All
+        </button>
+        {categories.map(cat => (
+          <button
+            class="category-filter font-display text-xs font-semibold uppercase tracking-widest border-b-2 border-transparent pb-1 text-[var(--color-warm-gray)] transition-colors hover:text-[var(--color-ink)]"
+            data-category={cat}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Posts grid — editorial magazine style -->
+      <div class="mt-12 grid gap-x-12 gap-y-14 md:grid-cols-2 lg:grid-cols-3" id="posts-grid">
+        {posts.map(post => (
+          <div class="post-item border-t border-[var(--color-border)] pt-8" data-category={post.data.category}>
+            <PostCard
+              title={post.data.title}
+              excerpt={post.data.excerpt}
+              date={post.data.publishDate}
+              category={post.data.category}
+              slug={post.id}
+            />
+          </div>
+        ))}
+      </div>
+
+      {posts.length === 0 && (
+        <div class="py-24 text-center">
+          <p class="font-display text-xl text-[var(--color-warm-gray)]">
+            Articles coming soon.
+          </p>
+          <p class="mt-2 text-sm text-[var(--color-warm-gray)]">
+            Subscribe below to be notified when new content is published.
+          </p>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const filters = document.querySelectorAll('.category-filter');
+  const items = document.querySelectorAll('.post-item');
+
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const cat = (btn as HTMLElement).dataset.category;
+
+      filters.forEach(f => {
+        f.classList.remove('active', 'border-[var(--color-ink)]', 'text-[var(--color-ink)]');
+        f.classList.add('border-transparent', 'text-[var(--color-warm-gray)]');
+      });
+      btn.classList.add('active', 'border-[var(--color-ink)]', 'text-[var(--color-ink)]');
+      btn.classList.remove('border-transparent', 'text-[var(--color-warm-gray)]');
+
+      items.forEach(item => {
+        const el = item as HTMLElement;
+        if (cat === 'all' || el.dataset.category === cat) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

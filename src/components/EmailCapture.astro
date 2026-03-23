@@ -1,0 +1,36 @@
+---
+interface Props {
+  heading?: string;
+  text?: string;
+}
+
+const {
+  heading = 'Stay Rooted',
+  text = 'Receive new articles, book updates, and speaking announcements. No spam. No compromise.',
+} = Astro.props;
+---
+
+<section class="bg-[var(--color-ink)] px-6 py-16 text-center md:py-20">
+  <div class="mx-auto max-w-xl">
+    <h2 class="font-display text-2xl font-bold text-[var(--color-cream)] md:text-3xl">
+      {heading}
+    </h2>
+    <p class="mt-4 text-sm leading-relaxed text-[var(--color-cream)]/70">
+      {text}
+    </p>
+    <form class="mt-8 flex flex-col gap-3 sm:flex-row" action="#" method="POST">
+      <label class="sr-only" for="email-capture">Email address</label>
+      <input
+        id="email-capture"
+        type="email"
+        name="email"
+        required
+        placeholder="Your email address"
+        class="flex-1 border-[var(--color-charcoal)] bg-[var(--color-charcoal)] text-[var(--color-cream)] placeholder:text-[var(--color-cream)]/40 focus:border-[var(--color-cream)]"
+      />
+      <button type="submit" class="btn border-[var(--color-cream)] text-[var(--color-cream)] hover:bg-[var(--color-cream)] hover:text-[var(--color-ink)]">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</section>

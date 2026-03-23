@@ -1,0 +1,97 @@
+---
+import { NAV_LINKS } from '@/data/site-config';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="border-b border-[var(--color-border)]">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Top bar: brand + nav -->
+    <div class="flex items-center justify-between py-5">
+      <!-- Brand -->
+      <a href="/" class="group flex items-baseline gap-3 no-underline">
+        <span class="font-display text-xl font-bold tracking-tight text-[var(--color-ink)] md:text-2xl">
+          Undivided Allegiance
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary navigation">
+        {NAV_LINKS.map(link => (
+          <a
+            href={link.href}
+            class:list={[
+              'font-display text-sm font-semibold uppercase tracking-widest transition-colors hover:text-[var(--color-ink)]',
+              currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
+                ? 'text-[var(--color-ink)] border-b-2 border-[var(--color-ink)] pb-0.5'
+                : 'text-[var(--color-warm-gray)]',
+            ]}
+          >
+            {link.text}
+          </a>
+        ))}
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button
+        id="menu-toggle"
+        class="relative z-50 flex h-10 w-10 items-center justify-center lg:hidden"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <div class="menu-icon space-y-1.5">
+          <span class="block h-0.5 w-6 bg-[var(--color-ink)] transition-transform duration-300"></span>
+          <span class="block h-0.5 w-6 bg-[var(--color-ink)] transition-opacity duration-300"></span>
+          <span class="block h-0.5 w-6 bg-[var(--color-ink)] transition-transform duration-300"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 z-40 hidden bg-[var(--color-cream)] lg:hidden"
+  >
+    <nav class="flex h-full flex-col items-center justify-center gap-6" aria-label="Mobile navigation">
+      {NAV_LINKS.map(link => (
+        <a
+          href={link.href}
+          class:list={[
+            'font-display text-2xl font-bold uppercase tracking-widest transition-colors',
+            currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
+              ? 'text-[var(--color-ink)]'
+              : 'text-[var(--color-warm-gray)] hover:text-[var(--color-ink)]',
+          ]}
+        >
+          {link.text}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('hidden');
+      document.body.style.overflow = expanded ? '' : 'hidden';
+
+      const spans = toggle.querySelectorAll('span');
+      if (!expanded) {
+        spans[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(4px, -4px)';
+      } else {
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = '';
+      }
+    });
+  }
+</script>

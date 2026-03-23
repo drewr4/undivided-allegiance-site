@@ -1,0 +1,58 @@
+---
+import { NAV_LINKS, SOCIAL_LINKS } from '@/data/site-config';
+import SocialIcon from '@/components/SocialIcon.astro';
+---
+
+<footer class="border-t border-[var(--color-border)] bg-[var(--color-cream-dark)]">
+  <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+    <div class="grid gap-12 md:grid-cols-3">
+      <!-- Brand column -->
+      <div>
+        <p class="font-display text-xl font-bold tracking-tight">Undivided Allegiance</p>
+        <p class="mt-3 text-sm leading-relaxed text-[var(--color-charcoal-light)]">
+          Calling the Church back to biblical fidelity in an age of cultural compromise.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <p class="section-heading">Navigate</p>
+        <nav class="flex flex-col gap-2" aria-label="Footer navigation">
+          {NAV_LINKS.filter(l => l.href !== '/').map(link => (
+            <a
+              href={link.href}
+              class="text-sm text-[var(--color-charcoal-light)] transition-colors hover:text-[var(--color-ink)]"
+            >
+              {link.text}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      <!-- Connect -->
+      <div>
+        <p class="section-heading">Connect</p>
+        <div class="flex flex-wrap gap-4">
+          {SOCIAL_LINKS.map(link => (
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[var(--color-charcoal-light)] transition-colors hover:text-[var(--color-ink)]"
+              title={link.platform}
+              aria-label={link.platform}
+            >
+              <SocialIcon icon={link.icon} class="h-5 w-5" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 border-t border-[var(--color-border)] pt-8">
+      <p class="text-center text-xs text-[var(--color-warm-gray)]">
+        &copy; {new Date().getFullYear()} Drew Reitzel. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

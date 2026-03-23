@@ -1,0 +1,133 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Speaking"
+  description="Invite Drew Reitzel to speak at your church, conference, or event. Available for speaking engagements and podcast appearances."
+>
+  <section class="px-6 py-20 lg:px-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
+        <!-- Left: Info -->
+        <div>
+          <p class="section-heading">Speaking</p>
+          <h1 class="mt-2 font-display text-4xl font-bold tracking-tight md:text-5xl">
+            Invite Drew<br />to Speak
+          </h1>
+          <p class="mt-6 text-base leading-relaxed text-[var(--color-charcoal)]">
+            Drew Reitzel is available for churches, conferences, events, and podcast appearances. His messages center on the call to undivided allegiance to Christ — challenging believers to examine where the Church has compromised and calling them back to biblical fidelity.
+          </p>
+
+          <div class="mt-10 space-y-8">
+            <div>
+              <h2 class="font-display text-lg font-bold">Speaking Topics</h2>
+              <ul class="mt-4 space-y-3 text-[var(--color-charcoal)]">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 bg-[var(--color-ink)]"></span>
+                  Undivided Allegiance — The Cost of Following Christ Without Compromise
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 bg-[var(--color-ink)]"></span>
+                  The Church in an Age of Cultural Accommodation
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 bg-[var(--color-ink)]"></span>
+                  Repentance, Grace, and the Road Back to Faithfulness
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 bg-[var(--color-ink)]"></span>
+                  No One Can Serve Two Masters — A Study in Matthew 6:24
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 class="font-display text-lg font-bold">Available For</h2>
+              <div class="mt-4 flex flex-wrap gap-3">
+                <span class="border border-[var(--color-border)] px-4 py-2 text-sm text-[var(--color-charcoal)]">
+                  Sunday Services
+                </span>
+                <span class="border border-[var(--color-border)] px-4 py-2 text-sm text-[var(--color-charcoal)]">
+                  Conferences
+                </span>
+                <span class="border border-[var(--color-border)] px-4 py-2 text-sm text-[var(--color-charcoal)]">
+                  Men's Events
+                </span>
+                <span class="border border-[var(--color-border)] px-4 py-2 text-sm text-[var(--color-charcoal)]">
+                  Retreats
+                </span>
+                <span class="border border-[var(--color-border)] px-4 py-2 text-sm text-[var(--color-charcoal)]">
+                  Podcasts
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form -->
+        <div>
+          <div class="bg-[var(--color-white)] border border-[var(--color-border)] p-8 md:p-10">
+            <h2 class="font-display text-2xl font-bold">Speaking Inquiry</h2>
+            <p class="mt-2 text-sm text-[var(--color-charcoal-light)]">
+              Fill out the form below and Drew's team will be in touch.
+            </p>
+
+            <form class="mt-8 space-y-6" action="#" method="POST">
+              <div>
+                <label for="inquiry-type" class="block text-sm font-semibold text-[var(--color-ink)]">
+                  Inquiry Type
+                </label>
+                <select id="inquiry-type" name="inquiry_type" required class="mt-2">
+                  <option value="" disabled selected>Select type</option>
+                  <option value="church-event">Church / Event</option>
+                  <option value="conference">Conference</option>
+                  <option value="podcast">Podcast Appearance</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="contact-name" class="block text-sm font-semibold text-[var(--color-ink)]">
+                  Your Name
+                </label>
+                <input type="text" id="contact-name" name="name" required class="mt-2" />
+              </div>
+
+              <div>
+                <label for="contact-email" class="block text-sm font-semibold text-[var(--color-ink)]">
+                  Email Address
+                </label>
+                <input type="email" id="contact-email" name="email" required class="mt-2" />
+              </div>
+
+              <div>
+                <label for="organization" class="block text-sm font-semibold text-[var(--color-ink)]">
+                  Church / Organization
+                </label>
+                <input type="text" id="organization" name="organization" class="mt-2" />
+              </div>
+
+              <div>
+                <label for="event-date" class="block text-sm font-semibold text-[var(--color-ink)]">
+                  Preferred Date(s)
+                </label>
+                <input type="text" id="event-date" name="event_date" placeholder="e.g., March 2026 or flexible" class="mt-2" />
+              </div>
+
+              <div>
+                <label for="details" class="block text-sm font-semibold text-[var(--color-ink)]">
+                  Tell Us More
+                </label>
+                <textarea id="details" name="details" rows="4" class="mt-2" placeholder="Describe your event, audience size, and any other relevant details."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-filled w-full">
+                Submit Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
