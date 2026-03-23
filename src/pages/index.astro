@@ -12,20 +12,22 @@ const latestPosts = posts.slice(0, 3);
 
 <BaseLayout>
   <!-- Hero -->
-  <section class="px-6 py-24 md:py-36 lg:px-8">
-    <div class="mx-auto max-w-4xl text-center">
-      <p class="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-warm-gray)]">
+  <section class="bg-[#0A0A0A] px-6 py-24 md:py-36 lg:px-8 lg:py-44">
+    <div class="mx-auto max-w-7xl">
+      <p class="font-display text-[0.6875rem] font-semibold uppercase tracking-[0.3em] text-[#8C8478]">
         Drew Reitzel
       </p>
-      <h1 class="mt-6 font-display text-4xl font-bold leading-[1.1] tracking-tight md:text-6xl lg:text-7xl">
+      <div class="mt-4 h-[3px] w-10 bg-[#B41E1E]"></div>
+      <h1 class="mt-8 font-display text-[clamp(2.5rem,8vw,7rem)] font-extrabold leading-[1.0] tracking-tight text-[#F5F0E8]">
         The Church is not drifting.<br />It is choosing.
       </h1>
-      <p class="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-[var(--color-charcoal-light)]">
-        Prophetic writer and speaker calling the Church back to biblical fidelity in an age of cultural compromise.
+      <p class="mt-6 text-lg text-[#8C8478]">
+        This is not condemnation. It is a call home.
       </p>
-      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <a href="/book/" class="btn btn-filled">Explore the Book</a>
-        <a href="/about/" class="btn">About Drew</a>
+      <div class="mt-10">
+        <a href="/book/" class="btn border-[#F5F0E8] text-[#F5F0E8] hover:bg-[#F5F0E8] hover:text-[#0A0A0A]">
+          Explore the Book
+        </a>
       </div>
     </div>
   </section>
