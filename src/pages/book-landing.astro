@@ -32,26 +32,20 @@ import { SITE } from '../data/site-config';
       </a>
 
       <!-- Book cover -->
-      <div class="relative mb-10 sm:mb-12 fade-in mx-auto">
-        <div class="absolute -inset-12 bg-red/6 blur-[100px] rounded-full pointer-events-none"></div>
-        <Image
-          src={bookCover}
-          alt="You Can't Serve Two Masters — by Drew Reitzel"
-          class="relative w-52 sm:w-60 md:w-68 shadow-2xl shadow-black/60 mx-auto block"
-          widths={[208, 240, 272]}
-          sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, 272px"
-        />
+      <div class="relative mb-10 sm:mb-12 fade-in flex justify-center w-full">
+        <div class="relative inline-block">
+          <div class="absolute -inset-12 bg-red/6 blur-[100px] rounded-full pointer-events-none"></div>
+          <Image
+            src={bookCover}
+            alt="You Can't Serve Two Masters — by Drew Reitzel"
+            class="relative w-52 sm:w-60 md:w-68 shadow-2xl shadow-black/60"
+            widths={[208, 240, 272]}
+            sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, 272px"
+          />
+        </div>
       </div>
 
-      <div class="w-14 h-[1.5px] bg-red mb-5 fade-in"></div>
-
-      <p class="text-[0.65rem] sm:text-[0.7rem] uppercase tracking-[0.22em] text-cream/60 leading-relaxed px-6 mb-4 max-w-md fade-in">
-        Undivided Allegiance to Christ in an Age of Cultural Compromise
-      </p>
-
-      <p class="text-[0.65rem] uppercase tracking-[0.3em] text-muted mb-8 fade-in">
-        Drew Reitzel
-      </p>
+      <div class="w-14 h-[1.5px] bg-red mb-8 fade-in"></div>
 
       <a
         href="#AMAZON_URL"
