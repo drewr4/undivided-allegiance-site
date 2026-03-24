@@ -2,23 +2,98 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Newsletter" description="The Remnant — a bi-weekly letter for Christians who refuse to trade conviction for comfort.">
+<BaseLayout title="The Remnant — Newsletter" description="Breadcrumbs for the narrow gate. A bi-weekly letter for the lost, the wayward, the afraid, and the ones who never knew they'd drifted.">
+  <!-- Hero -->
   <section class="section-padding bg-black">
-    <div class="container mx-auto px-6 text-center max-w-2xl">
+    <div class="container mx-auto px-6 text-center max-w-3xl">
       <div class="fade-in">
-        <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-6">Newsletter</span>
-        <h1 class="mb-6">The Remnant</h1>
-        <div class="divider mx-auto mb-8"></div>
-        <p class="text-muted-light text-lg leading-relaxed mb-10">
-          A bi-weekly letter for Christians who refuse to trade conviction for comfort.
+        <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-6">The Remnant</span>
+        <h1 class="mb-6">There Is Still a Path. This Is How You Find It.</h1>
+        <p class="text-muted text-lg leading-relaxed max-w-2xl mx-auto">
+          For the lost, the wayward, the afraid, and the ones who never knew they'd drifted.
         </p>
-        <div class="flex justify-center">
-          <div style="background: #0A0A0A;">
-            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-            <iframe src="https://subscribe-forms.beehiiv.com/c3ad021c-2a0f-40d3-9b52-2058dd05b6a5" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 560px; height: 291px; margin: 0; border-radius: 0px 0px 0px 0px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"></iframe>
-          </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider mx-auto"></div>
+
+  <!-- Breadcrumbs for the Narrow Gate -->
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6 max-w-2xl fade-in">
+      <h2 class="text-center mb-10">Breadcrumbs for the Narrow Gate</h2>
+      <div class="space-y-6 text-cream text-lg leading-[1.85]">
+        <p>
+          The Remnant is not a letter of condemnation. It is an outstretched hand.
+        </p>
+        <p>
+          It is for the pastor who knows he should preach the difficult texts but hasn't found the courage yet. For the young disciple who is passionate and sincere — and doesn't yet know that some of what he's been taught falls short of the whole counsel of God. For the believer who feels the unease of a Sunday morning that asks nothing of them. For the wayward, the searching, the ones who walked away and aren't sure what they walked toward.
+        </p>
+        <p>
+          This is not about being right. It is about being found. Every issue follows a single thread — one idea, one passage, one moment of honest reckoning — and lays it down like breadcrumbs on a path that is narrow, old, and still open.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider mx-auto"></div>
+
+  <!-- Every Other Week -->
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6 max-w-2xl fade-in">
+      <h2 class="text-center mb-10">Every Other Week. No Filler.</h2>
+      <ul class="space-y-5 text-cream text-lg leading-[1.85]">
+        <li class="flex gap-3">
+          <span class="text-red font-bold mt-0.5">•</span>
+          <span>Bi-weekly — every other week, one idea at a time</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-red font-bold mt-0.5">•</span>
+          <span>Written for wherever you are — not just where you should be</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-red font-bold mt-0.5">•</span>
+          <span>No condemnation — only the truth, offered with both hands</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Pull Quote -->
+  <section class="py-16 sm:py-24 bg-black">
+    <div class="container mx-auto px-6 text-center max-w-3xl fade-in">
+      <blockquote>
+        <p class="text-xl sm:text-2xl md:text-3xl font-heading text-cream italic leading-snug mb-6">
+          "The narrow gate is not locked. It is simply unpopular. That does not mean it is closed to you."
+        </p>
+        <cite class="text-muted text-sm not-italic">
+          — Drew Reitzel, <em>You Can't Serve Two Masters</em>
+        </cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <div class="divider mx-auto"></div>
+
+  <!-- Subscribe -->
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6 text-center max-w-2xl fade-in">
+      <h2 class="mb-4">Join The Remnant</h2>
+      <p class="text-muted text-lg mb-10">Free. Bi-weekly. Unfiltered.</p>
+      <div class="flex justify-center">
+        <div style="background: #0A0A0A;">
+          <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+          <iframe src="https://subscribe-forms.beehiiv.com/c3ad021c-2a0f-40d3-9b52-2058dd05b6a5" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 560px; height: 291px; margin: 0; border-radius: 0px 0px 0px 0px !important; background-color: transparent; box-shadow: 0 0 #0000; max-width: 100%;"></iframe>
         </div>
       </div>
+      <a
+        href="https://app.beehiiv.com/p/the-remnant"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block mt-8 text-muted text-sm hover:text-cream hover:underline transition-colors"
+      >
+        Read past issues &rarr;
+      </a>
     </div>
   </section>
 </BaseLayout>
