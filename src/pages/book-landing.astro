@@ -22,69 +22,63 @@ import { SITE } from '../data/site-config';
   </head>
   <body>
     <!-- Hero -->
-    <section class="min-h-screen flex flex-col items-center justify-center section-padding bg-black relative">
-      <div class="w-full max-w-5xl mx-auto px-6">
-        <!-- Brand mark -->
-        <div class="text-center mb-16 fade-in">
-          <a
-            href="https://undividedallegiance.com"
-            class="text-red text-[0.65rem] font-semibold uppercase tracking-[0.35em] hover:text-red-light transition-colors"
-          >
-            Undivided Allegiance
-          </a>
+    <section class="flex flex-col items-center bg-black relative py-20 sm:py-28 md:py-36 px-8 sm:px-12 md:px-16">
+      <!-- Brand mark -->
+      <div class="text-center mb-16 fade-in">
+        <a
+          href="https://undividedallegiance.com"
+          class="text-red text-[0.65rem] font-semibold uppercase tracking-[0.35em] hover:text-red-light transition-colors"
+        >
+          Undivided Allegiance
+        </a>
+      </div>
+
+      <div class="flex flex-col items-center text-center w-full fade-in">
+        <!-- Book cover -->
+        <div class="relative mb-14">
+          <div class="absolute -inset-8 bg-red/8 blur-[80px]"></div>
+          <Image
+            src={bookCover}
+            alt="You Can't Serve Two Masters — by Drew Reitzel"
+            class="relative w-56 sm:w-64 md:w-72 shadow-2xl shadow-black/50"
+            widths={[224, 256, 288]}
+            sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, 288px"
+          />
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
-          <!-- Book cover -->
-          <div class="lg:col-span-2 flex justify-center fade-in">
-            <div class="relative">
-              <div class="absolute -inset-8 bg-red/8 blur-[80px]"></div>
-              <Image
-                src={bookCover}
-                alt="You Can't Serve Two Masters — by Drew Reitzel"
-                class="relative w-64 sm:w-72 md:w-80 shadow-2xl shadow-black/50"
-                widths={[288, 320, 480]}
-                sizes="(max-width: 640px) 256px, (max-width: 768px) 288px, 320px"
-              />
-            </div>
-          </div>
+        <!-- Title -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold uppercase tracking-[0.06em] text-cream leading-[1.0] mb-8 max-w-5xl">
+          You Can't Serve Two Masters
+        </h1>
 
-          <!-- Title block -->
-          <div class="lg:col-span-3 text-center fade-in flex flex-col items-center">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold uppercase tracking-[0.06em] text-cream leading-[1.0] mb-6">
-              You Can't Serve<br />Two Masters
-            </h1>
+        <div class="w-16 h-[2px] bg-red mb-8"></div>
 
-            <div class="w-16 h-[2px] bg-red mb-6"></div>
+        <p class="text-[0.7rem] sm:text-xs uppercase tracking-[0.2em] text-cream/70 leading-relaxed mb-6 max-w-lg">
+          Undivided Allegiance to Christ in an Age of Cultural Compromise
+        </p>
 
-            <p class="text-[0.7rem] sm:text-xs uppercase tracking-[0.2em] text-cream/70 leading-relaxed mb-6 max-w-md">
-              Undivided Allegiance to Christ in an Age of Cultural Compromise
-            </p>
+        <p class="text-[0.7rem] uppercase tracking-[0.25em] text-muted mb-12">
+          Drew Reitzel
+        </p>
 
-            <p class="text-[0.7rem] uppercase tracking-[0.25em] text-muted mb-10">
-              Drew Reitzel
-            </p>
+        <a
+          href="#AMAZON_URL"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          Order on Amazon
+        </a>
 
-            <a
-              href="#AMAZON_URL"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-primary"
-            >
-              Order on Amazon
-            </a>
-
-            <!-- Endorsement -->
-            <blockquote class="mt-12 border-l-2 border-red/30 pl-6 max-w-lg text-left">
-              <p class="text-cream/60 italic text-sm leading-relaxed mb-2">
-                "This is the book the Church needs but fears to read. Every pastor in America should have a copy."
-              </p>
-              <cite class="text-muted text-[0.65rem] uppercase tracking-[0.15em] not-italic">
-                — John Dillon, Undivided Allegiance, Orlando, FL
-              </cite>
-            </blockquote>
-          </div>
-        </div>
+        <!-- Endorsement -->
+        <blockquote class="mt-14 max-w-lg">
+          <p class="text-cream/60 italic text-sm leading-relaxed mb-2">
+            "This is the book the Church needs but fears to read. Every pastor in America should have a copy."
+          </p>
+          <cite class="text-muted text-[0.65rem] uppercase tracking-[0.15em] not-italic">
+            — John Dillon, Undivided Allegiance, Orlando, FL
+          </cite>
+        </blockquote>
       </div>
     </section>
 
