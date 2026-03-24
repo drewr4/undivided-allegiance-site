@@ -20,156 +20,122 @@ import { SITE } from '../data/site-config';
     <meta property="og:image" content={new URL(SITE.ogImage, SITE.website)} />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
-  <body>
-    <!-- Hero -->
-    <section class="min-h-screen flex flex-col items-center justify-center bg-black relative py-24 px-6">
-      <div class="flex flex-col items-center text-center max-w-2xl mx-auto">
-        <!-- Brand mark -->
-        <a
-          href="https://undividedallegiance.com"
-          class="text-red text-[0.6rem] font-semibold uppercase tracking-[0.4em] hover:text-red-light transition-colors mb-20 fade-in"
-        >
-          Undivided Allegiance
-        </a>
+  <body class="bg-black">
+    <div class="flex flex-col items-center">
 
-        <!-- Title -->
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold uppercase tracking-[0.08em] text-cream leading-[1.05] mb-8 fade-in">
-          You Can't Serve Two Masters
-        </h1>
+      <!-- Brand mark -->
+      <a
+        href="https://undividedallegiance.com"
+        class="text-red text-[0.6rem] font-semibold uppercase tracking-[0.4em] hover:text-red-light transition-colors pt-12 pb-20 sm:pt-16 sm:pb-24 fade-in"
+      >
+        Undivided Allegiance
+      </a>
 
-        <div class="w-14 h-[1.5px] bg-red mb-8 fade-in"></div>
-
-        <p class="text-[0.65rem] sm:text-[0.7rem] uppercase tracking-[0.22em] text-cream/65 leading-relaxed mb-6 max-w-md fade-in">
-          Undivided Allegiance to Christ in an Age of Cultural Compromise
-        </p>
-
-        <p class="text-[0.65rem] uppercase tracking-[0.3em] text-muted mb-12 fade-in">
-          Drew Reitzel
-        </p>
-
-        <a
-          href="#AMAZON_URL"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-primary fade-in"
-        >
-          Order on Amazon
-        </a>
-
-        <!-- Endorsement -->
-        <blockquote class="mt-16 max-w-md fade-in">
-          <p class="text-cream/50 italic text-sm leading-relaxed mb-3">
-            "This is the book the Church needs but fears to read. Every pastor in America should have a copy."
-          </p>
-          <cite class="text-muted/70 text-[0.6rem] uppercase tracking-[0.18em] not-italic">
-            — John Dillon, Undivided Allegiance, Orlando, FL
-          </cite>
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- Book Cover -->
-    <section class="py-24 sm:py-32 bg-charcoal relative overflow-hidden">
-      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div class="w-80 h-80 bg-red/6 blur-[120px] rounded-full"></div>
-      </div>
-      <div class="relative flex justify-center fade-in">
+      <!-- Book cover -->
+      <div class="relative mb-16 sm:mb-20 fade-in">
+        <div class="absolute -inset-12 bg-red/6 blur-[100px] rounded-full pointer-events-none"></div>
         <Image
           src={bookCover}
           alt="You Can't Serve Two Masters — by Drew Reitzel"
-          class="w-56 sm:w-64 md:w-72 shadow-2xl shadow-black/60"
-          widths={[224, 256, 288]}
-          sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, 288px"
+          class="relative w-52 sm:w-60 md:w-68 shadow-2xl shadow-black/60"
+          widths={[208, 240, 272]}
+          sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, 272px"
         />
       </div>
-    </section>
 
-    <!-- The Indictment -->
-    <section class="section-padding bg-black">
-      <div class="max-w-3xl mx-auto px-6 text-center fade-in">
-        <blockquote class="mb-14">
-          <p class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-cream leading-[1.12] italic">
-            "The Church is not drifting.<br class="hidden sm:block" />
-            It is choosing."
-          </p>
-        </blockquote>
+      <!-- Title -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold uppercase tracking-[0.08em] text-cream leading-[1.05] text-center px-6 mb-8 max-w-3xl fade-in">
+        You Can't Serve Two Masters
+      </h1>
 
-        <div class="w-12 h-[2px] bg-red mx-auto mb-14"></div>
+      <div class="w-14 h-[1.5px] bg-red mb-8 fade-in"></div>
 
-        <div class="text-left space-y-6 text-base sm:text-lg text-cream/75 leading-[1.85]">
-          <p>
-            Choosing cultural approval over biblical fidelity. Choosing silence over conviction. Choosing the language of compassion while abandoning its source. And with every accommodation, every softened sermon, every redefinition of truth dressed up as love — the cost grows heavier and the distance from God grows wider.
-          </p>
-        </div>
+      <p class="text-[0.65rem] sm:text-[0.7rem] uppercase tracking-[0.22em] text-cream/60 leading-relaxed text-center px-6 mb-6 max-w-md fade-in">
+        Undivided Allegiance to Christ in an Age of Cultural Compromise
+      </p>
 
-        <p class="text-cream font-semibold text-lg sm:text-xl mt-10 leading-snug">
+      <p class="text-[0.65rem] uppercase tracking-[0.3em] text-muted mb-12 fade-in">
+        Drew Reitzel
+      </p>
+
+      <a
+        href="#AMAZON_URL"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary fade-in"
+      >
+        Order on Amazon
+      </a>
+
+      <!-- Endorsement -->
+      <blockquote class="mt-14 mb-28 sm:mb-36 max-w-md text-center px-6 fade-in">
+        <p class="text-cream/45 italic text-sm leading-relaxed mb-3">
+          "This is the book the Church needs but fears to read. Every pastor in America should have a copy."
+        </p>
+        <cite class="text-muted/60 text-[0.6rem] uppercase tracking-[0.18em] not-italic">
+          — John Dillon, Undivided Allegiance, Orlando, FL
+        </cite>
+      </blockquote>
+
+      <!-- Body -->
+      <div class="max-w-xl px-6 space-y-7 text-base sm:text-lg text-cream/70 leading-[1.9] fade-in">
+        <p>
+          Choosing cultural approval over biblical fidelity. Choosing silence over conviction. Choosing the language of compassion while abandoning its source. And with every accommodation, every softened sermon, every redefinition of truth dressed up as love — the cost grows heavier and the distance from God grows wider.
+        </p>
+
+        <p class="text-cream/90 font-semibold text-lg sm:text-xl leading-snug">
           This is not a book about politics. It is a book about allegiance.
         </p>
       </div>
-    </section>
 
-    <!-- What This Book Confronts -->
-    <section class="section-padding bg-black">
-      <div class="max-w-3xl mx-auto px-6 fade-in">
-        <h2 class="text-center mb-4">What This Book Confronts</h2>
-        <div class="w-12 h-[2px] bg-red mx-auto mb-14"></div>
+      <!-- Pull quote -->
+      <div class="my-20 sm:my-28 max-w-2xl px-6 text-center fade-in">
+        <p class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-cream italic leading-[1.2]">
+          "The Church is not drifting.<br class="hidden sm:block" />
+          It is choosing."
+        </p>
+      </div>
 
-        <div class="space-y-6 text-base sm:text-lg text-cream/75 leading-[1.85]">
-          <p>
-            <em>You Can't Serve Two Masters</em> confronts the abortion altar, the redefinition of marriage, the silencing of the pulpit, and the cheap grace that has replaced the costly Gospel of Jesus Christ. It does not offer comfort. It offers truth — because truth, spoken in love, is the only thing that can still lead us back.
-          </p>
-          <p>
-            God has not abandoned His people. But His people have wandered far. The watchman is sounding the alarm. The question is no longer whether judgment is coming. The question is whether you will hear it before it arrives.
-          </p>
-        </div>
+      <!-- More body -->
+      <div class="max-w-xl px-6 space-y-7 text-base sm:text-lg text-cream/70 leading-[1.9] fade-in">
+        <p>
+          <em>You Can't Serve Two Masters</em> confronts the abortion altar, the redefinition of marriage, the silencing of the pulpit, and the cheap grace that has replaced the costly Gospel of Jesus Christ. It does not offer comfort. It offers truth — because truth, spoken in love, is the only thing that can still lead us back.
+        </p>
 
-        <p class="text-cream font-semibold text-lg sm:text-xl text-center mt-10 leading-snug">
+        <p>
+          God has not abandoned His people. But His people have wandered far. The watchman is sounding the alarm. The question is no longer whether judgment is coming. The question is whether you will hear it before it arrives.
+        </p>
+
+        <p class="text-cream/90 font-semibold text-lg sm:text-xl leading-snug">
           Repentance is not the end. It is the only way home.
         </p>
       </div>
-    </section>
 
-    <!-- About the Author -->
-    <section class="section-padding bg-charcoal">
-      <div class="max-w-3xl mx-auto px-6 fade-in">
-        <span class="text-red text-[0.65rem] font-semibold uppercase tracking-[0.25em] block mb-4 text-center">The Author</span>
-        <h2 class="text-center mb-4">About Drew Reitzel</h2>
-        <div class="w-12 h-[2px] bg-red mx-auto mb-14"></div>
-
-        <div class="text-base sm:text-lg text-cream/75 leading-[1.85]">
-          <p>
-            Drew Reitzel holds a degree in theology and served for several years in pastoral ministry before spending the last twenty-five years in the marketplace. He writes not from a distance but from the middle of the road — as someone who has known the mountaintop and the valley, who has carried his own cross, and who understands what it means to love God and still struggle to obey Him. This book was not written from a place of arrival. It was written from a place of conviction — by a man who has seen enough of his own failure to know that repentance is not theory, and enough of God's mercy to know that it is always available. His heart is for the Church, for the lost, and for a nation that still has time to turn.
-          </p>
-        </div>
+      <!-- Author -->
+      <div class="max-w-xl px-6 mt-24 sm:mt-32 mb-24 sm:mb-32 fade-in">
+        <p class="text-cream/70 text-base sm:text-lg leading-[1.9]">
+          Drew Reitzel holds a degree in theology and served for several years in pastoral ministry before spending the last twenty-five years in the marketplace. He writes not from a distance but from the middle of the road — as someone who has known the mountaintop and the valley, who has carried his own cross, and who understands what it means to love God and still struggle to obey Him. This book was not written from a place of arrival. It was written from a place of conviction — by a man who has seen enough of his own failure to know that repentance is not theory, and enough of God's mercy to know that it is always available. His heart is for the Church, for the lost, and for a nation that still has time to turn.
+        </p>
       </div>
-    </section>
 
-    <!-- Final CTA -->
-    <section class="section-padding bg-black text-center">
-      <div class="max-w-2xl mx-auto px-6 fade-in">
-        <div class="w-16 h-[2px] bg-red mx-auto mb-10"></div>
+      <!-- Final CTA -->
+      <a
+        href="#AMAZON_URL"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary fade-in"
+      >
+        Order on Amazon
+      </a>
 
-        <h2 class="mb-10">The Time to Read This Is Now</h2>
+      <a
+        href="https://undividedallegiance.com"
+        class="text-muted/50 hover:text-cream text-[0.6rem] uppercase tracking-[0.25em] transition-colors mt-16 mb-16 fade-in"
+      >
+        undividedallegiance.com
+      </a>
 
-        <a
-          href="#AMAZON_URL"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-primary mb-12"
-        >
-          Order on Amazon
-        </a>
-
-        <div class="mt-12 pt-10 border-t border-cream/5">
-          <a
-            href="https://undividedallegiance.com"
-            class="text-muted hover:text-cream text-xs uppercase tracking-[0.2em] transition-colors"
-          >
-            undividedallegiance.com
-          </a>
-        </div>
-      </div>
-    </section>
+    </div>
 
     <script>
       const observer = new IntersectionObserver(
