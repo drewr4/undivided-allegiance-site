@@ -21,37 +21,35 @@ import { SITE } from '../data/site-config';
     <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body class="bg-black">
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center text-center">
 
       <!-- Brand mark -->
       <a
         href="https://undividedallegiance.com"
-        class="text-red text-[0.6rem] font-semibold uppercase tracking-[0.4em] hover:text-red-light transition-colors pt-12 pb-20 sm:pt-16 sm:pb-24 fade-in"
+        class="text-red text-sm font-semibold uppercase tracking-[0.35em] hover:text-red-light transition-colors pt-10 pb-12 sm:pt-12 sm:pb-14 fade-in"
       >
         Undivided Allegiance
       </a>
 
       <!-- Book cover -->
-      <div class="relative mb-16 sm:mb-20 fade-in w-full flex justify-center">
-        <div class="relative">
-          <div class="absolute -inset-12 bg-red/6 blur-[100px] rounded-full pointer-events-none"></div>
-          <Image
-            src={bookCover}
-            alt="You Can't Serve Two Masters — by Drew Reitzel"
-            class="relative w-52 sm:w-60 md:w-68 shadow-2xl shadow-black/60"
-            widths={[208, 240, 272]}
-            sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, 272px"
-          />
-        </div>
+      <div class="relative mb-10 sm:mb-12 fade-in mx-auto">
+        <div class="absolute -inset-12 bg-red/6 blur-[100px] rounded-full pointer-events-none"></div>
+        <Image
+          src={bookCover}
+          alt="You Can't Serve Two Masters — by Drew Reitzel"
+          class="relative w-52 sm:w-60 md:w-68 shadow-2xl shadow-black/60 mx-auto block"
+          widths={[208, 240, 272]}
+          sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, 272px"
+        />
       </div>
 
-      <div class="w-14 h-[1.5px] bg-red mb-8 fade-in"></div>
+      <div class="w-14 h-[1.5px] bg-red mb-5 fade-in"></div>
 
-      <p class="text-[0.65rem] sm:text-[0.7rem] uppercase tracking-[0.22em] text-cream/60 leading-relaxed text-center px-6 mb-6 max-w-md fade-in">
+      <p class="text-[0.65rem] sm:text-[0.7rem] uppercase tracking-[0.22em] text-cream/60 leading-relaxed px-6 mb-4 max-w-md fade-in">
         Undivided Allegiance to Christ in an Age of Cultural Compromise
       </p>
 
-      <p class="text-[0.65rem] uppercase tracking-[0.3em] text-muted mb-12 fade-in">
+      <p class="text-[0.65rem] uppercase tracking-[0.3em] text-muted mb-8 fade-in">
         Drew Reitzel
       </p>
 
@@ -65,7 +63,7 @@ import { SITE } from '../data/site-config';
       </a>
 
       <!-- Endorsement -->
-      <blockquote class="mt-14 mb-28 sm:mb-36 max-w-md text-center px-6 fade-in">
+      <blockquote class="mt-10 mb-16 sm:mb-20 max-w-md px-6 fade-in">
         <p class="text-cream/45 italic text-sm leading-relaxed mb-3">
           "This is the book the Church needs but fears to read. Every pastor in America should have a copy."
         </p>
@@ -75,7 +73,7 @@ import { SITE } from '../data/site-config';
       </blockquote>
 
       <!-- Body -->
-      <div class="max-w-xl px-6 space-y-7 text-base sm:text-lg text-cream/70 leading-[1.9] fade-in">
+      <div class="max-w-[700px] w-full px-6 space-y-5 text-base sm:text-lg text-cream/70 leading-[1.85] fade-in">
         <p>
           Choosing cultural approval over biblical fidelity. Choosing silence over conviction. Choosing the language of compassion while abandoning its source. And with every accommodation, every softened sermon, every redefinition of truth dressed up as love — the cost grows heavier and the distance from God grows wider.
         </p>
@@ -86,7 +84,7 @@ import { SITE } from '../data/site-config';
       </div>
 
       <!-- Pull quote -->
-      <div class="my-20 sm:my-28 max-w-2xl px-6 text-center fade-in">
+      <div class="my-10 sm:my-14 max-w-2xl px-6 fade-in">
         <p class="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-cream italic leading-[1.2]">
           "The Church is not drifting.<br class="hidden sm:block" />
           It is choosing."
@@ -94,7 +92,7 @@ import { SITE } from '../data/site-config';
       </div>
 
       <!-- More body -->
-      <div class="max-w-xl px-6 space-y-7 text-base sm:text-lg text-cream/70 leading-[1.9] fade-in">
+      <div class="max-w-[700px] w-full px-6 space-y-5 text-base sm:text-lg text-cream/70 leading-[1.85] fade-in">
         <p>
           <em>You Can't Serve Two Masters</em> confronts the abortion altar, the redefinition of marriage, the silencing of the pulpit, and the cheap grace that has replaced the costly Gospel of Jesus Christ. It does not offer comfort. It offers truth — because truth, spoken in love, is the only thing that can still lead us back.
         </p>
@@ -109,8 +107,8 @@ import { SITE } from '../data/site-config';
       </div>
 
       <!-- Author -->
-      <div class="max-w-xl px-6 mt-24 sm:mt-32 mb-24 sm:mb-32 fade-in">
-        <p class="text-cream/70 text-base sm:text-lg leading-[1.9]">
+      <div class="max-w-[700px] w-full px-6 mt-14 sm:mt-18 mb-14 sm:mb-18 fade-in">
+        <p class="text-cream/70 text-base sm:text-lg leading-[1.85]">
           Drew Reitzel holds a degree in theology and served for several years in pastoral ministry before spending the last twenty-five years in the marketplace. He writes not from a distance but from the middle of the road — as someone who has known the mountaintop and the valley, who has carried his own cross, and who understands what it means to love God and still struggle to obey Him. This book was not written from a place of arrival. It was written from a place of conviction — by a man who has seen enough of his own failure to know that repentance is not theory, and enough of God's mercy to know that it is always available. His heart is for the Church, for the lost, and for a nation that still has time to turn.
         </p>
       </div>
@@ -127,7 +125,7 @@ import { SITE } from '../data/site-config';
 
       <a
         href="https://undividedallegiance.com"
-        class="text-muted/50 hover:text-cream text-[0.6rem] uppercase tracking-[0.25em] transition-colors mt-16 mb-16 fade-in"
+        class="text-muted/50 hover:text-cream text-[0.6rem] uppercase tracking-[0.25em] transition-colors mt-10 mb-10 fade-in"
       >
         undividedallegiance.com
       </a>
