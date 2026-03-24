@@ -22,42 +22,28 @@ import { SITE } from '../data/site-config';
   </head>
   <body>
     <!-- Hero -->
-    <section class="flex flex-col items-center bg-black relative py-20 sm:py-28 md:py-36 px-8 sm:px-12 md:px-16">
-      <!-- Brand mark -->
-      <div class="text-center mb-16 fade-in">
+    <section class="min-h-screen flex flex-col items-center justify-center bg-black relative py-24 px-6">
+      <div class="flex flex-col items-center text-center max-w-2xl mx-auto">
+        <!-- Brand mark -->
         <a
           href="https://undividedallegiance.com"
-          class="text-red text-[0.65rem] font-semibold uppercase tracking-[0.35em] hover:text-red-light transition-colors"
+          class="text-red text-[0.6rem] font-semibold uppercase tracking-[0.4em] hover:text-red-light transition-colors mb-20 fade-in"
         >
           Undivided Allegiance
         </a>
-      </div>
-
-      <div class="flex flex-col items-center text-center w-full fade-in">
-        <!-- Book cover -->
-        <div class="relative mb-14">
-          <div class="absolute -inset-8 bg-red/8 blur-[80px]"></div>
-          <Image
-            src={bookCover}
-            alt="You Can't Serve Two Masters — by Drew Reitzel"
-            class="relative w-56 sm:w-64 md:w-72 shadow-2xl shadow-black/50"
-            widths={[224, 256, 288]}
-            sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, 288px"
-          />
-        </div>
 
         <!-- Title -->
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold uppercase tracking-[0.06em] text-cream leading-[1.0] mb-8 max-w-5xl">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold uppercase tracking-[0.08em] text-cream leading-[1.05] mb-8 fade-in">
           You Can't Serve Two Masters
         </h1>
 
-        <div class="w-16 h-[2px] bg-red mb-8"></div>
+        <div class="w-14 h-[1.5px] bg-red mb-8 fade-in"></div>
 
-        <p class="text-[0.7rem] sm:text-xs uppercase tracking-[0.2em] text-cream/70 leading-relaxed mb-6 max-w-lg">
+        <p class="text-[0.65rem] sm:text-[0.7rem] uppercase tracking-[0.22em] text-cream/65 leading-relaxed mb-6 max-w-md fade-in">
           Undivided Allegiance to Christ in an Age of Cultural Compromise
         </p>
 
-        <p class="text-[0.7rem] uppercase tracking-[0.25em] text-muted mb-12">
+        <p class="text-[0.65rem] uppercase tracking-[0.3em] text-muted mb-12 fade-in">
           Drew Reitzel
         </p>
 
@@ -65,25 +51,41 @@ import { SITE } from '../data/site-config';
           href="#AMAZON_URL"
           target="_blank"
           rel="noopener noreferrer"
-          class="btn-primary"
+          class="btn-primary fade-in"
         >
           Order on Amazon
         </a>
 
         <!-- Endorsement -->
-        <blockquote class="mt-14 max-w-lg">
-          <p class="text-cream/60 italic text-sm leading-relaxed mb-2">
+        <blockquote class="mt-16 max-w-md fade-in">
+          <p class="text-cream/50 italic text-sm leading-relaxed mb-3">
             "This is the book the Church needs but fears to read. Every pastor in America should have a copy."
           </p>
-          <cite class="text-muted text-[0.65rem] uppercase tracking-[0.15em] not-italic">
+          <cite class="text-muted/70 text-[0.6rem] uppercase tracking-[0.18em] not-italic">
             — John Dillon, Undivided Allegiance, Orlando, FL
           </cite>
         </blockquote>
       </div>
     </section>
 
+    <!-- Book Cover -->
+    <section class="py-24 sm:py-32 bg-charcoal relative overflow-hidden">
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="w-80 h-80 bg-red/6 blur-[120px] rounded-full"></div>
+      </div>
+      <div class="relative flex justify-center fade-in">
+        <Image
+          src={bookCover}
+          alt="You Can't Serve Two Masters — by Drew Reitzel"
+          class="w-56 sm:w-64 md:w-72 shadow-2xl shadow-black/60"
+          widths={[224, 256, 288]}
+          sizes="(max-width: 640px) 224px, (max-width: 768px) 256px, 288px"
+        />
+      </div>
+    </section>
+
     <!-- The Indictment -->
-    <section class="section-padding bg-charcoal">
+    <section class="section-padding bg-black">
       <div class="max-w-3xl mx-auto px-6 text-center fade-in">
         <blockquote class="mb-14">
           <p class="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-cream leading-[1.12] italic">
