@@ -15,6 +15,7 @@ export const NAV_LINKS = [
   { text: 'Speaking', href: '/speaking/' },
   { text: 'Podcast', href: '/podcast/' },
   { text: 'Video', href: '/video/' },
+  { text: 'Newsletter', href: '/newsletter/' },
   { text: 'Contact', href: '/contact/' },
 ];
 
