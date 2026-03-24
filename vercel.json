@@ -1,24 +1,3 @@
 {
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "book.undividedallegiance.com"
-        }
-      ],
-      "destination": "/book-landing/"
-    },
-    {
-      "source": "/((?!book-landing|_astro|favicon).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "book.undividedallegiance.com"
-        }
-      ],
-      "destination": "/book-landing/"
-    }
-  ]
+  "framework": null
 }
