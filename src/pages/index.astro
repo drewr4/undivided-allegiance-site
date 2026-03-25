@@ -15,10 +15,10 @@ const latestPosts = posts.slice(0, 3);
   <!-- Hero -->
   <section class="relative min-h-[90vh] flex items-center -mt-20">
     <VideoBackground overlay overlayOpacity={0.75} />
-    <div class="relative z-10 container mx-auto px-6 py-32">
+    <div class="relative z-10 container hp-container mx-auto px-6 py-32">
       <div class="max-w-3xl">
         <div class="divider mb-8"></div>
-        <h1 class="mb-6 text-cream">
+        <h1 class="hero-headline mb-6 text-cream">
           The Church is not drifting.<br />
           <span class="text-red">It is choosing.</span>
         </h1>
@@ -37,9 +37,9 @@ const latestPosts = posts.slice(0, 3);
 
   <!-- Mission Statement -->
   <section class="section-padding bg-black">
-    <div class="container mx-auto px-6 text-center max-w-4xl fade-in">
+    <div class="container hp-container mx-auto px-6 text-center max-w-4xl fade-in">
       <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-6">The Mission</span>
-      <h2 class="mb-8">
+      <h2 class="mission-heading mb-8">
         A prophetic voice calling the Church back to biblical fidelity
       </h2>
       <div class="divider mx-auto mb-8"></div>
@@ -52,7 +52,7 @@ const latestPosts = posts.slice(0, 3);
 
   <!-- Featured Book -->
   <section class="section-padding bg-charcoal">
-    <div class="container mx-auto px-6">
+    <div class="container hp-container mx-auto px-6">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center fade-in">
         <div class="flex justify-center lg:justify-end">
           <div class="relative">
@@ -68,7 +68,7 @@ const latestPosts = posts.slice(0, 3);
         </div>
         <div>
           <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-4">The Book</span>
-          <h2 class="mb-6">You Can't Serve Two Masters</h2>
+          <h2 class="book-title mb-6">You Can't Serve Two Masters</h2>
           <div class="divider mb-6"></div>
           <p class="text-muted-light text-lg leading-relaxed mb-4">
             The American Church stands at a crossroads. It has traded the authority of Scripture
@@ -79,7 +79,7 @@ const latestPosts = posts.slice(0, 3);
             A call to examine what we have accepted, what we have abandoned,
             and whether we are willing to return to the narrow road that Christ actually described.
           </p>
-          <p class="text-cream text-2xl uppercase tracking-[0.12em] font-bold mb-6">Available April 30, 2026</p>
+          <p class="available-date text-cream text-2xl uppercase tracking-[0.12em] font-bold mb-6">Available April 30, 2026</p>
           <a href="/book/" class="btn-secondary">
             Learn More
           </a>
@@ -91,7 +91,7 @@ const latestPosts = posts.slice(0, 3);
   <!-- Latest Content -->
   {latestPosts.length > 0 && (
     <section class="section-padding bg-black">
-      <div class="container mx-auto px-6 fade-in">
+      <div class="container hp-container mx-auto px-6 fade-in">
         <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12">
           <div>
             <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-4">Latest</span>
@@ -119,3 +119,43 @@ const latestPosts = posts.slice(0, 3);
   <!-- Email Capture -->
   <EmailCapture heading="Join the Remnant" subtext="Prophetic writing delivered to those who refuse to look away. No spam. Unsubscribe anytime." />
 </BaseLayout>
+
+<style>
+  /* Mobile portrait — narrow vertical screens */
+  @media (max-width: 768px) and (orientation: portrait) {
+    .hero-headline {
+      font-size: 1.75rem;
+    }
+    .mission-heading {
+      font-size: 1.5rem;
+    }
+    .book-title {
+      font-size: 1.5rem;
+    }
+    .available-date {
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+    .hp-container {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+  }
+
+  /* Mobile landscape — wider horizontal screens */
+  @media (max-width: 768px) and (orientation: landscape) {
+    .hero-headline {
+      font-size: 2.25rem;
+    }
+    .mission-heading {
+      font-size: 1.75rem;
+    }
+    .book-title {
+      font-size: 1.75rem;
+    }
+    .available-date {
+      font-size: 1.25rem;
+      white-space: nowrap;
+    }
+  }
+</style>
