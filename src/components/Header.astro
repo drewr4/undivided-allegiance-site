@@ -80,7 +80,7 @@ const currentPath = Astro.url.pathname;
         header.style.backgroundColor = 'transparent';
         header.style.backdropFilter = 'none';
       }
-      if (!isOpen && currentScroll > lastScroll && currentScroll > 200) {
+      if (currentScroll > lastScroll && currentScroll > 200) {
         header.style.transform = 'translateY(-100%)';
       } else {
         header.style.transform = 'translateY(0)';
@@ -111,7 +111,6 @@ const currentPath = Astro.url.pathname;
   mobileMenu?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       isOpen = false;
-      toggle?.setAttribute('aria-expanded', 'false');
       mobileMenu.classList.add('hidden');
       document.body.style.overflow = '';
       if (bar1) { bar1.style.transform = 'none'; }
