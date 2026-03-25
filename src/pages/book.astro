@@ -32,7 +32,7 @@ import bookCover from '../assets/book-cover.png';
           <p class="text-sm uppercase tracking-[0.2em] text-muted mb-10">
             Drew Reitzel
           </p>
-          <div>
+          <div style="overflow: hidden; width: 100%;">
             <p class="available-date text-cream text-2xl uppercase tracking-[0.12em] font-bold mb-4">Available April 30, 2026</p>
             <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
             <iframe src="https://subscribe-forms.beehiiv.com/c3ad021c-2a0f-40d3-9b52-2058dd05b6a5" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; max-width: 560px; height: 291px; margin: 0; border-radius: 0px 0px 0px 0px !important; background-color: transparent; box-shadow: 0 0 #0000;"></iframe>
@@ -108,7 +108,7 @@ import bookCover from '../assets/book-cover.png';
     <div class="container mx-auto px-6 max-w-2xl fade-in">
       <div class="w-20 h-[2px] bg-red mx-auto mb-8"></div>
       <h2 class="mb-8">The Time to Read This Is Now</h2>
-      <div class="mb-8">
+      <div class="mb-8" style="overflow: hidden; width: 100%;">
         <p class="available-date text-cream text-2xl uppercase tracking-[0.12em] font-bold mb-4">Available April 30, 2026</p>
         <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
         <iframe src="https://subscribe-forms.beehiiv.com/c3ad021c-2a0f-40d3-9b52-2058dd05b6a5" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; max-width: 560px; height: 291px; margin: 0; border-radius: 0px 0px 0px 0px !important; background-color: transparent; box-shadow: 0 0 #0000;"></iframe>
@@ -124,6 +124,9 @@ import bookCover from '../assets/book-cover.png';
     </div>
   </section>
   <style>
+    :global(body) {
+      overflow-x: hidden;
+    }
     @media (max-width: 768px) and (orientation: portrait) {
       .available-date {
         font-size: 1rem;
