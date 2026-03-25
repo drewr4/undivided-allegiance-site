@@ -123,19 +123,18 @@ import bookCover from '../assets/book-cover.png';
       </div>
     </div>
   </section>
+  <style>
+    @media (max-width: 768px) and (orientation: portrait) {
+      .available-date {
+        font-size: 1rem;
+        white-space: nowrap;
+      }
+    }
+    @media (max-width: 768px) and (orientation: landscape) {
+      .available-date {
+        font-size: 1.25rem;
+        white-space: nowrap;
+      }
+    }
+  </style>
 </BaseLayout>
-
-<style>
-  @media (max-width: 768px) and (orientation: portrait) {
-    .available-date {
-      font-size: 1rem;
-      white-space: nowrap;
-    }
-  }
-  @media (max-width: 768px) and (orientation: landscape) {
-    .available-date {
-      font-size: 1.25rem;
-      white-space: nowrap;
-    }
-  }
-</style>
