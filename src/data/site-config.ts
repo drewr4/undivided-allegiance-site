@@ -20,11 +20,11 @@ export const NAV_LINKS = [
 ];
 
 export const SOCIAL_LINKS = [
-  { platform: 'X', href: 'https://x.com/UndivAllegiance', icon: 'twitter' },
-  { platform: 'Instagram', href: 'https://instagram.com/undividedallegiance', icon: 'instagram' },
-  { platform: 'YouTube', href: 'https://youtube.com/@UndividedAllegiance', icon: 'youtube' },
   { platform: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61579550235172', icon: 'facebook' },
-  { platform: 'LinkedIn', href: 'https://www.linkedin.com/company/undivided-allegiance', icon: 'linkedin' },
-  { platform: 'Threads', href: 'https://threads.net/@undividedallegiance', icon: 'threads' },
+  { platform: 'Instagram', href: 'https://instagram.com/undividedallegiance', icon: 'instagram' },
   { platform: 'TikTok', href: 'https://www.tiktok.com/@undividedallegiance', icon: 'tiktok' },
+  { platform: 'X', href: 'https://x.com/UndivAllegiance', icon: 'twitter' },
+  { platform: 'LinkedIn', href: 'https://www.linkedin.com/company/undivided-allegiance', icon: 'linkedin' },
+  { platform: 'YouTube', href: 'https://youtube.com/@UndividedAllegiance', icon: 'youtube' },
+  { platform: 'Threads', href: 'https://threads.net/@undividedallegiance', icon: 'threads' },
 ];
