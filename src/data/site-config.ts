@@ -26,4 +26,5 @@ export const SOCIAL_LINKS = [
   { platform: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61579550235172', icon: 'facebook' },
   { platform: 'LinkedIn', href: 'https://www.linkedin.com/company/undivided-allegiance', icon: 'linkedin' },
   { platform: 'Threads', href: 'https://threads.net/@undividedallegiance', icon: 'threads' },
+  { platform: 'TikTok', href: 'https://www.tiktok.com/@undividedallegiance', icon: 'tiktok' },
 ];
