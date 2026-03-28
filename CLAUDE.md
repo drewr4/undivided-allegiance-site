@@ -1,52 +1,28 @@
-## Workflow Orchestration
+# Undivided Allegiance Site
 
-### 1. Plan Mode Default
-- Enter plan mode for ANY non-trivial task (3+ steps or architectural decisions)
-- If something goes sideways, STOP and re-plan immediately - don't keep pushing
-- Use plan mode for verification steps, not just building
-- Write detailed specs upfront to reduce ambiguity
+## Project
 
-### 2. Subagent Strategy
-- Use subagents liberally to keep main context window clean
-- Offload research, exploration, and parallel analysis to subagents
-- For complex problems, throw more compute at it via subagents
-- One task per subagent for focused execution
+- **Stack**: Astro 6, TypeScript, Tailwind CSS v4, MDX
+- **Site**: https://undividedallegiance.com
+- **Deploy**: GitHub Pages via Actions (push to `main` triggers build)
+- **Dev server**: `npm run dev` (localhost:4321)
+- **Build**: `npm run build` (outputs to `dist/`)
+- **No test or lint commands configured**
 
-### 3. Self-Improvement Loop
-- After ANY correction from the user: update `tasks/lessons.md` with the pattern
-- Write rules for yourself that prevent the same mistake
-- Ruthlessly iterate on these lessons until mistake rate drops
-- Review lessons at session start for relevant project
+## Architecture
 
-### 4. Verification Before Done
-- Never mark a task complete without proving it works
-- Diff behavior between main and your changes when relevant
-- Ask yourself: "Would a staff engineer approve this?"
-- Run tests, check logs, demonstrate correctness
+- `src/pages/` - File-based routing (Astro pages)
+- `src/components/` - Reusable Astro components
+- `src/layouts/` - BaseLayout, BlogPostLayout
+- `src/content/blog/` - MDX blog posts with frontmatter schema
+- `src/data/site-config.ts` - Nav links, social links, metadata
+- `src/styles/global.css` - Tailwind directives
+- `middleware.ts` - Vercel edge: `book.` subdomain rewrites to `/book-landing/`
+- Path alias: `@/*` maps to `src/*`
 
-### 5. Demand Elegance (Balanced)
-- For non-trivial changes: pause and ask "is there a more elegant way?"
-- If a fix feels hacky: "Knowing everything I know now, implement the elegant solution"
-- Skip this for simple, obvious fixes - don't over-engineer
-- Challenge your own work before presenting it
+## Rules
 
-### 6. Autonomous Bug Fixing
-- When given a bug report: just fix it. Don't ask for hand-holding
-- Point at logs, errors, failing tests - then resolve them
-- Zero context switching required from the user
-- Go fix failing CI tests without being told how
-
-## Task Management
-
-1. **Plan First**: Write plan to `tasks/todo.md` with checkable items
-2. **Verify Plan**: Check in before starting implementation
-3. **Track Progress**: Mark items complete as you go
-4. **Explain Changes**: High-level summary at each step
-5. **Document Results**: Add review section to `tasks/todo.md`
-6. **Capture Lessons**: Update `tasks/lessons.md` after corrections
-
-## Core Principles
-
-- **Simplicity First**: Make every change as simple as possible. Impact minimal code.
-- **Laziness**: Find root causes. No temporary fixes. Senior developer standards.
-- **Minimalism**: Only touch what's necessary. Avoid introducing bugs.
+- Verify changes work by running `npm run build` before calling it done
+- Fix bugs autonomously - don't ask, just fix
+- Keep changes minimal and simple
+- Check in before starting large refactors
