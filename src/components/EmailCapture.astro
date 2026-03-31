@@ -20,9 +20,26 @@ const {
     <div class="divider mx-auto mb-6"></div>
     <p class="text-muted text-lg leading-relaxed mb-8">{subtext}</p>
 
-    <div class="flex justify-center">
+    <div class="w-full max-w-[560px] mx-auto">
       <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-      <iframe src="https://subscribe-forms.beehiiv.com/c3ad021c-2a0f-40d3-9b52-2058dd05b6a5" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; max-width: 560px; height: 291px; margin: 0; border-radius: 0px 0px 0px 0px !important; background-color: transparent; box-shadow: 0 0 #0000;"></iframe>
+      <iframe src="https://subscribe-forms.beehiiv.com/c3ad021c-2a0f-40d3-9b52-2058dd05b6a5" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no"></iframe>
     </div>
   </div>
 </section>
+
+<style>
+  .beehiiv-embed {
+    width: 100%;
+    max-width: 560px;
+    height: 340px;
+    margin: 0;
+    border-radius: 0 !important;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  @media (min-width: 480px) {
+    .beehiiv-embed {
+      height: 291px;
+    }
+  }
+</style>

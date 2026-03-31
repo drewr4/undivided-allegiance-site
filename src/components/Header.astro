@@ -5,7 +5,7 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="site-header">
-  <div class="container mx-auto px-6 flex items-center justify-between h-20">
+  <div class="relative z-[70] container mx-auto px-6 flex items-center justify-between h-20">
     <a href="/" class="font-heading text-xl font-bold tracking-tight text-cream hover:text-red transition-colors">
       {SITE.title}
     </a>
@@ -38,7 +38,7 @@ const currentPath = Astro.url.pathname;
     </button>
   </div>
 
-  <div class="lg:hidden hidden fixed inset-0 bg-black/98 z-40" id="mobile-menu">
+  <div class="lg:hidden hidden fixed inset-0 bg-black/98 z-[60]" id="mobile-menu">
     <div class="flex flex-col items-center justify-center h-full gap-8">
       {NAV_LINKS.map((link) => (
         <a
