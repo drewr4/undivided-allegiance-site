@@ -41,12 +41,24 @@ const currentPath = Astro.url.pathname;
 
 <!-- Mobile menu lives OUTSIDE header to escape its stacking context -->
 <div class="lg:hidden hidden fixed inset-0 bg-black/98 z-[9998]" id="mobile-menu">
-  <div class="flex flex-col items-center justify-center h-full gap-8">
+  <!-- Fixed close button — always accessible -->
+  <button
+    class="fixed top-6 right-6 z-[9999] p-2"
+    id="mobile-menu-close"
+    aria-label="Close menu"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-cream">
+      <path d="M18 6L6 18M6 6l12 12"/>
+    </svg>
+  </button>
+
+  <!-- Scrollable nav links -->
+  <div class="mobile-menu-inner">
     {NAV_LINKS.map((link) => (
       <a
         href={link.href}
         class:list={[
-          'text-2xl font-heading font-bold transition-colors',
+          'mobile-menu-link font-heading font-bold transition-colors',
           currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))
             ? 'text-red'
             : 'text-cream hover:text-red',
@@ -58,16 +70,81 @@ const currentPath = Astro.url.pathname;
   </div>
 </div>
 
+<style>
+  .mobile-menu-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 5rem 1.5rem;
+    gap: 2rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+  .mobile-menu-link {
+    font-size: 1.5rem;
+  }
+
+  /* Portrait: tighter spacing when screen is short */
+  @media (max-height: 500px) {
+    .mobile-menu-inner {
+      justify-content: flex-start;
+      padding-top: 4rem;
+      gap: 1rem;
+    }
+    .mobile-menu-link {
+      font-size: 1.125rem;
+    }
+  }
+
+  /* Landscape mobile: two-column grid with smaller text */
+  @media (orientation: landscape) and (max-height: 500px) {
+    .mobile-menu-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      align-content: start;
+      padding-top: 4rem;
+      gap: 1rem 2rem;
+    }
+    .mobile-menu-link {
+      font-size: 1.125rem;
+    }
+  }
+</style>
+
 <div class="h-20"></div>
 
 <script>
   const header = document.getElementById('site-header');
   const toggle = document.getElementById('mobile-menu-toggle');
+  const closeBtn = document.getElementById('mobile-menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
   const bar1 = document.getElementById('bar1');
   const bar2 = document.getElementById('bar2');
   const bar3 = document.getElementById('bar3');
   let isOpen = false;
+
+  function openMenu() {
+    isOpen = true;
+    toggle?.setAttribute('aria-expanded', 'true');
+    mobileMenu?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    if (bar1) { bar1.style.transform = 'rotate(45deg) translate(4px, 4px)'; }
+    if (bar2) { bar2.style.opacity = '0'; }
+    if (bar3) { bar3.style.transform = 'rotate(-45deg) translate(4px, -4px)'; }
+  }
+
+  function closeMenu() {
+    isOpen = false;
+    toggle?.setAttribute('aria-expanded', 'false');
+    mobileMenu?.classList.add('hidden');
+    document.body.style.overflow = '';
+    if (bar1) { bar1.style.transform = 'none'; }
+    if (bar2) { bar2.style.opacity = '1'; }
+    if (bar3) { bar3.style.transform = 'none'; }
+  }
 
   // Scroll behavior
   let lastScroll = 0;
@@ -90,33 +167,16 @@ const currentPath = Astro.url.pathname;
     lastScroll = currentScroll;
   });
 
-  // Mobile menu toggle
+  // Open via hamburger
   toggle?.addEventListener('click', () => {
-    isOpen = !isOpen;
-    toggle.setAttribute('aria-expanded', String(isOpen));
-    mobileMenu?.classList.toggle('hidden');
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-
-    if (isOpen) {
-      if (bar1) { bar1.style.transform = 'rotate(45deg) translate(4px, 4px)'; }
-      if (bar2) { bar2.style.opacity = '0'; }
-      if (bar3) { bar3.style.transform = 'rotate(-45deg) translate(4px, -4px)'; }
-    } else {
-      if (bar1) { bar1.style.transform = 'none'; }
-      if (bar2) { bar2.style.opacity = '1'; }
-      if (bar3) { bar3.style.transform = 'none'; }
-    }
+    isOpen ? closeMenu() : openMenu();
   });
 
-  // Close mobile menu on link click
+  // Close via X button
+  closeBtn?.addEventListener('click', closeMenu);
+
+  // Close on link click
   mobileMenu?.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      isOpen = false;
-      mobileMenu.classList.add('hidden');
-      document.body.style.overflow = '';
-      if (bar1) { bar1.style.transform = 'none'; }
-      if (bar2) { bar2.style.opacity = '1'; }
-      if (bar3) { bar3.style.transform = 'none'; }
-    });
+    link.addEventListener('click', closeMenu);
   });
 </script>
