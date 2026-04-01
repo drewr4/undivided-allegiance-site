@@ -27,17 +27,38 @@
 - **Posting Automation**: Zapier + Buffer handle scheduled posting from the sheet
 - **Google Drive**: Content documents and filing system for pipeline assets
 - **Campaigns**: Two active content campaigns — book promotion ("You Can't Serve Two Masters") and newsletter signup
-- **Site Health Monitor**: Google Apps Script checks all pages + Beehiiv endpoints 4x/day (every 6 hours), emails alerts on failure and recovery
+- **Site Health Monitor**: Google Apps Script checks all pages + Beehiiv endpoints 4x/day (every 6 hours), sends status email every run (subject shows pass/fail at a glance). Script file: `~/Desktop/SiteHealthMonitor.gs`
 
 ## Book Launch (April 30, 2026)
 
 - **Book**: "You Can't Serve Two Masters" — ISBN 979-8-2786-09926, $9.99 Kindle / $16.99 Print
-- **Preorder**: Kindle preorder submitted Mar 31, Amazon link pending (~72 hours)
-- **Meta Pixel**: Installed in BaseLayout.astro with placeholder ID `REPLACE_WITH_META_PIXEL_ID` — swap when Events Manager provides real ID
+- **Preorder**: Kindle preorder live at https://www.amazon.com/dp/B0FGY9PL66
+- **Site CTA Strategy**: Ads point to /book/ page (not direct Amazon link) to capture both buyers (preorder button) and non-buyers (newsletter signup). After Apr 30, update buttons to reflect both Kindle and print being live.
+- **Announcement Bar**: Red bar at top of every page (BaseLayout.astro) linking to Amazon preorder
+- **Meta Pixel**: Installed in BaseLayout.astro with ID `1289553056416593`
 - **TikTok Pixel**: Not yet installed — pending TikTok Ads Manager setup
 - **Paid Ads**: Meta + TikTok, $10-20/day budget, 70/30 preorder/email split weeks 1-2, 90/10 weeks 3-4
 - **Email**: The Remnant (Beehiiv) — 4 issues planned before launch (Apr 2, 9, 16, 23) + launch day issue Apr 30
 - **30-day launch plan**: Approved Mar 31, 3 phases (Foundation → Build → Launch)
+
+## Mobile Menu
+
+- Mobile menu `<div>` lives OUTSIDE `<header>` in Header.astro to escape the header's stacking context (z-50)
+- Menu overlay: `z-[9998]`, close button: `z-[9999]`, hamburger toggle: `z-[9999]`
+- Scrollable container with two-column grid layout on landscape mobile
+- Dedicated SVG close button (fixed position) separate from hamburger
+
+## Hero Sections
+
+- All interior pages use `section-padding bg-black` with identical structure: label + h1 + divider + paragraph
+- Hero height is determined by content length, NOT by min-h/h-[vh] values (those broke the layout)
+- Do NOT change hero padding or height values. If heroes look different, adjust content length instead.
+- Blog page hero is a separate section from the posts grid (posts are in `section-padding bg-charcoal`)
+
+## Newsletter Embed (Beehiiv)
+
+- Iframe height: 420px for screens <400px, 340px for 400-479px, 291px for 480px+
+- Styles duplicated in EmailCapture.astro and newsletter.astro
 
 ## Rules
 
@@ -45,3 +66,5 @@
 - Fix bugs autonomously - don't ask, just fix
 - Keep changes minimal and simple
 - Check in before starting large refactors
+- If a CSS/layout change doesn't look right on first attempt, REVERT immediately. Do not stack fixes on top of broken changes.
+- For visual changes: make one change, deploy, get confirmation before touching anything else
