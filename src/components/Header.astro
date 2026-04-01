@@ -4,7 +4,7 @@ import { NAV_LINKS, SITE } from '../data/site-config';
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="site-header">
+<header class="fixed top-9 left-0 right-0 z-50 transition-all duration-300" id="site-header">
   <div class="container mx-auto px-6 flex items-center justify-between h-20">
     <a href="/" class="font-heading text-xl font-bold tracking-tight text-cream hover:text-red transition-colors">
       {SITE.title}
@@ -114,7 +114,7 @@ const currentPath = Astro.url.pathname;
   }
 </style>
 
-<div class="h-20"></div>
+<div class="h-[116px]"></div>
 
 <script>
   const header = document.getElementById('site-header');
