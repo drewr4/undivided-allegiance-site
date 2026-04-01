@@ -8,23 +8,17 @@ const categories = await getCategories();
 ---
 
 <BaseLayout title="Blog" description="Essays on faith, culture, and the call to biblical fidelity.">
-  <!-- Hero -->
-  <section class="bg-black h-[70vh] flex items-center px-6">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <div class="fade-in">
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mb-16 fade-in">
         <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-6">Blog</span>
         <h1 class="mb-6">Writing for the Remnant</h1>
         <div class="divider mb-6"></div>
-        <p class="text-muted-light text-lg leading-relaxed max-w-2xl">
+        <p class="text-muted-light text-lg leading-relaxed">
           Essays on faith, culture, and the cost of compromise. Written for those who refuse to look away.
         </p>
       </div>
-    </div>
-  </section>
 
-  <!-- Posts -->
-  <section class="section-padding bg-charcoal">
-    <div class="container mx-auto px-6">
       {categories.length > 1 && (
         <div class="flex flex-wrap gap-3 mb-12 fade-in">
           <button class="px-4 py-2 text-sm font-semibold uppercase tracking-wider bg-red text-cream category-filter active" data-category="all">
