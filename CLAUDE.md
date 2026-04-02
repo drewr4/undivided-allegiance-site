@@ -41,6 +41,43 @@
 - **Email**: The Remnant (Beehiiv) — 4 issues planned before launch (Apr 2, 9, 16, 23) + launch day issue Apr 30
 - **30-day launch plan**: Approved Mar 31, 3 phases (Foundation → Build → Launch)
 
+## Meta Ads — Active Campaigns (as of Apr 1, 2026)
+
+### Account
+- **Account**: Undivided Allegiance — ID: 920678984196514
+- **Meta Pixel ID**: 1289553056416593
+- **Destination (newsletter)**: https://undividedallegiance.com/newsletter/
+
+### Newsletter Campaign — "Newsletter — April 2026"
+- **Ad Set**: Newsletter — Pair 01 | Budget: $15/day total | End date: April 4, 2026
+- **Objective**: Traffic | Placements: Advantage+ | Geography: United States only
+- **Status**: LIVE (published April 1, 2026) — 3-day test ends April 4, then assess
+
+#### Pair 01-A — "You Already Know Something Is Off" (hook image)
+- **Image**: `01_newsletter/pairs/pair-01-A.jpg` (1500×1500px)
+- **Primary Text**: "Something has gone wrong in the American Church. You've felt it. You just haven't had words for it. The Remnant is a newsletter for believers who refuse to pretend otherwise. Join us."
+- **Headline**: "You're Not Alone In This"
+- **Description**: "The Remnant — Truth for those who are done pretending"
+- **CTA**: Subscribe
+- **Status**: Processing (published Apr 1)
+
+#### Pair 01-B — "When Scripture Loses Authority..." (call image)
+- **Image**: `01_newsletter/pairs/pair-01-B.jpg` (1500×1500px)
+- **Primary Text**: "The Church isn't losing people to atheism. It's losing them to comfort. If you're tired of sermons that never cost anyone anything — this is for you. Join The Remnant."
+- **Headline**: "The Remnant Refuses to Pretend"
+- **Description**: "The Remnant — Truth for those who are done pretending"
+- **CTA**: Subscribe
+- **Status**: Processing (published Apr 1)
+
+### A/B Test Logic
+- Both ads run in same ad set — Meta auto-splits the $15/day (~$7.50 each)
+- Headlines do different work than image text (image = statement, headline = emotional bridge)
+- April 4: review CPR, CTR, cost-per-subscriber → scale winner, pause loser
+
+### Next Pairs Queued
+- Pairs 02–09 remain as singles/pairs in `01_newsletter/pairs/` and `01_newsletter/singles/`
+- Rotate in weekly after initial A/B assessment
+
 ## Mobile Menu
 
 - Mobile menu `<div>` lives OUTSIDE `<header>` in Header.astro to escape the header's stacking context (z-50)
