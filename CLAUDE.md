@@ -27,7 +27,7 @@
 - **Posting Automation**: Zapier + Buffer handle scheduled posting from the sheet
 - **Google Drive**: Content documents and filing system for pipeline assets
 - **Campaigns**: Two active content campaigns — book promotion ("You Can't Serve Two Masters") and newsletter signup
-- **Site Health Monitor**: Google Apps Script checks all pages + Beehiiv endpoints 4x/day (every 6 hours), sends status email every run (subject shows pass/fail at a glance). Script file: `~/Desktop/SiteHealthMonitor.gs`
+- **Site Health Monitor**: Google Apps Script checks all pages + Beehiiv endpoints 4x/day (every 6 hours), sends status email every run (subject shows pass/fail at a glance). Script file: `~/Desktop/01_scripts/SiteHealthMonitor.gs`. Contact page check updated to "We Would Love to Hear From You" (Apr 2).
 
 ## Book Launch (April 30, 2026)
 
@@ -96,6 +96,22 @@
 
 - Iframe height: 420px for screens <400px, 340px for 400-479px, 291px for 480px+
 - Styles duplicated in EmailCapture.astro and newsletter.astro
+
+## Cowork Integration
+
+- **Rules file**: `~/Desktop/undivided-allegiance/COWORK_RULES.md` — Cowork reads this before every task
+- **Outputs folder**: `~/Desktop/undivided-allegiance/outputs/` — all Cowork deliverables go here
+- **Source of truth**: Claude Code owns CLAUDE.md, memory files, git, deploys. Cowork owns browser tasks and Meta Ads Manager.
+- **Locked files**: Memory files, COWORK_RULES.md, and REMNANT_TEMPLATE.md are locked with macOS `uchg` flag. To update: `chflags nouchg <path>` → edit → `chflags uchg <path>`
+- **Sync flow**: Cowork logs work to `outputs/memory-sync-log.md` → Claude Code reads it and syncs into CLAUDE.md and memory files
+- **If conflict**: Claude Code's version wins
+
+## File System (reorganized April 2, 2026)
+
+- **Desktop**: `01_scripts/`, `02_docs/`, `03_screenshots/`, `04_content/`, `undivided-allegiance/`, `YCSTM_KDP/`
+- **Documents**: `01_businesses/` through `09_recipes/`, `_archive/`, `_config/`
+- **Project root** (`~/Desktop/undivided-allegiance/`): `01_newsletter/`, `02_book_campaign/`, `outputs/`, `meta-ads-copy.md`, `COWORK_RULES.md`, site repo
+- **Site Health Monitor**: `~/Desktop/01_scripts/SiteHealthMonitor.gs` (moved from Desktop root)
 
 ## Rules
 
