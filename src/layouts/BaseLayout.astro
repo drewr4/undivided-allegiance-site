@@ -29,6 +29,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
 
+    <link rel="preconnect" href="https://connect.facebook.net" />
+    <link rel="preconnect" href="https://subscribe-forms.beehiiv.com" />
+
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
@@ -43,6 +46,43 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Undivided Allegiance",
+      "url": "https://www.undividedallegiance.com",
+      "description": SITE.description,
+      "author": {
+        "@type": "Person",
+        "name": "Drew Reitzel",
+        "url": "https://www.undividedallegiance.com/about/",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61579550235172",
+          "https://instagram.com/undividedallegiance",
+          "https://x.com/UndivAllegiance",
+          "https://www.linkedin.com/company/undivided-allegiance",
+          "https://youtube.com/@UndividedAllegiance"
+        ]
+      }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Undivided Allegiance",
+      "url": "https://www.undividedallegiance.com",
+      "logo": new URL("/og-default.png", Astro.site).toString(),
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61579550235172",
+        "https://instagram.com/undividedallegiance",
+        "https://www.tiktok.com/@undividedallegiance",
+        "https://x.com/UndivAllegiance",
+        "https://www.linkedin.com/company/undivided-allegiance",
+        "https://youtube.com/@UndividedAllegiance",
+        "https://threads.net/@undividedallegiance"
+      ]
+    })} />
 
     <!-- Meta Pixel -->
     <script is:inline>
@@ -64,7 +104,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- End Meta Pixel -->
   </head>
   <body>
-    <a href="https://www.amazon.com/dp/B0FGY9PL66" target="_blank" rel="noopener noreferrer" class="fixed top-0 left-0 right-0 z-[52] block bg-[#B41E1E] text-[#F5F0E8] text-center text-sm font-medium py-2 px-4 hover:bg-[#9a1919] transition-colors" id="announcement-bar">
+    <a href="/book/" class="fixed top-0 left-0 right-0 z-[52] block bg-[#B41E1E] text-[#F5F0E8] text-center text-sm font-medium py-2 px-4 hover:bg-[#9a1919] transition-colors" id="announcement-bar">
       Now available for Kindle preorder — $9.99 · Available April 30, 2026
     </a>
     <Header />

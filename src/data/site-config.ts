@@ -1,5 +1,5 @@
 export const SITE = {
-  website: 'https://undividedallegiance.com',
+  website: 'https://www.undividedallegiance.com',
   title: 'Undivided Allegiance',
   author: 'Drew Reitzel',
   description: 'Calling the Church back to biblical fidelity in an age of cultural compromise.',

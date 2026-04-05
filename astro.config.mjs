@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://undividedallegiance.com',
+  site: 'https://www.undividedallegiance.com',
   output: 'static',
   integrations: [
     mdx(),

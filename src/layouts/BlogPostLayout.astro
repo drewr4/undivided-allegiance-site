@@ -26,6 +26,29 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
 ---
 
 <BaseLayout title={title} description={excerpt}>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": title,
+    "description": excerpt || "",
+    "datePublished": publishDate.toISOString(),
+    ...(updatedDate && { "dateModified": updatedDate.toISOString() }),
+    "author": {
+      "@type": "Person",
+      "name": "Drew Reitzel",
+      "url": "https://www.undividedallegiance.com/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Undivided Allegiance",
+      "url": "https://www.undividedallegiance.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://www.undividedallegiance.com${Astro.url.pathname}`
+    },
+    "keywords": tags
+  })} />
   <article class="section-padding">
     <div class="container-narrow">
       <header class="mb-16">

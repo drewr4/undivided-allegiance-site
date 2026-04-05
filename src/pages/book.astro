@@ -5,6 +5,57 @@ import bookCover from '../assets/book-cover.png';
 ---
 
 <BaseLayout title="You Can't Serve Two Masters" description="Undivided allegiance to Christ in an age of cultural compromise. A prophetic call to the American Church by Drew Reitzel.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "You Can't Serve Two Masters",
+    "subtitle": "Undivided Allegiance to Christ in an Age of Cultural Compromise",
+    "author": {
+      "@type": "Person",
+      "name": "Drew Reitzel",
+      "url": "https://www.undividedallegiance.com/about/"
+    },
+    "isbn": "979-8-2786-09926",
+    "bookFormat": ["https://schema.org/EBook", "https://schema.org/Paperback"],
+    "numberOfPages": 250,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Undivided Allegiance"
+    },
+    "datePublished": "2026-04-30",
+    "image": "https://www.undividedallegiance.com/_astro/book-cover.Bgaqth1X_Z1ixAoY.webp",
+    "url": "https://www.undividedallegiance.com/book/",
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "9.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/PreOrder",
+        "url": "https://www.amazon.com/dp/B0FGY9PL66",
+        "itemCondition": "https://schema.org/NewCondition"
+      },
+      {
+        "@type": "Offer",
+        "price": "16.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/PreOrder",
+        "itemCondition": "https://schema.org/NewCondition"
+      }
+    ],
+    "genre": ["Religion", "Christianity", "Church"],
+    "inLanguage": "en",
+    "description": "A prophetic call to the American Church. Confronts the abortion altar, the redefinition of marriage, the silencing of the pulpit, and the cheap grace that has replaced the costly Gospel of Jesus Christ."
+  })} />
+  <!-- ViewContent pixel event — tells Meta this visitor viewed the book page -->
+  <script is:inline>
+    fbq('track', 'ViewContent', {
+      content_name: 'You Cant Serve Two Masters',
+      content_type: 'product',
+      value: 9.99,
+      currency: 'USD'
+    });
+  </script>
+
   <!-- Hero -->
   <section class="section-padding bg-black">
     <div class="container mx-auto px-6">
@@ -32,7 +83,7 @@ import bookCover from '../assets/book-cover.png';
           <p class="text-sm uppercase tracking-[0.2em] text-muted mb-10">
             Drew Reitzel
           </p>
-          <a href="https://www.amazon.com/dp/B0FGY9PL66" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-8 py-4 inline-flex mb-3">
+          <a href="https://www.amazon.com/dp/B0FGY9PL66" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'AddToCart', {content_name: 'YCSTM Kindle Preorder', content_type: 'product', value: 9.99, currency: 'USD'});" class="btn-primary text-lg px-8 py-4 inline-flex mb-3">
             Preorder on Kindle — $9.99
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M7 17L17 7M17 7H7M17 7v10"/>
@@ -121,7 +172,7 @@ import bookCover from '../assets/book-cover.png';
         <p class="text-cream/80 text-lg"><span class="text-red font-semibold">Kindle</span> — Preorder now. Delivered April 30, 2026.</p>
         <p class="text-cream/80 text-lg"><span class="text-red font-semibold">Print</span> — Available April 30, 2026.</p>
       </div>
-      <a href="https://www.amazon.com/dp/B0FGY9PL66" target="_blank" rel="noopener noreferrer" class="btn-primary text-lg px-10 py-4 mb-12 inline-flex">
+      <a href="https://www.amazon.com/dp/B0FGY9PL66" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'AddToCart', {content_name: 'YCSTM Kindle Preorder', content_type: 'product', value: 9.99, currency: 'USD'});" class="btn-primary text-lg px-10 py-4 mb-12 inline-flex">
         Preorder on Kindle — $9.99
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M7 17L17 7M17 7H7M17 7v10"/>
