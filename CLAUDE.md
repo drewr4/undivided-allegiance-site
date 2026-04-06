@@ -60,7 +60,7 @@
 - **Status**: LIVE (published April 1, 2026) — 3-day test ends April 4, then assess
 
 #### Pair 01-A — "You Already Know Something Is Off" (hook image)
-- **Image**: `01_newsletter/pairs/pair-01-A.jpg` (1500×1500px)
+- **Image**: `01_newsletter/ads-feed/newsletter-01A-feed.jpg` (1500×1500px). Cinematic variant: `newsletter-01A-feed-cinematic.jpg`
 - **Primary Text**: "Something has gone wrong in the American Church. You've felt it. You just haven't had words for it. The Remnant is a newsletter for believers who refuse to pretend otherwise. Join us."
 - **Headline**: "You're Not Alone In This"
 - **Description**: "The Remnant — Truth for those who are done pretending"
@@ -68,7 +68,7 @@
 - **Status**: Processing (published Apr 1)
 
 #### Pair 01-B — "When Scripture Loses Authority..." (call image)
-- **Image**: `01_newsletter/pairs/pair-01-B.jpg` (1500×1500px)
+- **Image**: `01_newsletter/ads-feed/newsletter-01B-feed.jpg` (1500×1500px)
 - **Primary Text**: "The Church isn't losing people to atheism. It's losing them to comfort. If you're tired of sermons that never cost anyone anything — this is for you. Join The Remnant."
 - **Headline**: "The Remnant Refuses to Pretend"
 - **Description**: "The Remnant — Truth for those who are done pretending"
@@ -81,7 +81,7 @@
 - April 4: review CPR, CTR, cost-per-subscriber → scale winner, pause loser
 
 ### Next Pairs Queued
-- Pairs 02–09 remain as singles/pairs in `01_newsletter/pairs/` and `01_newsletter/singles/`
+- Pairs 02–09 in `01_newsletter/ads-feed/` (newsletter-NNX-feed.jpg). Story/TikTok format in `01_newsletter/ads-story/`. 9 cinematic variants available with `-cinematic` suffix.
 - Rotate in weekly after initial A/B assessment
 
 ## Mobile Menu
