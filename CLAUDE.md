@@ -34,8 +34,14 @@
 - **Book**: "You Can't Serve Two Masters" — ISBN 979-8-2786-09926, $9.99 Kindle / $16.99 Print
 - **Preorder**: Kindle preorder live at https://www.amazon.com/dp/B0FGY9PL66
 - **Site CTA Strategy**: Ads point to /book/ page (not direct Amazon link) to capture both buyers (preorder button) and non-buyers (newsletter signup). After Apr 30, update buttons to reflect both Kindle and print being live.
-- **Announcement Bar**: Red bar at top of every page (BaseLayout.astro) linking to Amazon preorder
+- **Announcement Bar**: Red bar at top of every page (BaseLayout.astro) linking to **/book/** (was Amazon — changed Apr 5 to funnel through book page)
+- **Homepage Hero CTA**: Also points to **/book/** (was Amazon — changed Apr 5)
 - **Meta Pixel**: Installed in BaseLayout.astro with ID `1289553056416593`
+- **Conversion Events** (added Apr 5):
+  - `PageView` — fires site-wide via BaseLayout
+  - `ViewContent` — fires on `/book/` page load (book.astro)
+  - `AddToCart` — fires on both Amazon preorder buttons in book.astro, value $9.99 USD
+  - `Lead` — fires from Beehiiv iframe on newsletter signup (configured in Beehiiv dashboard, not site code)
 - **TikTok Pixel**: Not yet installed — pending TikTok Ads Manager setup
 - **Paid Ads**: Meta + TikTok, $10-20/day budget, 70/30 preorder/email split weeks 1-2, 90/10 weeks 3-4
 - **Email**: The Remnant (Beehiiv) — 4 issues planned before launch (Apr 2, 9, 16, 23) + launch day issue Apr 30
@@ -114,6 +120,47 @@
 - **Site Health Monitor**: `~/Desktop/01_scripts/SiteHealthMonitor.gs` (moved from Desktop root)
 
 ## Rules
+
+### MANDATORY: Universal Save Protocol
+
+When Drew signals end of session, asks to save, or asks to "update everything," execute ALL of the following in one pass without waiting to be asked twice:
+
+1. **Local (site repo)** — Update this file if any code/architecture/ad-strategy changed. Run `npm run build`. `git add` specific files, commit, **`git push` immediately**.
+2. **Global (memory)** — Update relevant project memory file(s), MEMORY.md index, feedback/user/reference memories. Files at `~/.claude/projects/-Users-drewr4/memory/` are `uchg`-locked — unlock, edit, re-lock.
+3. **Cowork** — Update `~/Desktop/undivided-allegiance/CLAUDE.md` (Cowork rules) for any campaign/conversion/routing change. Append session entry to `~/Desktop/undivided-allegiance/outputs/memory-sync-log.md`. Update `meta-ads-copy.md` for any ad copy/destination/status change.
+4. **Re-lock** — All `uchg` files (memory files, both CLAUDE.md files, REMNANT_TEMPLATE.md) must be re-locked after edit.
+5. **Push immediately** — Site repo: `git push origin main`. Note any Drew action items for external systems (Buffer, Beehiiv, Ads Manager) explicitly.
+
+Full protocol in memory file `feedback_end_of_session.md`. The cost of redundancy is zero; the cost of missing context is a broken next session.
+
+### MANDATORY: Content Approval Pipeline
+
+**All public-facing content MUST be approved by Drew before publishing.** No exceptions.
+
+#### Draft Locations (staging — NOT live)
+- **Blog posts:** `~/Desktop/undivided-allegiance/outputs/02_blog/drafts/`
+- **Newsletter issues:** `~/Desktop/undivided-allegiance/outputs/04_newsletter/drafts/`
+- **Ad copy:** `~/Desktop/undivided-allegiance/outputs/03_campaign/drafts/`
+
+#### Process
+1. **Draft** — Write to the appropriate drafts/ folder. NEVER to `src/content/blog/` directly.
+2. **Review** — Show the full text to Drew in the conversation.
+3. **Approval** — Wait for Drew to explicitly say "approved," "go," "publish it," or "looks good, post it."
+4. **Publish** — Only after approval: move to `src/content/blog/`, set publishDate to current date, build, and deploy.
+
+#### What counts as approval
+- Explicit: "approved," "go," "post it," "looks good" = publish
+- Silence, "let me think," or no response = NOT approved
+- "Change X" = edit draft, re-show for review
+
+#### Applies to
+- Blog posts
+- Newsletter issues
+- Ad copy
+- Social media posts
+- Any content with Drew's name or voice on it
+
+### Development Rules
 
 - Verify changes work by running `npm run build` before calling it done
 - Fix bugs autonomously - don't ask, just fix
