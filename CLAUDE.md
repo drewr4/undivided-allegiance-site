@@ -68,7 +68,7 @@
 - **Status**: Processing (published Apr 1)
 
 #### Pair 01-B — "When Scripture Loses Authority..." (call image)
-- **Image**: `01_newsletter/ads-feed/newsletter-01B-feed.jpg` (1500×1500px)
+- **Image**: `01_newsletter/ads-feed/newsletter-01B-feed.jpg` (1500×1500px). Cinematic variant: `newsletter-01B-feed-cinematic.jpg`
 - **Primary Text**: "The Church isn't losing people to atheism. It's losing them to comfort. If you're tired of sermons that never cost anyone anything — this is for you. Join The Remnant."
 - **Headline**: "The Remnant Refuses to Pretend"
 - **Description**: "The Remnant — Truth for those who are done pretending"
@@ -81,7 +81,7 @@
 - April 4: review CPR, CTR, cost-per-subscriber → scale winner, pause loser
 
 ### Next Pairs Queued
-- Pairs 02–09 in `01_newsletter/ads-feed/` (newsletter-NNX-feed.jpg). Story/TikTok format in `01_newsletter/ads-story/`. 9 cinematic variants available with `-cinematic` suffix.
+- Pairs 02–09 in `01_newsletter/ads-feed/` (newsletter-NNX-feed.jpg). Story/TikTok format in `01_newsletter/ads-story/`. **Every pair (01–09) now has both A and B cinematic photographic variants** with `-cinematic.jpg` suffix (18 total cinematic files generated 2026-04-07 via Gemini gemini-2.5-flash-image, composited with Playfair Display headlines via Pillow).
 - Rotate in weekly after initial A/B assessment
 
 ## Mobile Menu
