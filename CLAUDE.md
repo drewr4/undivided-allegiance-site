@@ -112,12 +112,21 @@
 - **Sync flow**: Cowork logs work to `outputs/memory-sync-log.md` → Claude Code reads it and syncs into CLAUDE.md and memory files
 - **If conflict**: Claude Code's version wins
 
-## File System (reorganized April 2, 2026)
+## File System (reorganized April 10, 2026)
 
 - **Desktop**: `01_scripts/`, `02_docs/`, `03_screenshots/`, `04_content/`, `undivided-allegiance/`, `YCSTM_KDP/`
 - **Documents**: `01_businesses/` through `09_recipes/`, `_archive/`, `_config/`
-- **Project root** (`~/Desktop/undivided-allegiance/`): `01_newsletter/`, `02_book_campaign/`, `outputs/`, `meta-ads-copy.md`, `COWORK_RULES.md`, site repo
-- **Site Health Monitor**: `~/Desktop/01_scripts/SiteHealthMonitor.gs` (moved from Desktop root)
+- **Project root** (`~/Desktop/undivided-allegiance/`):
+  - `01_book-launch/` — book launch assets by platform (images/, reels/, meta/, tiktok/, x/, linkedin/, youtube/, docs/)
+  - `02_newsletter/` — newsletter assets by platform (images/, reels/, meta/, tiktok/, x/, linkedin/, youtube/, issues/, templates/)
+  - `03_blog/` — blog posts and strategy
+  - `04_audiobook/` — manuscript, chapters, production files
+  - `ops/` — briefings/, cowork/, seo/, scripts/, social/, production/
+  - `undivided-allegiance-site/` — website repo (Claude Code only)
+- **Image naming**: `[campaign]-[pair][variant]_[type]_[platform].[ext]` (e.g. `01_book-launch/images/meta-ig-feed/book-02A_feed_meta-ig.jpg`). Types: `feed`, `story`, `cinematic`. Platforms: `meta-ig`, `tiktok`, `x`, `linkedin`, `youtube`.
+- **New image rule**: Every new image must be created for ALL platforms: meta-ig-feed, meta-ig-story, tiktok, x, linkedin, youtube
+- **Reel naming**: `[campaign]-reel-[NN]-[slug].[ext]` inside campaign/reels/[platform]/
+- **Site Health Monitor**: `~/Desktop/01_scripts/SiteHealthMonitor.gs`
 
 ## Rules
 
@@ -127,7 +136,7 @@ When Drew signals end of session, asks to save, or asks to "update everything," 
 
 1. **Local (site repo)** — Update this file if any code/architecture/ad-strategy changed. Run `npm run build`. `git add` specific files, commit, **`git push` immediately**.
 2. **Global (memory)** — Update relevant project memory file(s), MEMORY.md index, feedback/user/reference memories. Files at `~/.claude/projects/-Users-drewr4/memory/` are `uchg`-locked — unlock, edit, re-lock.
-3. **Cowork** — Update `~/Desktop/undivided-allegiance/CLAUDE.md` (Cowork rules) for any campaign/conversion/routing change. Append session entry to `~/Desktop/undivided-allegiance/outputs/memory-sync-log.md`. Update `meta-ads-copy.md` for any ad copy/destination/status change.
+3. **Cowork** — Update `~/Desktop/undivided-allegiance/CLAUDE.md` (Cowork rules) for any campaign/conversion/routing change. Append session entry to `~/Desktop/undivided-allegiance/ops/cowork/memory-sync-log.md`. Update `meta-ads-copy.md` for any ad copy/destination/status change.
 4. **Re-lock** — All `uchg` files (memory files, both CLAUDE.md files, REMNANT_TEMPLATE.md) must be re-locked after edit.
 5. **Push immediately** — Site repo: `git push origin main`. Note any Drew action items for external systems (Buffer, Beehiiv, Ads Manager) explicitly.
 
@@ -138,9 +147,10 @@ Full protocol in memory file `feedback_end_of_session.md`. The cost of redundanc
 **All public-facing content MUST be approved by Drew before publishing.** No exceptions.
 
 #### Draft Locations (staging — NOT live)
-- **Blog posts:** `~/Desktop/undivided-allegiance/outputs/02_blog/drafts/`
-- **Newsletter issues:** `~/Desktop/undivided-allegiance/outputs/04_newsletter/drafts/`
-- **Ad copy:** `~/Desktop/undivided-allegiance/outputs/03_campaign/drafts/`
+- **Blog posts:** `~/Desktop/undivided-allegiance/03_blog/drafts/`
+- **Newsletter issues:** `~/Desktop/undivided-allegiance/02_newsletter/issues/`
+- **Ad copy (book):** `~/Desktop/undivided-allegiance/01_book-launch/docs/`
+- **Ad copy (newsletter):** `~/Desktop/undivided-allegiance/02_newsletter/meta/`
 
 #### Process
 1. **Draft** — Write to the appropriate drafts/ folder. NEVER to `src/content/blog/` directly.
