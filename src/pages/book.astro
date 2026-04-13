@@ -101,11 +101,26 @@ import bookCover from '../assets/book-cover.png';
 
           <!-- Option 2: Free Preview -->
           <p class="text-sm uppercase tracking-[0.15em] text-muted mb-4">Not ready to commit? Read a free preview first.</p>
-          <div style="overflow: hidden; width: 100%;">
-            <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-            <iframe src="https://subscribe-forms.beehiiv.com/c3ad021c-2a0f-40d3-9b52-2058dd05b6a5" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width: 100%; max-width: 560px; height: 291px; margin: 0; border-radius: 0px !important; background-color: transparent; box-shadow: 0 0 #0000;"></iframe>
-          </div>
-          <p class="text-xs text-muted leading-relaxed max-w-lg mx-auto lg:mx-0 mt-2">
+          <form id="preview-form" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto lg:mx-0 mb-2" novalidate>
+            <input
+              id="preview-email"
+              type="email"
+              name="email"
+              required
+              placeholder="Your email address"
+              class="flex-1 px-4 py-3 bg-black border border-cream/20 text-cream placeholder-muted focus:outline-none focus:border-red text-base"
+              autocomplete="email"
+            />
+            <button
+              type="submit"
+              id="preview-submit"
+              class="btn-secondary px-6 py-3 text-base whitespace-nowrap"
+            >
+              Get Free Preview
+            </button>
+          </form>
+          <p id="preview-msg" class="text-sm text-red mb-2 hidden"></p>
+          <p class="text-xs text-muted leading-relaxed max-w-lg mx-auto lg:mx-0">
             By submitting your email you will receive the free preview and be subscribed to The Remnant, our biweekly newsletter. Unsubscribe any time.
           </p>
 
@@ -122,6 +137,37 @@ import bookCover from '../assets/book-cover.png';
     </div>
   </section>
 
+
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('preview-form');
+      var emailInput = document.getElementById('preview-email');
+      var submitBtn = document.getElementById('preview-submit');
+      var msg = document.getElementById('preview-msg');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = emailInput.value.trim();
+        if (!email || !email.includes('@')) {
+          msg.textContent = 'Please enter a valid email address.';
+          msg.classList.remove('hidden');
+          return;
+        }
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'One moment...';
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead', { content_name: 'Free Preview Download' });
+        }
+        fetch('https://hooks.zapier.com/hooks/catch/24741056/u7p59nn/', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        }).catch(function () {});
+        window.location.href = '/free-preview.pdf';
+      });
+    })();
+  </script>
 
   <!-- The Indictment -->
   <section class="section-padding bg-charcoal">
