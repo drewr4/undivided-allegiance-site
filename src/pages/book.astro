@@ -158,13 +158,17 @@ import bookCover from '../assets/book-cover.png';
         if (typeof fbq !== 'undefined') {
           fbq('track', 'Lead', { content_name: 'Free Preview Download' });
         }
-        fetch('https://hooks.zapier.com/hooks/catch/24741056/u7p59nn/', {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email })
-        }).catch(function () {});
-        window.location.href = '/free-preview.pdf';
+        // Post to Zapier then redirect to PDF
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://hooks.zapier.com/hooks/catch/24741056/u7p59nn/');
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onreadystatechange = function() {
+          window.location.href = '/free-preview.pdf';
+        };
+        xhr.onerror = function() {
+          window.location.href = '/free-preview.pdf';
+        };
+        xhr.send(JSON.stringify({ email: email }));
       });
     })();
   </script>
