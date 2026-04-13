@@ -158,9 +158,11 @@ import bookCover from '../assets/book-cover.png';
         if (typeof fbq !== 'undefined') {
           fbq('track', 'Lead', { content_name: 'Free Preview Download' });
         }
-        // Send email as query param — avoids CORS body stripping
-        var zapUrl = 'https://hooks.zapier.com/hooks/catch/24741056/u7p59nn/?email=' + encodeURIComponent(email);
-        fetch(zapUrl, { method: 'POST', mode: 'no-cors' })
+        fetch('https://subscribe.drewr4.workers.dev', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        })
           .catch(function() {})
           .finally(function() {
             window.open('/free-preview.pdf', '_blank');
