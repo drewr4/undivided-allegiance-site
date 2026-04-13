@@ -158,7 +158,7 @@ import bookCover from '../assets/book-cover.png';
         if (typeof fbq !== 'undefined') {
           fbq('track', 'Lead', { content_name: 'Free Preview Download' });
         }
-        fetch('https://subscribe.drewr4.workers.dev', {
+        fetch('https://subscribe.drewreitzel.workers.dev', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email: email })
