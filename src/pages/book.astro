@@ -110,6 +110,83 @@ import bookCover from '../assets/book-cover.png';
     </div>
   </section>
 
+  <!-- Free Preview Capture -->
+  <section class="section-padding bg-charcoal" id="free-preview">
+    <div class="container mx-auto px-6 max-w-2xl text-center fade-in">
+      <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-4">Free Preview</span>
+      <h2 class="mb-4">Not ready to pre-order yet?</h2>
+      <div class="divider mx-auto mb-6"></div>
+      <p class="text-cream/80 text-lg leading-relaxed mb-8">
+        Read the opening of Chapter 1 before you commit. Enter your email and we will send you instant access to the free preview.
+      </p>
+      <form id="preview-form" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4" novalidate>
+        <input
+          id="preview-email"
+          type="email"
+          name="email"
+          required
+          placeholder="Your email address"
+          class="flex-1 px-4 py-3 bg-black border border-cream/20 text-cream placeholder-muted focus:outline-none focus:border-red text-base"
+          autocomplete="email"
+        />
+        <button
+          type="submit"
+          id="preview-submit"
+          class="btn-primary px-6 py-3 text-base whitespace-nowrap"
+        >
+          Get Free Preview
+        </button>
+      </form>
+      <p id="preview-msg" class="text-sm text-muted hidden"></p>
+      <p class="text-xs text-muted mt-3 uppercase tracking-[0.12em]">No spam. Unsubscribe any time.</p>
+    </div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('preview-form');
+      var emailInput = document.getElementById('preview-email');
+      var submitBtn = document.getElementById('preview-submit');
+      var msg = document.getElementById('preview-msg');
+
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = emailInput.value.trim();
+        if (!email || !email.includes('@')) {
+          msg.textContent = 'Please enter a valid email address.';
+          msg.classList.remove('hidden');
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'One moment...';
+
+        // Fire Lead pixel
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead', { content_name: 'Free Preview Download' });
+        }
+
+        // Subscribe to Beehiiv — fire and forget (no-cors)
+        try {
+          var body = new URLSearchParams();
+          body.append('email', email);
+          body.append('form_uuid', 'c3ad021c-2a0f-40d3-9b52-2058dd05b6a5');
+          fetch('https://subscribe-forms.beehiiv.com/subscriptions', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: body.toString()
+          }).catch(function () {});
+        } catch (_) {}
+
+        // Redirect to PDF
+        window.location.href = '/free-preview.pdf';
+      });
+    })();
+  </script>
+
   <!-- The Indictment -->
   <section class="section-padding bg-charcoal">
     <div class="container mx-auto px-6 max-w-3xl text-center fade-in">
