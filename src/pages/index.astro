@@ -125,7 +125,7 @@ const latestPosts = posts.slice(0, 3);
   <EmailCapture heading="Join the Remnant" subtext="Prophetic writing delivered to those who refuse to look away. No spam. Unsubscribe anytime." />
 
   <!-- Homepage Popup -->
-  <div id="popup-overlay" class="fixed inset-0 z-[9999] flex items-center justify-center p-4" style="background: rgba(10,10,10,0.88);">
+  <div id="popup-overlay" class="fixed inset-0 z-[9999] flex items-center justify-center p-4" style="background: rgba(10,10,10,0.88); display: none;">
     <div class="relative w-full max-w-lg p-8 sm:p-10" style="background-color: #F5F0E8;">
       <button id="popup-close" class="absolute top-4 right-4 transition-colors" style="color: rgba(10,10,10,0.4);" onmouseover="this.style.color='#0A0A0A'" onmouseout="this.style.color='rgba(10,10,10,0.4)'" aria-label="Close">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -177,6 +177,7 @@ const latestPosts = posts.slice(0, 3);
   <script is:inline>
     (function () {
       var overlay = document.getElementById('popup-overlay');
+      setTimeout(function () { overlay.style.display = 'flex'; }, 1500);
       var closeBtn = document.getElementById('popup-close');
       var form = document.getElementById('popup-form');
       var nameInput = document.getElementById('popup-name');
@@ -210,13 +211,26 @@ const latestPosts = posts.slice(0, 3);
         fetch('https://subscribe.drewreitzel.workers.dev', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email, name: name })
+          body: JSON.stringify({ email: email, name: name, source: 'homepage-popup' })
         })
-          .catch(function () {})
-          .finally(function () {
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (data.already_subscribed) {
+              msg.textContent = 'This email is already subscribed. Please use a different email address.';
+              msg.classList.remove('hidden');
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Count Me In';
+            } else {
+              msg.textContent = 'Check your inbox.';
+              msg.style.color = '#0A0A0A';
+              msg.classList.remove('hidden');
+              setTimeout(closePopup, 2000);
+            }
+          })
+          .catch(function () {
             msg.textContent = 'Check your inbox.';
+            msg.style.color = '#0A0A0A';
             msg.classList.remove('hidden');
-            msg.style.color = 'rgb(245, 240, 232)';
             setTimeout(closePopup, 2000);
           });
       });
