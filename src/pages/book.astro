@@ -172,10 +172,18 @@ import bookCover from '../assets/book-cover.png';
               submitBtn.textContent = 'Get Free Preview';
             } else {
               window.open('/free-preview.pdf', '_blank');
+              emailInput.value = '';
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Get Free Preview';
+              msg.classList.add('hidden');
             }
           })
           .catch(function () {
             window.open('/free-preview.pdf', '_blank');
+            emailInput.value = '';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Get Free Preview';
+            msg.classList.add('hidden');
           });
       });
     })();
