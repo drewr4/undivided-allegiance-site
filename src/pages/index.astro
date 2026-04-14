@@ -126,22 +126,22 @@ const latestPosts = posts.slice(0, 3);
 
   <!-- Homepage Popup -->
   <div id="popup-overlay" class="fixed inset-0 z-[9999] flex items-center justify-center p-4" style="background: rgba(10,10,10,0.88);">
-    <div class="relative w-full max-w-lg bg-black border border-cream/10 p-8 sm:p-10">
-      <button id="popup-close" class="absolute top-4 right-4 text-cream/40 hover:text-cream transition-colors" aria-label="Close">
+    <div class="relative w-full max-w-lg p-8 sm:p-10" style="background-color: #F5F0E8;">
+      <button id="popup-close" class="absolute top-4 right-4 transition-colors" style="color: rgba(10,10,10,0.4);" onmouseover="this.style.color='#0A0A0A'" onmouseout="this.style.color='rgba(10,10,10,0.4)'" aria-label="Close">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M18 6L6 18M6 6l12 12"/>
         </svg>
       </button>
       <div class="w-12 h-[2px] bg-red mb-6"></div>
-      <h2 class="font-heading font-bold uppercase tracking-[0.1em] text-cream text-2xl sm:text-3xl mb-6">Stand With Us</h2>
-      <p class="text-cream/80 text-sm leading-relaxed mb-4">
+      <h2 class="font-heading font-bold uppercase tracking-[0.1em] text-2xl sm:text-3xl mb-6" style="color: #0A0A0A;">Stand With Us</h2>
+      <p class="text-sm leading-relaxed mb-4" style="color: rgba(10,10,10,0.75);">
         Join the Undivided Allegiance mailing list and receive articles on faith, culture, and what it means to follow Christ without compromise, new blog posts the moment they go live, and The Remnant newsletter, a prophetic perspective on the American Church delivered every other week.
       </p>
-      <p class="text-cream/80 text-sm leading-relaxed mb-6">
-        Also, receive a <strong class="text-cream">FREE</strong> preview of <em>You Can't Serve Two Masters</em> in digital format.
+      <p class="text-sm leading-relaxed mb-6" style="color: rgba(10,10,10,0.75);">
+        Also, receive a <strong style="color: #0A0A0A;">FREE</strong> preview of <em>You Can't Serve Two Masters</em> in digital format.
       </p>
-      <p class="text-cream/80 text-sm leading-relaxed mb-6">
-        The line has already been drawn. <strong class="text-cream">Stand With Us.</strong>
+      <p class="text-sm leading-relaxed mb-6" style="color: rgba(10,10,10,0.75);">
+        The line has already been drawn. <strong style="color: #0A0A0A;">Stand With Us.</strong>
       </p>
       <form id="popup-form" novalidate>
         <input
@@ -149,7 +149,8 @@ const latestPosts = posts.slice(0, 3);
           type="text"
           name="name"
           placeholder="First name"
-          class="w-full px-4 py-3 bg-black border border-cream/20 text-cream placeholder-muted focus:outline-none focus:border-red text-base mb-3"
+          class="w-full px-4 py-3 text-base mb-3 focus:outline-none"
+          style="background: #fff; border: 1px solid rgba(10,10,10,0.2); color: #0A0A0A;"
           autocomplete="given-name"
         />
         <input
@@ -158,7 +159,8 @@ const latestPosts = posts.slice(0, 3);
           name="email"
           required
           placeholder="Email address"
-          class="w-full px-4 py-3 bg-black border border-cream/20 text-cream placeholder-muted focus:outline-none focus:border-red text-base mb-4"
+          class="w-full px-4 py-3 text-base mb-4 focus:outline-none"
+          style="background: #fff; border: 1px solid rgba(10,10,10,0.2); color: #0A0A0A;"
           autocomplete="email"
         />
         <p id="popup-msg" class="text-sm text-red mb-3 hidden"></p>
@@ -166,7 +168,7 @@ const latestPosts = posts.slice(0, 3);
           Count Me In
         </button>
       </form>
-      <p class="text-xs text-muted mt-4 leading-relaxed">
+      <p class="text-xs mt-4 leading-relaxed" style="color: rgba(10,10,10,0.45);">
         By submitting you agree to receive The Remnant newsletter and occasional updates. Unsubscribe any time.
       </p>
     </div>
