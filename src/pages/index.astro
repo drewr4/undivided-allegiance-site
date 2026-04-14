@@ -221,17 +221,13 @@ const latestPosts = posts.slice(0, 3);
               submitBtn.disabled = false;
               submitBtn.textContent = 'Count Me In';
             } else {
-              msg.textContent = 'Check your inbox.';
-              msg.style.color = '#0A0A0A';
-              msg.classList.remove('hidden');
-              setTimeout(closePopup, 2000);
+              window.open('/free-preview.pdf', '_blank');
+              setTimeout(closePopup, 500);
             }
           })
           .catch(function () {
-            msg.textContent = 'Check your inbox.';
-            msg.style.color = '#0A0A0A';
-            msg.classList.remove('hidden');
-            setTimeout(closePopup, 2000);
+            window.open('/free-preview.pdf', '_blank');
+            setTimeout(closePopup, 500);
           });
       });
     })();
