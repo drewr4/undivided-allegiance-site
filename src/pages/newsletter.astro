@@ -150,17 +150,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               submitBtn.disabled = false;
               submitBtn.textContent = 'Join The Remnant';
             } else {
+              nameInput.value = '';
+              emailInput.value = '';
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Join The Remnant';
               msg.textContent = 'Check your inbox.';
               msg.style.color = 'rgb(245, 240, 232)';
               msg.classList.remove('hidden');
-              submitBtn.textContent = 'Done';
             }
           })
           .catch(function () {
+            nameInput.value = '';
+            emailInput.value = '';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Join The Remnant';
             msg.textContent = 'Check your inbox.';
             msg.style.color = 'rgb(245, 240, 232)';
             msg.classList.remove('hidden');
-            submitBtn.textContent = 'Done';
           });
       });
     })();
