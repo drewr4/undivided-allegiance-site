@@ -208,6 +208,9 @@ const latestPosts = posts.slice(0, 3);
         if (typeof fbq !== 'undefined') {
           fbq('track', 'Lead', { content_name: 'Homepage Popup Signup' });
         }
+        if (typeof ttq !== 'undefined') {
+          ttq.track('CompleteRegistration', { content_name: 'Homepage Popup Signup' });
+        }
         fetch('https://subscribe.drewreitzel.workers.dev', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },

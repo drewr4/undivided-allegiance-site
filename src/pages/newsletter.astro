@@ -137,6 +137,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         if (typeof fbq !== 'undefined') {
           fbq('track', 'Lead', { content_name: 'Newsletter Page Signup' });
         }
+        if (typeof ttq !== 'undefined') {
+          ttq.track('CompleteRegistration', { content_name: 'Newsletter Page Signup' });
+        }
         fetch('https://subscribe.drewreitzel.workers.dev', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
