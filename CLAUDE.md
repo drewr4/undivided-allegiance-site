@@ -42,7 +42,7 @@
   - `ViewContent` — fires on `/book/` page load (book.astro)
   - `AddToCart` — fires on both Amazon preorder buttons in book.astro, value $9.99 USD
   - `Lead` — fires from Beehiiv iframe on newsletter signup (configured in Beehiiv dashboard, not site code)
-- **TikTok Pixel**: Not yet installed — pending TikTok Ads Manager setup
+- **TikTok Pixel**: Live as of Apr 16, 2026 — ID `D7CGUT3C77UA7GO31OO0` in BaseLayout.astro. Conversion events: `ViewContent` on /book/ load, `AddToCart` on preorder buttons, `CompleteRegistration` on all 3 email forms.
 - **Paid Ads**: Meta + TikTok, $10-20/day budget, 70/30 preorder/email split weeks 1-2, 90/10 weeks 3-4
 - **Email**: The Remnant (Beehiiv) — 3 issues before launch: #1 sent Apr 9, #2 "Silence of the Shepherds" drafted (post ID: dcf6ed5f, source URLs pending verification), #3 launch day Apr 30 6 AM ET. No Apr 16 issue.
 - **30-day launch plan**: Approved Mar 31, 3 phases (Foundation → Build → Launch)
