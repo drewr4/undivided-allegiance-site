@@ -44,7 +44,7 @@
   - `Lead` — fires from Beehiiv iframe on newsletter signup (configured in Beehiiv dashboard, not site code)
 - **TikTok Pixel**: Not yet installed — pending TikTok Ads Manager setup
 - **Paid Ads**: Meta + TikTok, $10-20/day budget, 70/30 preorder/email split weeks 1-2, 90/10 weeks 3-4
-- **Email**: The Remnant (Beehiiv) — 4 issues planned before launch (Apr 2, 9, 16, 23) + launch day issue Apr 30
+- **Email**: The Remnant (Beehiiv) — 3 issues before launch: #1 sent Apr 9, #2 "Silence of the Shepherds" drafted (post ID: dcf6ed5f, source URLs pending verification), #3 launch day Apr 30 6 AM ET. No Apr 16 issue.
 - **30-day launch plan**: Approved Mar 31, 3 phases (Foundation → Build → Launch)
 
 ## Meta Ads — Active Campaigns (as of Apr 1, 2026)
@@ -98,10 +98,27 @@
 - Do NOT change hero padding or height values. If heroes look different, adjust content length instead.
 - Blog page hero is a separate section from the posts grid (posts are in `section-padding bg-charcoal`)
 
-## Newsletter Embed (Beehiiv)
+## Email Capture System (Apr 14, 2026)
 
-- Iframe height: 420px for screens <400px, 340px for 400-479px, 291px for 480px+
-- Styles duplicated in EmailCapture.astro and newsletter.astro
+Beehiiv iframe on /newsletter/ has been REMOVED and replaced with a native form. All three signup forms route through a Cloudflare Worker proxy to the Beehiiv API.
+
+### Forms
+- **Homepage popup** (`index.astro`) — "Stand With Us" modal, 1.5s delay, first name + email, opens `/free-preview.pdf` on success
+- **Book page** (`book.astro`) — email only, opens `/free-preview.pdf` on success, resets form
+- **Newsletter page** (`newsletter.astro`) — native form (no iframe), first name + email, shows "Check your inbox." on success, resets form
+
+### Cloudflare Worker
+- **URL**: `https://subscribe.drewreitzel.workers.dev`
+- **Code**: `~/Desktop/undivided-allegiance/ops/scripts/subscribe-worker.js`
+- **Already-subscribed check**: uses `/subscriptions?email=` endpoint (NOT `/subscribers?email=` — returns 404)
+- All forms fire Meta Pixel `Lead` event and show duplicate-email error message
+
+### Meta Pixel Lead event
+- `Lead` now fires from site code on all three forms (popup, book, newsletter)
+- Previously was only firing from Beehiiv iframe — update any campaign notes that reference Beehiiv as the Lead event source
+
+### Site Health Monitor
+- `SiteHealthMonitor.gs` checks newsletter page for `beehiiv-embed` — needs updating to `newsletter-form`
 
 ## Cowork Integration
 
@@ -129,6 +146,10 @@
 - **Site Health Monitor**: `~/Desktop/01_scripts/SiteHealthMonitor.gs`
 
 ## Rules
+
+### MANDATORY: Answer Questions Directly
+
+When Drew asks a question, answer it and do nothing else. Do not execute any action, write any file, or call any tool until Drew explicitly instructs you to proceed. A question is not a command.
 
 ### MANDATORY: Universal Save Protocol
 
