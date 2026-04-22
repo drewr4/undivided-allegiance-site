@@ -144,6 +144,7 @@ const latestPosts = posts.slice(0, 3);
         The line has already been drawn. <strong style="color: #0A0A0A;">Stand With Us.</strong>
       </p>
       <form id="popup-form" novalidate>
+        <label for="popup-name" class="sr-only">First name</label>
         <input
           id="popup-name"
           type="text"
@@ -153,6 +154,7 @@ const latestPosts = posts.slice(0, 3);
           style="background: #fff; border: 1px solid rgba(10,10,10,0.2); color: #0A0A0A;"
           autocomplete="given-name"
         />
+        <label for="popup-email" class="sr-only">Email address</label>
         <input
           id="popup-email"
           type="email"
