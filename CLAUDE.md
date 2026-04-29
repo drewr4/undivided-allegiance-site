@@ -122,11 +122,11 @@ Beehiiv iframe on /newsletter/ has been REMOVED and replaced with a native form.
 
 ## Cowork Integration
 
-- **Rules file**: `~/Desktop/undivided-allegiance/COWORK_RULES.md` — Cowork reads this before every task
+- **Rules file**: `~/Desktop/undivided-allegiance/CLAUDE.md` — Cowork reads this before every task
 - **Outputs folder**: `~/Desktop/undivided-allegiance/outputs/` — all Cowork deliverables go here
 - **Source of truth**: Claude Code owns CLAUDE.md, memory files, git, deploys. Cowork owns browser tasks and Meta Ads Manager.
-- **Locked files**: Memory files, COWORK_RULES.md, and REMNANT_TEMPLATE.md are locked with macOS `uchg` flag. To update: `chflags nouchg <path>` → edit → `chflags uchg <path>`
-- **Sync flow**: Cowork logs work to `outputs/memory-sync-log.md` → Claude Code reads it and syncs into CLAUDE.md and memory files
+- **Locked files**: Memory files, root CLAUDE.md, and REMNANT_TEMPLATE.md are locked with macOS `uchg` flag. To update: `chflags nouchg <path>` → edit → `chflags uchg <path>`
+- **Sync flow**: Cowork logs work to `ops/cowork/memory-sync-log.md` → Claude Code reads it and syncs into CLAUDE.md and memory files
 - **If conflict**: Claude Code's version wins
 
 ## File System (reorganized April 10, 2026)
