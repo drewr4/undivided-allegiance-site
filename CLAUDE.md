@@ -29,22 +29,25 @@
 - **Campaigns**: Two active content campaigns — book promotion ("You Can't Serve Two Masters") and newsletter signup
 - **Site Health Monitor**: Google Apps Script checks all pages + Beehiiv endpoints 4x/day (every 6 hours), sends status email every run (subject shows pass/fail at a glance). Script file: `~/Desktop/01_scripts/SiteHealthMonitor.gs`. Contact page check updated to "We Would Love to Hear From You" (Apr 2).
 
-## Book Launch (April 30, 2026)
+## Book Launch — KINDLE LIVE (April 30, 2026)
 
 - **Book**: "You Can't Serve Two Masters" — ISBN 979-8-2786-09926, $9.99 Kindle / $16.99 Print
-- **Preorder**: Kindle preorder live at https://www.amazon.com/dp/B0FGY9PL66
-- **Site CTA Strategy**: Ads point to /book/ page (not direct Amazon link) to capture both buyers (preorder button) and non-buyers (newsletter signup). After Apr 30, update buttons to reflect both Kindle and print being live.
-- **Announcement Bar**: Red bar at top of every page (BaseLayout.astro) linking to **/book/** (was Amazon — changed Apr 5 to funnel through book page)
-- **Homepage Hero CTA**: Also points to **/book/** (was Amazon — changed Apr 5)
+- **Kindle**: LIVE as of April 30, 2026 at https://www.amazon.com/dp/B0FGY9PL66
+- **Paperback**: ASIN B0GYLHSBR3 ($16.99) — releases May 2, 2026
+- **Site copy (updated Apr 30)**: All preorder language removed. Announcement bar, homepage, book page, and blog all updated. Current live copy: "Available now on Kindle. $9.99. Print available May 2." Buttons say "Order on Kindle — $9.99". Schema updated to InStock for Kindle.
+- **Site CTA Strategy**: Ads point to /book/ page (not direct Amazon link) to capture both buyers and non-buyers (newsletter signup).
+- **Announcement Bar**: Red bar at top of every page (BaseLayout.astro) linking to **/book/**
+- **Homepage Hero CTA**: Points to **/book/**
+- **Homepage popup**: "Stand With Us" modal — uses `sessionStorage` flag (`ua_popup_seen`). Shows once per browser session; does not re-trigger on same-session return visits. Clears on tab close.
 - **Meta Pixel**: Installed in BaseLayout.astro with ID `1289553056416593`
 - **Conversion Events** (added Apr 5):
   - `PageView` — fires site-wide via BaseLayout
   - `ViewContent` — fires on `/book/` page load (book.astro)
-  - `AddToCart` — fires on both Amazon preorder buttons in book.astro, value $9.99 USD
-  - `Lead` — fires from Beehiiv iframe on newsletter signup (configured in Beehiiv dashboard, not site code)
-- **TikTok Pixel**: Live as of Apr 16, 2026 — ID `D7CGUT3C77UA7GO31OO0` in BaseLayout.astro. Conversion events: `ViewContent` on /book/ load, `AddToCart` on preorder buttons, `CompleteRegistration` on all 3 email forms.
-- **Paid Ads**: Meta + TikTok, $10-20/day budget, 70/30 preorder/email split weeks 1-2, 90/10 weeks 3-4
-- **Email**: The Remnant (Beehiiv) — 3 issues before launch: #1 sent Apr 9, #2 "Silence of the Shepherds" drafted (post ID: dcf6ed5f, source URLs pending verification), #3 launch day Apr 30 6 AM ET. No Apr 16 issue.
+  - `AddToCart` — fires on both Amazon order buttons in book.astro (content_name: `YCSTM Kindle Order`), value $9.99 USD
+  - `Lead` — fires from site forms on all 3 email signup forms (homepage popup, book page, newsletter page)
+- **TikTok Pixel**: Live as of Apr 16, 2026 — ID `D7CGUT3C77UA7GO31OO0` in BaseLayout.astro. Conversion events: `ViewContent` on /book/ load, `AddToCart` on order buttons, `CompleteRegistration` on all 3 email forms.
+- **Paid Ads**: Meta + TikTok, $10-20/day budget
+- **Email**: The Remnant (Beehiiv) — Issue #3 "Two Masters" scheduled Apr 30 7 AM ET (post ID: 509c8319). Issues #1 + #2 sent.
 - **30-day launch plan**: Approved Mar 31, 3 phases (Foundation → Build → Launch)
 
 ## Meta Ads — Active Campaigns (as of Apr 1, 2026)
