@@ -178,8 +178,12 @@ const latestPosts = posts.slice(0, 3);
 
   <script is:inline>
     (function () {
+      if (localStorage.getItem('ua_popup_seen')) return;
       var overlay = document.getElementById('popup-overlay');
-      setTimeout(function () { overlay.style.display = 'flex'; }, 1500);
+      setTimeout(function () {
+        localStorage.setItem('ua_popup_seen', '1');
+        overlay.style.display = 'flex';
+      }, 1500);
       var closeBtn = document.getElementById('popup-close');
       var form = document.getElementById('popup-form');
       var nameInput = document.getElementById('popup-name');
