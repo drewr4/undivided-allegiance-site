@@ -147,7 +147,7 @@ One master. Undivided allegiance. There is no other option that ends well.
 
 ---
 
-*Drew Reitzel's book [You Can't Serve Two Masters: Undivided Allegiance to Christ in an Age of Cultural Compromise](/book/) releases April 30, 2026. [Preorder on Kindle for $9.99.](https://www.amazon.com/dp/B0FGY9PL66)*
+*Drew Reitzel's book [You Can't Serve Two Masters: Undivided Allegiance to Christ in an Age of Cultural Compromise](/book/) is available now on Kindle for $9.99. Print available May 2.*
 
 *Join [The Remnant](/newsletter/), a newsletter for believers who refuse to look away.*
 
@@ -173,4 +173,4 @@ The United Methodist Church removed prohibitions on LGBTQ clergy in 2024, with 7
 
 ### How does "You Can't Serve Two Masters" by Drew Reitzel address this?
 
-The book applies the principle of Matthew 6:24 to the American Church's institutional compromise: the silencing of pulpits, the avoidance of biblical clarity on cultural issues, and the cheap grace that has replaced the costly Gospel. It releases April 30, 2026 and is [available for Kindle preorder at $9.99](https://www.amazon.com/dp/B0FGY9PL66).
+The book applies the principle of Matthew 6:24 to the American Church's institutional compromise: the silencing of pulpits, the avoidance of biblical clarity on cultural issues, and the cheap grace that has replaced the costly Gospel. It is [available now on Kindle for $9.99](https://www.amazon.com/dp/B0FGY9PL66). Print available May 2.
