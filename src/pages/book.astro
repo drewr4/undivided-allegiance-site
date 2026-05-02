@@ -38,7 +38,8 @@ import bookCover from '../assets/book-cover.png';
         "@type": "Offer",
         "price": "16.99",
         "priceCurrency": "USD",
-        "availability": "https://schema.org/PreOrder",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.amazon.com/dp/B0GYLHSBR3",
         "itemCondition": "https://schema.org/NewCondition"
       }
     ],
@@ -100,7 +101,7 @@ import bookCover from '../assets/book-cover.png';
           </a>
           <div class="mb-8 space-y-1">
             <p class="text-cream/80 text-base"><span class="text-red font-semibold">Kindle</span> — Available now. $9.99.</p>
-            <p class="text-cream/80 text-base"><span class="text-red font-semibold">Print</span> — Available May 2.</p>
+            <p class="text-cream/80 text-base"><span class="text-red font-semibold">Print</span> — Available now. $16.99.</p>
           </div>
 
           <!-- Divider -->
@@ -260,14 +261,22 @@ import bookCover from '../assets/book-cover.png';
       <h2 class="mb-6">Order Now</h2>
       <div class="mb-8 space-y-1">
         <p class="text-cream/80 text-lg"><span class="text-red font-semibold">Kindle</span> — Available now. $9.99.</p>
-        <p class="text-cream/80 text-lg"><span class="text-red font-semibold">Print</span> — Available May 2.</p>
+        <p class="text-cream/80 text-lg"><span class="text-red font-semibold">Print</span> — Available now. $16.99.</p>
       </div>
-      <a href="https://www.amazon.com/dp/B0FGY9PL66" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'AddToCart', {content_name: 'YCSTM Kindle Order', content_type: 'product', value: 9.99, currency: 'USD'}); if(typeof ttq!=='undefined'){ttq.track('AddToCart', {content_name: 'YCSTM Kindle Order', content_type: 'product', value: 9.99, currency: 'USD'});}" class="btn-primary text-lg px-10 py-4 mb-12 inline-flex">
-        Order on Kindle — $9.99
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M7 17L17 7M17 7H7M17 7v10"/>
-        </svg>
-      </a>
+      <div class="flex flex-col sm:flex-row gap-4 mb-12">
+        <a href="https://www.amazon.com/dp/B0FGY9PL66" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'AddToCart', {content_name: 'YCSTM Kindle Order', content_type: 'product', value: 9.99, currency: 'USD'}); if(typeof ttq!=='undefined'){ttq.track('AddToCart', {content_name: 'YCSTM Kindle Order', content_type: 'product', value: 9.99, currency: 'USD'});}" class="btn-primary text-lg px-10 py-4 inline-flex">
+          Order on Kindle — $9.99
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+          </svg>
+        </a>
+        <a href="https://www.amazon.com/dp/B0GYLHSBR3" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'AddToCart', {content_name: 'YCSTM Paperback Order', content_type: 'product', value: 16.99, currency: 'USD'}); if(typeof ttq!=='undefined'){ttq.track('AddToCart', {content_name: 'YCSTM Paperback Order', content_type: 'product', value: 16.99, currency: 'USD'});}" class="btn-secondary text-lg px-10 py-4 inline-flex">
+          Order Paperback — $16.99
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </section>
 
