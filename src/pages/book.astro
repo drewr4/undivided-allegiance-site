@@ -93,15 +93,9 @@ import bookCover from '../assets/book-cover.png';
             Drew Reitzel
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-3 mb-8">
-            <a href="https://www.amazon.com/dp/B0FGY9PL66" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'AddToCart', {content_name: 'YCSTM Kindle Order', content_type: 'product', value: 9.99, currency: 'USD'}); if(typeof ttq!=='undefined'){ttq.track('AddToCart', {content_name: 'YCSTM Kindle Order', content_type: 'product', value: 9.99, currency: 'USD'});}" class="btn-primary text-lg px-8 py-4 inline-flex">
-              Kindle — $9.99
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M7 17L17 7M17 7H7M17 7v10"/>
-              </svg>
-            </a>
-            <a href="https://www.amazon.com/dp/B0GYLHSBR3" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'AddToCart', {content_name: 'YCSTM Paperback Order', content_type: 'product', value: 16.99, currency: 'USD'}); if(typeof ttq!=='undefined'){ttq.track('AddToCart', {content_name: 'YCSTM Paperback Order', content_type: 'product', value: 16.99, currency: 'USD'});}" class="btn-secondary text-lg px-8 py-4 inline-flex">
-              Paperback — $16.99
+          <div class="mb-8">
+            <a href="#order" class="btn-primary text-lg px-8 py-4 inline-flex">
+              Order Now
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M7 17L17 7M17 7H7M17 7v10"/>
               </svg>
@@ -259,7 +253,7 @@ import bookCover from '../assets/book-cover.png';
   </section>
 
   <!-- Order CTA -->
-  <section class="section-padding bg-black text-center">
+  <section id="order" class="section-padding bg-black text-center">
     <div class="container mx-auto px-6 max-w-2xl fade-in">
       <div class="w-20 h-[2px] bg-red mx-auto mb-8"></div>
       <h2 class="mb-6">Order Now</h2>
