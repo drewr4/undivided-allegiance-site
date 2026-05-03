@@ -33,8 +33,8 @@
 
 - **Book**: "You Can't Serve Two Masters" — ISBN 979-8-2786-09926, $9.99 Kindle / $16.99 Print
 - **Kindle**: LIVE as of April 30, 2026 at https://www.amazon.com/dp/B0FGY9PL66
-- **Paperback**: ASIN B0GYLHSBR3 ($16.99) — releases May 2, 2026
-- **Site copy (updated Apr 30)**: All preorder language removed. Announcement bar, homepage, book page, and blog all updated. Current live copy: "Available now on Kindle. $9.99. Print available May 2." Buttons say "Order on Kindle — $9.99". Schema updated to InStock for Kindle.
+- **Paperback**: ASIN B0GYLHSBR3 ($16.99) — LIVE May 2, 2026 at amazon.com/dp/B0GYLHSBR3
+- **Site copy (updated May 2)**: Both formats live. Announcement bar: "Now available in Kindle ($9.99) and Paperback ($16.99)." Homepage hero: "Available now in Kindle and Paperback." Book page hero: single "Order Now" button → scrolls to #order section. Order section: two buttons — "Kindle — $9.99" + "Paperback — $16.99". Schema: InStock for both. Blog: "Also available in paperback for $16.99."
 - **Site CTA Strategy**: Ads point to /book/ page (not direct Amazon link) to capture both buyers and non-buyers (newsletter signup).
 - **Announcement Bar**: Red bar at top of every page (BaseLayout.astro) linking to **/book/**
 - **Homepage Hero CTA**: Points to **/book/**
