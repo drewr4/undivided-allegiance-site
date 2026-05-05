@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 import bookCover from '../assets/book-cover.png';
 ---
 
-<BaseLayout title="You Can't Serve Two Masters" description="Undivided allegiance to Christ in an age of cultural compromise. A prophetic call to the American Church by Drew Reitzel.">
+<BaseLayout title="You Can't Serve Two Masters" description="A prophetic call to the American Church. Confronts cultural compromise and the silencing of the pulpit. Available in Kindle ($9.99) and Paperback ($16.99)." ogImage="/og-book.png">
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Book",
@@ -78,6 +78,7 @@ import bookCover from '../assets/book-cover.png';
               class="relative w-72 sm:w-80 md:w-96 shadow-2xl"
               widths={[320, 384, 512]}
               sizes="(max-width: 640px) 288px, (max-width: 768px) 320px, 384px"
+              loading="eager"
             />
           </div>
         </div>
