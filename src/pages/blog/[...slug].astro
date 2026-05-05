@@ -15,8 +15,8 @@ const { Content } = await render(post);
 ---
 
 <BlogPostLayout
-  title={post.data.title}
-  excerpt={post.data.excerpt}
+  title={post.data.seo?.title || post.data.title}
+  excerpt={post.data.seo?.description || post.data.excerpt}
   publishDate={post.data.publishDate}
   updatedDate={post.data.updatedDate}
   category={post.data.category}
