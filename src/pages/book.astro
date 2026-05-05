@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 import bookCover from '../assets/book-cover.png';
 ---
 
-<BaseLayout title="You Can't Serve Two Masters" description="A prophetic call to the American Church. Confronts cultural compromise and the silencing of the pulpit. Available in Kindle ($9.99) and Paperback ($16.99)." ogImage="/og-book.png">
+<BaseLayout title="You Can't Serve Two Masters" description="A prophetic call to the American Church. Confronts cultural compromise and the silencing of the pulpit. Available in Kindle ($9.99) and Paperback ($16.99)." ogImage="/og-book.png" ogType="book">
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Book",
@@ -46,6 +46,24 @@ import bookCover from '../assets/book-cover.png';
     "genre": ["Religion", "Christianity", "Church"],
     "inLanguage": "en",
     "description": "A prophetic call to the American Church. Confronts the abortion altar, the redefinition of marriage, the silencing of the pulpit, and the cheap grace that has replaced the costly Gospel of Jesus Christ."
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.undividedallegiance.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "The Book",
+        "item": "https://www.undividedallegiance.com/book/"
+      }
+    ]
   })} />
   <!-- ViewContent pixel event — tells Meta + TikTok this visitor viewed the book page -->
   <script is:inline>
