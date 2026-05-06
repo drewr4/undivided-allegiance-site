@@ -2,12 +2,13 @@
 title: "Why 'You Can't Serve Two Masters' Is the Book the American Church Needs Right Now"
 excerpt: "The American Church is not drifting. It is choosing. And this book, prophetic, unflinching, and deeply pastoral, names the choice most authors and pastors won't."
 publishDate: 2026-03-26
+updatedDate: 2026-05-06
 category: "Culture"
 tags: ["book", "church", "compromise", "allegiance", "culture"]
 featured: true
 seo:
-  title: "Why 'You Can't Serve Two Masters' Is the Book the American Church Needs"
-  description: "Drew Reitzel's prophetic new book calls the American Church to undivided allegiance to Christ. Only 4% hold a biblical worldview. This book names why."
+  title: "Why the Church Needs 'You Can't Serve Two Masters' by Drew Reitzel"
+  description: "Drew Reitzel's debut book calls the American Church to undivided allegiance to Christ. Only 4% hold a biblical worldview. Available now in Kindle and paperback."
   pageType: "article"
 ---
 
@@ -17,7 +18,7 @@ We have churches that are growing and congregations that are shrinking. We have 
 
 The problem is not that the Church lacks resources. The problem is that the Church lacks allegiance.
 
-Drew Reitzel's forthcoming book, *You Can't Serve Two Masters: Undivided Allegiance to Christ in an Age of Cultural Compromise*, says what the pulpit has gone quiet about. It is not another self-help book with a cross on the cover. It is a prophetic call to the American Church to stop choosing cultural approval over biblical fidelity, and to confront the cost of that choice before it's too late.
+Drew Reitzel's debut book, *You Can't Serve Two Masters: Undivided Allegiance to Christ in an Age of Cultural Compromise*, says what the pulpit has gone quiet about. It is not another self-help book with a cross on the cover. It is a prophetic call to the American Church to stop choosing cultural approval over biblical fidelity, and to confront the cost of that choice before it's too late.
 
 ## Why Does the American Church Need This Book Right Now?
 
@@ -31,7 +32,7 @@ The vast majority of people who call themselves Christians in America do not thi
 
 This is not a problem that more programs will fix. It is not a problem that a better worship set will fix. It is a crisis of allegiance, and it demands a prophetic voice, not a marketing strategy.
 
-*You Can't Serve Two Masters* is that voice. Where most Christian books tiptoe around the tension between faith and culture, this one walks straight into it. Where most authors soften the diagnosis to avoid offense, Reitzel names the disease: [the Church is not drifting, it is choosing](/blog/the-church-is-choosing).
+*You Can't Serve Two Masters* is that voice. Where most Christian books tiptoe around the tension between faith and culture, this one walks straight into it. Where most authors soften the diagnosis to avoid offense, Reitzel names the disease: [the Church is not drifting, it is choosing](/blog/the-church-is-choosing/).
 
 ## What Is This Book Actually About?
 
@@ -85,7 +86,7 @@ This is not a book written by someone who studied the problem. It's a book writt
 
 Directly. That's the short answer.
 
-Where most churches tiptoe around abortion, *You Can't Serve Two Masters* speaks with biblical clarity. Where denominations have quietly revised their positions on marriage, this book holds the line, not out of cruelty, but out of faithfulness to what Scripture actually says. Where the prosperity gospel and its softer cousin, therapeutic Christianity, have [replaced the God of Scripture with a god of comfort](/blog/the-god-of-comfort-vs-the-god-of-scripture), Reitzel calls it what it is: idolatry dressed in worship music.
+Where most churches tiptoe around abortion, *You Can't Serve Two Masters* speaks with biblical clarity. Where denominations have quietly revised their positions on marriage, this book holds the line, not out of cruelty, but out of faithfulness to what Scripture actually says. Where the prosperity gospel and its softer cousin, therapeutic Christianity, have [replaced the God of Scripture with a god of comfort](/blog/the-god-of-comfort-vs-the-god-of-scripture/), Reitzel calls it what it is: idolatry dressed in worship music.
 
 These are not easy chapters. They won't make you feel good. But conviction rarely does.
 
@@ -111,19 +112,22 @@ The book makes this choice concrete. It's not an abstraction. It's not a theolog
 
 This is where the book separates itself from every other critique of the American Church. It doesn't just name the problem. It calls for a response.
 
-[Repentance](/blog/what-repentance-actually-requires). Not the soft, therapeutic kind that modern Christianity has invented, the biblical kind. The kind that means turning around entirely. The kind that costs something.
+[Repentance](/blog/what-repentance-actually-requires/). Not the soft, therapeutic kind that modern Christianity has invented, the biblical kind. The kind that means turning around entirely. The kind that costs something.
 
 The invitation at the heart of *You Can't Serve Two Masters* is the oldest invitation in Scripture: *Choose this day whom you will serve.*
 
 The book simply asks: Have you?
 
-## When Does the Book Release?
+## Get the Book
 
-*You Can't Serve Two Masters: Undivided Allegiance to Christ in an Age of Cultural Compromise* releases on **April 30, 2026**.
+*You Can't Serve Two Masters: Undivided Allegiance to Christ in an Age of Cultural Compromise* is available now in Kindle and paperback.
 
 If this post named something you've been feeling, if you've sensed the compromise, felt the tension, or wondered whether anyone was going to say it out loud, this book was written for you.
 
-[Sign up for the newsletter](/newsletter) to be notified on release day, and follow along at [undividedallegiance.com](https://undividedallegiance.com) as we count down to launch.
+- [Order on Kindle — $9.99](https://www.amazon.com/dp/B0FGY9PL66)
+- [Order in Paperback — $16.99](https://www.amazon.com/dp/B0GYLHSBR3)
+
+[Join The Remnant newsletter](/newsletter/) for ongoing writing on faith, culture, and biblical fidelity in America.
 
 Share this with a pastor who needs to hear it. Share it with a friend who's been asking the hard questions. The Church doesn't need more silence. It needs more voices willing to say what's true, no matter the cost.
 
@@ -143,6 +147,6 @@ Drew Reitzel holds a theology degree and has years of pastoral ministry experien
 
 No. While it addresses culturally charged issues, the book's framework is allegiance to Christ, not allegiance to a party, a movement, or a political platform. Both sides of the aisle will find themselves challenged, which is exactly the point.
 
-### When does "You Can't Serve Two Masters" come out?
+### Where can I get "You Can't Serve Two Masters"?
 
-The book releases on **April 30, 2026**. [Sign up at undividedallegiance.com](/newsletter) to be notified on release day and receive updates leading up to launch.
+The book is available now. Order the [Kindle edition for $9.99](https://www.amazon.com/dp/B0FGY9PL66) or the [paperback for $16.99](https://www.amazon.com/dp/B0GYLHSBR3). You can also [visit the book page](/book/) for more details and a free preview chapter.
