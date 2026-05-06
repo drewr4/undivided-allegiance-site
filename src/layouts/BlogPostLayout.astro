@@ -87,13 +87,13 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
       </header>
 
       {image && (
-        <div class="mb-12">
+        <div class="mb-12 flex justify-center">
           <img
             src={image.src}
             alt={image.alt}
-            width="1200"
-            height="630"
-            class="w-full object-cover max-h-[480px]"
+            width="720"
+            height="1152"
+            class="w-full max-w-sm"
             loading="eager"
             decoding="async"
           />
