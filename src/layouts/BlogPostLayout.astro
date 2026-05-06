@@ -8,9 +8,10 @@ interface Props {
   updatedDate?: Date;
   category: string;
   tags: string[];
+  image?: { src: string; alt: string };
 }
 
-const { title, excerpt, publishDate, updatedDate, category, tags } = Astro.props;
+const { title, excerpt, publishDate, updatedDate, category, tags, image } = Astro.props;
 
 const formattedDate = publishDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -25,7 +26,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
 });
 ---
 
-<BaseLayout title={title} description={excerpt} ogType="article">
+<BaseLayout title={title} description={excerpt} ogType="article" ogImage={image?.src}>
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",
@@ -33,7 +34,12 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     "description": excerpt || "",
     "datePublished": publishDate.toISOString(),
     ...(updatedDate && { "dateModified": updatedDate.toISOString() }),
-    "image": {
+    "image": image ? {
+      "@type": "ImageObject",
+      "url": `https://www.undividedallegiance.com${image.src}`,
+      "width": 1200,
+      "height": 630
+    } : {
       "@type": "ImageObject",
       "url": "https://www.undividedallegiance.com/og-book.png",
       "width": 1931,
@@ -79,6 +85,20 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
         )}
         <div class="divider mt-8"></div>
       </header>
+
+      {image && (
+        <div class="mb-12">
+          <img
+            src={image.src}
+            alt={image.alt}
+            width="1200"
+            height="630"
+            class="w-full object-cover"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      )}
 
       <div class="prose-custom">
         <slot />

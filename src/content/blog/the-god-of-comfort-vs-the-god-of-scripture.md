@@ -6,6 +6,9 @@ lastUpdated: 2026-04-29
 category: "Culture"
 tags: ["theology", "idolatry", "culture", "moralistic therapeutic deism", "biblical worldview", "American church", "compromise"]
 featured: false
+image:
+  src: /images/blog/god-of-comfort.png
+  alt: Split composition showing warm comfortable light on one side and stark harsh light with an open Bible on the other
 seo:
   title: "The God of Comfort vs. the God of Scripture"
   description: "The American Church replaced the God of Scripture with a deity who asks nothing. Sociologists call it Moralistic Therapeutic Deism. Here's how."

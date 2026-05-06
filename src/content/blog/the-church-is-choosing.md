@@ -6,6 +6,9 @@ lastUpdated: 2026-04-29
 category: "Culture"
 tags: ["church", "culture", "compromise", "biblical worldview", "faithfulness", "pastoral silence", "American church"]
 featured: true
+image:
+  src: /images/blog/church-is-choosing.png
+  alt: Crossroads sign in darkness, one direction lit by harsh light, the other in deep shadow
 seo:
   title: "The Church Is Not Drifting. It Is Choosing"
   description: "The American Church hasn't drifted from truth. It chose to abandon it. Only 4% hold a biblical worldview (AWVI, 2026). Here's how it happened."

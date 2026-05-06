@@ -6,6 +6,9 @@ lastUpdated: 2026-04-28
 category: "Church"
 tags: ["pastoral silence", "church compromise", "preaching", "hard truths", "biblical authority", "shepherd"]
 featured: false
+image:
+  src: /images/blog/why-pastors-wont-preach.png
+  alt: Empty wooden pulpit under a single spotlight in a dark sanctuary
 seo:
   title: "Why Pastors Won't Preach Hard Truths Anymore"
   description: "50% of pastors avoid moral issues from the pulpit (Barna, 2023). It's not fear. It's a calculated trade that's costing the Church everything."

@@ -6,6 +6,9 @@ lastUpdated: 2026-04-29
 category: "Theology"
 tags: ["repentance", "theology", "sanctification", "metanoia", "biblical worldview", "sin", "transformation"]
 featured: true
+image:
+  src: /images/blog/repentance-requires.png
+  alt: Narrow wooden door slightly ajar, warm light spilling into a dark stone corridor
 seo:
   title: "What Repentance Actually Requires"
   description: "Only 4% of Americans hold a biblical worldview (AWVI, 2026). It starts with misunderstanding repentance. Here's what the Bible actually says it requires."

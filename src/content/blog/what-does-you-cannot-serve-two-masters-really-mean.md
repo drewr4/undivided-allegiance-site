@@ -5,6 +5,9 @@ publishDate: 2026-04-08
 category: "Scripture"
 tags: ["matthew-6-24", "serving-two-masters", "church", "compromise", "allegiance", "biblical-authority"]
 featured: false
+image:
+  src: /images/blog/two-masters-meaning.png
+  alt: Two diverging stone paths at night, one lit by amber lantern light, one in shadow
 seo:
   title: "What Does 'You Cannot Serve Two Masters' Really Mean? Beyond Money"
   description: "Only 4% of Americans hold a biblical worldview. Matthew 6:24 isn't about money. It's about the allegiance crisis the Church lives daily."
