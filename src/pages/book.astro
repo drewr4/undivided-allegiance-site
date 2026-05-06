@@ -1,10 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import bookCover from '../assets/book-cover.png';
+
+const preloadCover = await getImage({ src: bookCover, format: 'webp', width: 384 });
 ---
 
 <BaseLayout title="You Can't Serve Two Masters" description="A prophetic call to the American Church. Confronts cultural compromise and the silencing of the pulpit. Available in Kindle ($9.99) and Paperback ($16.99)." ogImage="/og-book.png" ogType="book">
+  <link rel="preload" as="image" href={preloadCover.src} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Book",

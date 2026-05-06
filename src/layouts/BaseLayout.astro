@@ -116,6 +116,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       }(window, document, 'ttq');
     </script>
     <!-- End TikTok Pixel -->
+    <slot name="head" />
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
