@@ -85,7 +85,7 @@ image:
 - All 6 existing posts have images as of May 6, 2026
 - Generate new images with nano-banana for each new blog post
 - Without `image` field, Article schema falls back to `/og-book.png`
-- **Portrait images:** BlogPostLayout renders images with `max-w-md flex justify-center` so portrait photos display centered at max 448px wide, full height. `book-church-needs.png` is a portrait photo (836x1152). Do not change the image wrapper to `w-full` for that post — it will stretch huge.
+- **Portrait images:** Add `portrait: true` to the `image` field in frontmatter. BlogPostLayout conditionally applies `flex justify-center max-w-md` for portrait, `w-full` for landscape. `book-church-needs.png` is a portrait photo (836x1152) and has `portrait: true` set. All other posts default to full-width landscape. Do not remove `portrait: true` from that post.
 
 ## Content Pipeline
 
