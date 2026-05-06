@@ -9,7 +9,12 @@ export default defineConfig({
   output: 'static',
   integrations: [
     mdx(),
-    sitemap(),
+    sitemap({
+      filter: (page) => !page.includes('/book-landing/'),
+      serialize(item) {
+        return { ...item, lastmod: new Date().toISOString().split('T')[0] };
+      },
+    }),
   ],
   vite: {
     plugins: [tailwindcss()],

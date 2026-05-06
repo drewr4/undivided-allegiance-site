@@ -2,7 +2,29 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="About" description="Learn about Drew Reitzel and the mission of Undivided Allegiance — calling the Church back to biblical fidelity.">
+<BaseLayout title="About Drew Reitzel" description="Drew Reitzel is a prophetic writer and speaker calling the Church back to biblical fidelity. Author of You Can't Serve Two Masters.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Drew Reitzel",
+    "url": "https://www.undividedallegiance.com/about/",
+    "jobTitle": "Author, Writer, Speaker",
+    "description": "Prophetic writer and speaker calling the Church back to biblical fidelity. Author of You Can't Serve Two Masters.",
+    "knowsAbout": ["biblical theology", "cultural Christianity", "church integrity", "faith and culture"],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61579550235172",
+      "https://instagram.com/undividedallegiance",
+      "https://www.tiktok.com/@undividedallegiance",
+      "https://x.com/UndivAllegiance",
+      "https://www.linkedin.com/company/undivided-allegiance",
+      "https://youtube.com/@UndividedAllegiance"
+    ],
+    "author": {
+      "@type": "Book",
+      "name": "You Can't Serve Two Masters",
+      "url": "https://www.undividedallegiance.com/book/"
+    }
+  })} />
   <!-- Hero -->
   <section class="section-padding bg-black">
     <div class="container mx-auto px-6 max-w-4xl">
@@ -25,19 +47,64 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="space-y-6 text-muted-light text-lg leading-relaxed">
           <p>
             Drew Reitzel is a prophetic writer and speaker whose work sits at the intersection
-            of faith, culture, and biblical truth. His writing does not seek to be popular —
-            it seeks to be faithful.
+            of faith, culture, and biblical truth. His writing does not seek to be popular.
+            It seeks to be faithful.
+          </p>
+          <p>
+            He holds a degree in theology and spent several years in pastoral ministry before
+            entering the marketplace, where he spent more than two decades building businesses
+            and learning what it costs to carry conviction in a world that rewards compromise.
+            That tension, between what Scripture demands and what culture rewards, is where his
+            writing was forged.
           </p>
           <p>
             In a time when the Church has learned to speak in softer tones to avoid offending
-            the world, Drew writes with the conviction that truth spoken in love is never cruel —
-            but silence in the face of compromise always is.
+            the world, Drew writes with the conviction that truth spoken in love is never cruel.
+            But silence in the face of compromise always is.
           </p>
           <p>
-            His debut book, <em>You Can't Serve Two Masters</em>, examines the American Church's
-            steady exchange of biblical authority for cultural approval. It is not a condemnation.
-            It is a mirror — and a call to come home.
+            He is not writing from a place of having arrived. He is writing from a place of
+            conviction, shaped by his own failures, his own seasons of wandering, and his own
+            experience of what it means to be pulled in two directions at once. That is what
+            makes this message personal. And what makes it urgent.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Book -->
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="fade-in">
+        <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-4">The Book</span>
+        <h2 class="mb-8">You Can't Serve Two Masters</h2>
+        <div class="divider mb-8"></div>
+        <div class="space-y-6 text-muted-light text-lg leading-relaxed">
+          <p>
+            After a year of writing, Drew released his debut book in April 2026. It is not a
+            political book. It is not a culture-war manifesto. It is a theological examination
+            of the allegiance crisis that has quietly gutted the American Church.
+          </p>
+          <p>
+            The book confronts the silencing of the pulpit, the redefinition of biblical truth
+            to match cultural comfort, and the slow trade the Church has made: the authority of
+            Scripture for the approval of the world. It names what most people in the pews
+            already sense but cannot articulate. And it points toward the only way forward.
+          </p>
+          <p>
+            Repentance is not shame. It is the door back to where God always intended His Church
+            to stand. That is the message of this book. That is the message Drew has given his
+            voice to.
+          </p>
+          <div class="mt-8">
+            <a href="/book/" class="btn-primary inline-flex">
+              Read About the Book
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7v10"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
