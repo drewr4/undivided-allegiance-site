@@ -33,6 +33,12 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
     "description": excerpt || "",
     "datePublished": publishDate.toISOString(),
     ...(updatedDate && { "dateModified": updatedDate.toISOString() }),
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://www.undividedallegiance.com/og-book.png",
+      "width": 1931,
+      "height": 2775
+    },
     "author": {
       "@type": "Person",
       "name": "Drew Reitzel",
