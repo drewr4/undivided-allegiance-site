@@ -81,10 +81,11 @@ image:
 ```
 
 - Images live in `public/images/blog/` (served as `/images/blog/filename.png`)
-- Target dimensions: 1200x630 (16:9, blog featured image standard)
+- Target dimensions: 1200x630 (16:9, blog featured image standard); portrait images also work (see note below)
 - All 6 existing posts have images as of May 6, 2026
 - Generate new images with nano-banana for each new blog post
 - Without `image` field, Article schema falls back to `/og-book.png`
+- **Portrait images:** BlogPostLayout renders images with `max-w-md flex justify-center` so portrait photos display centered at max 448px wide, full height. `book-church-needs.png` is a portrait photo (836x1152). Do not change the image wrapper to `w-full` for that post — it will stretch huge.
 
 ## Content Pipeline
 
