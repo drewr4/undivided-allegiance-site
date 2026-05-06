@@ -22,6 +22,40 @@
 - `BaseLayout.astro` accepts `ogType` prop (default: `"website"`) — pass `ogType="book"` on book page, `ogType="article"` on blog posts if needed
 - `public/og-book.png` — stable book cover OG image (267KB PNG, 1931×2775). Used by /book/ page. Predictable URL regardless of Astro build hashing.
 
+## Blog Frontmatter Schema (use this for all new blog posts)
+
+When writing or publishing blog posts for this site, always use this exact frontmatter format. The blog-write skill generates different field names — map them as shown below.
+
+```yaml
+---
+title: "Post Title Here"
+excerpt: "Human-readable subtitle shown on the blog card and post header. 1-2 sentences, no stats required. This is what readers see on the page."
+publishDate: 2026-05-05
+updatedDate: 2026-05-05        # optional, only include if updating an existing post
+category: "Scripture"          # examples: Scripture, Church, Culture, Faith, Allegiance
+tags: ["tag-one", "tag-two", "tag-three"]
+featured: false
+draft: false
+seo:
+  title: "SEO-Optimized Title — can differ from main title for keyword targeting"
+  description: "150-160 char search snippet. Include 1 statistic with source. This is what appears in Google results."
+  pageType: "article"
+---
+```
+
+### Mapping from blog-write skill output
+| blog-write field | Site field |
+|---|---|
+| `description` | move to `seo.description` |
+| `title` | keep as `title`; copy to `seo.title` if you want a keyword variant |
+| `date` | rename to `publishDate` |
+| `lastUpdated` | rename to `updatedDate` (optional) |
+| `author` | omit, hardcoded to Drew Reitzel in the layout |
+| `coverImage` | omit, site does not use cover images in frontmatter |
+| `tags` | keep as-is |
+
+Write `excerpt` separately. It is the on-page subtitle, not the SEO description.
+
 ## Content Pipeline
 
 - **Google Sheet**: Manages social content queue with Status column (Ready / Scheduled / Posted)
