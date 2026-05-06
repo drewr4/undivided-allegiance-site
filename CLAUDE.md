@@ -20,7 +20,18 @@
 - `middleware.ts` - Vercel edge: `book.` subdomain rewrites to `/book-landing/`
 - Path alias: `@/*` maps to `src/*`
 - `BaseLayout.astro` accepts `ogType` prop (default: `"website"`) — pass `ogType="book"` on book page, `ogType="article"` on blog posts if needed
+- `BaseLayout.astro` has `<slot name="head" />` just before `</head>` — use to inject page-specific `<link rel="preload">` or other head elements
 - `public/og-book.png` — stable book cover OG image (267KB PNG, 1931×2775). Used by /book/ page. Predictable URL regardless of Astro build hashing.
+- `public/llms.txt` — AI crawler guidance file. Lists all 6 blog posts, book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
+
+## SEO Infrastructure (as of May 5, 2026)
+
+- **Google Search Console**: Verified via HTML meta tag (`Ss2oF61TWvXnYwq2J2ppQrUax4YMvRrHPagmRBNgQLU`) in `BaseLayout.astro`. Sitemap submitted: `sitemap-index.xml`. Do NOT remove the GSC meta tag from BaseLayout.
+- **Article schema**: All blog posts now include required `image` field (ImageObject pointing to `/og-book.png`, 1931×2775) via `BlogPostLayout.astro`. Eligible for Google rich results.
+- **og:type**: Blog posts declare `og:type="article"` via `ogType` prop in BlogPostLayout. Book page uses `ogType="book"`. All others default to `website`.
+- **LCP optimizations**: Homepage book cover has `loading="eager"`. /book/ hero uses `loading="eager"` + `<link rel="preload">` injected via head slot using `getImage()` to resolve the hashed WebP URL at build time.
+- **301 redirect**: Non-www to www redirect is permanent (301) via `vercel.json`.
+- **Security headers**: X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy set via `vercel.json`.
 
 ## Blog Frontmatter Schema (use this for all new blog posts)
 
