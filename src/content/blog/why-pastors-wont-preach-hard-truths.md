@@ -125,9 +125,9 @@ The hard truth (the one nobody is preaching) is that the silence in the pulpit i
 
 That choice has consequences. The flock bears them.
 
-[INTERNAL-LINK: For more on divided allegiance in the Church, read our deep dive on what → "What Does 'You Cannot Serve Two Masters' Really Mean?"]
+For more on divided allegiance in the Church, read [What Does 'You Cannot Serve Two Masters' Really Mean?](/blog/what-does-you-cannot-serve-two-masters-really-mean/).
 
-[INTERNAL-LINK: Read about the pattern of institutional drift → "The Church Is Not Drifting. It Is Choosing"]
+Read about the pattern of institutional drift in [The Church Is Not Drifting. It Is Choosing](/blog/the-church-is-choosing/).
 
 ---
 

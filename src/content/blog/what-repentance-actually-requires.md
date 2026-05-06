@@ -115,9 +115,9 @@ That turning is what makes grace land. It is what opens the door to everything J
 
 The mercy is real. The door is open. But the door is a door, and doors are walked through, not appreciated from a distance.
 
-[INTERNAL-LINK: For more on the Church's drift from biblical truth, read "The Church Is Not Drifting. It Is Choosing."]
+For more on the Church's drift from biblical truth, read [The Church Is Not Drifting. It Is Choosing](/blog/the-church-is-choosing/).
 
-[INTERNAL-LINK: On what it means to hold nothing back from God, read "What Does 'You Cannot Serve Two Masters' Really Mean?"]
+On what it means to hold nothing back from God, read [What Does 'You Cannot Serve Two Masters' Really Mean?](/blog/what-does-you-cannot-serve-two-masters-really-mean/).
 
 ---
 

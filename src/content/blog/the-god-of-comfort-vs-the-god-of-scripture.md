@@ -112,9 +112,9 @@ The God of Scripture is harder. He asks everything. He costs everything. And he 
 
 That is why the exchange has been so appealing, and why it has cost the Church so much. Not because the real God is harsh, but because he is real, and real things make demands that constructed things do not.
 
-[INTERNAL-LINK: On how the Church chose this path step by step, read "The Church Is Not Drifting. It Is Choosing."]
+On how the Church chose this path step by step, read [The Church Is Not Drifting. It Is Choosing](/blog/the-church-is-choosing/).
 
-[INTERNAL-LINK: On what the God of Scripture actually requires from those who follow him, read "What Repentance Actually Requires."]
+On what the God of Scripture actually requires from those who follow him, read [What Repentance Actually Requires](/blog/what-repentance-actually-requires/).
 
 ---
 

@@ -123,9 +123,9 @@ It needs to stop calling what it has done a drift and start calling it a series 
 
 God's covenant faithfulness is not exhausted by our unfaithfulness. But our restoration begins in the same place it always has: with honesty about what we actually chose, and with the will to choose differently.
 
-[INTERNAL-LINK: On the silence of pastors who know better, read "Why Pastors Won't Preach Hard Truths Anymore."]
+On the silence of pastors who know better, read [Why Pastors Won't Preach Hard Truths Anymore](/blog/why-pastors-wont-preach-hard-truths/).
 
-[INTERNAL-LINK: On what genuine repentance requires from the Church and from individuals, read "What Repentance Actually Requires."]
+On what genuine repentance requires from the Church and from individuals, read [What Repentance Actually Requires](/blog/what-repentance-actually-requires/).
 
 ---
 
