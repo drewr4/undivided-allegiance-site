@@ -8,7 +8,7 @@ tags: ["book", "church", "compromise", "allegiance", "culture"]
 featured: true
 image:
   src: /images/blog/book-church-needs.png
-  alt: Closed hardcover book on dark stone, illuminated by a single beam of light from above
+  alt: You Can't Serve Two Masters by Drew Reitzel lying on a wooden table beside a lit candle in a brass holder
 seo:
   title: "Why the Church Needs 'You Can't Serve Two Masters' by Drew Reitzel"
   description: "Drew Reitzel's debut book calls the American Church to undivided allegiance to Christ. Only 4% hold a biblical worldview. Available now in Kindle and paperback."
