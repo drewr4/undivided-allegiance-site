@@ -24,14 +24,17 @@
 - `public/og-book.png` — stable book cover OG image (267KB PNG, 1931×2775). Used by /book/ page. Predictable URL regardless of Astro build hashing.
 - `public/llms.txt` — AI crawler guidance file. Lists all 6 blog posts, book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
 
-## SEO Infrastructure (as of May 5, 2026)
+## SEO Infrastructure (as of May 6, 2026)
 
 - **Google Search Console**: Verified via HTML meta tag (`Ss2oF61TWvXnYwq2J2ppQrUax4YMvRrHPagmRBNgQLU`) in `BaseLayout.astro`. Sitemap submitted: `sitemap-index.xml`. Do NOT remove the GSC meta tag from BaseLayout.
-- **Article schema**: All blog posts now include required `image` field (ImageObject pointing to `/og-book.png`, 1931×2775) via `BlogPostLayout.astro`. Eligible for Google rich results.
-- **og:type**: Blog posts declare `og:type="article"` via `ogType` prop in BlogPostLayout. Book page uses `ogType="book"`. All others default to `website`.
+- **Article schema**: All 6 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
+- **Blog featured images**: All 6 posts have inline featured images (visible in article body). Images at `public/images/blog/*.png` (1200x630). Article schema, og:image, and inline render all use the post-specific image. See Blog Frontmatter Schema below for the `image` field.
+- **og:type**: Blog posts declare `og:type="article"` via `ogType` prop in BlogPostLayout. og:image is post-specific. Book page uses `ogType="book"`. All others default to `website`.
+- **GEO readiness**: Scored 74/100 (May 6, 2026). llms.txt live at /llms.txt. All AI crawlers allowed. Inline images + multi-modal signals complete. Remaining ceiling: Wikipedia entity, Reddit presence (off-site builds).
 - **LCP optimizations**: Homepage book cover has `loading="eager"`. /book/ hero uses `loading="eager"` + `<link rel="preload">` injected via head slot using `getImage()` to resolve the hashed WebP URL at build time.
 - **301 redirect**: Non-www to www redirect is permanent (301) via `vercel.json`.
 - **Security headers**: X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy set via `vercel.json`.
+- **llms.txt**: `public/llms.txt` — lists all blog posts, book, newsletter, key pages, and content use policy. Update when new blog posts are published.
 
 ## Blog Frontmatter Schema (use this for all new blog posts)
 
@@ -62,10 +65,26 @@ seo:
 | `date` | rename to `publishDate` |
 | `lastUpdated` | rename to `updatedDate` (optional) |
 | `author` | omit, hardcoded to Drew Reitzel in the layout |
-| `coverImage` | omit, site does not use cover images in frontmatter |
+| `coverImage` | omit — use `image` field instead (see below) |
 | `tags` | keep as-is |
 
 Write `excerpt` separately. It is the on-page subtitle, not the SEO description.
+
+### Blog featured images (added May 6, 2026)
+
+Every blog post should have an `image` field. This renders as an inline featured image in the article body, sets the post-specific `og:image` for social sharing, and populates the Article schema ImageObject (replacing the old static `og-book.png` fallback).
+
+```yaml
+image:
+  src: /images/blog/your-post-slug.png
+  alt: Descriptive alt text for the image (what it actually shows)
+```
+
+- Images live in `public/images/blog/` (served as `/images/blog/filename.png`)
+- Target dimensions: 1200x630 (16:9, blog featured image standard)
+- All 6 existing posts have images as of May 6, 2026
+- Generate new images with nano-banana for each new blog post
+- Without `image` field, Article schema falls back to `/og-book.png`
 
 ## Content Pipeline
 
