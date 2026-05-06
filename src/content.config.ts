@@ -25,6 +25,7 @@ const blog = defineCollection({
     image: z.object({
       src: z.string(),
       alt: z.string(),
+      portrait: z.boolean().default(false),
     }).optional(),
     seo: seoSchema,
   }),

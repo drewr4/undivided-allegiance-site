@@ -8,7 +8,7 @@ interface Props {
   updatedDate?: Date;
   category: string;
   tags: string[];
-  image?: { src: string; alt: string };
+  image?: { src: string; alt: string; portrait?: boolean };
 }
 
 const { title, excerpt, publishDate, updatedDate, category, tags, image } = Astro.props;
@@ -87,13 +87,13 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
       </header>
 
       {image && (
-        <div class="mb-12 flex justify-center">
+        <div class={`mb-12${image.portrait ? ' flex justify-center' : ''}`}>
           <img
             src={image.src}
             alt={image.alt}
-            width="720"
-            height="1152"
-            class="w-full max-w-md"
+            width={image.portrait ? 836 : 1200}
+            height={image.portrait ? 1152 : 630}
+            class={image.portrait ? 'w-full max-w-md' : 'w-full'}
             loading="eager"
             decoding="async"
           />
