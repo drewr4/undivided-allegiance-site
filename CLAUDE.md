@@ -19,6 +19,8 @@
 - `src/styles/global.css` - Tailwind directives
 - `middleware.ts` - Vercel edge: `book.` subdomain rewrites to `/book-landing/`
 - Path alias: `@/*` maps to `src/*`
+- `BaseLayout.astro` accepts `ogType` prop (default: `"website"`) — pass `ogType="book"` on book page, `ogType="article"` on blog posts if needed
+- `public/og-book.png` — stable book cover OG image (267KB PNG, 1931×2775). Used by /book/ page. Predictable URL regardless of Astro build hashing.
 
 ## Content Pipeline
 
@@ -49,6 +51,7 @@
 - **Paid Ads**: Meta + TikTok, $10-20/day budget
 - **Email**: The Remnant (Beehiiv) — Issue #3 "Two Masters" scheduled Apr 30 7 AM ET (post ID: 509c8319). Issues #1 + #2 sent.
 - **30-day launch plan**: Approved Mar 31, 3 phases (Foundation → Build → Launch)
+- **/book/ SEO state (May 5, 2026):** Hero image `loading="eager"` (LCP fix). og:image = `/og-book.png` (book cover). og:type = `book`. Meta description 156 chars with CTA and prices. BreadcrumbList schema added. Two new body sections: "Who This Book Is For" and "What This Book Will Do" (with anonymous "Pastor, Orlando, FL" endorsement — John Dillon's name removed). Page word count ~725.
 
 ## Meta Ads — Active Campaigns (as of Apr 1, 2026)
 
