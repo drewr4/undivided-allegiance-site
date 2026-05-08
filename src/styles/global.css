@@ -244,6 +244,31 @@
     outline: 2px solid var(--color-red);
     outline-offset: 3px;
   }
+
+  .author-bio picture {
+    display: block;
+    flex-shrink: 0;
+    line-height: 0;
+  }
+
+  .author-bio img {
+    width: 96px;
+    height: 96px;
+    min-width: 96px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 8px;
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    .author-bio img {
+      width: 72px;
+      height: 72px;
+      min-width: 72px;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

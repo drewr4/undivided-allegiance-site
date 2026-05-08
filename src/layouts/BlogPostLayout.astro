@@ -114,11 +114,21 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
         </footer>
       )}
 
-      <div class="mt-16 pt-10 border-t border-charcoal flex items-start gap-6">
-        <div class="shrink-0 w-14 h-14 rounded-full bg-charcoal flex items-center justify-center text-cream font-bold text-lg">DR</div>
+      <div class="author-bio mt-16 pt-10 border-t border-charcoal flex items-start gap-6">
+        <picture>
+          <source srcset="/assets/authors/drew-reitzel.webp" type="image/webp" />
+          <img
+            src="/assets/authors/drew-reitzel.jpg"
+            alt="Drew Reitzel, author of You Can't Serve Two Masters and founder of Undivided Allegiance"
+            width="96"
+            height="96"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
         <div>
           <p class="text-cream font-semibold mb-1">Drew Reitzel</p>
-          <p class="text-muted text-sm leading-relaxed">Drew holds a theology degree and spent 25 years in business before returning to writing and speaking. He is the author of <em>You Can't Serve Two Masters</em> and the founder of Undivided Allegiance.</p>
+          <p class="text-muted text-sm leading-relaxed">Drew Reitzel is the author of <em>You Can't Serve Two Masters</em> and founder of Undivided Allegiance. His writing focuses on Scripture, divided allegiance, conviction, cultural compromise, repentance, and the call for Christians to live under the authority of Christ with clarity and unwavering loyalty.</p>
           <a href="/about/" class="text-red text-sm mt-2 inline-block hover:underline">More about Drew</a>
         </div>
       </div>

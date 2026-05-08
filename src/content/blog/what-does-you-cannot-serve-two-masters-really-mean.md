@@ -171,24 +171,3 @@ The United Methodist Church removed prohibitions on LGBTQ clergy in 2024, with 7
 ### How does "You Can't Serve Two Masters" by Drew Reitzel address this?
 
 The book applies the principle of Matthew 6:24 to the American Church's institutional compromise: the silencing of pulpits, the avoidance of biblical clarity on cultural issues, and the cheap grace that has replaced the costly Gospel. It is [available now on Kindle for $9.99](https://www.amazon.com/dp/B0FGY9PL66). Also available in paperback for $16.99.
-
----
-
-## About the Author
-
-<div style="display: flex; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
-  <picture>
-    <source srcset="/assets/authors/drew-reitzel.webp" type="image/webp" />
-    <img
-      src="/assets/authors/drew-reitzel.jpg"
-      alt="Drew Reitzel, author of You Can't Serve Two Masters and founder of Undivided Allegiance"
-      width="400"
-      height="400"
-      loading="lazy"
-      style="width: 80px; height: 80px; border-radius: 6px; object-fit: cover; flex-shrink: 0;"
-    />
-  </picture>
-  <div>
-    <strong>Drew Reitzel</strong> is the author of <em>You Can't Serve Two Masters</em> and founder of Undivided Allegiance. His writing focuses on Scripture, divided allegiance, conviction, cultural compromise, repentance, and the call for Christians to live under the authority of Christ with clarity and unwavering loyalty.
-  </div>
-</div>

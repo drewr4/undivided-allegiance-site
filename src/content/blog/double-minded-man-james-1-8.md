@@ -283,24 +283,3 @@ If this is a question you're working through, *You Can't Serve Two Masters* exam
 **[Read You Can't Serve Two Masters at undividedallegiance.com/book/](https://undividedallegiance.com/book/)**
 
 <!-- TODO: Internal link needed — "the theology of lordship and loyalty in Scripture" — foundational allegiance article. Does not yet exist. -->
-
----
-
-## About the Author
-
-<div style="display: flex; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
-  <picture>
-    <source srcset="/assets/authors/drew-reitzel.webp" type="image/webp" />
-    <img
-      src="/assets/authors/drew-reitzel.jpg"
-      alt="Drew Reitzel, author of You Can't Serve Two Masters and founder of Undivided Allegiance"
-      width="400"
-      height="400"
-      loading="lazy"
-      style="width: 80px; height: 80px; border-radius: 6px; object-fit: cover; flex-shrink: 0;"
-    />
-  </picture>
-  <div>
-    <strong>Drew Reitzel</strong> is the author of <em>You Can't Serve Two Masters</em> and founder of Undivided Allegiance. His writing focuses on Scripture, divided allegiance, conviction, cultural compromise, repentance, and the call for Christians to live under the authority of Christ with clarity and unwavering loyalty.
-  </div>
-</div>

@@ -131,24 +131,3 @@ On the silence of pastors who know better, read [Why Pastors Won't Preach Hard T
 On what genuine repentance requires from the Church and from individuals, read [What Repentance Actually Requires](/blog/what-repentance-actually-requires/).
 
 ---
-
----
-
-## About the Author
-
-<div style="display: flex; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
-  <picture>
-    <source srcset="/assets/authors/drew-reitzel.webp" type="image/webp" />
-    <img
-      src="/assets/authors/drew-reitzel.jpg"
-      alt="Drew Reitzel, author of You Can't Serve Two Masters and founder of Undivided Allegiance"
-      width="400"
-      height="400"
-      loading="lazy"
-      style="width: 80px; height: 80px; border-radius: 6px; object-fit: cover; flex-shrink: 0;"
-    />
-  </picture>
-  <div>
-    <strong>Drew Reitzel</strong> is the author of <em>You Can't Serve Two Masters</em> and founder of Undivided Allegiance. His writing focuses on Scripture, divided allegiance, conviction, cultural compromise, repentance, and the call for Christians to live under the authority of Christ with clarity and unwavering loyalty.
-  </div>
-</div>

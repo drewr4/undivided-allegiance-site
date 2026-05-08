@@ -154,24 +154,3 @@ No. While it addresses culturally charged issues, the book's framework is allegi
 ### Where can I get "You Can't Serve Two Masters"?
 
 The book is available now. Order the [Kindle edition for $9.99](https://www.amazon.com/dp/B0FGY9PL66) or the [paperback for $16.99](https://www.amazon.com/dp/B0GYLHSBR3). You can also [visit the book page](/book/) for more details and a free preview chapter.
-
----
-
-## About the Author
-
-<div style="display: flex; align-items: flex-start; gap: 1.5rem; margin: 1.5rem 0;">
-  <picture>
-    <source srcset="/assets/authors/drew-reitzel.webp" type="image/webp" />
-    <img
-      src="/assets/authors/drew-reitzel.jpg"
-      alt="Drew Reitzel, author of You Can't Serve Two Masters and founder of Undivided Allegiance"
-      width="400"
-      height="400"
-      loading="lazy"
-      style="width: 80px; height: 80px; border-radius: 6px; object-fit: cover; flex-shrink: 0;"
-    />
-  </picture>
-  <div>
-    <strong>Drew Reitzel</strong> is the author of <em>You Can't Serve Two Masters</em> and founder of Undivided Allegiance. His writing focuses on Scripture, divided allegiance, conviction, cultural compromise, repentance, and the call for Christians to live under the authority of Christ with clarity and unwavering loyalty.
-  </div>
-</div>
