@@ -22,19 +22,27 @@
 - `BaseLayout.astro` accepts `ogType` prop (default: `"website"`) — pass `ogType="book"` on book page, `ogType="article"` on blog posts if needed
 - `BaseLayout.astro` has `<slot name="head" />` just before `</head>` — use to inject page-specific `<link rel="preload">` or other head elements
 - `public/og-book.png` — stable book cover OG image (267KB PNG, 1931×2775). Used by /book/ page. Predictable URL regardless of Astro build hashing.
-- `public/llms.txt` — AI crawler guidance file. Lists all 6 blog posts, book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
+- `public/llms.txt` — AI crawler guidance file. Lists all 7 blog posts, book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
 
 ## SEO Infrastructure (as of May 6, 2026)
 
 - **Google Search Console**: Verified via HTML meta tag (`Ss2oF61TWvXnYwq2J2ppQrUax4YMvRrHPagmRBNgQLU`) in `BaseLayout.astro`. Sitemap submitted: `sitemap-index.xml`. Do NOT remove the GSC meta tag from BaseLayout.
-- **Article schema**: All 6 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
-- **Blog featured images**: All 6 posts have inline featured images (visible in article body). Images at `public/images/blog/*.png` (1200x630). Article schema, og:image, and inline render all use the post-specific image. See Blog Frontmatter Schema below for the `image` field.
+- **Article schema**: All 7 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
+- **Blog featured images**: All 7 posts have inline featured images (visible in article body). Images at `public/images/blog/`. Article schema, og:image, and inline render all use the post-specific image. See Blog Frontmatter Schema below for the `image` field.
 - **og:type**: Blog posts declare `og:type="article"` via `ogType` prop in BlogPostLayout. og:image is post-specific. Book page uses `ogType="book"`. All others default to `website`.
 - **GEO readiness**: Scored 74/100 (May 6, 2026). llms.txt live at /llms.txt. All AI crawlers allowed. Inline images + multi-modal signals complete. Remaining ceiling: Wikipedia entity, Reddit presence (off-site builds).
 - **LCP optimizations**: Homepage book cover has `loading="eager"`. /book/ hero uses `loading="eager"` + `<link rel="preload">` injected via head slot using `getImage()` to resolve the hashed WebP URL at build time.
 - **301 redirect**: Non-www to www redirect is permanent (301) via `vercel.json`.
 - **Security headers**: X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy set via `vercel.json`.
-- **llms.txt**: `public/llms.txt` — lists all blog posts, book, newsletter, key pages, and content use policy. Update when new blog posts are published.
+- **llms.txt**: `public/llms.txt` — lists all 7 blog posts, book, newsletter, key pages, and content use policy. Update when new blog posts are published.
+
+## Author Bio System (added May 8, 2026)
+
+- **Author bio block**: Rendered by `BlogPostLayout.astro` — replaces the old "DR" initials placeholder. Uses real headshot. Consistent across all blog posts automatically.
+- **Headshot files**: `public/assets/authors/drew-reitzel.webp` (20KB) and `drew-reitzel.jpg` (48KB), 400x400px, sourced from `03_blog/close_up_professional_portrait.png`.
+- **Author bio CSS**: `.author-bio` class in `global.css` — 96px×96px desktop, 72px×72px at max-640px, `aspect-ratio: 1/1`, `object-fit: cover`, `border-radius: 8px`. Overrides global `img { height: auto }` via class-level specificity.
+- **Bio text**: "Drew Reitzel is the author of *You Can't Serve Two Masters* and founder of Undivided Allegiance. His writing focuses on Scripture, divided allegiance, conviction, cultural compromise, repentance, and the call for Christians to live under the authority of Christ with clarity and unwavering loyalty."
+- **Do NOT add `## About the Author` blocks to markdown content** — the layout handles it automatically. Any hand-written bio blocks in markdown will create duplicates.
 
 ## Blog Frontmatter Schema (use this for all new blog posts)
 
@@ -82,7 +90,7 @@ image:
 
 - Images live in `public/images/blog/` (served as `/images/blog/filename.png`)
 - Target dimensions: 1200x630 (16:9, blog featured image standard); portrait images also work (see note below)
-- All 6 existing posts have images as of May 6, 2026
+- All 7 posts have images as of May 8, 2026
 - Generate new images with nano-banana for each new blog post
 - Without `image` field, Article schema falls back to `/og-book.png`
 - **Portrait images:** Add `portrait: true` to the `image` field in frontmatter. BlogPostLayout conditionally applies `flex justify-center max-w-md` for portrait, `w-full` for landscape. `book-church-needs.png` is a portrait photo (836x1152) and has `portrait: true` set. All other posts default to full-width landscape. Do not remove `portrait: true` from that post.
