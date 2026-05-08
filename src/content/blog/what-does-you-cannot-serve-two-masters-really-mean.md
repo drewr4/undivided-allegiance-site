@@ -185,7 +185,7 @@ The book applies the principle of Matthew 6:24 to the American Church's institut
       width="400"
       height="400"
       loading="lazy"
-      style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0;"
+      style="width: 80px; height: 80px; border-radius: 6px; object-fit: cover; flex-shrink: 0;"
     />
   </picture>
   <div>

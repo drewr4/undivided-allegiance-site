@@ -145,7 +145,7 @@ On what genuine repentance requires from the Church and from individuals, read [
       width="400"
       height="400"
       loading="lazy"
-      style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0;"
+      style="width: 80px; height: 80px; border-radius: 6px; object-fit: cover; flex-shrink: 0;"
     />
   </picture>
   <div>

@@ -147,7 +147,7 @@ Read about the pattern of institutional drift in [The Church Is Not Drifting. It
       width="400"
       height="400"
       loading="lazy"
-      style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0;"
+      style="width: 80px; height: 80px; border-radius: 6px; object-fit: cover; flex-shrink: 0;"
     />
   </picture>
   <div>

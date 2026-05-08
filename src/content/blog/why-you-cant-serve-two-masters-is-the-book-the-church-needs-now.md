@@ -11,7 +11,7 @@ image:
   alt: You Can't Serve Two Masters by Drew Reitzel lying on a wooden table beside a lit candle in a brass holder
   portrait: true
 seo:
-  title: "Why the Church Needs 'You Can't Serve Two Masters' by Drew Reitzel"
+  title: "Why the Church Needs 'You Can't Serve Two Masters'"
   description: "Drew Reitzel's debut book calls the American Church to undivided allegiance to Christ. Only 4% hold a biblical worldview. Available now in Kindle and paperback."
   pageType: "article"
 ---
@@ -168,7 +168,7 @@ The book is available now. Order the [Kindle edition for $9.99](https://www.amaz
       width="400"
       height="400"
       loading="lazy"
-      style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0;"
+      style="width: 80px; height: 80px; border-radius: 6px; object-fit: cover; flex-shrink: 0;"
     />
   </picture>
   <div>
