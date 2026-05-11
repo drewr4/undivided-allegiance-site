@@ -1,26 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const videos = [
-  {
-    title: 'The Church Is Choosing — Introduction',
-    description: 'A short introduction to the message of Undivided Allegiance and why this conversation matters now.',
-    category: 'Introduction',
-  },
-  {
-    title: 'Why Comfort Became the Gospel',
-    description: 'How the pursuit of a painless faith created a Church that cannot confront the darkness.',
-    category: 'Teaching',
-  },
-  {
-    title: 'The Remnant Is Not Alone',
-    description: 'A word for those who feel isolated in their conviction. You are not alone. You are not wrong.',
-    category: 'Encouragement',
-  },
-];
 ---
 
-<BaseLayout title="Video" description="Watch video content from Undivided Allegiance — teaching, conversations, and prophetic messages.">
+<BaseLayout title="Video" description="Watch short-form video content from Undivided Allegiance on YouTube — reels, teaching, and prophetic messages.">
   <!-- Hero -->
   <section class="section-padding bg-black">
     <div class="container mx-auto px-6 max-w-4xl">
@@ -29,64 +11,17 @@ const videos = [
         <h1 class="mb-6">Watch</h1>
         <div class="divider mb-6"></div>
         <p class="text-muted-light text-xl leading-relaxed max-w-2xl">
-          Prophetic teaching and unfiltered conversations for the remnant. Subscribe to be notified when new videos are released.
+          Short-form reels and teaching content on undivided allegiance to Christ. New videos released regularly on YouTube.
         </p>
         <a
           href="https://youtube.com/@UndividedAllegiance"
           target="_blank"
           rel="noopener noreferrer"
-          class="btn-secondary mt-8 inline-flex"
+          class="btn-primary mt-8 inline-flex"
         >
-          Subscribe on YouTube
+          Watch on YouTube
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- Videos -->
-  <section class="section-padding bg-charcoal">
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {videos.map((video) => (
-          <article class="bg-black border border-cream/5 overflow-hidden fade-in group">
-            <div class="aspect-video bg-charcoal flex items-center justify-center relative">
-              <div class="absolute inset-0 bg-red/5"></div>
-              <div class="relative flex flex-col items-center gap-3">
-                <div class="w-16 h-16 rounded-full bg-red/20 flex items-center justify-center group-hover:bg-red/30 transition-colors">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-cream)" class="ml-1">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-                <span class="text-muted text-xs uppercase tracking-wider">Coming Soon</span>
-              </div>
-            </div>
-            <div class="p-6">
-              <span class="text-red text-xs font-semibold uppercase tracking-widest block mb-2">{video.category}</span>
-              <h3 class="text-lg mb-2 font-heading font-bold">{video.title}</h3>
-              <p class="text-muted text-sm leading-relaxed">{video.description}</p>
-            </div>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section-padding bg-black text-center">
-    <div class="container mx-auto px-6 max-w-2xl fade-in">
-      <h2 class="mb-4">More Content Coming</h2>
-      <div class="divider mx-auto mb-6"></div>
-      <p class="text-muted-light text-lg leading-relaxed mb-8">
-        Subscribe to the YouTube channel to be notified when new videos are published.
-      </p>
-      <a
-        href="https://youtube.com/@UndividedAllegiance"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-primary"
-      >
-        Subscribe on YouTube
-      </a>
     </div>
   </section>
 </BaseLayout>
