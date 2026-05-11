@@ -20,11 +20,15 @@
 - `middleware.ts` - Vercel edge: `book.` subdomain rewrites to `/book-landing/`
 - Path alias: `@/*` maps to `src/*`
 - `BaseLayout.astro` accepts `ogType` prop (default: `"website"`) — pass `ogType="book"` on book page, `ogType="article"` on blog posts if needed
+- `BaseLayout.astro` accepts `noindex` prop (default: `false`) — pass `noindex={true}` on any page that should not be indexed by Google. Currently set on: `podcast.astro`, `book-landing.astro`, `404.astro`
+- `src/pages/404.astro` — custom branded 404 page. Black background, brand voice line, links to Home and /book/. Noindexed. Created May 11, 2026.
+- `src/pages/podcast.astro` — noindexed May 11, 2026. Coming Soon placeholder, no real content yet.
+- `src/pages/video.astro` — simplified May 11, 2026. Removed Coming Soon placeholder cards. Now a clean single-section page pointing to YouTube channel.
 - `BaseLayout.astro` has `<slot name="head" />` just before `</head>` — use to inject page-specific `<link rel="preload">` or other head elements
 - `public/og-book.png` — stable book cover OG image (267KB PNG, 1931×2775). Used by /book/ page. Predictable URL regardless of Astro build hashing.
 - `public/llms.txt` — AI crawler guidance file. Lists all 7 blog posts, book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
 
-## SEO Infrastructure (as of May 6, 2026)
+## SEO Infrastructure (as of May 11, 2026)
 
 - **Google Search Console**: Verified via HTML meta tag (`Ss2oF61TWvXnYwq2J2ppQrUax4YMvRrHPagmRBNgQLU`) in `BaseLayout.astro`. Sitemap submitted: `sitemap-index.xml`. Do NOT remove the GSC meta tag from BaseLayout.
 - **Article schema**: All 7 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
