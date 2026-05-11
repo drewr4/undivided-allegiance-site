@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page Not Found" description="This page doesn't exist." noindex={true}>
+  <section class="section-padding bg-black min-h-[70vh] flex items-center">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="fade-in">
+        <span class="text-red text-sm font-semibold uppercase tracking-[0.2em] block mb-6">404</span>
+        <h1 class="mb-6">This page doesn't exist.</h1>
+        <div class="divider mb-6"></div>
+        <p class="text-muted-light text-xl leading-relaxed max-w-2xl mb-10">
+          But the question of who you are serving does.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/" class="btn-primary">Go Home</a>
+          <a href="/book/" class="btn-secondary">Get the Book</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
