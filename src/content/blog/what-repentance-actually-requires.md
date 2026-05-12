@@ -25,6 +25,8 @@ That is not repentance. That is regret.
 
 ## What Does the Bible Actually Mean by Repentance?
 
+The Greek word *metanoia*, translated as "repentance" throughout the New Testament, is built from two roots: *meta* (change, after) and *nous* (mind). Translated directly, it means a change of mind so complete it changes everything downstream. Not a mood shift. A reorientation of how you see reality, make decisions, and where you are walking. Paul draws the line sharply in 2 Corinthians 7:10: "Godly sorrow brings repentance that leads to salvation and leaves no regret, but worldly sorrow brings death." Two kinds of grief, one producing change and one producing nothing but misery. Worldly sorrow is remorse over consequences. Godly sorrow is grief over what your choices reveal about your heart, and what they cost others, and what they cost you in closeness to God. John the Baptist understood this before Jesus began his ministry: his command in Matthew 3:8 was not "feel differently." It was "produce fruit in keeping with repentance."
+
 The Greek word *metanoia* appears 22 times in the New Testament. It is built from two parts: *meta* (change, after) and *nous* (mind). Translated woodenly, it means a change of mind so complete it changes everything downstream. Not a mood shift. A reorientation of how you see reality, how you make decisions, and where you are walking.
 
 Paul draws the line sharply in 2 Corinthians 7:10: *"Godly sorrow brings repentance that leads to salvation and leaves no regret, but worldly sorrow brings death."* Two kinds of grief. One produces change. The other produces nothing but misery.
@@ -50,6 +52,8 @@ The therapeutic gospel is not a rejection of Christianity. It is a version of Ch
 Only 37% of American pastors hold a biblical worldview ([Barna, 2022](https://www.barna.com/research/biblical-worldview-pastors/)). When the shepherd does not understand what repentance actually is, the flock cannot learn it from the pulpit. The gap starts at the top.
 
 ## What Happens When Repentance Gets Diluted?
+
+When repentance gets diluted to a feeling, the practical consequences are predictable and documented. According to a 2025 Barna study, 62% of Americans identify as Christian, but only 24% qualify as practicing. That gap, 38% of the population claiming the name without the practice, represents people who have substituted remorse for repentance and stayed in place. Hosea 6:4 diagnosed the same pattern in ancient Israel: "Your love is like the morning mist, like the early dew that disappears." Devotion that evaporates. Emotion without transformation. The Church that preaches grace without preaching repentance produces sincere but fragile faith. People who are genuinely moved in worship and genuinely unchanged in life. People who return to the same confessions year after year because they've learned to feel bad about sin without learning to turn from it. Sin is a direction, not just a feeling. Repentance turns.
 
 When a church stops preaching repentance clearly, people fill the gap with substitutes. Confession without direction. Grief without change. Prayer without surrender. The motions of repentance without the substance.
 

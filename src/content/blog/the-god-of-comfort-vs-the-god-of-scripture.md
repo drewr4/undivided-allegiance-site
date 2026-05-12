@@ -27,6 +27,8 @@ The God of Scripture is different.
 
 ## What Is the God of Comfort?
 
+The God of Comfort is the operative deity of most American Christianity: a God who wants you to be happy, affirms your existing choices, intervenes in life only when you need help, and makes no demands that cost anything. Sociologists Christian Smith and Melinda Lundquist Denton named this theology "Moralistic Therapeutic Deism" after a landmark 2005 study of American adolescent religion. The name describes five core tenets: God exists; God wants people to be good and nice; the central goal of life is to feel good about yourself; God doesn't need to be involved unless you need help; and good people go to heaven when they die. Notice what is absent: sin, judgment, repentance, discipleship, the cross, any form of demand. Only 4% of American adults hold a biblical worldview (AWVI, 2026). The God of Comfort is not a fringe substitute. He is the primary God most Americans actually worship.
+
 Sociologists have a clinical name for the substitute deity that has taken hold in American Christianity. Researchers Christian Smith and Melinda Lundquist Denton coined the term "Moralistic Therapeutic Deism" in their landmark 2005 study of American adolescent religion, *Soul Searching*. The name describes a belief system with five core tenets: a God exists who created the world; God wants people to be good and nice; the central goal of life is to be happy and feel good about yourself; God does not need to be involved in your life except when you need help with a problem; and good people go to heaven when they die.
 
 Notice what is absent. Sin. Judgment. Repentance. Discipleship. The cross. The resurrection as more than a symbol. Any form of demand.
@@ -63,6 +65,8 @@ The church growth movement of the 1980s and 1990s accelerated this substitution 
 According to Barna Research ([Barna, 2025](https://www.barna.com/research/practicing-christians/)), 62% of Americans still identify as Christian, but only 24% qualify as practicing. The gap (38% of the population who claim the name without the practice) is the market for the God of Comfort. A deity who asks nothing and promises everything is an easy product to attend.
 
 ## What You Lose When You Worship a Comfortable God
+
+Worshipping a comfortable God feels painless at first. You keep the language, the community, the holidays, the cultural identity of being a Christian. What you lose is harder to see immediately, but the losses are real and cumulative. You lose the capacity for genuine repentance, because the God of Comfort has no category for sin, only struggle and growth. There is nothing to repent of, only things to work through. And people who have nothing to repent of cannot receive forgiveness for anything. You lose the capacity for real transformation. The God of Scripture changes people from the inside out through confrontation with truth and the work of the Holy Spirit. The God of Comfort, who affirms rather than confronts, produces no change. He makes you feel better about where you already are, which is exactly what he was designed to do, and exactly why he cannot save anyone.
 
 The substitution feels painless at first. You keep the language, the community, the holidays, the cultural identity of being a Christian. What you lose is harder to see immediately.
 

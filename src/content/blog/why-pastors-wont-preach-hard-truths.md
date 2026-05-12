@@ -25,6 +25,8 @@ What they are calculating, why they keep calculating it, and what the Church los
 
 ## What Are Pastors Actually Afraid Of?
 
+American pastors are afraid of the consequences that come from preaching what Scripture actually says on contested issues. According to Barna Research (2025), 50% of American pastors feel limited in what they can say from the pulpit on moral issues, not because of legal restriction, but because they anticipate offense. The fear is specific and rational: say the wrong thing, and people leave. They stop giving. They find another church that will tell them what they came to hear. Pastors who preach with clarity on sexuality, the exclusivity of Christ, the reality of hell, or the political implications of Scripture face real consequences. This is not a new form of fear. But it is a fear that the American Church has allowed to govern the pulpit in a way prior generations of pastors would not have recognized as acceptable stewardship of the Word they were entrusted to preach.
+
 According to Barna Research ([Barna, 2025](https://www.barna.com/research/pastors-speaking-out/)), 50% of American pastors feel limited in what they can say from the pulpit on moral issues, not because of legal restriction, but because they anticipate offense. The fear is specific: say the wrong thing, and people leave. They stop giving. They write letters. They find another church down the road that will tell them what they came to hear.
 
 That fear is not irrational. Pastors who preach with clarity on sexuality, the exclusivity of Christ, the reality of hell, or the political implications of Scripture face real and immediate consequences. Congregants do leave. Budgets do tighten. Staff meetings do get harder.
@@ -48,6 +50,8 @@ This is how metrics rewired ministry. Not through a single decision, not through
 Attendance-based metrics don't just affect what pastors preach. They affect what they believe is worth preaching. A pastor who has spent fifteen years avoiding conflict with certain truths starts to believe, on some level, that those truths aren't essential. That they're peripheral. That emphasizing them would be unloving. The metrics don't just change behavior. They shape theology.
 
 ## What Gets Left Out When the Pulpit Goes Quiet?
+
+When pastors stop preaching on contested biblical topics, congregations develop faith that is sincere but theologically incomplete. Only 4% of American adults hold a biblical worldview, according to the 2026 American Worldview Inventory, and only 37% of pastors do (Barna, 2022). When the shepherd and the flock are standing in the same fog, preaching cannot close the gap. The topics pastors most commonly avoid: sexuality, abortion, the nature of hell, end-times, church discipline, and the exclusivity of Christ. These are precisely the topics where cultural pressure has been highest. The avoidance is not random. It is correlated. Where culture pushes hardest, the pulpit has gone quietest. The result is Christians who know Jesus loves them but don't know what Jesus requires of them. Congregations who can quote John 3:16 and cannot tell you what the Church historically believed about marriage, death, judgment, or salvation.
 
 Only 4% of American adults hold a fully biblical worldview, a number that has not moved in years, according to the 2026 American Worldview Inventory ([AWVI, 2026](https://web.arizonachristian.edu/CRC/2026/AWVI-2026_Report_1-BWV_Incidence_Stagnates-03_03_2026.pdf)). Among born-again Christians specifically, that figure rises, but only to 10%. The gap between claiming the name and thinking through the lens is enormous.
 
@@ -75,6 +79,8 @@ The Ezekiel 33 model of the watchman is instructive. God tells the prophet that 
 The theological cover for pastoral silence is not new. Every generation produces a version of it. In the 19th century, it was "social harmony." In the 20th, it was "not getting political." In the 21st, it's "creating a safe space." The framing changes. The function is the same: permission to say less than the text demands.
 
 ## What Does Scripture Actually Expect of Shepherds?
+
+Scripture treats pastoral silence not as a neutral option but as a specific failure with named consequences. Ezekiel 34 indicts the shepherds of Israel directly: "Woe to you shepherds of Israel who only take care of yourselves." The charge is not doctrinal error. It is self-protection at the expense of the flock. Paul warns Timothy that people will accumulate teachers who tell them what they want to hear (2 Timothy 4:3), and his own posture toward preaching is unambiguous: "Woe to me if I do not preach the gospel" (1 Corinthians 9:16). Not "woe to me if people leave." Not "woe to me if giving drops." Woe to me if I do not say the thing I was entrusted to say. These texts do not leave room for a metrics-driven calculus. They assume cost. They assume opposition. And they name silence as the failure, not the speaking.
 
 The Bible doesn't treat pastoral silence as a neutral option. It treats it as a specific failure with specific consequences.
 

@@ -117,6 +117,8 @@ James identified a condition that remains strikingly recognizable today.
 
 ## What Does "Double-Minded" Mean in James 1:8?
 
+The Greek word *dipsychos*, translated as "double-minded" in James 1:8, means literally "two-souled": a person attempting to live under two competing ultimate loyalties at the same time. James uses the word only twice in the New Testament, both times in his own letter, and most scholars believe he either coined it or drew it from a Jewish source that has not survived. The *dipsychos* person is not a skeptic who has rejected God. They are someone who prays to God while serving other masters, who professes faith while living by other values, who wants God's blessing and the world's approval and has not chosen between them. James says the consequence is not just instability in prayer but instability "in all his ways," a sweeping claim that the fracture at the soul's center spreads outward into every dimension of life.
+
 The English phrase "double-minded" translates a single Greek word: *dipsychos*. It comes from two roots — *dís* (twice) and *psyché* (soul or life). The literal meaning is "two-souled."
 
 This word appears only twice in the entire New Testament. Both times, it appears in the letter of James — at 1:8 and at 4:8. No other New Testament author uses it. More significant still, *dipsychos* does not appear in secular Greek literature that predates James. Most scholars believe James either coined the word himself or drew it from a Jewish source that has not survived ([Blue Letter Bible, Strong's G1374](https://www.blueletterbible.org/lexicon/g1374/kjv/tr/0-1/); [Bill Mounce Greek Dictionary](https://www.billmounce.com/greek-dictionary/dipsychos)).
@@ -227,6 +229,8 @@ The promise attached to James 4:8 is real and available without prior achievemen
 <!-- TODO: Internal link needed — "what it looks like to draw near to God in ordinary life" — article on daily practices of undivided allegiance. Does not yet exist. -->
 
 ## What the Symptoms of Double-Mindedness Actually Look Like
+
+Double-mindedness produces four recognizable patterns, though they can be difficult to identify from the inside. First, a prayer life and a decision-making life that operate on different logic: you pray as though God is sovereign, then make decisions as though he isn't a real factor. Second, a spiritual temperature that is almost entirely context-dependent, strong in worship and fading quickly in ordinary life, the wave dynamic James describes in 1:6. Third, an inability to hold clear positions on things that should be clear, not from weakness, but from an unresolved question of whose opinion is finally authoritative. Fourth, more religious activity that fails to close the gap, because double-mindedness is not a volume problem. It does not resolve when you attend more services. It resolves when there is a settled answer to the question underneath all the activity: whose voice gets the final word?
 
 The condition James describes can be genuinely difficult to see from the inside. People living in divided allegiance often don't experience themselves as divided. They experience themselves as spiritually inconsistent, perpetually behind in their faith, or stretched too thin to figure out why the gap between what they believe and how they live keeps persisting.
 

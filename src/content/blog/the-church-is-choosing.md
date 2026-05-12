@@ -48,6 +48,8 @@ These numbers are not the cause of the Church's compromise. They are the result 
 
 ## What Choosing Looks Like
 
+The American Church's departure from biblical faithfulness rarely begins with a dramatic rejection of Scripture. It starts with small concessions, repeated. A sermon topic avoided because it might offend. A biblical standard quietly shelved because it conflicts with the cultural moment. A word like sin replaced with softer language: struggle, journey, season. A statement of faith updated to reflect where the congregation currently is rather than what Scripture requires. According to Barna Research (2025), 50% of American pastors feel limited in their ability to address moral issues from the pulpit because people will take offense. Over time, these small concessions become the new normal, and the Church forgets it ever believed differently. The result is not a congregation that rejected the Bible. It is a congregation that substituted comfort for conviction, one careful decision at a time, until the substitution was complete.
+
 Choosing does not always look dramatic. It rarely starts with a public announcement or a bold rejection of Scripture. It starts with small concessions.
 
 A sermon topic avoided because it might offend. A biblical standard quietly shelved because it conflicts with the cultural moment. A word like *sin* replaced with softer language: *struggle*, *journey*, *season*. A statement of faith updated to reflect where the congregation "is" rather than what Scripture requires.
@@ -59,6 +61,8 @@ According to Barna Research ([Barna, 2025](https://www.barna.com/research/pastor
 This is not drift. This is death by a thousand choices.
 
 ## Why the Church Keeps Making These Choices
+
+The American Church keeps choosing cultural approval over biblical fidelity because the incentive structure rewards it. When a church measures its health by attendance and giving, the pastor's job description quietly shifts from herald to host. A host makes people comfortable. A herald says what was sent to be said. Those two roles are incompatible when the message is "repent," "the road is narrow," or "you cannot serve two masters." According to Barna Research (2025), 50% of pastors feel limited in what they can say from the pulpit on moral issues because they anticipate offense. Only 37% of pastors hold a biblical worldview (Barna, 2022). When a building's mortgage, a staff's salaries, and a pastor's reputation depend on Sunday headcount, the math consistently favors comfort. This is not a new problem. It is a structural one. And structures do not change until the metrics change.
 
 The incentives are not mysterious. They are structural.
 
