@@ -116,13 +116,16 @@ const preloadCover = await getImage({ src: bookCover, format: 'webp', width: 384
           </p>
 
           <div class="mb-8">
-            <a href="#order" class="btn-primary text-lg px-8 py-4 inline-flex mb-3">
+            <div class="flex flex-col gap-1 mb-4 text-center lg:text-left">
+              <p class="text-cream/60 text-sm uppercase tracking-[0.15em]">Kindle &nbsp;&middot;&nbsp; $9.99</p>
+              <p class="text-cream/60 text-sm uppercase tracking-[0.15em]">Paperback &nbsp;&middot;&nbsp; $16.99</p>
+            </div>
+            <a href="https://www.amazon.com/dp/B0FGY9PL66" target="_blank" rel="noopener noreferrer" onclick="fbq('track', 'AddToCart', {content_name: 'YCSTM Kindle Order', content_type: 'product', value: 9.99, currency: 'USD'}); if(typeof ttq!=='undefined'){ttq.track('AddToCart', {content_name: 'YCSTM Kindle Order', content_type: 'product', value: 9.99, currency: 'USD'});}" class="btn-primary text-lg px-8 py-4 inline-flex">
               Order Now
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M7 17L17 7M17 7H7M17 7v10"/>
               </svg>
             </a>
-            <p class="text-cream/50 text-sm">Kindle $9.99 &nbsp;&middot;&nbsp; Paperback $16.99</p>
           </div>
 
           <!-- Divider -->
