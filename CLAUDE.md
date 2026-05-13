@@ -113,7 +113,7 @@ image:
 - **Book**: "You Can't Serve Two Masters" — ISBN 979-8-2786-09926, $9.99 Kindle / $16.99 Print
 - **Kindle**: LIVE as of April 30, 2026 at https://www.amazon.com/dp/B0FGY9PL66
 - **Paperback**: ASIN B0GYLHSBR3 ($16.99) — LIVE May 2, 2026 at amazon.com/dp/B0GYLHSBR3
-- **Site copy (updated May 2)**: Both formats live. Announcement bar: "Now available in Kindle ($9.99) and Paperback ($16.99)." Homepage hero: "Available now in Kindle and Paperback." Book page hero: single "Order Now" button → scrolls to #order section. Order section: two buttons — "Kindle — $9.99" + "Paperback — $16.99". Schema: InStock for both. Blog: "Also available in paperback for $16.99."
+- **Site copy (updated May 2)**: Both formats live. Announcement bar: "Now available in Kindle ($9.99) and Paperback ($16.99)." Homepage hero: "Available now in Kindle and Paperback." Book page hero (updated May 13, 2026): shows "Kindle $9.99 / Paperback $16.99" as text labels with ONE direct Order Now button → links to Amazon Kindle page (B0FGY9PL66) with AddToCart pixel. No more scroll-to-bottom required. Bottom #order section unchanged with both format buttons. Schema: InStock for both. Blog: "Also available in paperback for $16.99."
 - **Site CTA Strategy**: Ads point to /book/ page (not direct Amazon link) to capture both buyers and non-buyers (newsletter signup).
 - **Announcement Bar**: Red bar at top of every page (BaseLayout.astro) linking to **/book/**
 - **Homepage Hero CTA**: Points to **/book/**
@@ -124,7 +124,9 @@ image:
   - `ViewContent` — fires on `/book/` page load (book.astro)
   - `AddToCart` — fires on both Amazon order buttons in book.astro (content_name: `YCSTM Kindle Order`), value $9.99 USD
   - `Lead` — fires from site forms on all 3 email signup forms (homepage popup, book page, newsletter page)
-- **TikTok Pixel**: Live as of Apr 16, 2026 — ID `D7CGUT3C77UA7GO31OO0` in BaseLayout.astro. Conversion events: `ViewContent` on /book/ load, `AddToCart` on order buttons, `CompleteRegistration` on all 3 email forms.
+- **CAPI (Conversions API)** — LIVE May 13, 2026. subscribe-worker.js sends server-side Lead event to Meta on every successful Beehiiv subscription. Email hashed SHA-256. META_ACCESS_TOKEN stored as Cloudflare secret. Resolves iOS 14+ signal loss. Worker: subscribe.drewreitzel.workers.dev. Source: ops/scripts/subscribe-worker.js.
+- **TikTok Pixel**: Live as of Apr 16, 2026 — ID `D7CGUT3C77UA7GO31OO0` in BaseLayout.astro. Conversion events: `ViewContent` on /book/ load, `AddToCart` on order buttons, `CompleteRegistration` on all 3 email forms. VERIFIED firing May 13, 2026 via Playwright intercept (5 POST requests to analytics.tiktok.com all 200 OK).
+- **Meta Pixel**: VERIFIED firing May 13, 2026 — PageView and ViewContent confirmed. Events Manager diagnostics (EU data blocks) confirmed non-issue, US-only targeting unaffected.
 - **Paid Ads**: Meta + TikTok, $10-20/day budget
 - **Email**: The Remnant (Beehiiv) — Issue #3 "Two Masters" scheduled Apr 30 7 AM ET (post ID: 509c8319). Issues #1 + #2 sent.
 - **30-day launch plan**: Approved Mar 31, 3 phases (Foundation → Build → Launch)
