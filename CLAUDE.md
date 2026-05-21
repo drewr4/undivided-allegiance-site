@@ -32,7 +32,7 @@
 
 - **Google Search Console**: Verified via HTML meta tag (`Ss2oF61TWvXnYwq2J2ppQrUax4YMvRrHPagmRBNgQLU`) in `BaseLayout.astro`. Sitemap submitted: `sitemap-index.xml`. Do NOT remove the GSC meta tag from BaseLayout.
 - **Article schema**: All 7 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
-- **Blog featured images**: All 7 posts have inline featured images (visible in article body). Images at `public/images/blog/`. Article schema, og:image, and inline render all use the post-specific image. See Blog Frontmatter Schema below for the `image` field.
+- **Blog featured images**: All 8 posts have inline featured images (visible in article body). Images at `public/images/blog/`. Article schema, og:image, and inline render all use the post-specific image. See Blog Frontmatter Schema below for the `image` field.
 - **og:type**: Blog posts declare `og:type="article"` via `ogType` prop in BlogPostLayout. og:image is post-specific. Book page uses `ogType="book"`. All others default to `website`.
 - **GEO readiness**: Scored 74/100 (May 6, 2026). llms.txt live at /llms.txt. All AI crawlers allowed. Inline images + multi-modal signals complete. Remaining ceiling: Wikipedia entity, Reddit presence (off-site builds).
 - **LCP optimizations**: Homepage book cover has `loading="eager"`. /book/ hero uses `loading="eager"` + `<link rel="preload">` injected via head slot using `getImage()` to resolve the hashed WebP URL at build time.
