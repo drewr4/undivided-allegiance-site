@@ -192,6 +192,31 @@ const latestPosts = posts.slice(0, 3);
       var submitBtn = document.getElementById('popup-submit');
       var msg = document.getElementById('popup-msg');
 
+      function showMsg(text, isError) {
+        msg.textContent = text;
+        msg.classList.remove('hidden');
+        if (isError) {
+          msg.classList.add('text-red');
+          msg.style.color = '';
+        } else {
+          msg.classList.remove('text-red');
+          msg.style.color = '#0A0A0A';
+        }
+      }
+      function resetBtn() {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Count Me In';
+      }
+      function showSuccess() {
+        nameInput.style.display = 'none';
+        emailInput.style.display = 'none';
+        submitBtn.style.display = 'none';
+        msg.classList.remove('hidden', 'text-red');
+        msg.style.color = '#0A0A0A';
+        msg.style.fontWeight = '600';
+        msg.textContent = "You're in. Check your inbox for the free chapter. If you don't see it, check your spam folder.";
+      }
+
       function closePopup() {
         overlay.style.display = 'none';
       }
@@ -226,18 +251,18 @@ const latestPosts = posts.slice(0, 3);
           .then(function (res) { return res.json(); })
           .then(function (data) {
             if (data.already_subscribed) {
-              msg.textContent = 'This email is already subscribed. Please use a different email address.';
-              msg.classList.remove('hidden');
-              submitBtn.disabled = false;
-              submitBtn.textContent = 'Count Me In';
+              showMsg('You are already subscribed with this email. The chapter link is in your original welcome email.', false);
+              resetBtn();
+            } else if (data.success) {
+              showSuccess();
             } else {
-              window.open('/free-preview.pdf', '_blank');
-              setTimeout(closePopup, 500);
+              showMsg('Something went wrong. Please try again.', true);
+              resetBtn();
             }
           })
           .catch(function () {
-            window.open('/free-preview.pdf', '_blank');
-            setTimeout(closePopup, 500);
+            showMsg('Something went wrong. Please try again.', true);
+            resetBtn();
           });
       });
     })();
