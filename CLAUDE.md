@@ -188,9 +188,10 @@ image:
 Beehiiv iframe on /newsletter/ has been REMOVED and replaced with a native form. All three signup forms route through a Cloudflare Worker proxy to the Beehiiv API.
 
 ### Forms
-- **Homepage popup** (`index.astro`) — "Stand With Us" modal, 1.5s delay, first name + email, opens `/free-preview.pdf` on success
-- **Book page** (`book.astro`) — email only, opens `/free-preview.pdf` on success, resets form
+- **Homepage popup** (`index.astro`) — "Stand With Us" modal, 1.5s delay, first name + email. **Changed 2026-06-29: no longer opens the PDF. On success it shows "You're in. Check your inbox for the free chapter..." and hides the form. Chapter is delivered only by the Beehiiv welcome email (forced email capture).**
+- **Book page** (`book.astro`) — email only, opens `/free-preview.pdf` on success, resets form. **Intentionally left as instant-PDF (its copy promises an instant preview); still subscribes to Beehiiv.**
 - **Newsletter page** (`newsletter.astro`) — native form (no iframe), first name + email, shows "Check your inbox." on success, resets form
+- **Links hub** (`links.astro`, `/links`) — added 2026-06-29. Link-in-bio hub: identity, free-chapter email capture (email-only, no instant PDF, like the popup), cards to book/newsletter/speaking/blog, socials. noindexed. All seven social bios now point here; paid ads still go to `/book`.
 
 ### Cloudflare Worker
 - **URL**: `https://subscribe.drewreitzel.workers.dev`
@@ -204,6 +205,14 @@ Beehiiv iframe on /newsletter/ has been REMOVED and replaced with a native form.
 
 ### Site Health Monitor
 - `SiteHealthMonitor.gs` checks newsletter page for `beehiiv-embed` — needs updating to `newsletter-form`
+- **2026-06-29:** added the subscribe worker to the monitor. `ENDPOINTS` in `ops/scripts/sitehealthmonitor.gs` (and the live Apps Script "Site Health Monitor") now includes `https://subscribe.drewreitzel.workers.dev/health`. Monitor is now 11 checks (10 pages + the worker). Catches signup-capture outages within 6 hours.
+
+### Subscribe worker outage + fix (2026-06-29) — IMPORTANT
+- **Root cause:** the live worker (Cloudflare, named `subscribe`, URL `subscribe.drewreitzel.workers.dev`) was missing `BEEHIIV_PUB_ID` entirely and had stale `BEEHIIV_API_KEY` and `META_ACCESS_TOKEN` (wiped/rotated in the June 23/24 credential cleanup, never restored on the worker). Every signup returned HTTP 500; nobody was subscribed to Beehiiv from ~June 15 to June 29. Forms still opened the PDF so it looked fine.
+- **Fix:** set all three secrets on the `subscribe` worker via `wrangler secret put` (values from macOS Keychain: `ua-beehiiv-key`, `ua-meta-token`; pub id `pub_21b31f33-3bae-46f2-9532-b4ca1e15cd33`). Added a read-only `GET /health` route to `subscribe-worker.js` that pings Beehiiv and returns `{ok:true}`/200 or `{ok:false}`/503. Redeployed. Verified end to end: live popup + book form now create Beehiiv subscriptions.
+- **Config correction:** `ops/scripts/wrangler.toml` `name` was `subscribe-drewreitzel` (a different/orphan worker the site does NOT use). Corrected to `name = "subscribe"` so future `wrangler deploy` targets the right worker. The orphan `subscribe-drewreitzel` worker was deleted.
+- **Cloudflare auth:** the deploy token was deleted in June; Drew ran `wrangler login` (browser OAuth) to authorize. If a future deploy fails on auth, run `npx wrangler login` again from `ops/scripts/`.
+- **ops/scripts is NOT a git repo.** `subscribe-worker.js`, `wrangler.toml`, `sitehealthmonitor.gs` live on disk only; their live versions are deployed (Cloudflare / Apps Script). Consider version-controlling `ops/` later.
 
 ## Cowork Integration
 
