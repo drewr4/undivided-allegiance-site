@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SocialIcon from '../components/SocialIcon.astro';
+import { SOCIAL_LINKS } from '../data/site-config';
+
+// Link-in-bio hub. Reached from the organic social bio link.
+// Paid ads continue to point at /book/ directly (see CLAUDE.md funnel routing).
+// The free-chapter form posts to the Cloudflare Worker (subscribes to Beehiiv,
+// send_welcome_email: true) and fires Meta + TikTok Lead events. It does NOT open
+// the PDF: Beehiiv delivers the chapter by email so every download is a captured subscriber.
+
+const cards = [
+  {
+    title: 'The Book',
+    teaser: 'Undivided allegiance to Christ in an age of cultural compromise.',
+    href: '/book/',
+  },
+  {
+    title: 'The Remnant',
+    teaser: 'Biweekly writing for believers done pretending. Free to join.',
+    href: '/newsletter/',
+  },
+  {
+    title: 'Invite Drew to Speak',
+    teaser: 'Bring the message to your church, conference, or event.',
+    href: '/speaking/',
+  },
+  {
+    title: 'Read the Blog',
+    teaser: 'Essays on Scripture, conviction, and the American Church.',
+    href: '/blog/',
+  },
+];
+---
+
+<BaseLayout
+  title="Links"
+  description="Drew Reitzel, author of You Can't Serve Two Masters. Get the free first chapter, read the book, join The Remnant, and follow along."
+  noindex={true}
+>
+  <section class="bg-black px-6 py-16 sm:py-20">
+    <div class="container-narrow max-w-md mx-auto flex flex-col items-center text-center">
+
+      <!-- Identity -->
+      <div class="fade-in flex flex-col items-center">
+        <div class="relative mb-6">
+          <div class="absolute -inset-5 bg-red/15 blur-2xl rounded-full"></div>
+          <img
+            src="/assets/authors/drew-reitzel.webp"
+            alt="Drew Reitzel"
+            width="128"
+            height="128"
+            class="relative w-32 h-32 rounded-full object-cover border border-cream/15"
+            loading="eager"
+          />
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-heading font-bold uppercase tracking-[0.06em] text-cream leading-tight mb-3">
+          Drew Reitzel
+        </h1>
+        <div class="w-12 h-[2px] bg-red mb-4"></div>
+        <p class="text-sm uppercase tracking-[0.15em] text-cream/70 leading-relaxed">
+          Author of You Can't Serve Two Masters
+        </p>
+        <p class="text-muted text-sm leading-relaxed mt-2">
+          Calling the Church back to biblical fidelity in an age of cultural compromise.
+        </p>
+      </div>
+
+      <!-- Free chapter offer (primary) -->
+      <div class="fade-in w-full mt-12 bg-charcoal border border-cream/15 px-6 py-8">
+        <h2 class="text-xl sm:text-2xl font-heading font-bold uppercase tracking-[0.05em] text-cream mb-3">
+          Read the First Chapter Free
+        </h2>
+        <p class="text-muted text-sm leading-relaxed mb-6">
+          Enter your email and we will send the free first chapter straight to your inbox.
+        </p>
+        <form id="links-form" class="flex flex-col gap-3" novalidate>
+          <label for="links-email" class="sr-only">Email address</label>
+          <input
+            id="links-email"
+            type="email"
+            name="email"
+            required
+            placeholder="Your email address"
+            class="w-full px-4 py-3 bg-black border border-cream/20 text-cream placeholder-muted focus:outline-none focus:border-red text-base"
+            autocomplete="email"
+          />
+          <button type="submit" id="links-submit" class="btn-primary justify-center w-full">
+            Get the Free Chapter
+          </button>
+        </form>
+        <p id="links-msg" class="text-sm text-red mt-3 hidden"></p>
+        <p class="text-xs text-muted leading-relaxed mt-4">
+          By submitting your email you will receive the free preview and be subscribed to The Remnant, our biweekly newsletter. Unsubscribe any time.
+        </p>
+      </div>
+
+      <!-- Cards -->
+      <div class="w-full mt-8 flex flex-col gap-4">
+        {cards.map((card) => (
+          <a
+            href={card.href}
+            class="fade-in group block w-full bg-charcoal border border-cream/15 px-5 py-4 text-left transition-colors hover:border-red focus-visible:border-red"
+          >
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="font-heading font-bold uppercase tracking-[0.05em] text-cream text-base mb-1">
+                  {card.title}
+                </p>
+                <p class="text-muted text-sm leading-snug">{card.teaser}</p>
+              </div>
+              <svg
+                class="shrink-0 text-muted transition-colors group-hover:text-red"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Socials -->
+      <div class="fade-in w-full mt-12 flex flex-col items-center">
+        <p class="text-xs uppercase tracking-[0.2em] text-muted mb-5">Follow Along</p>
+        <div class="flex flex-wrap items-center justify-center gap-5">
+          {SOCIAL_LINKS.map((social) => (
+            <a
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.platform}
+              class="text-cream/70 transition-colors hover:text-red"
+            >
+              <SocialIcon icon={social.icon} size={22} />
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script is:inline>
+    (function () {
+      var form = document.getElementById('links-form');
+      var emailInput = document.getElementById('links-email');
+      var submitBtn = document.getElementById('links-submit');
+      var msg = document.getElementById('links-msg');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = emailInput.value.trim();
+        if (!email || !email.includes('@')) {
+          msg.textContent = 'Please enter a valid email address.';
+          msg.classList.remove('hidden');
+          return;
+        }
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'One moment...';
+        if (typeof fbq !== 'undefined') {
+          fbq('track', 'Lead', { content_name: 'Free Preview Download' });
+        }
+        if (typeof ttq !== 'undefined') {
+          ttq.track('CompleteRegistration', { content_name: 'Free Preview Download' });
+        }
+        function showMsg(text, isError) {
+          msg.textContent = text;
+          msg.classList.remove('hidden');
+          if (isError) {
+            msg.classList.add('text-red');
+            msg.classList.remove('text-cream');
+          } else {
+            msg.classList.add('text-cream');
+            msg.classList.remove('text-red');
+          }
+        }
+        function reset() {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Get the Free Chapter';
+        }
+        fetch('https://subscribe.drewreitzel.workers.dev', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, source: 'link-in-bio' })
+        })
+          .then(function (res) { return res.json(); })
+          .then(function (data) {
+            if (data.already_subscribed) {
+              showMsg('You are already subscribed with this email. No need to sign up again.', false);
+              reset();
+            } else if (data.success) {
+              showMsg('Check your inbox. Your free chapter is on the way.', false);
+              emailInput.value = '';
+              reset();
+            } else {
+              showMsg('Something went wrong. Please try again.', true);
+              reset();
+            }
+          })
+          .catch(function () {
+            showMsg('Something went wrong. Please try again.', true);
+            reset();
+          });
+      });
+    })();
+  </script>
+</BaseLayout>
