@@ -4,7 +4,7 @@
 
 - **Stack**: Astro 6, TypeScript, Tailwind CSS v4, MDX
 - **Site**: https://undividedallegiance.com
-- **Deploy**: GitHub Pages via Actions (push to `main` triggers build)
+- **Deploy**: Vercel serves https://undividedallegiance.com (verified live 2026-07-06; vercel.json supplies the 301 redirect and security headers). Pushing to `main` does NOT publish the production site through GitHub Pages; the old `.github/workflows/deploy.yml` targeted an unused GitHub Pages destination and was disabled (renamed to `deploy.yml.disabled`) on 2026-07-06 per the council ruling.
 - **Dev server**: `npm run dev` (localhost:4321)
 - **Build**: `npm run build` (outputs to `dist/`)
 - **No test or lint commands configured**
@@ -26,19 +26,19 @@
 - `src/pages/video.astro` — simplified May 11, 2026. Removed Coming Soon placeholder cards. Now a clean single-section page pointing to YouTube channel.
 - `BaseLayout.astro` has `<slot name="head" />` just before `</head>` — use to inject page-specific `<link rel="preload">` or other head elements
 - `public/og-book.png` — stable book cover OG image (267KB PNG, 1931×2775). Used by /book/ page. Predictable URL regardless of Astro build hashing.
-- `public/llms.txt` — AI crawler guidance file. Lists all 7 blog posts, book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
+- `public/llms.txt` — AI crawler guidance file. Lists all 8 blog posts (verified against the live file 2026-07-06), book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
 
 ## SEO Infrastructure (as of May 11, 2026)
 
 - **Google Search Console**: Verified via HTML meta tag (`Ss2oF61TWvXnYwq2J2ppQrUax4YMvRrHPagmRBNgQLU`) in `BaseLayout.astro`. Sitemap submitted: `sitemap-index.xml`. Do NOT remove the GSC meta tag from BaseLayout.
-- **Article schema**: All 7 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
+- **Article schema**: All 8 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
 - **Blog featured images**: All 8 posts have inline featured images (visible in article body). Images at `public/images/blog/`. Article schema, og:image, and inline render all use the post-specific image. See Blog Frontmatter Schema below for the `image` field.
 - **og:type**: Blog posts declare `og:type="article"` via `ogType` prop in BlogPostLayout. og:image is post-specific. Book page uses `ogType="book"`. All others default to `website`.
 - **GEO readiness**: Scored 74/100 (May 6, 2026). llms.txt live at /llms.txt. All AI crawlers allowed. Inline images + multi-modal signals complete. Remaining ceiling: Wikipedia entity, Reddit presence (off-site builds).
 - **LCP optimizations**: Homepage book cover has `loading="eager"`. /book/ hero uses `loading="eager"` + `<link rel="preload">` injected via head slot using `getImage()` to resolve the hashed WebP URL at build time.
 - **301 redirect**: Non-www to www redirect is permanent (301) via `vercel.json`.
 - **Security headers**: X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy set via `vercel.json`.
-- **llms.txt**: `public/llms.txt` — lists all 7 blog posts, book, newsletter, key pages, and content use policy. Update when new blog posts are published.
+- **llms.txt**: `public/llms.txt` — lists all 8 blog posts, book, newsletter, key pages, and content use policy. Update when new blog posts are published.
 
 ## Author Bio System (added May 8, 2026)
 
@@ -94,7 +94,7 @@ image:
 
 - Images live in `public/images/blog/` (served as `/images/blog/filename.png`)
 - Target dimensions: 1200x630 (16:9, blog featured image standard); portrait images also work (see note below)
-- All 7 posts have images as of May 8, 2026
+- All 8 posts have images (8th added May 21, 2026)
 - Generate new images with nano-banana for each new blog post
 - Without `image` field, Article schema falls back to `/og-book.png`
 - **Portrait images:** Add `portrait: true` to the `image` field in frontmatter. BlogPostLayout conditionally applies `flex justify-center max-w-md` for portrait, `w-full` for landscape. `book-church-needs.png` is a portrait photo (836x1152) and has `portrait: true` set. All other posts default to full-width landscape. Do not remove `portrait: true` from that post.
@@ -106,11 +106,11 @@ image:
 - **Posting Automation**: Zapier + Buffer handle scheduled posting from the sheet
 - **Google Drive**: Content documents and filing system for pipeline assets
 - **Campaigns**: Two active content campaigns — book promotion ("You Can't Serve Two Masters") and newsletter signup
-- **Site Health Monitor**: Google Apps Script checks all pages + Beehiiv endpoints 4x/day (every 6 hours), sends status email every run (subject shows pass/fail at a glance). Script file: `~/Desktop/01_scripts/SiteHealthMonitor.gs`. Contact page check updated to "We Would Love to Hear From You" (Apr 2).
+- **Site Health Monitor**: Google Apps Script checks all pages + Beehiiv endpoints 4x/day (every 6 hours), sends status email every run (subject shows pass/fail at a glance). Script source on disk: `ops/scripts/sitehealthmonitor.gs` (the live copy runs in Google Apps Script; the old ~/Desktop/01_scripts/ copy no longer exists, checked 2026-07-06). Contact page check updated to "We Would Love to Hear From You" (Apr 2).
 
 ## Book Launch — KINDLE LIVE (April 30, 2026)
 
-- **Book**: "You Can't Serve Two Masters" — ISBN 979-8-2786-09926, $9.99 Kindle / $16.99 Print
+- **Book**: "You Can't Serve Two Masters" — $9.99 Kindle / $16.99 Print. TWO ISBNs exist and that is correct, not a conflict: 979-8-2786-09926 is the Amazon/KDP edition ISBN (recorded here since April; not re-verified against the KDP dashboard on 2026-07-06, no local record found), and 9798996417605 is the IngramSpark print edition ISBN (wide print distribution, set up June 22, 2026, per project records). KDP and IngramSpark each assign their own ISBN.
 - **Kindle**: LIVE as of April 30, 2026 at https://www.amazon.com/dp/B0FGY9PL66
 - **Paperback**: ASIN B0GYLHSBR3 ($16.99) — LIVE May 2, 2026 at amazon.com/dp/B0GYLHSBR3
 - **Site copy (updated May 2)**: Both formats live. Announcement bar: "Now available in Kindle ($9.99) and Paperback ($16.99)." Homepage hero: "Available now in Kindle and Paperback." Book page hero (updated May 13, 2026): shows "Kindle $9.99 / Paperback $16.99" as text labels with ONE direct Order Now button → links to Amazon Kindle page (B0FGY9PL66) with AddToCart pixel. No more scroll-to-bottom required. Bottom #order section unchanged with both format buttons. Schema: InStock for both. Blog: "Also available in paperback for $16.99."
@@ -132,42 +132,14 @@ image:
 - **30-day launch plan**: Approved Mar 31, 3 phases (Foundation → Build → Launch)
 - **/book/ SEO state (May 5, 2026):** Hero image `loading="eager"` (LCP fix). og:image = `/og-book.png` (book cover). og:type = `book`. Meta description 156 chars with CTA and prices. BreadcrumbList schema added. Two new body sections: "Who This Book Is For" and "What This Book Will Do" (with anonymous "Pastor, Orlando, FL" endorsement — John Dillon's name removed). Page word count ~725.
 
-## Meta Ads — Active Campaigns (as of Apr 1, 2026)
+## Meta Ads — Live-State Pointer (static list removed 2026-07-06)
 
-### Account
+Current campaign state lives in the daily snapshot (`~/Desktop/undivided-allegiance/outputs/daily-snapshot.md`) and Ads Manager; never trust a static campaign list in this file. The frozen April 2026 campaign detail that used to live here is preserved in git history and in `ops/cowork/archive/claude-md-campaign-history-20260706.md`.
+
+Durable facts:
 - **Account**: Undivided Allegiance — ID: 920678984196514
 - **Meta Pixel ID**: 1289553056416593
-- **Destination (newsletter)**: https://undividedallegiance.com/newsletter/
-
-### Newsletter Campaign — "Newsletter — April 2026"
-- **Ad Set**: Newsletter — Pair 01 | Budget: $15/day total | End date: April 4, 2026
-- **Objective**: Traffic | Placements: Advantage+ | Geography: United States only
-- **Status**: LIVE (published April 1, 2026) — 3-day test ends April 4, then assess
-
-#### Pair 01-A — "You Already Know Something Is Off" (hook image)
-- **Image**: `01_newsletter/ads-feed/newsletter-01A-feed.jpg` (1500×1500px). Cinematic variant: `newsletter-01A-feed-cinematic.jpg`
-- **Primary Text**: "Something has gone wrong in the American Church. You've felt it. You just haven't had words for it. The Remnant is a newsletter for believers who refuse to pretend otherwise. Join us."
-- **Headline**: "You're Not Alone In This"
-- **Description**: "The Remnant — Truth for those who are done pretending"
-- **CTA**: Subscribe
-- **Status**: Processing (published Apr 1)
-
-#### Pair 01-B — "When Scripture Loses Authority..." (call image)
-- **Image**: `01_newsletter/ads-feed/newsletter-01B-feed.jpg` (1500×1500px). Cinematic variant: `newsletter-01B-feed-cinematic.jpg`
-- **Primary Text**: "The Church isn't losing people to atheism. It's losing them to comfort. If you're tired of sermons that never cost anyone anything — this is for you. Join The Remnant."
-- **Headline**: "The Remnant Refuses to Pretend"
-- **Description**: "The Remnant — Truth for those who are done pretending"
-- **CTA**: Subscribe
-- **Status**: Processing (published Apr 1)
-
-### A/B Test Logic
-- Both ads run in same ad set — Meta auto-splits the $15/day (~$7.50 each)
-- Headlines do different work than image text (image = statement, headline = emotional bridge)
-- April 4: review CPR, CTR, cost-per-subscriber → scale winner, pause loser
-
-### Next Pairs Queued
-- Pairs 02–09 in `01_newsletter/ads-feed/` (newsletter-NNX-feed.jpg). Story/TikTok format in `01_newsletter/ads-story/`. **Every pair (01–09) now has both A and B cinematic photographic variants** with `-cinematic.jpg` suffix (18 total cinematic files generated 2026-04-07 via Gemini gemini-2.5-flash-image, composited with Playfair Display headlines via Pillow).
-- Rotate in weekly after initial A/B assessment
+- Ad management is Claude Code's job via the Marketing API. All paid ads point to /book/, never directly to Amazon.
 
 ## Mobile Menu
 
@@ -204,7 +176,7 @@ Beehiiv iframe on /newsletter/ has been REMOVED and replaced with a native form.
 - Previously was only firing from Beehiiv iframe — update any campaign notes that reference Beehiiv as the Lead event source
 
 ### Site Health Monitor
-- `SiteHealthMonitor.gs` checks newsletter page for `beehiiv-embed` — needs updating to `newsletter-form`
+- RESOLVED 2026-07-06: `ops/scripts/sitehealthmonitor.gs` checks /newsletter/ for both `The Remnant` and `newsletter-form` (PAGES list). To-do closed.
 - **2026-06-29:** added the subscribe worker to the monitor. `ENDPOINTS` in `ops/scripts/sitehealthmonitor.gs` (and the live Apps Script "Site Health Monitor") now includes `https://subscribe.drewreitzel.workers.dev/health`. Monitor is now 11 checks (10 pages + the worker). Catches signup-capture outages within 6 hours.
 
 ### Subscribe worker outage + fix (2026-06-29) — IMPORTANT
@@ -237,7 +209,7 @@ Beehiiv iframe on /newsletter/ has been REMOVED and replaced with a native form.
 - **Image naming**: `[campaign]-[pair][variant]_[type]_[platform].[ext]` (e.g. `01_book-launch/images/meta-ig-feed/book-02A_feed_meta-ig.jpg`). Types: `feed`, `story`, `cinematic`. Platforms: `meta-ig`, `tiktok`, `x`, `linkedin`, `youtube`.
 - **New image rule**: Every new image must be created for ALL platforms: meta-ig-feed, meta-ig-story, tiktok, x, linkedin, youtube
 - **Reel naming**: `[campaign]-reel-[NN]-[slug].[ext]` inside campaign/reels/[platform]/
-- **Site Health Monitor**: `~/Desktop/01_scripts/SiteHealthMonitor.gs`
+- **Site Health Monitor**: source at `ops/scripts/sitehealthmonitor.gs` (live copy runs in Google Apps Script)
 
 ## Rules
 
