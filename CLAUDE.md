@@ -9,6 +9,12 @@
 - **Build**: `npm run build` (outputs to `dist/`)
 - **No test or lint commands configured**
 
+## Copy Standard — Zero Em Dashes (enforced 2026-07-20)
+
+- Commit ae7fb6e removed all 98 em dashes from `src/` and `public/` (13 files), verified with grep at zero in source, `dist/`, and all live pages. Before adding ANY copy, run `grep -rn "—" src public` and keep it at zero. En dashes (–) in ranges are allowed.
+- Same commit: podcast episode number tiles restyled (large bold centered number, `bg-red/15 border-red/40 text-3xl`); podcast episode 2 and 3 descriptions rewritten to positive framing; newsletter page title is now "The Remnant Newsletter"; book page order buttons read "Order on Kindle ($9.99)" / "Order Paperback ($16.99)".
+- Site Health Monitor text checks verified compatible with these changes (all 10 PAGES strings still present).
+
 ## Architecture
 
 - `src/pages/` - File-based routing (Astro pages)
