@@ -5,25 +5,25 @@ const episodes = [
   {
     number: 1,
     title: 'Why the Church Chose Comfort Over Truth',
-    description: 'In the pilot episode, we examine how the American Church systematically traded biblical authority for cultural relevance — and why naming it matters.',
+    description: 'In the pilot episode, we examine how the American Church systematically traded biblical authority for cultural relevance, and why naming it matters.',
     date: 'Coming Soon',
   },
   {
     number: 2,
     title: 'The Sin We Renamed',
-    description: 'How softening the language of sin has not made the Church more compassionate — it has made it less honest.',
+    description: 'How softening the language of sin has made the Church less honest, and why honest naming is the more compassionate path.',
     date: 'Coming Soon',
   },
   {
     number: 3,
     title: 'What the Remnant Owes the World',
-    description: 'Faithfulness is not retreat. The remnant has a responsibility — not to be popular, but to be present.',
+    description: 'Faithfulness holds its ground. The remnant has a responsibility: to be present.',
     date: 'Coming Soon',
   },
 ];
 ---
 
-<BaseLayout title="Podcast" description="The Undivided Allegiance podcast — prophetic conversations on faith, culture, and biblical fidelity." noindex={true}>
+<BaseLayout title="Podcast" description="The Undivided Allegiance podcast: prophetic conversations on faith, culture, and biblical fidelity." noindex={true}>
   <!-- Hero -->
   <section class="section-padding bg-black">
     <div class="container mx-auto px-6 max-w-4xl">
@@ -47,7 +47,7 @@ const episodes = [
         <div class="flex flex-wrap gap-4">
           {['Apple Podcasts', 'Spotify', 'YouTube'].map((platform) => (
             <span class="px-5 py-2 bg-black border border-cream/10 text-muted text-sm">
-              {platform} — Coming Soon
+              {platform}: Coming Soon
             </span>
           ))}
         </div>
@@ -63,8 +63,8 @@ const episodes = [
         {episodes.map((episode) => (
           <article class="bg-charcoal border border-cream/5 p-8 fade-in">
             <div class="flex items-start gap-6">
-              <div class="flex-shrink-0 w-14 h-14 bg-red/10 border border-red/20 flex items-center justify-center">
-                <span class="text-red font-heading text-xl font-bold">{episode.number}</span>
+              <div class="flex-shrink-0 w-14 h-14 bg-red/15 border border-red/40 flex items-center justify-center">
+                <span class="text-red font-heading text-3xl font-bold leading-none">{episode.number}</span>
               </div>
               <div class="flex-1">
                 <div class="flex items-center gap-3 mb-2">

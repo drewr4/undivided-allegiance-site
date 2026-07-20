@@ -107,37 +107,37 @@ The phrase "double-minded man" appears in James 1:8, again in James 4:8, and it 
 
 The common interpretation: the double-minded man is someone who prays for something and then doubts whether God will answer. The problem, on this reading, is weak prayer faith. The fix is to believe more firmly. Get the confidence up, and the instability resolves.
 
-This interpretation isn't fabricated from nothing. James 1:5–8 does open with a discussion of asking God for wisdom, and doubt is placed directly against faith. But the reading treats a condition James describes as a soul-level fracture as though it were a prayer-confidence problem. And when you look at what the Greek actually says — and at where James uses this word a second time — a much more serious diagnosis comes into view.
+This interpretation isn't fabricated from nothing. James 1:5–8 does open with a discussion of asking God for wisdom, and doubt is placed directly against faith. But the reading treats a condition James describes as a soul-level fracture as though it were a prayer-confidence problem. And when you look at what the Greek actually says, and at where James uses this word a second time, a much more serious diagnosis comes into view.
 
 According to the 2025 American Worldview Inventory, published by George Barna and Arizona Christian University's Cultural Research Center, 49% of theologically-identified born-again Christians now reject absolute moral truth ([Arizona Christian University / AWVI 2025](https://georgebarna.com/2025/05/confusion-about-moral-truth/)). That statistic does not describe people outside the church. It describes people inside it.
 
 James identified a condition that remains strikingly recognizable today.
 
-> **TL;DR:** The Greek word *dipsychos* in James 1:8 literally means "two-souled" — not someone who doubts a prayer request, but someone whose soul is divided between two competing ultimate loyalties. James 4:4–8 confirms the diagnosis: the fracture is about spiritual adultery, not prayer mechanics. Undivided allegiance is not flawless obedience. It is a settled direction of loyalty.
+> **TL;DR:** The Greek word *dipsychos* in James 1:8 literally means "two-souled": not someone who doubts a prayer request, but someone whose soul is divided between two competing ultimate loyalties. James 4:4–8 confirms the diagnosis: the fracture is about spiritual adultery, not prayer mechanics. Undivided allegiance is not flawless obedience. It is a settled direction of loyalty.
 
 ## What Does "Double-Minded" Mean in James 1:8?
 
 The Greek word *dipsychos*, translated as "double-minded" in James 1:8, means literally "two-souled": a person attempting to live under two competing ultimate loyalties at the same time. James uses the word only twice in the New Testament, both times in his own letter, and most scholars believe he either coined it or drew it from a Jewish source that has not survived. The *dipsychos* person is not a skeptic who has rejected God. They are someone who prays to God while serving other masters, who professes faith while living by other values, who wants God's blessing and the world's approval and has not chosen between them. James says the consequence is not just instability in prayer but instability "in all his ways," a sweeping claim that the fracture at the soul's center spreads outward into every dimension of life.
 
-The English phrase "double-minded" translates a single Greek word: *dipsychos*. It comes from two roots — *dís* (twice) and *psyché* (soul or life). The literal meaning is "two-souled."
+The English phrase "double-minded" translates a single Greek word: *dipsychos*. It comes from two roots: *dís* (twice) and *psyché* (soul or life). The literal meaning is "two-souled."
 
-This word appears only twice in the entire New Testament. Both times, it appears in the letter of James — at 1:8 and at 4:8. No other New Testament author uses it. More significant still, *dipsychos* does not appear in secular Greek literature that predates James. Most scholars believe James either coined the word himself or drew it from a Jewish source that has not survived ([Blue Letter Bible, Strong's G1374](https://www.blueletterbible.org/lexicon/g1374/kjv/tr/0-1/); [Bill Mounce Greek Dictionary](https://www.billmounce.com/greek-dictionary/dipsychos)).
+This word appears only twice in the entire New Testament. Both times, it appears in the letter of James, at 1:8 and at 4:8. No other New Testament author uses it. More significant still, *dipsychos* does not appear in secular Greek literature that predates James. Most scholars believe James either coined the word himself or drew it from a Jewish source that has not survived ([Blue Letter Bible, Strong's G1374](https://www.blueletterbible.org/lexicon/g1374/kjv/tr/0-1/); [Bill Mounce Greek Dictionary](https://www.billmounce.com/greek-dictionary/dipsychos)).
 
 The rarity of the term suggests James was intentionally emphasizing a condition he considered spiritually significant.
 
-The *dipsychos* person is not a skeptic. They haven't rejected God. They are someone attempting to live with two functional souls — two competing ultimate allegiances operating simultaneously. They pray to God and serve other masters. They profess faith and live by other values. They want God's blessing and they want the world's approval, and they have not chosen between them.
+The *dipsychos* person is not a skeptic. They haven't rejected God. They are someone attempting to live with two functional souls: two competing ultimate allegiances operating simultaneously. They pray to God and serve other masters. They profess faith and live by other values. They want God's blessing and they want the world's approval, and they have not chosen between them.
 
 James introduces the word in context:
 
-> "But let him ask in faith, with no doubting, for the one who doubts is like a wave of the sea that is driven and tossed by the wind. For that person must not suppose that he will receive anything from the Lord; he is a double-minded man, unstable in all his ways." — James 1:6–8 (ESV)
+> "But let him ask in faith, with no doubting, for the one who doubts is like a wave of the sea that is driven and tossed by the wind. For that person must not suppose that he will receive anything from the Lord; he is a double-minded man, unstable in all his ways." (James 1:6–8, ESV)
 
 Notice the scope James assigns. He doesn't say the double-minded man is unstable in prayer, or unstable in spiritual confidence. He says "unstable in *all* his ways." That's a sweeping claim. The fracture at the center spreads outward into every dimension of life. This isn't a prayer problem with isolated consequences. It's a structural problem with systemic consequences.
 
-<!-- TODO: Hero image needed — stormy sea or rough ocean waves, 1200x630. Suggested: site:pixabay.com storm sea waves wide. Must verify CDN URL before deploying to site. -->
+<!-- TODO: Hero image needed - stormy sea or rough ocean waves, 1200x630. Suggested: site:pixabay.com storm sea waves wide. Must verify CDN URL before deploying to site. -->
 
-## The Conventional Reading — and Where It Falls Short
+## The Conventional Reading, and Where It Falls Short
 
-The most common interpretation of this passage reads double-mindedness narrowly: the person doubts that God will answer their prayer request, and that doubt produces instability. The corrective is stronger faith in prayer — believe more firmly, ask more confidently.
+The most common interpretation of this passage reads double-mindedness narrowly: the person doubts that God will answer their prayer request, and that doubt produces instability. The corrective is stronger faith in prayer: believe more firmly, ask more confidently.
 
 This reading isn't without textual support. The immediate context in James 1:5–7 is about asking God for wisdom, and the contrast James draws is between faith and doubt. So the prayer-confidence interpretation didn't arise from carelessness.
 
@@ -147,7 +147,7 @@ The second problem is practical. You cannot resolve divided allegiance by trying
 
 This matters for a pastoral reason. There's an important category of people who struggle with honest doubt about God's character, his goodness, or his silence during suffering. That kind of doubt, brought honestly to God and wrestled with in prayer, is not what James is naming. What James names is different: the person who reaches toward God with one hand while holding the world with the other, and who is not willing to release either.
 
-<!-- TODO: Internal link needed — "how biblical doubt differs from double-mindedness" — article distinguishing honest doubt from divided allegiance. Does not yet exist. -->
+<!-- TODO: Internal link needed - "how biblical doubt differs from double-mindedness" - article distinguishing honest doubt from divided allegiance. Does not yet exist. -->
 
 ## The Bridge Between James 1 and James 4
 
@@ -155,15 +155,15 @@ James uses *dipsychos* only twice, and reading the two uses together removes any
 
 The second occurrence is in James 4:4–8:
 
-> "You adulterous people! Do you not know that friendship with the world is enmity with God? Therefore whoever wishes to be a friend of the world makes himself an enemy of God... Draw near to God, and he will draw near to you. Cleanse your hands, you sinners, and purify your hearts, you double-minded." — James 4:4, 8 (ESV)
+> "You adulterous people! Do you not know that friendship with the world is enmity with God? Therefore whoever wishes to be a friend of the world makes himself an enemy of God... Draw near to God, and he will draw near to you. Cleanse your hands, you sinners, and purify your hearts, you double-minded." (James 4:4, 8, ESV)
 
-The context around the second use of *dipsychos* is decisive. Spiritual adultery. Friendship with the world as enmity with God. This is not the language of prayer mechanics. This is covenant language, deliberately drawn from the Old Testament prophetic tradition in which Israel's unfaithfulness was described as adultery — pursuing other gods while maintaining the outward form of covenant relationship with the true God.
+The context around the second use of *dipsychos* is decisive. Spiritual adultery. Friendship with the world as enmity with God. This is not the language of prayer mechanics. This is covenant language, deliberately drawn from the Old Testament prophetic tradition in which Israel's unfaithfulness was described as adultery: pursuing other gods while maintaining the outward form of covenant relationship with the true God.
 
 The double-minded person in James 4 is not someone who doubts. They are someone attempting to be in covenant relationship with God while simultaneously maintaining friendship with a rival system of values. They want both. They haven't chosen.
 
-When you read James 1:8 and James 4:8 as a single diagnostic unit — both uses of a word James apparently coined for the purpose — the picture becomes coherent. In chapter 1, the double-minded person is unstable because the soul is divided. In chapter 4, the source of that division is named: they are living under two incompatible lordships simultaneously.
+When you read James 1:8 and James 4:8 as a single diagnostic unit, both uses of a word James apparently coined for the purpose, the picture becomes coherent. In chapter 1, the double-minded person is unstable because the soul is divided. In chapter 4, the source of that division is named: they are living under two incompatible lordships simultaneously.
 
-<!-- TODO: Internal link needed — "what friendship with the world means in James 4" — article on cultural engagement and undivided allegiance. Does not yet exist. -->
+<!-- TODO: Internal link needed - "what friendship with the world means in James 4" - article on cultural engagement and undivided allegiance. Does not yet exist. -->
 
 ## We Are a Double-Minded Generation: What the Data Shows
 
@@ -173,14 +173,14 @@ The 2025 American Worldview Inventory, conducted by George Barna and Arizona Chr
 
 These are not people outside the church. They are people inside it, praying on Sunday and operating under a different authority structure the rest of the week.
 
-The same survey found that 74% of American adults rely on their emotions at least occasionally as their primary source of moral discernment, compared to 44% who rely on the Bible ([AWVI 2025](https://georgebarna.com/2025/05/confusion-about-moral-truth/)). When feelings hold more authority than Scripture in a person's moral life, the allegiance is already divided — between what God says and what feels right, between the voice of God and the voice of self.
+The same survey found that 74% of American adults rely on their emotions at least occasionally as their primary source of moral discernment, compared to 44% who rely on the Bible ([AWVI 2025](https://georgebarna.com/2025/05/confusion-about-moral-truth/)). When feelings hold more authority than Scripture in a person's moral life, the allegiance is already divided: between what God says and what feels right, between the voice of God and the voice of self.
 
 <figure style="margin: 2.5rem 0; text-align: center; padding: 1.5rem; background: #f5f5f5; border-radius: 12px;">
   <svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto;" aria-label="Horizontal bar chart: How Americans discern moral truth, AWVI 2025">
-    <title>Primary Sources Americans Use to Discern Moral Truth — AWVI 2025</title>
+    <title>Primary Sources Americans Use to Discern Moral Truth, AWVI 2025</title>
     <rect width="560" height="300" fill="#f5f5f5" rx="8"/>
     <text x="280" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#1A1A1A">How Americans Discern Moral Truth</text>
-    <text x="280" y="48" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666">American Worldview Inventory 2025 — Arizona Christian University / Cultural Research Center</text>
+    <text x="280" y="48" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#666">American Worldview Inventory 2025, Arizona Christian University / Cultural Research Center</text>
     <!-- Emotions: 74% of 300px scale = 222px -->
     <rect x="140" y="72" width="222" height="34" fill="#B41E1E" rx="4"/>
     <text x="132" y="94" text-anchor="end" font-family="Georgia, serif" font-size="11" fill="#1A1A1A">Emotions</text>
@@ -226,7 +226,7 @@ James doesn't treat this as a minor irregularity. He says it produces instabilit
 
 The promise attached to James 4:8 is real and available without prior achievement. "Draw near to God, and he will draw near to you." The call to purify the heart is addressed to people who are already in relationship, and it comes with a guarantee of proximity. Direction is the requirement, not perfection.
 
-<!-- TODO: Internal link needed — "what it looks like to draw near to God in ordinary life" — article on daily practices of undivided allegiance. Does not yet exist. -->
+<!-- TODO: Internal link needed - "what it looks like to draw near to God in ordinary life" - article on daily practices of undivided allegiance. Does not yet exist. -->
 
 ## What the Symptoms of Double-Mindedness Actually Look Like
 
@@ -238,35 +238,35 @@ Four patterns tend to surface when a person is living in *dipsychos*:
 
 **Your prayer life and your decision-making operate on different logic.** You pray as though God is sovereign. You make decisions as though he isn't a real factor. The two systems coexist without integration because the soul hasn't settled which one holds final authority. This isn't dramatic hypocrisy. It's the natural result of two operating systems that haven't been unified under one lord.
 
-**Your spiritual temperature is almost entirely context-dependent.** The signal is strong in church, in worship, in crisis. It fades quickly when you return to ordinary life. This is the wave dynamic James describes in 1:6 — not the absence of faith, but a soul without a fixed orientation. Waves don't choose a direction. They respond to whatever force is strongest at the moment.
+**Your spiritual temperature is almost entirely context-dependent.** The signal is strong in church, in worship, in crisis. It fades quickly when you return to ordinary life. This is the wave dynamic James describes in 1:6: not the absence of faith, but a soul without a fixed orientation. Waves don't choose a direction. They respond to whatever force is strongest at the moment.
 
-**You find yourself unable to hold clear positions on things that should be clear.** Double-mindedness produces a specific kind of paralysis. Not the paralysis of someone who lacks information. The paralysis of someone who hasn't decided whose opinion is finally authoritative. The result is chronic inconsistency on the things that matter most — not from weakness, but from an unresolved question of lordship.
+**You find yourself unable to hold clear positions on things that should be clear.** Double-mindedness produces a specific kind of paralysis. Not the paralysis of someone who lacks information. The paralysis of someone who hasn't decided whose opinion is finally authoritative. The result is chronic inconsistency on the things that matter most, not from weakness, but from an unresolved question of lordship.
 
 **More religious activity doesn't close the gap.** The Pharisees maintained extraordinary levels of religious activity. Double-mindedness isn't a volume problem. It doesn't resolve when you attend more services or read more Scripture. It resolves when there is a settled answer to the question underneath all the activity: whose voice gets the final word?
 
-<!-- TODO: Inline image needed — person at a fork in a misty path. Suggested: https://pixabay.com/illustrations/crossroads-person-path-misty-9370980/ — verify CDN URL before deploying to site. -->
+<!-- TODO: Inline image needed - person at a fork in a misty path. Suggested: https://pixabay.com/illustrations/crossroads-person-path-misty-9370980/ - verify CDN URL before deploying to site. -->
 
-<!-- TODO: Internal link needed — "how to identify spiritual instability in your own life" — article on self-examination and the allegiance question. Does not yet exist. -->
+<!-- TODO: Internal link needed - "how to identify spiritual instability in your own life" - article on self-examination and the allegiance question. Does not yet exist. -->
 
 ## Frequently Asked Questions
 
 ### Isn't James 1:8 specifically about asking God for wisdom? Why expand the diagnosis?
 
-James 1:5–8 does open with asking God for wisdom, and doubt is placed directly against faith in that passage. But James describes the consequence of double-mindedness as instability "in all his ways" — not in prayer specifically. When James reuses *dipsychos* in 4:8, the context is explicitly about spiritual adultery and friendship with the world, which has nothing to do with prayer mechanics. Reading the two occurrences as a single diagnostic category — which the shared rare vocabulary demands — produces the allegiance reading. It isn't read into the text. It's what the text says when both uses are taken together.
+James 1:5–8 does open with asking God for wisdom, and doubt is placed directly against faith in that passage. But James describes the consequence of double-mindedness as instability "in all his ways," not in prayer specifically. When James reuses *dipsychos* in 4:8, the context is explicitly about spiritual adultery and friendship with the world, which has nothing to do with prayer mechanics. Reading the two occurrences as a single diagnostic category, which the shared rare vocabulary demands, produces the allegiance reading. It isn't read into the text. It's what the text says when both uses are taken together.
 
 ### Can a Christian be double-minded and still be saved?
 
-James writes to people he addresses as "brothers" — 1:2, 2:1, 5:19. The double-minded person is not someone outside the covenant. They are someone inside it who hasn't resolved the question of full loyalty. James is addressing the condition of sanctification, not the question of justification. The call to "purify your hearts" in 4:8 is an invitation addressed to people already in relationship with God, not a prerequisite for entering one. The severity of the warning is proportional to the seriousness of the condition, not to the person's standing before God.
+James writes to people he addresses as "brothers" (1:2, 2:1, 5:19). The double-minded person is not someone outside the covenant. They are someone inside it who hasn't resolved the question of full loyalty. James is addressing the condition of sanctification, not the question of justification. The call to "purify your hearts" in 4:8 is an invitation addressed to people already in relationship with God, not a prerequisite for entering one. The severity of the warning is proportional to the seriousness of the condition, not to the person's standing before God.
 
 ### What is the first step out of double-mindedness?
 
-James gives the sequence in 4:8: "Draw near to God, and he will draw near to you." The first movement is not an achievement. It is a direction. You go toward God with the divided heart — not after the heart is resolved, but before. Proximity does the work that prior commitment cannot. The direction of loyalty can be settled before the full weight of a life catches up to it, and the promise attached to that direction is that God will close the distance.
+James gives the sequence in 4:8: "Draw near to God, and he will draw near to you." The first movement is not an achievement. It is a direction. You go toward God with the divided heart, not after the heart is resolved, but before. Proximity does the work that prior commitment cannot. The direction of loyalty can be settled before the full weight of a life catches up to it, and the promise attached to that direction is that God will close the distance.
 
 ### Does "friendship with the world" mean Christians should withdraw from culture?
 
 James uses *kosmos* in 4:4 in a specific sense: the system of values and allegiances that operates in organized opposition to God, not the physical world or human society. This is not a call to geographic or social withdrawal. It is a call to resist cultural approval as the organizing principle of a life. Whether that approval comes from politics, social media, career advancement, or relational belonging doesn't change the category. A person can be fully engaged in culture while maintaining undivided allegiance to God. The question is not where you are. It is whose voice holds authority when the two conflict.
 
-<!-- TODO: Internal link needed — "what James 4 means by friendship with the world" — article on cultural engagement and undivided allegiance. Does not yet exist. -->
+<!-- TODO: Internal link needed - "what James 4 means by friendship with the world" - article on cultural engagement and undivided allegiance. Does not yet exist. -->
 
 ## The Crisis Is Not New. The Call Is Not Optional.
 
@@ -286,4 +286,4 @@ If this is a question you're working through, *You Can't Serve Two Masters* exam
 
 **[Read You Can't Serve Two Masters at undividedallegiance.com/book/](https://undividedallegiance.com/book/)**
 
-<!-- TODO: Internal link needed — "the theology of lordship and loyalty in Scripture" — foundational allegiance article. Does not yet exist. -->
+<!-- TODO: Internal link needed - "the theology of lordship and loyalty in Scripture" - foundational allegiance article. Does not yet exist. -->
