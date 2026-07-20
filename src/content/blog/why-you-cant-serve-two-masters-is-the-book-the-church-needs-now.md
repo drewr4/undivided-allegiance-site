@@ -30,7 +30,7 @@ The American Church needs a direct confrontation with the allegiance crisis it h
 
 Because the numbers confirm what the Spirit has been saying for years.
 
-According to the [American Worldview Inventory 2025](https://www.arizonachristian.edu/wp-content/uploads/2025/02/CRC-Release-AWVI-1-Feb-18-2025-Final.pdf) from Arizona Christian University's Cultural Research Center, only 4% of American adults hold a biblical worldview. Among born-again Christians, people who would say they have a personal relationship with Jesus, that number rises to just 13%.
+According to the [American Worldview Inventory 2025](https://web.archive.org/web/20260207065134/https://www.arizonachristian.edu/wp-content/uploads/2025/02/CRC-Release-AWVI-1-Feb-18-2025-Final.pdf) from Arizona Christian University's Cultural Research Center, only 4% of American adults hold a biblical worldview. Among born-again Christians, people who would say they have a personal relationship with Jesus, that number rises to just 13%.
 
 Let that settle. Thirteen percent.
 
@@ -52,7 +52,7 @@ And that distinction matters.
 
 A political book takes a side. A prophetic book takes a stand.
 
-*You Can't Serve Two Masters* is not a manifesto for the right or the left. It doesn't pledge allegiance to a party. It pledges allegiance to Christ, and then measures everything else against that standard. Both sides of the political spectrum will find themselves challenged. That's how you know it's prophetic and not partisan.
+*You Can't Serve Two Masters* pledges allegiance to Christ, and then measures everything else against that standard. Readers who come for the culture critique will find the mirror turned on them by the end: comfort, money, approval, and political hope are named as rivals to Christ with the same clarity as everything else. The question is older than our politics, and it is asked of every reader: who actually holds you?
 
 The book's subtitle says it plainly: *Undivided Allegiance to Christ in an Age of Cultural Compromise*. Not undivided allegiance to a platform. Not undivided allegiance to a movement. To Christ. That changes everything about how the argument unfolds.
 
@@ -92,7 +92,7 @@ This is not a book written by someone who studied the problem. It's a book writt
 
 Directly. That's the short answer.
 
-Where most churches tiptoe around abortion, *You Can't Serve Two Masters* speaks with biblical clarity. Where denominations have quietly revised their positions on marriage, this book holds the line, not out of cruelty, but out of faithfulness to what Scripture actually says. Where the prosperity gospel and its softer cousin, therapeutic Christianity, have [replaced the God of Scripture with a god of comfort](/blog/the-god-of-comfort-vs-the-god-of-scripture/), Reitzel calls it what it is: idolatry dressed in worship music.
+The book speaks plainly where many pulpits have gone quiet: abortion, marriage, gender, and doctrine bent toward cultural comfort. And it speaks just as plainly to the reader holding it, about the money we trust, the comfort we protect, the approval we chase, and the rescue we keep expecting from Washington. Where the prosperity gospel and its softer cousin, therapeutic Christianity, have [replaced the God of Scripture with a god of comfort](/blog/the-god-of-comfort-vs-the-god-of-scripture/), Reitzel calls it what it is: idolatry dressed in worship music.
 
 These are not easy chapters. They won't make you feel good. But conviction rarely does.
 

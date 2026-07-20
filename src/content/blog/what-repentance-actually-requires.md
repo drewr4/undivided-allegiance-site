@@ -49,7 +49,7 @@ Here is the critical difference. Self-improvement says: you can be better. Repen
 <!-- [UNIQUE INSIGHT] -->
 The therapeutic gospel is not a rejection of Christianity. It is a version of Christianity with the sharp edges filed off. It keeps the comfort and the community and the language of grace. It removes the confrontation with sin that makes grace necessary. The result is a faith that feels like Christianity but does not produce what Christianity produces: transformed people, reoriented lives, and the fruit John the Baptist demanded.
 
-Only 37% of American pastors hold a biblical worldview ([Barna, 2022](https://www.barna.com/research/biblical-worldview-pastors/)). When the shepherd does not understand what repentance actually is, the flock cannot learn it from the pulpit. The gap starts at the top.
+Only 37% of American pastors hold a biblical worldview ([American Worldview Inventory 2022, Cultural Research Center at Arizona Christian University](https://www.arizonachristian.edu/culturalresearchcenter/research/)). When the shepherd does not understand what repentance actually is, the flock cannot learn it from the pulpit. The gap starts at the top.
 
 ## What Happens When Repentance Gets Diluted?
 

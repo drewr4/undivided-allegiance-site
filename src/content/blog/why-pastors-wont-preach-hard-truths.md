@@ -55,7 +55,7 @@ When pastors stop preaching on contested biblical topics, congregations develop 
 
 Only 4% of American adults hold a fully biblical worldview, a number that has not moved in years, according to the 2026 American Worldview Inventory ([AWVI, 2026](https://web.arizonachristian.edu/CRC/2026/AWVI-2026_Report_1-BWV_Incidence_Stagnates-03_03_2026.pdf)). Among born-again Christians specifically, that figure rises, but only to 10%. The gap between claiming the name and thinking through the lens is enormous.
 
-And only 37% of pastors themselves hold a biblical worldview ([Barna, 2022](https://www.barna.com/research/biblical-worldview-pastors/)). That's not a gap between shepherd and flock. That's the shepherd and flock both standing in the same fog.
+And only 37% of pastors themselves hold a biblical worldview ([American Worldview Inventory 2022, Cultural Research Center at Arizona Christian University](https://www.arizonachristian.edu/culturalresearchcenter/research/)). That's not a gap between shepherd and flock. That's the shepherd and flock both standing in the same fog.
 
 What does this produce? Christians who are sincere but theologically hollow. People who know Jesus loves them but don't know what Jesus requires of them. Congregations who can quote John 3:16 and can't tell you what the Church historically believed about marriage, death, judgment, or the exclusivity of salvation.
 

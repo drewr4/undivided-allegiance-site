@@ -58,7 +58,7 @@ The data reveals a Church that professes one thing and lives another. The Americ
 
 The numbers are staggering if you're willing to look at them honestly.
 
-The [American Worldview Inventory 2024](https://www.arizonachristian.edu/wp-content/uploads/2024/04/CRC-Release-AWVI-2-April-23-2024.pdf) from Arizona Christian University found that only **4% of American adults** hold a biblical worldview. Among self-identified Christians? Just 6%.
+The [American Worldview Inventory 2024](https://web.archive.org/web/20250811021918/https://www.arizonachristian.edu/wp-content/uploads/2024/04/CRC-Release-AWVI-2-April-23-2024.pdf) from Arizona Christian University found that only **4% of American adults** hold a biblical worldview. Among self-identified Christians? Just 6%.
 
 Let that number do its work.
 
@@ -74,17 +74,9 @@ And here's the paradox that should keep every pastor up at night: [Bible sales h
 
 We're buying Bibles we don't read to decorate lives we haven't surrendered. That's two masters.
 
-## How Are Entire Denominations Choosing the Wrong Master?
+## When Institutions Choose the Wrong Master
 
-This isn't happening in the abstract. It's happening in denominations with names you know.
-
-In May 2024, the **United Methodist Church** General Conference voted [692 to 51](https://www.christianitytoday.com/2024/04/united-methodist-general-conference-umc-restructure-lgbt/) to remove its prohibition on LGBTQ clergy and same-sex weddings, striking language that had called homosexuality "incompatible with Christian teaching." Before the vote even happened, 7,600 U.S. congregations, one in four, had already left.
-
-The **Evangelical Lutheran Church in America** has seen its membership [cut nearly in half](https://sowhatfaith.com/2024/05/25/elca-membership-cut-in-half-2125/) since 1988, dropping from 5.25 million to 2.68 million. Over 500,000 members left and roughly 700 congregations withdrew after the ELCA's 2009 decision on human sexuality.
-
-The **PC(USA)** lost [48,885 members in 2024 alone](https://pcusa.org/news-storytelling/news/2025/5/21/even-membership-declines-2024-church-statistics-report-shows-increase-financial-contributions-adult) and is expected to drop below 1 million total members in 2025, down from a peak of over 4 million.
-
-These are not small course corrections. They're wholesale doctrinal reversals made under the pressure of a culture that has decided what is and isn't acceptable to believe. When a denomination rewrites its theology to match the surrounding society, it isn't being compassionate. It's switching masters.
+Church history has a pattern worth fearing. When the surrounding culture leans hard enough, institutions begin adjusting doctrine to relieve the pressure. It rarely announces itself as surrender; it arrives as revision, as broadened language, as standards quietly rewritten. Whole denominations have walked that road, on sexuality, on marriage, on the authority of Scripture itself, and watched their pews empty behind them. The lesson is the one Jesus gave: a church, like a heart, can serve only one master. When an institution lets the culture write its doctrine, it has already chosen which one.
 
 And here's what nobody says out loud: the congregations that compromise aren't growing. They're emptying. The pews don't fill when you tell people what they want to hear. They hollow out, because people can get cultural affirmation anywhere. What they can't get anywhere else is truth.
 
@@ -160,7 +152,7 @@ One master. Undivided allegiance. There is no other option that ends well.
 
 ### What does "you cannot serve two masters" mean in the Bible?
 
-In Matthew 6:24, Jesus teaches that divided allegiance is impossible. You will always prioritize one master over another. While traditionally applied to money, the principle extends to anything competing with God for ultimate loyalty. With only [4% of Americans holding a biblical worldview](https://www.arizonachristian.edu/wp-content/uploads/2024/04/CRC-Release-AWVI-2-April-23-2024.pdf) (Arizona Christian University, 2024), the Church's allegiance crisis goes far beyond finances.
+In Matthew 6:24, Jesus teaches that divided allegiance is impossible. You will always prioritize one master over another. While traditionally applied to money, the principle extends to anything competing with God for ultimate loyalty. With only [4% of Americans holding a biblical worldview](https://web.archive.org/web/20250811021918/https://www.arizonachristian.edu/wp-content/uploads/2024/04/CRC-Release-AWVI-2-April-23-2024.pdf) (Arizona Christian University, 2024), the Church's allegiance crisis goes far beyond finances.
 
 ### Is Matthew 6:24 only about money?
 

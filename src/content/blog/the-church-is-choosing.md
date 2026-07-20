@@ -56,7 +56,7 @@ A sermon topic avoided because it might offend. A biblical standard quietly shel
 
 Over time, these small concessions become the new normal. And the Church forgets it ever believed differently.
 
-According to Barna Research ([Barna, 2025](https://www.barna.com/research/pastors-speaking-out/)), 50% of American pastors feel limited in their ability to address moral issues from the pulpit because they anticipate offense. Not because Scripture is unclear. Because the social cost of clarity has become too high to pay. Only 37% of pastors themselves hold a biblical worldview ([Barna, 2022](https://www.barna.com/research/biblical-worldview-pastors/)).
+According to Barna Research ([Barna, 2025](https://www.barna.com/research/pastors-speaking-out/)), 50% of American pastors feel limited in their ability to address moral issues from the pulpit because they anticipate offense. Not because Scripture is unclear. Because the social cost of clarity has become too high to pay. Only 37% of pastors themselves hold a biblical worldview ([American Worldview Inventory 2022, Cultural Research Center at Arizona Christian University](https://www.arizonachristian.edu/culturalresearchcenter/research/)).
 
 This is not drift. This is death by a thousand choices.
 
