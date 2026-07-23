@@ -100,9 +100,20 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
         </div>
       )}
 
-      <div class="prose-custom">
+      <div class="prose-custom" data-article-body>
         <slot />
       </div>
+
+      <script is:inline>
+        // Every link in an article body opens in a new tab so readers never
+        // lose their place in the post.
+        document
+          .querySelectorAll('[data-article-body] a[href]')
+          .forEach((a) => {
+            a.setAttribute('target', '_blank');
+            a.setAttribute('rel', 'noopener');
+          });
+      </script>
 
       {tags.length > 0 && (
         <footer class="mt-16 pt-8 border-t border-charcoal">

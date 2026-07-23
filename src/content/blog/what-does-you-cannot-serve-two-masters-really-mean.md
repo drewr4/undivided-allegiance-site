@@ -38,6 +38,8 @@ In first-century Palestine, that competing allegiance was wealth. In twenty-firs
 
 It's the approval of the culture.
 
+Sometimes that approval arrives wearing a flag. I trace that particular version of the problem in [where Scripture places our allegiance when faith and country merge](/blog/christian-nationalism-and-the-bible/).
+
 ## Why Have We Reduced This Verse to a Money Problem?
 
 Because money is safe. Culture is not.
