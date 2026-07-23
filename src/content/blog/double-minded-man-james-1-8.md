@@ -23,8 +23,8 @@ seo:
       "@type": "BlogPosting",
       "headline": "What It Means to Be Double-Minded: James 1:8 and the Crisis of Divided Allegiance",
       "description": "The Greek word dipsychos means 'two-souled.' James 1:8 isn't a prayer problem. It's a divided allegiance crisis.",
-      "image": "https://undividedallegiance.com/images/blog/double-minded-james-1-8-crossroads.webp",
-      "url": "https://undividedallegiance.com/blog/double-minded-man-james-1-8/",
+      "image": "https://www.undividedallegiance.com/images/blog/double-minded-james-1-8-crossroads.webp",
+      "url": "https://www.undividedallegiance.com/blog/double-minded-man-james-1-8/",
       "datePublished": "2026-05-08",
       "dateModified": "2026-05-08",
       "keywords": ["double-minded man", "James 1:8", "dipsychos", "divided allegiance", "spiritual instability", "biblical exegesis"],
@@ -32,16 +32,16 @@ seo:
       "author": {
         "@type": "Person",
         "name": "Drew Reitzel",
-        "url": "https://undividedallegiance.com"
+        "url": "https://www.undividedallegiance.com"
       },
       "publisher": {
         "@type": "Organization",
         "name": "Undivided Allegiance",
-        "url": "https://undividedallegiance.com"
+        "url": "https://www.undividedallegiance.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://undividedallegiance.com/blog/double-minded-man-james-1-8/"
+        "@id": "https://www.undividedallegiance.com/blog/double-minded-man-james-1-8/"
       },
       "citation": [
         {
@@ -92,16 +92,14 @@ seo:
     {
       "@type": "Person",
       "name": "Drew Reitzel",
-      "url": "https://undividedallegiance.com",
-      "sameAs": ["https://undividedallegiance.com/book/"],
+      "url": "https://www.undividedallegiance.com",
+      "sameAs": ["https://www.undividedallegiance.com/book/"],
       "jobTitle": "Author, Founder of Undivided Allegiance",
       "description": "Author of You Can't Serve Two Masters and founder of Undivided Allegiance. His writing focuses on Scripture, divided allegiance, conviction, and the call for Christians to live under the authority of Christ with unwavering loyalty."
     }
   ]
 }
 </script>
-
-# What It Means to Be Double-Minded: James 1:8 and the Crisis of Divided Allegiance
 
 The phrase "double-minded man" appears in James 1:8, again in James 4:8, and it has been misread in popular Christianity for a long time.
 
@@ -284,6 +282,6 @@ Undivided allegiance does not mean flawless obedience. It means a settled direct
 
 If this is a question you're working through, *You Can't Serve Two Masters* examines the fracture directly: what divided allegiance looks like in ordinary life, where it comes from, and what it costs to resolve it.
 
-**[Read You Can't Serve Two Masters at undividedallegiance.com/book/](https://undividedallegiance.com/book/)**
+**[Read You Can't Serve Two Masters at undividedallegiance.com/book/](https://www.undividedallegiance.com/book/)**
 
 <!-- TODO: Internal link needed - "the theology of lordship and loyalty in Scripture" - foundational allegiance article. Does not yet exist. -->

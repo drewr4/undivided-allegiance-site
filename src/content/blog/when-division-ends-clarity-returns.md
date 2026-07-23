@@ -25,8 +25,8 @@ script_ref: WYGB-D1
       "@type": "BlogPosting",
       "headline": "When Division Ends, Clarity Returns: What You Get Back First",
       "description": "Matthew 6:24 names divided allegiance, not distraction, as the root cause of spiritual fog. When division ends, clarity is the first return.",
-      "image": "https://undividedallegiance.com/images/blog/clarity-returns-fog-lifting.webp",
-      "url": "https://undividedallegiance.com/blog/when-division-ends-clarity-returns/",
+      "image": "https://www.undividedallegiance.com/images/blog/clarity-returns-fog-lifting.webp",
+      "url": "https://www.undividedallegiance.com/blog/when-division-ends-clarity-returns/",
       "datePublished": "2026-05-21",
       "dateModified": "2026-05-21",
       "keywords": ["clarity", "divided allegiance", "Matthew 6:24", "two masters", "spiritual formation", "double-minded"],
@@ -34,12 +34,12 @@ script_ref: WYGB-D1
       "author": {
         "@type": "Person",
         "name": "Drew Reitzel",
-        "url": "https://undividedallegiance.com"
+        "url": "https://www.undividedallegiance.com"
       },
       "publisher": {
         "@type": "Organization",
         "name": "Undivided Allegiance",
-        "url": "https://undividedallegiance.com"
+        "url": "https://www.undividedallegiance.com"
       }
     },
     {
@@ -49,19 +49,19 @@ script_ref: WYGB-D1
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://undividedallegiance.com"
+          "item": "https://www.undividedallegiance.com"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "https://undividedallegiance.com/blog/"
+          "item": "https://www.undividedallegiance.com/blog/"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "When Division Ends, Clarity Returns",
-          "item": "https://undividedallegiance.com/blog/when-division-ends-clarity-returns/"
+          "item": "https://www.undividedallegiance.com/blog/when-division-ends-clarity-returns/"
         }
       ]
     },

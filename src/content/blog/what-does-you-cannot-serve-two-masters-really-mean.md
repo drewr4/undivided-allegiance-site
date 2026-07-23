@@ -9,7 +9,7 @@ image:
   src: /images/blog/two-masters-meaning.png
   alt: Two diverging stone paths at night, one lit by amber lantern light, one in shadow
 seo:
-  title: "What Does 'You Cannot Serve Two Masters' Really Mean? Beyond Money"
+  title: "What Does 'You Cannot Serve Two Masters' Really Mean?"
   description: "Only 4% of Americans hold a biblical worldview. Matthew 6:24 isn't about money. It's about the allegiance crisis the Church lives daily."
   pageType: "article"
 ---

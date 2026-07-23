@@ -32,12 +32,12 @@ seo:
       "author": {
         "@type": "Person",
         "name": "Drew Reitzel",
-        "url": "https://undividedallegiance.com"
+        "url": "https://www.undividedallegiance.com"
       },
       "publisher": {
         "@type": "Organization",
         "name": "Undivided Allegiance",
-        "url": "https://undividedallegiance.com"
+        "url": "https://www.undividedallegiance.com"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
