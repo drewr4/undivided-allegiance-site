@@ -32,19 +32,22 @@
 - `src/pages/video.astro` — simplified May 11, 2026. Removed Coming Soon placeholder cards. Now a clean single-section page pointing to YouTube channel.
 - `BaseLayout.astro` has `<slot name="head" />` just before `</head>` — use to inject page-specific `<link rel="preload">` or other head elements
 - `public/og-book.png` — stable book cover OG image (267KB PNG, 1931×2775). Used by /book/ page. Predictable URL regardless of Astro build hashing.
-- `public/llms.txt` — AI crawler guidance file. Lists all 8 blog posts (verified against the live file 2026-07-06), book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
+- `public/llms.txt` — AI crawler guidance file. Lists all 9 blog posts (9th, Christian nationalism, added 2026-07-23), book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
 
 ## SEO Infrastructure (as of May 11, 2026)
 
 - **Google Search Console**: Verified via HTML meta tag (`Ss2oF61TWvXnYwq2J2ppQrUax4YMvRrHPagmRBNgQLU`) in `BaseLayout.astro`. Sitemap submitted: `sitemap-index.xml`. Do NOT remove the GSC meta tag from BaseLayout.
-- **Article schema**: All 8 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
-- **Blog featured images**: All 8 posts have inline featured images (visible in article body). Images at `public/images/blog/`. Article schema, og:image, and inline render all use the post-specific image. See Blog Frontmatter Schema below for the `image` field.
+- **Article schema**: All 9 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
+- **Blog featured images**: All 9 posts have inline featured images (visible in article body). Images at `public/images/blog/`. Article schema, og:image, and inline render all use the post-specific image. See Blog Frontmatter Schema below for the `image` field.
+- **Schema URLs use www (normalized 2026-07-23)**: Every hand-written BlogPosting/FAQPage schema block and every inline body URL must use `https://www.undividedallegiance.com`, matching the canonical tag that BaseLayout builds from `Astro.site`. Three posts (double-minded, when-division, two-masters) had bare-apex URLs; all normalized. Verified zero bare-apex URLs across built pages. New posts: always write schema URLs with www.
+- **One H1 per post**: BlogPostLayout renders the title as the page H1. Do NOT add a markdown `# ` heading in post body — it creates a second H1. The double-minded post had this defect (fixed 2026-07-23). Body headings start at `## `.
+- **Article-body links open in new tabs (added 2026-07-23)**: BlogPostLayout has an inline script that sets `target="_blank" rel="noopener"` on every `<a>` inside `[data-article-body]`, so readers never lose their place. Applies to all posts automatically.
 - **og:type**: Blog posts declare `og:type="article"` via `ogType` prop in BlogPostLayout. og:image is post-specific. Book page uses `ogType="book"`. All others default to `website`.
 - **GEO readiness**: Scored 74/100 (May 6, 2026). llms.txt live at /llms.txt. All AI crawlers allowed. Inline images + multi-modal signals complete. Remaining ceiling: Wikipedia entity, Reddit presence (off-site builds).
 - **LCP optimizations**: Homepage book cover has `loading="eager"`. /book/ hero uses `loading="eager"` + `<link rel="preload">` injected via head slot using `getImage()` to resolve the hashed WebP URL at build time.
 - **301 redirect**: Non-www to www redirect is permanent (301) via `vercel.json`.
 - **Security headers**: X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy set via `vercel.json`.
-- **llms.txt**: `public/llms.txt` — lists all 8 blog posts, book, newsletter, key pages, and content use policy. Update when new blog posts are published.
+- **llms.txt**: `public/llms.txt` — lists all 9 blog posts, book, newsletter, key pages, and content use policy. Update when new blog posts are published.
 
 ## Author Bio System (added May 8, 2026)
 
@@ -100,7 +103,7 @@ image:
 
 - Images live in `public/images/blog/` (served as `/images/blog/filename.png`)
 - Target dimensions: 1200x630 (16:9, blog featured image standard); portrait images also work (see note below)
-- All 8 posts have images (8th added May 21, 2026)
+- All 9 posts have images (9th, Christian nationalism, added July 23, 2026, generated with nano-banana at 1200x630)
 - Generate new images with nano-banana for each new blog post
 - Without `image` field, Article schema falls back to `/og-book.png`
 - **Portrait images:** Add `portrait: true` to the `image` field in frontmatter. BlogPostLayout conditionally applies `flex justify-center max-w-md` for portrait, `w-full` for landscape. `book-church-needs.png` is a portrait photo (836x1152) and has `portrait: true` set. All other posts default to full-width landscape. Do not remove `portrait: true` from that post.
