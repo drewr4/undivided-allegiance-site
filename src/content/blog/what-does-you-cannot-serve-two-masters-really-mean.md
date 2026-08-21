@@ -14,6 +14,43 @@ seo:
   pageType: "article"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What Did Jesus Actually Say in Matthew 6:24?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jesus said in Matthew 6:24: \"No one can serve two masters. Either you will hate the one and love the other, or you will be devoted to the one and despise the other. You cannot serve both God and mammon.\" The Greek word mamōnas, often translated as money, refers to anything a person places ultimate trust in: wealth, status, cultural approval, institutional security. In first-century Palestine, the competing allegiance was primarily wealth. But Jesus's statement is not a principle about money management. It is a statement about the architecture of loyalty itself. You were built to give your complete allegiance to one authority. Whatever you trust more than God, whatever shapes your decisions more than Scripture, whatever you fear losing more than you fear disobeying Him: that is your real master. This is not a soft teaching. It is the framework for everything else He says about the Kingdom."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What Does the Data Tell Us About the Church's Allegiance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The data reveals a Church that professes one thing and lives another. The American Worldview Inventory 2024 from Arizona Christian University found that only 4% of American adults hold a biblical worldview, including just 6% of self-identified Christians. Meanwhile, 66% of Americans call themselves Christian. That gap is not a rounding error. It is the measure of the Church's compromise. The same study found 92% of American adults, including 64% of evangelicals, hold syncretism as their dominant worldview, blending Scripture with cultural morality and calling the result faith. Barna's 2025 research found practicing Christians declined from 46% to 24% of U.S. adults over 25 years, while 62% still claim the label. The gap between identification and practice is cultural Christianity. People wearing the name without bearing the cost. That is two masters with a church bulletin stapled to one of them."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How Do You Know Which Master You're Serving?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three questions can tell you which master you're actually serving, not which one you think you're serving. First: what are you afraid to say? If there's a biblical truth you won't speak because of how it will be received, the allegiance question is already answered. Fear of man and fear of God cannot coexist. One wins. Second: what have you quietly revised? Not publicly. In your own theology, in the sermons you choose not to preach, in the conversations you steer away from. The distance between what Scripture says and what you're willing to affirm is measured in masters. Third: where does your identity come from? If being called loving by the culture matters more than being called faithful by God, your allegiance has already shifted. Allegiance is not a feeling. It's a pattern. And your pattern tells the truth about which master you serve, even when your words don't."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 We've domesticated this verse.
 
 For centuries, the Church has treated Matthew 6:24 like a financial planning tip. Don't love money too much. Tithe. Be generous. Don't let your bank account become your god.

@@ -20,57 +20,6 @@ seo:
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BlogPosting",
-      "headline": "Christian Nationalism: Where Scripture Places Our Allegiance",
-      "description": "30% of pastors say their congregation's love for America sometimes seems greater than their love for God. What Scripture places first, and why it matters.",
-      "image": "https://www.undividedallegiance.com/images/blog/christian-nationalism-kingdom.png",
-      "url": "https://www.undividedallegiance.com/blog/christian-nationalism-and-the-bible/",
-      "datePublished": "2026-07-23",
-      "dateModified": "2026-07-23",
-      "keywords": ["christian nationalism", "christian nationalism and the bible", "allegiance", "citizenship in heaven", "kingdom of God", "Matthew 6:24", "patriotism and faith"],
-      "articleSection": "Allegiance",
-      "author": {
-        "@type": "Person",
-        "name": "Drew Reitzel",
-        "url": "https://www.undividedallegiance.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Undivided Allegiance",
-        "url": "https://www.undividedallegiance.com"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.undividedallegiance.com/blog/christian-nationalism-and-the-bible/"
-      },
-      "citation": [
-        {
-          "@type": "CreativeWork",
-          "name": "Mapping Christian Nationalism Across the 50 States: PRRI 2025 American Values Atlas",
-          "author": "Public Religion Research Institute",
-          "url": "https://prri.org/research/mapping-christian-nationalism-across-the-50-states-insights-from-prris-2025-american-values-atlas/"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Half of U.S. Churches to Honor America's 250th Anniversary",
-          "author": "Lifeway Research",
-          "url": "https://research.lifeway.com/2026/06/16/half-of-u-s-churches-to-honor-americas-250th-anniversary/"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Views of Christian Nationalism and Christianity's Place in Politics",
-          "author": "Pew Research Center",
-          "url": "https://www.pewresearch.org/religion/2024/03/15/christianitys-place-in-politics-and-christian-nationalism/"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Taking America Back for God: Christian Nationalism in the United States",
-          "author": "Andrew L. Whitehead and Samuel L. Perry",
-          "url": "https://faith.yale.edu/media/taking-america-back-for-god"
-        }
-      ]
-    },
-    {
       "@type": "FAQPage",
       "mainEntity": [
         {

@@ -22,50 +22,6 @@ script_ref: WYGB-D1
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BlogPosting",
-      "headline": "When Division Ends, Clarity Returns: What You Get Back First",
-      "description": "Matthew 6:24 names divided allegiance, not distraction, as the root cause of spiritual fog. When division ends, clarity is the first return.",
-      "image": "https://www.undividedallegiance.com/images/blog/clarity-returns-fog-lifting.webp",
-      "url": "https://www.undividedallegiance.com/blog/when-division-ends-clarity-returns/",
-      "datePublished": "2026-05-21",
-      "dateModified": "2026-05-21",
-      "keywords": ["clarity", "divided allegiance", "Matthew 6:24", "two masters", "spiritual formation", "double-minded"],
-      "articleSection": "Spiritual Formation",
-      "author": {
-        "@type": "Person",
-        "name": "Drew Reitzel",
-        "url": "https://www.undividedallegiance.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Undivided Allegiance",
-        "url": "https://www.undividedallegiance.com"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.undividedallegiance.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blog",
-          "item": "https://www.undividedallegiance.com/blog/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "When Division Ends, Clarity Returns",
-          "item": "https://www.undividedallegiance.com/blog/when-division-ends-clarity-returns/"
-        }
-      ]
-    },
-    {
       "@type": "FAQPage",
       "mainEntity": [
         {

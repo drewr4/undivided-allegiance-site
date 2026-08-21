@@ -15,6 +15,27 @@ seo:
   pageType: "article"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What Is the God of Comfort?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The God of Comfort is the operative deity of most American Christianity: a God who wants you to be happy, affirms your existing choices, intervenes in life only when you need help, and makes no demands that cost anything. Sociologists Christian Smith and Melinda Lundquist Denton named this theology \"Moralistic Therapeutic Deism\" after a landmark 2005 study of American adolescent religion. The name describes five core tenets: God exists; God wants people to be good and nice; the central goal of life is to feel good about yourself; God doesn't need to be involved unless you need help; and good people go to heaven when they die. Notice what is absent: sin, judgment, repentance, discipleship, the cross, any form of demand. Only 4% of American adults hold a biblical worldview (AWVI, 2026). The God of Comfort is not a fringe substitute. He is the primary God most Americans actually worship."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 Somewhere along the way, the American Church stopped worshipping the God of Scripture and started worshipping the God of Comfort.
 
 This God looks familiar. He uses some of the same language. He is associated with the same Book. But he is not the same God.

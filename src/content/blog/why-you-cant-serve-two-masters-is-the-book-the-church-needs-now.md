@@ -16,6 +16,35 @@ seo:
   pageType: "article"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why Does the American Church Need This Book Right Now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The American Church needs a direct confrontation with the allegiance crisis it has been managing for decades. According to the American Worldview Inventory 2025 from Arizona Christian University, only 4% of American adults hold a biblical worldview, including just 13% of born-again Christians. The vast majority of people who call themselves Christian in America do not think biblically. They think culturally. They have absorbed the values of the surrounding world and wrapped them in Christian language, producing a faith that resembles the culture it was supposed to transform. This is not a problem that better programs will fix. It is not a problem a more contemporary worship set will resolve. It is a crisis of allegiance, and it requires a prophetic response: not a marketing strategy, not a softer version of the gospel, but a clear call to choose which master you actually serve."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What Does \"Undivided Allegiance\" Actually Look Like?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Undivided allegiance looks like one settled answer to the question of final authority. Jesus stated it plainly in Matthew 6:24: \"No one can serve two masters. Either you will hate the one and love the other, or you will be devoted to the one and despise the other.\" The principle extends beyond money to any system of loyalty competing with Christ for first place: career, cultural approval, political identity, institutional belonging. Undivided allegiance is not sinlessness. It is a resolved question of lordship. The person with undivided allegiance sins, fails, doubts, and grieves. But they have answered, at the level of will, the question of whose voice holds final authority when two voices conflict. You cannot hold the Bible in one hand and the approval of a culture that has rejected its claims in the other. At some point, you choose."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 Something has gone wrong in the American Church. Most people can feel it. Fewer are willing to say it.
 
 We have churches that are growing and congregations that are shrinking. We have worship music on every streaming platform and biblical illiteracy at an all-time high. We have more Christian content than any generation in history, and less Christian conviction.

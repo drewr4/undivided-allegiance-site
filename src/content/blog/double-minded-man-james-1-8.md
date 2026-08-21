@@ -20,39 +20,6 @@ seo:
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "BlogPosting",
-      "headline": "What It Means to Be Double-Minded: James 1:8 and the Crisis of Divided Allegiance",
-      "description": "The Greek word dipsychos means 'two-souled.' James 1:8 isn't a prayer problem. It's a divided allegiance crisis.",
-      "image": "https://www.undividedallegiance.com/images/blog/double-minded-james-1-8-crossroads.webp",
-      "url": "https://www.undividedallegiance.com/blog/double-minded-man-james-1-8/",
-      "datePublished": "2026-05-08",
-      "dateModified": "2026-05-08",
-      "keywords": ["double-minded man", "James 1:8", "dipsychos", "divided allegiance", "spiritual instability", "biblical exegesis"],
-      "articleSection": "Scripture",
-      "author": {
-        "@type": "Person",
-        "name": "Drew Reitzel",
-        "url": "https://www.undividedallegiance.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Undivided Allegiance",
-        "url": "https://www.undividedallegiance.com"
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.undividedallegiance.com/blog/double-minded-man-james-1-8/"
-      },
-      "citation": [
-        {
-          "@type": "CreativeWork",
-          "name": "American Worldview Inventory 2025",
-          "author": "George Barna / Arizona Christian University",
-          "url": "https://georgebarna.com/2025/05/confusion-about-moral-truth/"
-        }
-      ]
-    },
-    {
       "@type": "FAQPage",
       "mainEntity": [
         {
@@ -93,7 +60,9 @@ seo:
       "@type": "Person",
       "name": "Drew Reitzel",
       "url": "https://www.undividedallegiance.com",
-      "sameAs": ["https://www.undividedallegiance.com/book/"],
+      "sameAs": [
+        "https://www.undividedallegiance.com/book/"
+      ],
       "jobTitle": "Author, Founder of Undivided Allegiance",
       "description": "Author of You Can't Serve Two Masters and founder of Undivided Allegiance. His writing focuses on Scripture, divided allegiance, conviction, and the call for Christians to live under the authority of Christ with unwavering loyalty."
     }
@@ -204,7 +173,7 @@ The same survey found that 74% of American adults rely on their emotions at leas
   <figcaption style="margin-top: 0.75rem; font-size: 0.875rem; color: #666; font-style: italic;">Adults who rely on each source at least occasionally to discern moral truth. AWVI 2025, Arizona Christian University / Cultural Research Center.</figcaption>
 </figure>
 
-This is a structural observation, not a judgment on individual character. When feelings consistently outrank Scripture as the governing authority for moral decisions, the architecture of allegiance is already divided. The soul is operating under two masters. James had a word for that.
+This is a structural observation, not a judgment on individual character. When feelings consistently outrank Scripture as the governing authority for moral decisions, the architecture of allegiance is already divided. The soul is operating under [two masters](/blog/what-does-you-cannot-serve-two-masters-really-mean/). James had a word for that.
 
 ## Undivided Allegiance Is Not Flawless Obedience
 
@@ -230,7 +199,7 @@ The promise attached to James 4:8 is real and available without prior achievemen
 
 Double-mindedness produces four recognizable patterns, though they can be difficult to identify from the inside. First, a prayer life and a decision-making life that operate on different logic: you pray as though God is sovereign, then make decisions as though he isn't a real factor. Second, a spiritual temperature that is almost entirely context-dependent, strong in worship and fading quickly in ordinary life, the wave dynamic James describes in 1:6. Third, an inability to hold clear positions on things that should be clear, not from weakness, but from an unresolved question of whose opinion is finally authoritative. Fourth, more religious activity that fails to close the gap, because double-mindedness is not a volume problem. It does not resolve when you attend more services. It resolves when there is a settled answer to the question underneath all the activity: whose voice gets the final word?
 
-The condition James describes can be genuinely difficult to see from the inside. People living in divided allegiance often don't experience themselves as divided. They experience themselves as spiritually inconsistent, perpetually behind in their faith, or stretched too thin to figure out why the gap between what they believe and how they live keeps persisting.
+The condition James describes can be genuinely difficult to see from the inside. People living in [divided allegiance](/blog/when-division-ends-clarity-returns/) often don't experience themselves as divided. They experience themselves as spiritually inconsistent, perpetually behind in their faith, or stretched too thin to figure out why the gap between what they believe and how they live keeps persisting.
 
 Four patterns tend to surface when a person is living in *dipsychos*:
 

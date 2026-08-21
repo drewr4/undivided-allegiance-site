@@ -10,6 +10,7 @@ interface Props {
   ogImage?: string;
   ogType?: string;
   noindex?: boolean;
+  appendSiteName?: boolean;
 }
 
 const {
@@ -18,9 +19,13 @@ const {
   ogImage = SITE.ogImage,
   ogType = 'website',
   noindex = false,
+  appendSiteName = true,
 } = Astro.props;
 
-const pageTitle = title === SITE.title ? title : `${title} | ${SITE.title}`;
+// Blog posts pass appendSiteName={false} so the brand suffix does not push the
+// title past Google's ~60 character display limit.
+const pageTitle =
+  title === SITE.title || !appendSiteName ? title : `${title} | ${SITE.title}`;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 

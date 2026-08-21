@@ -15,6 +15,43 @@ seo:
   pageType: "article"
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What Are Pastors Actually Afraid Of?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "American pastors are afraid of the consequences that come from preaching what Scripture actually says on contested issues. According to Barna Research (2025), 50% of American pastors feel limited in what they can say from the pulpit on moral issues, not because of legal restriction, but because they anticipate offense. The fear is specific and rational: say the wrong thing, and people leave. They stop giving. They find another church that will tell them what they came to hear. Pastors who preach with clarity on sexuality, the exclusivity of Christ, the reality of hell, or the political implications of Scripture face real consequences. This is not a new form of fear. But it is a fear that the American Church has allowed to govern the pulpit in a way prior generations of pastors would not have recognized as acceptable stewardship of the Word they were entrusted to preach."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What Gets Left Out When the Pulpit Goes Quiet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When pastors stop preaching on contested biblical topics, congregations develop faith that is sincere but theologically incomplete. Only 4% of American adults hold a biblical worldview, according to the 2026 American Worldview Inventory, and only 37% of pastors do (Barna, 2022). When the shepherd and the flock are standing in the same fog, preaching cannot close the gap. The topics pastors most commonly avoid: sexuality, abortion, the nature of hell, end-times, church discipline, and the exclusivity of Christ. These are precisely the topics where cultural pressure has been highest. The avoidance is not random. It is correlated. Where culture pushes hardest, the pulpit has gone quietest. The result is Christians who know Jesus loves them but don't know what Jesus requires of them. Congregations who can quote John 3:16 and cannot tell you what the Church historically believed about marriage, death, judgment, or salvation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What Does Scripture Actually Expect of Shepherds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Scripture treats pastoral silence not as a neutral option but as a specific failure with named consequences. Ezekiel 34 indicts the shepherds of Israel directly: \"Woe to you shepherds of Israel who only take care of yourselves.\" The charge is not doctrinal error. It is self-protection at the expense of the flock. Paul warns Timothy that people will accumulate teachers who tell them what they want to hear (2 Timothy 4:3), and his own posture toward preaching is unambiguous: \"Woe to me if I do not preach the gospel\" (1 Corinthians 9:16). Not \"woe to me if people leave.\" Not \"woe to me if giving drops.\" Woe to me if I do not say the thing I was entrusted to say. These texts do not leave room for a metrics-driven calculus. They assume cost. They assume opposition. And they name silence as the failure, not the speaking."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 The pastor knows. He has read the text. He understands what it says. And he is choosing not to say it.
 
 That is the crisis: not ignorance, not confusion, not a theological gap. A Barna study found that 50% of American pastors feel limited in their ability to speak on moral and social issues because people will take offense ([Barna, 2025](https://www.barna.com/research/pastors-speaking-out/)). Half. Not because they don't believe what Scripture says. Because saying it has become too expensive.

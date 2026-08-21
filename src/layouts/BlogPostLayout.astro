@@ -3,6 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 
 interface Props {
   title: string;
+  seoTitle?: string;
   excerpt?: string;
   publishDate: Date;
   updatedDate?: Date;
@@ -11,7 +12,12 @@ interface Props {
   image?: { src: string; alt: string; portrait?: boolean };
 }
 
-const { title, excerpt, publishDate, updatedDate, category, tags, image } = Astro.props;
+const { title, seoTitle, excerpt, publishDate, updatedDate, category, tags, image } = Astro.props;
+
+// title is the reader-facing headline (H1, schema headline, breadcrumb).
+// seoTitle is the search-result title, kept under 60 characters with no brand
+// suffix appended.
+const searchTitle = seoTitle || title;
 
 const formattedDate = publishDate.toLocaleDateString('en-US', {
   year: 'numeric',
@@ -26,7 +32,7 @@ const formattedUpdatedDate = updatedDate?.toLocaleDateString('en-US', {
 });
 ---
 
-<BaseLayout title={title} description={excerpt} ogType="article" ogImage={image?.src}>
+<BaseLayout title={searchTitle} description={excerpt} ogType="article" ogImage={image?.src} appendSiteName={false}>
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Article",
