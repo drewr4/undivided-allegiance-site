@@ -32,12 +32,12 @@
 - `src/pages/video.astro` — simplified May 11, 2026. Removed Coming Soon placeholder cards. Now a clean single-section page pointing to YouTube channel.
 - `BaseLayout.astro` has `<slot name="head" />` just before `</head>` — use to inject page-specific `<link rel="preload">` or other head elements
 - `public/og-book.png` — stable book cover OG image (267KB PNG, 1931×2775). Used by /book/ page. Predictable URL regardless of Astro build hashing.
-- `public/llms.txt` — AI crawler guidance file. Lists all 9 blog posts (9th, Christian nationalism, added 2026-07-23), book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
+- `public/llms.txt` — AI crawler guidance file. Lists all 10 blog posts (10th, 5 signs your church has compromised with culture, added 2026-08-22), book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
 
 ## SEO Infrastructure (as of May 11, 2026)
 
 - **Google Search Console**: Verified via HTML meta tag (`Ss2oF61TWvXnYwq2J2ppQrUax4YMvRrHPagmRBNgQLU`) in `BaseLayout.astro`. Sitemap submitted: `sitemap-index.xml`. Do NOT remove the GSC meta tag from BaseLayout.
-- **Article schema**: All 9 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
+- **Article schema**: All 10 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
 - **Blog featured images**: All 9 posts have inline featured images (visible in article body). Images at `public/images/blog/`. Article schema, og:image, and inline render all use the post-specific image. See Blog Frontmatter Schema below for the `image` field.
 - **Schema URLs use www (normalized 2026-07-23)**: Every hand-written BlogPosting/FAQPage schema block and every inline body URL must use `https://www.undividedallegiance.com`, matching the canonical tag that BaseLayout builds from `Astro.site`. Three posts (double-minded, when-division, two-masters) had bare-apex URLs; all normalized. Verified zero bare-apex URLs across built pages. New posts: always write schema URLs with www.
 - **One H1 per post**: BlogPostLayout renders the title as the page H1. Do NOT add a markdown `# ` heading in post body — it creates a second H1. The double-minded post had this defect (fixed 2026-07-23). Body headings start at `## `.
@@ -47,7 +47,18 @@
 - **LCP optimizations**: Homepage book cover has `loading="eager"`. /book/ hero uses `loading="eager"` + `<link rel="preload">` injected via head slot using `getImage()` to resolve the hashed WebP URL at build time.
 - **301 redirect**: Non-www to www redirect is permanent (301) via `vercel.json`.
 - **Security headers**: X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy set via `vercel.json`.
-- **llms.txt**: `public/llms.txt` — lists all 9 blog posts, book, newsletter, key pages, and content use policy. Update when new blog posts are published.
+- **llms.txt**: `public/llms.txt` — lists all 10 blog posts, book, newsletter, key pages, and content use policy. Update when new blog posts are published.
+
+### Title and FAQ rules (added 2026-08-21, commit d57f2b8)
+
+- **Blog post titles drop the site name**: `BaseLayout.astro` takes an `appendSiteName` prop (default `true`). `BlogPostLayout` passes `appendSiteName={false}`, so a post's `<title>` is the SEO title alone with no `| Undivided Allegiance` suffix. Reason: the suffix pushed titles past Google's 60 character display limit and got them truncated in results. Every other page keeps the suffix. When adding a post, keep `seo.title` at 60 characters or fewer on its own and never reintroduce the suffix on posts.
+- **Display title and SEO title are separate**: `src/pages/blog/[...slug].astro` sends `seo.title` to the meta title while the H1, the Article schema `headline`, and the breadcrumb leaf use the longer display title. They are allowed to differ. That is deliberate, not a defect.
+- **FAQ schema needs a 120 word answer**: `FAQPage` JSON-LD goes into a post only where a question-form H2 is followed by an answer of at least 120 words after markdown is stripped. Shorter answers are skipped rather than padded or invented. 8 of 9 posts qualify; `the-church-is-choosing` has no question-form headings and correctly carries none. Google restricted FAQ rich results to government and health sites in Aug 2023, so this serves Bing and AI search, not Google. This supersedes the 40 to 80 word FAQ answer guidance in `03_blog/blog-standards.md`.
+- **One article entity per post**: the layout generates the Article schema. Never hand-write a `BlogPosting` or `BreadcrumbList` block into post markdown; three posts had duplicates and were cleaned up 2026-08-21. A hand-written `FAQPage` block in markdown is fine and expected.
+
+### Copy rule: no membership language (added 2026-08-21, set by Drew)
+
+- Never write **join**, **membership**, or **member** in reference to the church, in posts, page copy, or ads. Drew does not condone that framing and does not find it biblical. Write about believers gathering together, the gathered church, the body, congregating with like-minded believers. Hebrews 10:24-25 is the reference text: stir up one another to love and good works, meet together, encourage one another. Any research statistic worded around joining or membership gets dropped rather than reworded.
 
 ## Author Bio System (added May 8, 2026)
 

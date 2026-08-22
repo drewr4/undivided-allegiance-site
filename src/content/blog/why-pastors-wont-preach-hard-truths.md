@@ -175,4 +175,6 @@ For more on divided allegiance in the Church, read [What Does 'You Cannot Serve 
 
 Read about the pattern of institutional drift in [The Church Is Not Drifting. It Is Choosing](/blog/the-church-is-choosing/).
 
+If you want to know what silence in the pulpit looks like from the pew, work through [5 signs your church has compromised with culture](/blog/5-signs-your-church-has-compromised-with-culture/).
+
 ---
