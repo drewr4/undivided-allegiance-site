@@ -40,7 +40,15 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !page.includes('/book-landing/'),
+      // Pages that carry a noindex tag are kept OUT of the sitemap. A sitemap
+      // entry asks Google to index a page while the tag refuses, and that
+      // contradiction is what produced the Search Console notices (2026-09-21).
+      filter: (page) => ![
+        '/book-landing/',
+        '/links/',
+        '/podcast/',
+        '/video/',
+      ].some((excluded) => page.includes(excluded)),
       serialize(item) {
         const lastmod = lastmodMap[item.url] || '2026-05-06';
         return { ...item, lastmod };

@@ -18,31 +18,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Topics -->
+  <!-- The Message -->
   <section class="section-padding bg-charcoal">
+    <div class="container mx-auto px-6 max-w-4xl fade-in">
+      <h2 class="mb-4">The Message</h2>
+      <div class="divider mb-12"></div>
+      <div class="space-y-6 max-w-3xl">
+        <p class="text-muted-light text-lg leading-relaxed">
+          Most of us are not running from God. We are just divided. We show up on Sunday and fight
+          the same fight all week, giving Jesus some and the world the rest, and wondering why we
+          feel so tired.
+        </p>
+        <p class="text-muted leading-relaxed">
+          Drew Reitzel takes the hardest line Jesus ever drew, Matthew 6:24, and uses it to set
+          people free. He speaks with real love for the people who are still deciding which master
+          they serve, and he is still in the fight himself, which is the point. A room leaves with
+          the quiet exhaustion of a divided heart named out loud, and with an invitation home.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Topics -->
+  <section class="section-padding bg-black">
     <div class="container mx-auto px-6 max-w-4xl fade-in">
       <h2 class="mb-4">Speaking Topics</h2>
       <div class="divider mb-12"></div>
       <div class="space-y-8">
         {[
           {
+            title: 'You Can\'t Serve Two Masters',
+            description: 'The exhaustion of the divided life and the freedom of one allegiance. Where the pull between what we were made for and everything else competing for that place actually comes from, and the one decision that ends it.',
+          },
+          {
+            title: 'Who Needs to Hear This?',
+            description: 'Loving the divided home, what it costs and why it is worth it. For the husband, wife, parent or friend who loves someone pulled in two directions and has run out of things to say.',
+          },
+          {
+            title: 'The Invitation Inside Matthew 6:24',
+            description: 'The hardest line Jesus drew and the invitation hidden inside it. Built for a Sunday morning or a retreat session, and written to send people home with something they can act on that week.',
+          },
+          {
             title: 'The Church Is Choosing',
             description: 'Why the American Church\'s departure from biblical truth is not accidental, and what it will take to return.',
           },
-          {
-            title: 'You Can\'t Serve Two Masters',
-            description: 'The cost of cultural compromise and the call to undivided allegiance to Christ.',
-          },
-          {
-            title: 'The Remnant\'s Responsibility',
-            description: 'What it means to hold the line when the institution will not, and why faithfulness matters more than numbers.',
-          },
-          {
-            title: 'Prophetic Courage in a Comfortable Church',
-            description: 'Recovering the voice the Church has silenced and the message the world needs to hear.',
-          },
         ].map((topic) => (
-          <div class="p-8 bg-black border-l-2 border-red">
+          <div class="p-8 bg-charcoal border-l-2 border-red">
             <h3 class="text-xl mb-3">{topic.title}</h3>
             <p class="text-muted leading-relaxed">{topic.description}</p>
           </div>
@@ -51,11 +72,84 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Formats -->
+  <section class="section-padding bg-charcoal">
+    <div class="container mx-auto px-6 max-w-4xl fade-in">
+      <h2 class="mb-4">Formats</h2>
+      <div class="divider mb-12"></div>
+      <p class="text-muted leading-relaxed max-w-3xl">
+        Sunday morning services. Men's gatherings. Conferences. Retreats. Seminars. Drew works with
+        the shape of your event rather than asking your event to fit a talk, and he is glad to talk
+        through what would serve your people before anything is booked.
+      </p>
+    </div>
+  </section>
+
+  <!-- For Hosts -->
+  <section class="section-padding bg-black">
+    <div class="container mx-auto px-6 max-w-4xl fade-in">
+      <h2 class="mb-4">For Podcast and Radio Hosts</h2>
+      <div class="divider mb-12"></div>
+      <p class="text-muted leading-relaxed max-w-3xl mb-8">
+        Drew is available for interviews, and these are the three conversations that tend to serve
+        an audience best.
+      </p>
+      <div class="space-y-8">
+        {[
+          {
+            title: 'The most exhausting way to live',
+            description: 'Why a divided heart, rather than a hard life, is what wears people out, and the one decision that ends it.',
+          },
+          {
+            title: 'You can\'t argue someone home',
+            description: 'How to reach the people you love who are pulled in two, without preaching at them or pushing them away.',
+          },
+          {
+            title: 'The verse nobody wants to preach',
+            description: 'Matthew 6:24 as Jesus meant it, what undivided allegiance asks, and what it gives back.',
+          },
+        ].map((angle) => (
+          <div class="p-8 bg-charcoal border-l-2 border-red">
+            <h3 class="text-xl mb-3">{angle.title}</h3>
+            <p class="text-muted leading-relaxed">{angle.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Drew -->
+  <section class="section-padding bg-charcoal">
+    <div class="container mx-auto px-6 max-w-4xl fade-in">
+      <h2 class="mb-4">About Drew</h2>
+      <div class="divider mb-12"></div>
+      <div class="space-y-6 max-w-3xl">
+        <p class="text-muted leading-relaxed">
+          Drew Reitzel writes about the most uncomfortable truth in American Christianity: that you
+          cannot give Jesus part of your life and the world the rest. He is 61, a New Yorker, and
+          direct. He says it with real love for people who are still deciding which master they
+          serve.
+        </p>
+        <p class="text-muted leading-relaxed">
+          His book, <a href="/book/" class="text-red hover:underline">You Can't Serve Two Masters:
+          Undivided Allegiance To Christ In An Age of Cultural Compromise</a>, names the quiet
+          exhaustion of a divided heart and calls the reader home with compassion. It is written for
+          the person who loves God and still feels pulled in two directions, and for the people who
+          love that person and do not know what to say.
+          <a href="/about/" class="text-red hover:underline">More about Drew</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Inquiry Form -->
   <section class="section-padding bg-black">
     <div class="container mx-auto px-6 max-w-2xl fade-in">
       <h2 class="text-center mb-4">Request Drew to Speak</h2>
-      <div class="divider mx-auto mb-12"></div>
+      <div class="divider mx-auto mb-6"></div>
+      <p class="text-muted text-center leading-relaxed mb-12">
+        Tell us about your event and Drew will come back to you himself.
+      </p>
 
       <form class="space-y-6" data-speaking-form>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
