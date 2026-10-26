@@ -1,290 +1,152 @@
 # Undivided Allegiance Site
 
+Repo rules only. Project-wide rules (Cowork, content approval, folder maps, brand voice, campaign state) live in `~/Desktop/undivided-allegiance/CLAUDE.md`; global rules in `~/.claude/CLAUDE.md`. Do not duplicate them here.
+
 ## Project
 
-- **Stack**: Astro 6, TypeScript, Tailwind CSS v4, MDX
-- **Site**: https://undividedallegiance.com
-- **Deploy**: Vercel serves https://undividedallegiance.com (verified live 2026-07-06; vercel.json supplies the 301 redirect and security headers). Pushing to `main` does NOT publish the production site through GitHub Pages; the old `.github/workflows/deploy.yml` targeted an unused GitHub Pages destination and was disabled (renamed to `deploy.yml.disabled`) on 2026-07-06 per the council ruling.
-- **Dev server**: `npm run dev` (localhost:4321)
-- **Build**: `npm run build` (outputs to `dist/`)
-- **No test or lint commands configured**
-
-## Copy Standard — Zero Em Dashes (enforced 2026-07-20)
-
-- Commit ae7fb6e removed all 98 em dashes from `src/` and `public/` (13 files), verified with grep at zero in source, `dist/`, and all live pages. Before adding ANY copy, run `grep -rn "—" src public` and keep it at zero. En dashes (–) in ranges are allowed.
-- Same commit: podcast episode number tiles restyled (large bold centered number, `bg-red/15 border-red/40 text-3xl`); podcast episode 2 and 3 descriptions rewritten to positive framing; newsletter page title is now "The Remnant Newsletter"; book page order buttons read "Order on Kindle ($9.99)" / "Order Paperback ($16.99)".
-- Site Health Monitor text checks verified compatible with these changes (all 10 PAGES strings still present).
+- **Stack**: Astro 6 (`astro ^6.0.8`), TypeScript, Tailwind CSS v4. `@astrojs/mdx` is installed; blog posts are `.md` files.
+- **Site**: https://www.undividedallegiance.com (www is canonical; `vercel.json` 301-redirects the bare apex).
+- **Deploy**: Vercel, from `main`. GitHub Pages is not used; `.github/workflows/deploy.yml.disabled` stays disabled.
+- **Dev**: `npm run dev` (localhost:4321). **Build**: `npm run build` (outputs to `dist/`).
+- No test or lint commands.
 
 ## Architecture
 
-- `src/pages/` - File-based routing (Astro pages)
-- `src/components/` - Reusable Astro components
-- `src/layouts/` - BaseLayout, BlogPostLayout
-- `src/content/blog/` - MDX blog posts with frontmatter schema
-- `src/data/site-config.ts` - Nav links, social links, metadata
-- `src/styles/global.css` - Tailwind directives
-- `middleware.ts` - Vercel edge: `book.` subdomain rewrites to `/book-landing/`
-- Path alias: `@/*` maps to `src/*`
-- `BaseLayout.astro` accepts `ogType` prop (default: `"website"`) — pass `ogType="book"` on book page, `ogType="article"` on blog posts if needed
-- `BaseLayout.astro` accepts `noindex` prop (default: `false`) — pass `noindex={true}` on any page that should not be indexed by Google. Currently set on: `podcast.astro`, `book-landing.astro`, `404.astro`, `links.astro`, `video.astro` (video added 2026-09-21). **Any page given noindex must ALSO be added to the sitemap filter in `astro.config.mjs`** — a sitemap entry asks Google to index a page its own tag refuses, and that contradiction is what generated the Search Console notices on 2026-09-21.
-- `src/pages/404.astro` — custom branded 404 page. Black background, brand voice line, links to Home and /book/. Noindexed. Created May 11, 2026.
-- `src/pages/podcast.astro` — noindexed May 11, 2026. Coming Soon placeholder, no real content yet.
-- `src/pages/video.astro` — simplified May 11, 2026. Removed Coming Soon placeholder cards. Now a clean single-section page pointing to YouTube channel. Noindexed 2026-09-21 at Drew's direction: 21 words of body text will never index, so it stays out of the index until it has real content.
-- `src/pages/speaking.astro` — rebuilt 2026-09-21 from 137 to 571 body words. Sections: hero (unchanged), The Message, Speaking Topics, Formats, For Podcast and Radio Hosts, About Drew, inquiry form. Copy comes from the approved WNTH media kit (bio, its three speaking topics, its three interview angles), so the page matches what hosts are offered by email. Two older topics (The Remnant's Responsibility, Prophetic Courage in a Comfortable Church) were retired with Drew's approval. **The hero H1 'Bring the Message to Your Community' is asserted by the Site Health Monitor — do not change it without updating `ops/scripts/sitehealthmonitor.gs`.**
-- `BaseLayout.astro` has `<slot name="head" />` just before `</head>` — use to inject page-specific `<link rel="preload">` or other head elements
-- `public/og-book.png` — stable book cover OG image (267KB PNG, 1931×2775). Used by /book/ page. Predictable URL regardless of Astro build hashing.
-- `public/llms.txt` — AI crawler guidance file. Lists all 10 blog posts (10th, 5 signs your church has compromised with culture, added 2026-08-22), book info, newsletter, key pages, and content use policy. Update when new blog posts are published.
+- `src/pages/`: file-based routing. Pages: `index`, `about`, `book`, `book-landing`, `contact`, `newsletter`, `speaking`, `links`, `podcast`, `video`, `privacy`, `404`, `blog/index`, `blog/[...slug]`.
+- `src/components/`: `Header`, `Footer`, `BlogCard`, `EmailCapture`, `ImageCarousel`, `SocialIcon`, `VideoBackground`. `src/layouts/`: `BaseLayout`, `BlogPostLayout`.
+- `src/content/blog/`: blog posts (10 today). Schema in `src/content.config.ts`.
+- `src/data/site-config.ts`: nav links, social links, site metadata.
+- `src/styles/global.css`: Tailwind directives and custom classes (`.author-bio`, `section-padding`).
+- `middleware.ts` (repo root): Vercel edge; `book.undividedallegiance.com` rewrites to `/book-landing/`.
+- `astro.config.mjs`: sitemap config including the noindex filter.
+- `vercel.json`: apex to www redirect; security headers including a Content-Security-Policy. Any new third-party script or endpoint must be added to the CSP or it is blocked.
+- Path alias `@/*` maps to `src/*`.
+- `public/`: `og-book.png` (book OG image), `free-preview.pdf` (free chapter), `assets/authors/drew-reitzel.webp|.jpg` (headshot), `images/blog/` (featured images), `llms.txt` (AI crawler guidance listing every post; update it when a post is published).
 
-## SEO Infrastructure (as of May 11, 2026)
+### BaseLayout props
 
-- **Google Search Console**: Verified via HTML meta tag (`Ss2oF61TWvXnYwq2J2ppQrUax4YMvRrHPagmRBNgQLU`) in `BaseLayout.astro`. Sitemap submitted: `sitemap-index.xml`. Do NOT remove the GSC meta tag from BaseLayout.
-- **Article schema**: All 10 blog posts have post-specific Article schema (ImageObject uses per-post image at 1200x630, not global fallback). BreadcrumbList also present on all posts. Eligible for Google rich results.
-- **Blog featured images**: All 9 posts have inline featured images (visible in article body). Images at `public/images/blog/`. Article schema, og:image, and inline render all use the post-specific image. See Blog Frontmatter Schema below for the `image` field.
-- **Schema URLs use www (normalized 2026-07-23)**: Every hand-written BlogPosting/FAQPage schema block and every inline body URL must use `https://www.undividedallegiance.com`, matching the canonical tag that BaseLayout builds from `Astro.site`. Three posts (double-minded, when-division, two-masters) had bare-apex URLs; all normalized. Verified zero bare-apex URLs across built pages. New posts: always write schema URLs with www.
-- **One H1 per post**: BlogPostLayout renders the title as the page H1. Do NOT add a markdown `# ` heading in post body — it creates a second H1. The double-minded post had this defect (fixed 2026-07-23). Body headings start at `## `.
-- **Article-body links open in new tabs (added 2026-07-23)**: BlogPostLayout has an inline script that sets `target="_blank" rel="noopener"` on every `<a>` inside `[data-article-body]`, so readers never lose their place. Applies to all posts automatically.
-- **Sitemap excludes noindexed pages (2026-09-21)**: `astro.config.mjs` filters `/book-landing/`, `/links/`, `/podcast/` and `/video/` out of the sitemap. 18 entries, all indexable. Keep this list in step with the noindex props above.
-- **Internal links are what get a page crawled (2026-09-21)**: Search Console showed 4 blog posts discovered but never fetched, and the pages with no body-text links (nav and footer do not count) were the ones Google skipped. The blog author bio in `BlogPostLayout.astro` now links the book title to `/book/` and carries an 'Invite Drew to speak' link to `/speaking/`, and the about page links the word 'speaker' to `/speaking/`. Speaking went from 1 body inbound link to 13, the book page from 9 to 15.
-- **og:type**: Blog posts declare `og:type="article"` via `ogType` prop in BlogPostLayout. og:image is post-specific. Book page uses `ogType="book"`. All others default to `website`.
-- **GEO readiness**: Scored 74/100 (May 6, 2026). llms.txt live at /llms.txt. All AI crawlers allowed. Inline images + multi-modal signals complete. Remaining ceiling: Wikipedia entity, Reddit presence (off-site builds).
-- **LCP optimizations**: Homepage book cover has `loading="eager"`. /book/ hero uses `loading="eager"` + `<link rel="preload">` injected via head slot using `getImage()` to resolve the hashed WebP URL at build time.
-- **301 redirect**: Non-www to www redirect is permanent (301) via `vercel.json`.
-- **Security headers**: X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy set via `vercel.json`.
-- **llms.txt**: `public/llms.txt` — lists all 10 blog posts, book, newsletter, key pages, and content use policy. Update when new blog posts are published.
+- `ogType` (default `"website"`): `/book/` passes `"book"`, `BlogPostLayout` passes `"article"`.
+- `noindex` (default `false`): renders `noindex, nofollow`. Set today on `404`, `book-landing`, `links`, `podcast`, `video`.
+- `appendSiteName` (default `true`): `BlogPostLayout` passes `false` so a post's `<title>` has no `| Undivided Allegiance` suffix. Every other page keeps it.
+- `<slot name="head" />` before `</head>` for page-specific preloads or head tags; `/book/` uses it to preload the hero cover.
+- The Google Search Console verification meta tag, the red announcement bar (links to `/book/`), and both pixels load from BaseLayout on every page. Do not remove the GSC tag.
 
-### Title and FAQ rules (added 2026-08-21, commit d57f2b8)
+### Page notes
 
-- **Blog post titles drop the site name**: `BaseLayout.astro` takes an `appendSiteName` prop (default `true`). `BlogPostLayout` passes `appendSiteName={false}`, so a post's `<title>` is the SEO title alone with no `| Undivided Allegiance` suffix. Reason: the suffix pushed titles past Google's 60 character display limit and got them truncated in results. Every other page keeps the suffix. When adding a post, keep `seo.title` at 60 characters or fewer on its own and never reintroduce the suffix on posts.
-- **Display title and SEO title are separate**: `src/pages/blog/[...slug].astro` sends `seo.title` to the meta title while the H1, the Article schema `headline`, and the breadcrumb leaf use the longer display title. They are allowed to differ. That is deliberate, not a defect.
-- **FAQ schema needs a 120 word answer**: `FAQPage` JSON-LD goes into a post only where a question-form H2 is followed by an answer of at least 120 words after markdown is stripped. Shorter answers are skipped rather than padded or invented. 8 of 9 posts qualify; `the-church-is-choosing` has no question-form headings and correctly carries none. Google restricted FAQ rich results to government and health sites in Aug 2023, so this serves Bing and AI search, not Google. This supersedes the 40 to 80 word FAQ answer guidance in `03_blog/blog-standards.md`.
-- **One article entity per post**: the layout generates the Article schema. Never hand-write a `BlogPosting` or `BreadcrumbList` block into post markdown; three posts had duplicates and were cleaned up 2026-08-21. A hand-written `FAQPage` block in markdown is fine and expected.
+- `podcast.astro`: Coming Soon placeholder. `video.astro`: single section pointing to YouTube, noindexed until it has real content. `404.astro`: branded, links to Home and `/book/`.
+- `speaking.astro`: copy comes from the approved WNTH media kit (bio, three topics, three interview angles). **The H1 "Bring the Message to Your Community" is asserted by the Site Health Monitor; do not change it without updating `ops/scripts/sitehealthmonitor.gs`.**
+- `book-landing.astro`: the `book.` subdomain page. Its Order Now buttons link to `/book/`, not Amazon.
 
-### Copy rule: no membership language (added 2026-08-21, set by Drew)
+## SEO rules
 
-- Never write **join**, **membership**, or **member** in reference to the church, in posts, page copy, or ads. Drew does not condone that framing and does not find it biblical. Write about believers gathering together, the gathered church, the body, congregating with like-minded believers. Hebrews 10:24-25 is the reference text: stir up one another to love and good works, meet together, encourage one another. Any research statistic worded around joining or membership gets dropped rather than reworded.
+- **Noindex and sitemap move together.** Any page given `noindex` must also be added to the sitemap filter in `astro.config.mjs` (today: `/book-landing/`, `/links/`, `/podcast/`, `/video/`). Sitemap is 18 entries, all indexable.
+- **Schema and body URLs use www**, matching the canonical tag BaseLayout builds from `Astro.site`.
+- **One H1 per post.** The layout renders the title as H1. Body headings start at `## `.
+- **One Article entity per post.** The layout generates Article and BreadcrumbList schema with the post image as ImageObject. Never hand-write `BlogPosting` or `BreadcrumbList` in markdown. A hand-written `FAQPage` block is fine.
+- **FAQ schema needs a 120 word answer.** `FAQPage` goes in only where a question-form H2 is followed by at least 120 words. Skip, never pad. Supersedes `03_blog/blog-standards.md` (40 to 80 words). Serves Bing and AI search, not Google.
+- **`seo.title` at 60 characters or fewer.** It may differ from the display title, which the H1, Article `headline`, and breadcrumb leaf use.
+- **Body links get a page crawled.** Nav and footer do not count. New pages and posts need body-text inbound links.
+- **Article-body links open in new tabs** automatically (`[data-article-body]` script in the layout).
+- **LCP**: homepage cover and `/book/` hero use `loading="eager"`; `/book/` preloads the hero through the head slot.
 
-## Author Bio System (added May 8, 2026)
+## Author bio
 
-- **Author bio block**: Rendered by `BlogPostLayout.astro` — replaces the old "DR" initials placeholder. Uses real headshot. Consistent across all blog posts automatically.
-- **Headshot files**: `public/assets/authors/drew-reitzel.webp` (20KB) and `drew-reitzel.jpg` (48KB), 400x400px, sourced from `03_blog/close_up_professional_portrait.png`.
-- **Author bio CSS**: `.author-bio` class in `global.css` — 96px×96px desktop, 72px×72px at max-640px, `aspect-ratio: 1/1`, `object-fit: cover`, `border-radius: 8px`. Overrides global `img { height: auto }` via class-level specificity.
-- **Bio text**: "Drew Reitzel is the author of *You Can't Serve Two Masters* and founder of Undivided Allegiance. His writing focuses on Scripture, divided allegiance, conviction, cultural compromise, repentance, and the call for Christians to live under the authority of Christ with clarity and unwavering loyalty."
-- **Do NOT add `## About the Author` blocks to markdown content** — the layout handles it automatically. Any hand-written bio blocks in markdown will create duplicates.
+`BlogPostLayout.astro` renders the headshot and bio on every post, styled by `.author-bio` in `global.css`. **Never add `## About the Author` to post markdown.**
 
-## Blog Frontmatter Schema (use this for all new blog posts)
+Bio text: "Drew Reitzel is the author of *You Can't Serve Two Masters* and founder of Undivided Allegiance. His writing focuses on Scripture, divided allegiance, conviction, cultural compromise, repentance, and the call for Christians to live under the authority of Christ with clarity and unwavering loyalty."
 
-When writing or publishing blog posts for this site, always use this exact frontmatter format. The blog-write skill generates different field names — map them as shown below.
+## Blog frontmatter (every new post)
 
 ```yaml
 ---
 title: "Post Title Here"
-excerpt: "Human-readable subtitle shown on the blog card and post header. 1-2 sentences, no stats required. This is what readers see on the page."
+excerpt: "On-page subtitle for the card and post header. 1 to 2 sentences."
 publishDate: 2026-05-05
-updatedDate: 2026-05-05        # optional, only include if updating an existing post
-category: "Scripture"          # examples: Scripture, Church, Culture, Faith, Allegiance
-tags: ["tag-one", "tag-two", "tag-three"]
+updatedDate: 2026-05-05        # optional, only when updating
+category: "Scripture"          # Scripture, Church, Culture, Faith, Allegiance
+tags: ["tag-one", "tag-two"]
 featured: false
 draft: false
+image:
+  src: /images/blog/your-post-slug.png
+  alt: What the image actually shows
+  # portrait: true           # portrait images only; layout centers at max-w-md
 seo:
-  title: "SEO-Optimized Title — can differ from main title for keyword targeting"
-  description: "150-160 char search snippet. Include 1 statistic with source. This is what appears in Google results."
+  title: "SEO title, 60 chars or fewer"
+  description: "150 to 160 char snippet with one sourced statistic."
   pageType: "article"
 ---
 ```
 
-### Mapping from blog-write skill output
-| blog-write field | Site field |
-|---|---|
-| `description` | move to `seo.description` |
-| `title` | keep as `title`; copy to `seo.title` if you want a keyword variant |
-| `date` | rename to `publishDate` |
-| `lastUpdated` | rename to `updatedDate` (optional) |
-| `author` | omit, hardcoded to Drew Reitzel in the layout |
-| `coverImage` | omit — use `image` field instead (see below) |
-| `tags` | keep as-is |
+- `excerpt` is the on-page subtitle, not the SEO description. Write both.
+- `image` sets the inline featured image, the post `og:image`, and the Article ImageObject (fallback `/og-book.png`). Target 1200x630, generated with nano-banana.
+- `why-you-cant-serve-two-masters-is-the-book-the-church-needs-now.md` has `portrait: true`. Keep it.
+- blog-write skill mapping: `description` to `seo.description`, `date` to `publishDate`, `lastUpdated` to `updatedDate`, `coverImage` to `image`; drop `author`.
 
-Write `excerpt` separately. It is the on-page subtitle, not the SEO description.
+## Copy rules for this repo
 
-### Blog featured images (added May 6, 2026)
+- **Zero em dashes (U+2014)** in `src/` and `public/`. Before committing copy, run `grep -rn $'\u2014' src public` (zsh) and keep it at zero. En dashes in ranges are fine.
+- **No membership language.** Never write "join," "membership," or "member" about the church. Write about believers gathering, the gathered church, the body (Hebrews 10:24-25). Drop a statistic worded around joining rather than rewording it.
+- **Monitored strings must survive edits.** `ops/scripts/sitehealthmonitor.gs` (PAGES list) asserts text such as the speaking H1, "The Remnant" and `newsletter-form` on `/newsletter/`, "We Would Love to Hear From You" on `/contact/`. Check it before changing a heading.
 
-Every blog post should have an `image` field. This renders as an inline featured image in the article body, sets the post-specific `og:image` for social sharing, and populates the Article schema ImageObject (replacing the old static `og-book.png` fallback).
+## Book, funnel, and tracking
 
-```yaml
-image:
-  src: /images/blog/your-post-slug.png
-  alt: Descriptive alt text for the image (what it actually shows)
-```
+- **Book**: "You Can't Serve Two Masters." Kindle ASIN `B0FGY9PL66`, $9.99. Paperback ASIN `B0GYLHSBR3`, $16.99. Two ISBNs are correct: `979-8-2786-09926` (Amazon KDP) and `9798996417605` (IngramSpark print).
+- **Order buttons on `src/pages/book.astro`**: the hero shows "Kindle $9.99" and "Paperback $16.99" as text labels with ONE "Order Now" button to the Kindle page. The bottom `#order` section has TWO buttons, "Order on Kindle ($9.99)" and "Order Paperback ($16.99)". All three fire `AddToCart`. Schema marks both formats InStock.
+- **Funnel**: announcement bar, homepage hero CTA, and all paid ads point to `/book/`, never to Amazon, so the page captures buyers and non-buyers (signup form). Organic social bios point to `/links/`.
+- **Homepage popup** (`index.astro`): "Stand With Us" modal, `sessionStorage` flag `ua_popup_seen`, once per browser session.
+- **Meta Pixel** `1289553056416593` in `BaseLayout.astro`. Events: `PageView` site-wide; `ViewContent` on `/book/` load; `AddToCart` on the Amazon order buttons; `Lead` on every signup form.
+- **Meta CAPI**: the subscribe worker sends a server-side `Lead` on every successful subscription (email hashed SHA-256; token is a Cloudflare secret).
+- **TikTok Pixel** `D7CGUT3C77UA7GO31OO0` in `BaseLayout.astro`. Events: `ViewContent` on `/book/`, `AddToCart` on order buttons, `CompleteRegistration` on every signup form.
+- **Meta ad account** `920678984196514`. Live campaign state is in `outputs/daily-snapshot.md` and Ads Manager, never in this file.
 
-- Images live in `public/images/blog/` (served as `/images/blog/filename.png`)
-- Target dimensions: 1200x630 (16:9, blog featured image standard); portrait images also work (see note below)
-- All 9 posts have images (9th, Christian nationalism, added July 23, 2026, generated with nano-banana at 1200x630)
-- Generate new images with nano-banana for each new blog post
-- Without `image` field, Article schema falls back to `/og-book.png`
-- **Portrait images:** Add `portrait: true` to the `image` field in frontmatter. BlogPostLayout conditionally applies `flex justify-center max-w-md` for portrait, `w-full` for landscape. `book-church-needs.png` is a portrait photo (836x1152) and has `portrait: true` set. All other posts default to full-width landscape. Do not remove `portrait: true` from that post.
+## Email capture
 
-## Content Pipeline
+All signup forms are native (no Beehiiv iframe) and post to the Cloudflare Worker.
 
-- **Google Sheet**: Manages social content queue with Status column (Ready / Scheduled / Posted)
-- **Low-Inventory Monitor**: Google Apps Script checks daily (8–9 AM) if Ready rows drop below 5, emails drew.reitzel@undividedallegiance.com
-- **Posting Automation**: Zapier + Buffer handle scheduled posting from the sheet
-- **Google Drive**: Content documents and filing system for pipeline assets
-- **Campaigns**: Two active content campaigns — book promotion ("You Can't Serve Two Masters") and newsletter signup
-- **Site Health Monitor**: Google Apps Script checks all pages + Beehiiv endpoints 4x/day (every 6 hours), sends status email every run (subject shows pass/fail at a glance). Script source on disk: `ops/scripts/sitehealthmonitor.gs` (the live copy runs in Google Apps Script; the old ~/Desktop/01_scripts/ copy no longer exists, checked 2026-07-06). Contact page check updated to "We Would Love to Hear From You" (Apr 2).
+| Form | File | Fields | On success |
+|---|---|---|---|
+| Homepage popup | `index.astro` | first name + email | "Check your inbox" message; chapter arrives by Beehiiv welcome email only |
+| Book page | `book.astro` | email | opens `/free-preview.pdf` (intentional; its copy promises an instant preview) |
+| Newsletter page | `newsletter.astro` | first name + email | "Check your inbox." |
+| Links hub | `links.astro` | email | "Check your inbox" message; no instant PDF |
 
-## Book Launch — KINDLE LIVE (April 30, 2026)
+- **Worker**: `https://subscribe.drewreitzel.workers.dev`; `GET /health` returns 200 `{ok:true}` or 503.
+- **Source**: `~/Desktop/undivided-allegiance/ops/scripts/subscribe-worker.js`, config `ops/scripts/wrangler.toml` (`name = "subscribe"`). Not a git repo; Cloudflare runs the deployed copy. Deploy with `npx wrangler deploy` from `ops/scripts/`; if auth fails, `npx wrangler login`.
+- **Already-subscribed check** uses `/subscriptions?email=` (not `/subscribers?email=`, which 404s). Forms show a duplicate-email message.
+- **Site Health Monitor** (Apps Script, source `ops/scripts/sitehealthmonitor.gs`) checks 10 pages plus the worker `/health` every 6 hours.
 
-- **Book**: "You Can't Serve Two Masters" — $9.99 Kindle / $16.99 Print. TWO ISBNs exist and that is correct, not a conflict: 979-8-2786-09926 is the Amazon/KDP edition ISBN (recorded here since April; not re-verified against the KDP dashboard on 2026-07-06, no local record found), and 9798996417605 is the IngramSpark print edition ISBN (wide print distribution, set up June 22, 2026, per project records). KDP and IngramSpark each assign their own ISBN.
-- **Kindle**: LIVE as of April 30, 2026 at https://www.amazon.com/dp/B0FGY9PL66
-- **Paperback**: ASIN B0GYLHSBR3 ($16.99) — LIVE May 2, 2026 at amazon.com/dp/B0GYLHSBR3
-- **Site copy (updated May 2)**: Both formats live. Announcement bar: "Now available in Kindle ($9.99) and Paperback ($16.99)." Homepage hero: "Available now in Kindle and Paperback." Book page hero (updated May 13, 2026): shows "Kindle $9.99 / Paperback $16.99" as text labels with ONE direct Order Now button → links to Amazon Kindle page (B0FGY9PL66) with AddToCart pixel. No more scroll-to-bottom required. Bottom #order section unchanged with both format buttons. Schema: InStock for both. Blog: "Also available in paperback for $16.99."
-- **Site CTA Strategy**: Ads point to /book/ page (not direct Amazon link) to capture both buyers and non-buyers (newsletter signup).
-- **Announcement Bar**: Red bar at top of every page (BaseLayout.astro) linking to **/book/**
-- **Homepage Hero CTA**: Points to **/book/**
-- **Homepage popup**: "Stand With Us" modal — uses `sessionStorage` flag (`ua_popup_seen`). Shows once per browser session; does not re-trigger on same-session return visits. Clears on tab close.
-- **Meta Pixel**: Installed in BaseLayout.astro with ID `1289553056416593`
-- **Conversion Events** (added Apr 5):
-  - `PageView` — fires site-wide via BaseLayout
-  - `ViewContent` — fires on `/book/` page load (book.astro)
-  - `AddToCart` — fires on both Amazon order buttons in book.astro (content_name: `YCSTM Kindle Order`), value $9.99 USD
-  - `Lead` — fires from site forms on all 3 email signup forms (homepage popup, book page, newsletter page)
-- **CAPI (Conversions API)** — LIVE May 13, 2026. subscribe-worker.js sends server-side Lead event to Meta on every successful Beehiiv subscription. Email hashed SHA-256. META_ACCESS_TOKEN stored as Cloudflare secret. Resolves iOS 14+ signal loss. Worker: subscribe.drewreitzel.workers.dev. Source: ops/scripts/subscribe-worker.js.
-- **TikTok Pixel**: Live as of Apr 16, 2026 — ID `D7CGUT3C77UA7GO31OO0` in BaseLayout.astro. Conversion events: `ViewContent` on /book/ load, `AddToCart` on order buttons, `CompleteRegistration` on all 3 email forms. VERIFIED firing May 13, 2026 via Playwright intercept (5 POST requests to analytics.tiktok.com all 200 OK).
-- **Meta Pixel**: VERIFIED firing May 13, 2026 — PageView and ViewContent confirmed. Events Manager diagnostics (EU data blocks) confirmed non-issue, US-only targeting unaffected.
-- **Paid Ads**: Meta + TikTok, $10-20/day budget
-- **Email**: The Remnant (Beehiiv) — Issue #3 "Two Masters" scheduled Apr 30 7 AM ET (post ID: 509c8319). Issues #1 + #2 sent.
-- **30-day launch plan**: Approved Mar 31, 3 phases (Foundation → Build → Launch)
-- **/book/ SEO state (May 5, 2026):** Hero image `loading="eager"` (LCP fix). og:image = `/og-book.png` (book cover). og:type = `book`. Meta description 156 chars with CTA and prices. BreadcrumbList schema added. Two new body sections: "Who This Book Is For" and "What This Book Will Do" (with anonymous "Pastor, Orlando, FL" endorsement — John Dillon's name removed). Page word count ~725.
+## Layout rules
 
-## Meta Ads — Live-State Pointer (static list removed 2026-07-06)
-
-Current campaign state lives in the daily snapshot (`~/Desktop/undivided-allegiance/outputs/daily-snapshot.md`) and Ads Manager; never trust a static campaign list in this file. The frozen April 2026 campaign detail that used to live here is preserved in git history and in `ops/cowork/archive/claude-md-campaign-history-20260706.md`.
-
-Durable facts:
-- **Account**: Undivided Allegiance — ID: 920678984196514
-- **Meta Pixel ID**: 1289553056416593
-- Ad management is Claude Code's job via the Marketing API. All paid ads point to /book/, never directly to Amazon.
-
-## Mobile Menu
-
-- Mobile menu `<div>` lives OUTSIDE `<header>` in Header.astro to escape the header's stacking context (z-50)
-- Menu overlay: `z-[9998]`, close button: `z-[9999]`, hamburger toggle: `z-[9999]`
-- Scrollable container with two-column grid layout on landscape mobile
-- Dedicated SVG close button (fixed position) separate from hamburger
-
-## Hero Sections
-
-- All interior pages use `section-padding bg-black` with identical structure: label + h1 + divider + paragraph
-- Hero height is determined by content length, NOT by min-h/h-[vh] values (those broke the layout)
-- Do NOT change hero padding or height values. If heroes look different, adjust content length instead.
-- Blog page hero is a separate section from the posts grid (posts are in `section-padding bg-charcoal`)
-
-## Email Capture System (Apr 14, 2026)
-
-Beehiiv iframe on /newsletter/ has been REMOVED and replaced with a native form. All three signup forms route through a Cloudflare Worker proxy to the Beehiiv API.
-
-### Forms
-- **Homepage popup** (`index.astro`) — "Stand With Us" modal, 1.5s delay, first name + email. **Changed 2026-06-29: no longer opens the PDF. On success it shows "You're in. Check your inbox for the free chapter..." and hides the form. Chapter is delivered only by the Beehiiv welcome email (forced email capture).**
-- **Book page** (`book.astro`) — email only, opens `/free-preview.pdf` on success, resets form. **Intentionally left as instant-PDF (its copy promises an instant preview); still subscribes to Beehiiv.**
-- **Newsletter page** (`newsletter.astro`) — native form (no iframe), first name + email, shows "Check your inbox." on success, resets form
-- **Links hub** (`links.astro`, `/links`) — added 2026-06-29. Link-in-bio hub: identity, free-chapter email capture (email-only, no instant PDF, like the popup), cards to book/newsletter/speaking/blog, socials. noindexed. All seven social bios now point here; paid ads still go to `/book`.
-
-### Cloudflare Worker
-- **URL**: `https://subscribe.drewreitzel.workers.dev`
-- **Code**: `~/Desktop/undivided-allegiance/ops/scripts/subscribe-worker.js`
-- **Already-subscribed check**: uses `/subscriptions?email=` endpoint (NOT `/subscribers?email=` — returns 404)
-- All forms fire Meta Pixel `Lead` event and show duplicate-email error message
-
-### Meta Pixel Lead event
-- `Lead` now fires from site code on all three forms (popup, book, newsletter)
-- Previously was only firing from Beehiiv iframe — update any campaign notes that reference Beehiiv as the Lead event source
-
-### Site Health Monitor
-- RESOLVED 2026-07-06: `ops/scripts/sitehealthmonitor.gs` checks /newsletter/ for both `The Remnant` and `newsletter-form` (PAGES list). To-do closed.
-- **2026-06-29:** added the subscribe worker to the monitor. `ENDPOINTS` in `ops/scripts/sitehealthmonitor.gs` (and the live Apps Script "Site Health Monitor") now includes `https://subscribe.drewreitzel.workers.dev/health`. Monitor is now 11 checks (10 pages + the worker). Catches signup-capture outages within 6 hours.
-
-### Subscribe worker outage + fix (2026-06-29) — IMPORTANT
-- **Root cause:** the live worker (Cloudflare, named `subscribe`, URL `subscribe.drewreitzel.workers.dev`) was missing `BEEHIIV_PUB_ID` entirely and had stale `BEEHIIV_API_KEY` and `META_ACCESS_TOKEN` (wiped/rotated in the June 23/24 credential cleanup, never restored on the worker). Every signup returned HTTP 500; nobody was subscribed to Beehiiv from ~June 15 to June 29. Forms still opened the PDF so it looked fine.
-- **Fix:** set all three secrets on the `subscribe` worker via `wrangler secret put` (values from macOS Keychain: `ua-beehiiv-key`, `ua-meta-token`; pub id `pub_21b31f33-3bae-46f2-9532-b4ca1e15cd33`). Added a read-only `GET /health` route to `subscribe-worker.js` that pings Beehiiv and returns `{ok:true}`/200 or `{ok:false}`/503. Redeployed. Verified end to end: live popup + book form now create Beehiiv subscriptions.
-- **Config correction:** `ops/scripts/wrangler.toml` `name` was `subscribe-drewreitzel` (a different/orphan worker the site does NOT use). Corrected to `name = "subscribe"` so future `wrangler deploy` targets the right worker. The orphan `subscribe-drewreitzel` worker was deleted.
-- **Cloudflare auth:** the deploy token was deleted in June; Drew ran `wrangler login` (browser OAuth) to authorize. If a future deploy fails on auth, run `npx wrangler login` again from `ops/scripts/`.
-- **ops/scripts is NOT a git repo.** `subscribe-worker.js`, `wrangler.toml`, `sitehealthmonitor.gs` live on disk only; their live versions are deployed (Cloudflare / Apps Script). Consider version-controlling `ops/` later.
-
-## Cowork Integration
-
-- **Rules file**: `~/Desktop/undivided-allegiance/CLAUDE.md` — Cowork reads this before every task
-- **Outputs folder**: `~/Desktop/undivided-allegiance/outputs/` — all Cowork deliverables go here
-- **Source of truth**: Claude Code owns CLAUDE.md, memory files, git, deploys. Cowork owns browser tasks and Meta Ads Manager.
-- **Locked files**: Memory files, root CLAUDE.md, and REMNANT_TEMPLATE.md are locked with macOS `uchg` flag. To update: `chflags nouchg <path>` → edit → `chflags uchg <path>`
-- **Sync flow**: Cowork logs work to `ops/cowork/memory-sync-log.md` → Claude Code reads it and syncs into CLAUDE.md and memory files
-- **If conflict**: Claude Code's version wins
-
-## File System (reorganized April 10, 2026)
-
-- **Desktop**: `01_scripts/`, `02_docs/`, `03_screenshots/`, `04_content/`, `undivided-allegiance/`, `YCSTM_KDP/`
-- **Documents**: `01_businesses/` through `09_recipes/`, `_archive/`, `_config/`
-- **Project root** (`~/Desktop/undivided-allegiance/`):
-  - `01_book-launch/` — book launch assets by platform (images/, reels/, meta/, tiktok/, x/, linkedin/, youtube/, docs/)
-  - `02_newsletter/` — newsletter assets by platform (images/, reels/, meta/, tiktok/, x/, linkedin/, youtube/, issues/, templates/)
-  - `03_blog/` — blog posts and strategy
-  - `04_audiobook/` — manuscript, chapters, production files
-  - `ops/` — briefings/, cowork/, seo/, scripts/, social/, production/
-  - `undivided-allegiance-site/` — website repo (Claude Code only)
-- **Image naming**: `[campaign]-[pair][variant]_[type]_[platform].[ext]` (e.g. `01_book-launch/images/meta-ig-feed/book-02A_feed_meta-ig.jpg`). Types: `feed`, `story`, `cinematic`. Platforms: `meta-ig`, `tiktok`, `x`, `linkedin`, `youtube`.
-- **New image rule**: Every new image must be created for ALL platforms: meta-ig-feed, meta-ig-story, tiktok, x, linkedin, youtube
-- **Reel naming**: `[campaign]-reel-[NN]-[slug].[ext]` inside campaign/reels/[platform]/
-- **Site Health Monitor**: source at `ops/scripts/sitehealthmonitor.gs` (live copy runs in Google Apps Script)
+- **Mobile menu**: the menu `<div>` lives outside `<header>` in `Header.astro` to escape the header's `z-50` stacking context. Overlay `z-[9998]`; close button and hamburger `z-[9999]`.
+- **Hero sections**: every interior hero uses `section-padding bg-black` with label + h1 + divider + paragraph. Height comes from content length, not `min-h` or `h-[vh]` (those broke the layout). Never change hero padding or height; adjust content length. The blog hero is separate from the posts grid (`bg-charcoal`).
 
 ## Rules
 
-### MANDATORY: Answer Questions Directly
+### MANDATORY: Answer questions directly
 
-When Drew asks a question, answer it and do nothing else. Do not execute any action, write any file, or call any tool until Drew explicitly instructs you to proceed. A question is not a command.
+When Drew asks a question, answer it and do nothing else. No action, file write, or tool call until Drew explicitly says to proceed. A question is not a command.
 
 ### MANDATORY: Universal Save Protocol
 
-When Drew signals end of session, asks to save, or asks to "update everything," execute ALL of the following in one pass without waiting to be asked twice:
+When Drew signals end of session, asks to save, or asks to "update everything," do all of this in one pass:
 
-1. **Local (site repo)** — Update this file if any code/architecture/ad-strategy changed. Run `npm run build`. `git add` specific files, commit, **`git push` immediately**.
-2. **Global (memory)** — Update relevant project memory file(s), MEMORY.md index, feedback/user/reference memories. Files at `~/.claude/projects/-Users-drewr4/memory/` are `uchg`-locked — unlock, edit, re-lock.
-3. **Cowork** — Update `~/Desktop/undivided-allegiance/CLAUDE.md` (Cowork rules) for any campaign/conversion/routing change. Append session entry to `~/Desktop/undivided-allegiance/ops/cowork/memory-sync-log.md`. Update `meta-ads-copy.md` for any ad copy/destination/status change.
-4. **Re-lock** — All `uchg` files (memory files, both CLAUDE.md files, REMNANT_TEMPLATE.md) must be re-locked after edit.
-5. **Push immediately** — Site repo: `git push origin main`. Note any Drew action items for external systems (Buffer, Beehiiv, Ads Manager) explicitly.
+1. **Site repo**: update this file if code, architecture, or tracking changed. `npm run build`. `git add` specific files, commit, `git push origin main` immediately.
+2. **Memory**: update the relevant memory files and MEMORY.md at `~/.claude/projects/-Users-drewr4/memory/` (`uchg`-locked: unlock, edit, re-lock).
+3. **Project file**: update `~/Desktop/undivided-allegiance/CLAUDE.md` for any campaign, conversion, or routing change. Append to `ops/cowork/memory-sync-log.md`. Update `meta-ads-copy.md` for any ad copy, destination, or status change.
+4. **Re-lock** every `uchg` file touched (memory files, both CLAUDE.md files, REMNANT_TEMPLATE.md).
+5. **Name Drew's action items** for external systems (Buffer, Beehiiv, Ads Manager).
 
-Full protocol in memory file `feedback_end_of_session.md`. The cost of redundancy is zero; the cost of missing context is a broken next session.
+Full protocol in memory file `feedback_end_of_session.md`.
 
-### MANDATORY: Content Approval Pipeline
+### Content approval
 
-**All public-facing content MUST be approved by Drew before publishing.** No exceptions.
+All public-facing content is approved by Drew before publishing. Pipeline, draft locations, and what counts as approval: `~/Desktop/undivided-allegiance/CLAUDE.md` (Content Approval Pipeline). In this repo: never write a draft to `src/content/blog/`; move a post there only after explicit approval, then set `publishDate`, build, and deploy.
 
-#### Draft Locations (staging — NOT live)
-- **Blog posts:** `~/Desktop/undivided-allegiance/03_blog/drafts/`
-- **Newsletter issues:** `~/Desktop/undivided-allegiance/02_newsletter/issues/`
-- **Ad copy (book):** `~/Desktop/undivided-allegiance/01_book-launch/docs/`
-- **Ad copy (newsletter):** `~/Desktop/undivided-allegiance/02_newsletter/meta/`
+### Development rules
 
-#### Process
-1. **Draft** — Write to the appropriate drafts/ folder. NEVER to `src/content/blog/` directly.
-2. **Review** — Show the full text to Drew in the conversation.
-3. **Approval** — Wait for Drew to explicitly say "approved," "go," "publish it," or "looks good, post it."
-4. **Publish** — Only after approval: move to `src/content/blog/`, set publishDate to current date, build, and deploy.
-
-#### What counts as approval
-- Explicit: "approved," "go," "post it," "looks good" = publish
-- Silence, "let me think," or no response = NOT approved
-- "Change X" = edit draft, re-show for review
-
-#### Applies to
-- Blog posts
-- Newsletter issues
-- Ad copy
-- Social media posts
-- Any content with Drew's name or voice on it
-
-### Development Rules
-
-- Verify changes work by running `npm run build` before calling it done
-- Fix bugs autonomously - don't ask, just fix
-- Keep changes minimal and simple
-- Check in before starting large refactors
-- If a CSS/layout change doesn't look right on first attempt, REVERT immediately. Do not stack fixes on top of broken changes.
-- For visual changes: make one change, deploy, get confirmation before touching anything else
+- Verify changes with `npm run build` before calling them done.
+- Fix bugs autonomously; do not ask, just fix.
+- Keep changes minimal and simple. Check in before large refactors.
+- If a CSS or layout change does not look right on the first attempt, revert immediately. Do not stack fixes on broken changes.
+- Visual changes: one change, deploy, confirm, then next.
