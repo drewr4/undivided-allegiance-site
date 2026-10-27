@@ -153,6 +153,8 @@ The mercy is real. The door is open. But the door is a door, and doors are walke
 
 For more on the Church's drift from biblical truth, read [The Church Is Not Drifting. It Is Choosing](/blog/the-church-is-choosing/).
 
+For what repentance looks like when a whole church turns together, read [Can a Whole Church Repent? What Scripture Shows](https://www.undividedallegiance.com/blog/can-a-whole-church-repent/).
+
 On what it means to hold nothing back from God, read [What Does 'You Cannot Serve Two Masters' Really Mean?](/blog/what-does-you-cannot-serve-two-masters-really-mean/).
 
 ---
