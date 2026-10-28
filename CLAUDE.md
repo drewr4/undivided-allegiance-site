@@ -86,7 +86,7 @@ seo:
 ## Copy rules for this repo
 
 - **Zero em dashes (U+2014)** in `src/` and `public/`. Before committing copy, run `grep -rn $'\u2014' src public` (zsh) and keep it at zero. En dashes in ranges are fine.
-- **No membership language.** Never write "join," "membership," or "member" about the church. Write about believers gathering, the gathered church, the body (Hebrews 10:24-25). Drop a statistic worded around joining rather than rewording it.
+- **No membership language.** Never write "join," "membership," or "member" about the church. Write about believers gathering, the gathered church, the body (Hebrews 10:24-25). Statistics are welcome when validated against their named source; when a source words a figure around joining or membership, cite it accurately in the source's own term, but never adopt that framing in Drew's own sentences.
 - **Monitored strings must survive edits.** `ops/scripts/sitehealthmonitor.gs` (PAGES list) asserts text such as the speaking H1, "The Remnant" and `newsletter-form` on `/newsletter/`, "We Would Love to Hear From You" on `/contact/`. Check it before changing a heading.
 
 ## Book, funnel, and tracking
