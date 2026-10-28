@@ -35,7 +35,7 @@ seo:
           "name": "What Happens When Repentance Gets Diluted?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "When repentance gets diluted to a feeling, the practical consequences are predictable and documented. According to a 2025 Barna study, 62% of Americans identify as Christian, but only 24% qualify as practicing. That gap, 38% of the population claiming the name without the practice, represents people who have substituted remorse for repentance and stayed in place. Hosea 6:4 diagnosed the same pattern in ancient Israel: \"Your love is like the morning mist, like the early dew that disappears.\" Devotion that evaporates. Emotion without transformation. The Church that preaches grace without preaching repentance produces sincere but fragile faith. People who are genuinely moved in worship and genuinely unchanged in life. People who return to the same confessions year after year because they've learned to feel bad about sin without learning to turn from it. Sin is a direction, not just a feeling. Repentance turns."
+            "text": "When repentance gets diluted to a feeling, the practical consequences are predictable and documented. According to a 2025 Barna study, only 24% of U.S. adults now qualify as practicing Christians, down from 46% twenty-five years ago. Many who still claim the name have let the practice go: people who have substituted remorse for repentance and stayed in place. Hosea 6:4 diagnosed the same pattern in ancient Israel: \"Your love is like the morning mist, like the early dew that disappears.\" Devotion that evaporates. Emotion without transformation. The Church that preaches grace without preaching repentance produces sincere but fragile faith. People who are genuinely moved in worship and genuinely unchanged in life. People who return to the same confessions year after year because they've learned to feel bad about sin without learning to turn from it. Sin is a direction, not just a feeling. Repentance turns."
           }
         }
       ]
@@ -69,7 +69,7 @@ John the Baptist understood this before Jesus began his public ministry. His com
 
 ## Why Has the Church Stopped Calling It That?
 
-Only 4% of American adults hold a biblical worldview, according to the 2026 American Worldview Inventory ([AWVI, 2026](https://web.arizonachristian.edu/CRC/2026/AWVI-2026_Report_1-BWV_Incidence_Stagnates-03_03_2026.pdf)). Among born-again Christians specifically, the number rises to 10%. The gap between claiming the name and thinking through its lens is not small. It is enormous. And one of the places that gap opens first is on the question of sin and repentance.
+Only 4% of American adults hold a biblical worldview, according to the 2026 American Worldview Inventory ([AWVI, 2026](https://web.arizonachristian.edu/CRC/2026/AWVI-2026_Report_1-BWV_Incidence_Stagnates-03_03_2026.pdf)). Among born-again Christians specifically, the number rises to 12%. The gap between claiming the name and thinking through its lens is not small. It is enormous. And one of the places that gap opens first is on the question of sin and repentance.
 
 The modern Church has largely replaced the call to repentance with the language of self-improvement. We talk about "growth" and "healing" and "becoming your best self." These are not bad words. But they are not the same as repentance.
 
@@ -82,7 +82,7 @@ Only 37% of American pastors hold a biblical worldview ([American Worldview Inve
 
 ## What Happens When Repentance Gets Diluted?
 
-When repentance gets diluted to a feeling, the practical consequences are predictable and documented. According to a 2025 Barna study, 62% of Americans identify as Christian, but only 24% qualify as practicing. That gap, 38% of the population claiming the name without the practice, represents people who have substituted remorse for repentance and stayed in place. Hosea 6:4 diagnosed the same pattern in ancient Israel: "Your love is like the morning mist, like the early dew that disappears." Devotion that evaporates. Emotion without transformation. The Church that preaches grace without preaching repentance produces sincere but fragile faith. People who are genuinely moved in worship and genuinely unchanged in life. People who return to the same confessions year after year because they've learned to feel bad about sin without learning to turn from it. Sin is a direction, not just a feeling. Repentance turns.
+When repentance gets diluted to a feeling, the practical consequences are predictable and documented. According to a 2025 Barna study, only 24% of U.S. adults now qualify as practicing Christians, down from 46% twenty-five years ago. Many who still claim the name have let the practice go: people who have substituted remorse for repentance and stayed in place. Hosea 6:4 diagnosed the same pattern in ancient Israel: "Your love is like the morning mist, like the early dew that disappears." Devotion that evaporates. Emotion without transformation. The Church that preaches grace without preaching repentance produces sincere but fragile faith. People who are genuinely moved in worship and genuinely unchanged in life. People who return to the same confessions year after year because they've learned to feel bad about sin without learning to turn from it. Sin is a direction, not just a feeling. Repentance turns.
 
 When a church stops preaching repentance clearly, people fill the gap with substitutes. Confession without direction. Grief without change. Prayer without surrender. The motions of repentance without the substance.
 
@@ -90,7 +90,7 @@ This is not a new problem. The prophets encountered it constantly. Hosea 6:4 cap
 
 What this produces in congregations is sincere but fragile faith. People who are genuinely moved in worship and genuinely unchanged in life. People who return to the same confessions year after year because they have learned to feel bad about sin without learning to war against it.
 
-According to a 2025 Barna study ([Barna, 2025](https://www.barna.com/research/practicing-christians/)), 62% of Americans identify as Christian, but only 24% qualify as practicing. The gap (the 38% who claim the name without the practice) is partly a failure of preaching on repentance. Not entirely. But partly.
+According to a 2025 Barna study ([Barna, 2025](https://www.barna.com/trends/faiths-shrinking-influence/)), only 24% of U.S. adults now qualify as practicing Christians, down from 46% twenty-five years ago. That decline is partly a failure of preaching on repentance. Not entirely. But partly.
 
 Sin is not primarily a problem to feel bad about. It is a direction to turn from. The Church that does not preach that clearly produces Christians who are perpetually remorseful but never free.
 
