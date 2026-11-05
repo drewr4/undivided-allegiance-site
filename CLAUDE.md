@@ -21,7 +21,7 @@ Repo rules only. Project-wide rules (Cowork, content approval, folder maps, bran
 - `astro.config.mjs`: sitemap config including the noindex filter.
 - `vercel.json`: apex to www redirect; security headers including a Content-Security-Policy. Any new third-party script or endpoint must be added to the CSP or it is blocked.
 - Path alias `@/*` maps to `src/*`.
-- `public/`: `og-book.png` (book OG image), `free-preview.pdf` (free chapter), `assets/authors/drew-reitzel.webp|.jpg` (headshot), `images/blog/` (featured images), `llms.txt` (AI crawler guidance listing every post; update it when a post is published).
+- `public/`: `og-book.png` (book OG image), `free-preview.pdf` (free chapter: since 2026-11-05 the revised-edition Chapter 1 sample, copied from `~/Documents/03_book-ycstm/master-files/book-master/chapters/final-version/REVISED-EDITION_PRODUCTION/06_Sample_Chapter-1/You_Cant_Serve_Two_Masters_SAMPLE_Chapter-1.pdf`; replace it in place, never rename, because the book page and the Beehiiv welcome email both link to this URL), `assets/authors/drew-reitzel.webp|.jpg` (headshot), `images/blog/` (featured images), `llms.txt` (AI crawler guidance listing every post; update it when a post is published).
 
 ### BaseLayout props
 
