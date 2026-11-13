@@ -125,6 +125,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       var submitBtn = document.getElementById('nl-submit');
       var msg = document.getElementById('nl-msg');
       if (!form) return;
+      // Tracked promo links (?utm_source=instagram-story etc.) pass their tag to Beehiiv as the signup source.
+      var src = 'newsletter-page';
+      try {
+        var tag = new URLSearchParams(window.location.search).get('utm_source');
+        if (tag && /^[a-z0-9-]{1,40}$/.test(tag)) src = tag;
+      } catch (err) {}
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         var email = emailInput.value.trim();
@@ -145,7 +151,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         fetch('https://subscribe.drewreitzel.workers.dev', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email, name: name, source: 'newsletter-page' })
+          body: JSON.stringify({ email: email, name: name, source: src })
         })
           .then(function (res) { return res.json(); })
           .then(function (data) {
