@@ -108,11 +108,12 @@ All signup forms are native (no Beehiiv iframe) and post to the Cloudflare Worke
 |---|---|---|---|
 | Homepage popup | `index.astro` | first name + email | "Check your inbox" message; chapter arrives by Beehiiv welcome email only |
 | Book page | `book.astro` | email | opens `/free-preview.pdf` (intentional; its copy promises an instant preview) |
-| Newsletter page | `newsletter.astro` | first name + email | "Check your inbox." |
+| Newsletter page | `newsletter.astro` | first name + email | "Check your inbox." Sends `?utm_source=` from the page URL as the signup source (lowercase letters, digits, hyphens, 40 max), else `newsletter-page` |
 | Links hub | `links.astro` | email | "Check your inbox" message; no instant PDF |
 
 - **Worker**: `https://subscribe.drewreitzel.workers.dev`; `GET /health` returns 200 `{ok:true}` or 503.
 - **Source**: `~/Desktop/undivided-allegiance/ops/scripts/subscribe-worker.js`, config `ops/scripts/wrangler.toml` (`name = "subscribe"`). Not a git repo; Cloudflare runs the deployed copy. Deploy with `npx wrangler deploy` from `ops/scripts/`; if auth fails, `npx wrangler login`.
+- **Tracked promo links (since 2026-11-13)**: `/newsletter/?utm_source=facebook-post`, `facebook-story`, `instagram-story` are used by The Remnant promo posts; the worker passes the tag to Beehiiv as `utm_source`, so each subscriber shows where they came from. Instagram feed and TikTok use the bio link (`/links`), recorded as `link-in-bio`. The promo package builder (`~/.local/bin/remnant_promo_run.py`) writes these links into each posting page; keep the tags unchanged.
 - **Already-subscribed check** uses `/subscriptions?email=` (not `/subscribers?email=`, which 404s). Forms show a duplicate-email message.
 - **Site Health Monitor** (Apps Script, source `ops/scripts/sitehealthmonitor.gs`) checks 10 pages plus the worker `/health` every 6 hours.
 
