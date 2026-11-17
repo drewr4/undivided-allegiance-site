@@ -162,7 +162,7 @@ The book simply asks: Have you?
 If this post named something you've been feeling, if you've sensed the compromise, felt the tension, or wondered whether anyone was going to say it out loud, this book was written for you.
 
 - [Order on Kindle ($9.99)](https://www.amazon.com/dp/B0FGY9PL66)
-- [Order in Paperback ($16.99)](https://www.amazon.com/dp/B0GYLHSBR3)
+- [Order in Paperback ($19.99)](https://www.amazon.com/dp/B0H41CS8NX)
 
 [Join The Remnant newsletter](/newsletter/) for ongoing writing on faith, culture, and biblical fidelity in America.
 
@@ -186,4 +186,4 @@ No. While it addresses culturally charged issues, the book's framework is allegi
 
 ### Where can I get "You Can't Serve Two Masters"?
 
-The book is available now. Order the [Kindle edition for $9.99](https://www.amazon.com/dp/B0FGY9PL66) or the [paperback for $16.99](https://www.amazon.com/dp/B0GYLHSBR3). You can also [visit the book page](/book/) for more details and a free preview chapter.
+The book is available now. Order the [Kindle edition for $9.99](https://www.amazon.com/dp/B0FGY9PL66) or the [paperback for $19.99](https://www.amazon.com/dp/B0H41CS8NX). You can also [visit the book page](/book/) for more details and a free preview chapter.

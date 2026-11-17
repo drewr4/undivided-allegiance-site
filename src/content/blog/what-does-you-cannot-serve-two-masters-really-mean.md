@@ -207,4 +207,4 @@ The United Methodist Church removed prohibitions on LGBTQ clergy in 2024, with 7
 
 ### How does "You Can't Serve Two Masters" by Drew Reitzel address this?
 
-The book applies the principle of Matthew 6:24 to the American Church's institutional compromise: the silencing of pulpits, the avoidance of biblical clarity on cultural issues, and the cheap grace that has replaced the costly Gospel. It is [available now on Kindle for $9.99](https://www.amazon.com/dp/B0FGY9PL66). Also available in paperback for $16.99.
+The book applies the principle of Matthew 6:24 to the American Church's institutional compromise: the silencing of pulpits, the avoidance of biblical clarity on cultural issues, and the cheap grace that has replaced the costly Gospel. It is [available now on Kindle for $9.99](https://www.amazon.com/dp/B0FGY9PL66). Also available in paperback for $19.99.

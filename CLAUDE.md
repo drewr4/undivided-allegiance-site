@@ -91,8 +91,8 @@ seo:
 
 ## Book, funnel, and tracking
 
-- **Book**: "You Can't Serve Two Masters." Kindle ASIN `B0FGY9PL66`, $9.99. Paperback ASIN `B0GYLHSBR3`, $16.99. Two ISBNs are correct: `979-8-2786-09926` (Amazon KDP) and `9798996417605` (IngramSpark print).
-- **Order buttons on `src/pages/book.astro`**: the hero shows "Kindle $9.99" and "Paperback $16.99" as text labels with ONE "Order Now" button to the Kindle page. The bottom `#order` section has TWO buttons, "Order on Kindle ($9.99)" and "Order Paperback ($16.99)". All three fire `AddToCart`. Schema marks both formats InStock.
+- **Book**: "You Can't Serve Two Masters." Kindle ASIN `B0FGY9PL66`, $9.99. Paperback ASIN `B0H41CS8NX`, $19.99 (revised edition, live Nov 2026; the old $16.99 paperback B0GYLHSBR3 with KDP ISBN 979-8-2786-09926 is retired). One print ISBN for both KDP and IngramSpark: `979-8-9964176-0-5`.
+- **Order buttons on `src/pages/book.astro`**: the hero shows "Kindle $9.99" and "Paperback $19.99" as text labels with ONE "Order Now" button to the Kindle page. The bottom `#order` section has TWO buttons, "Order on Kindle ($9.99)" and "Order Paperback ($19.99)". All three fire `AddToCart`. Schema marks both formats InStock.
 - **Funnel**: announcement bar, homepage hero CTA, and all paid ads point to `/book/`, never to Amazon, so the page captures buyers and non-buyers (signup form). Organic social bios point to `/links/`.
 - **Homepage popup** (`index.astro`): "Stand With Us" modal, `sessionStorage` flag `ua_popup_seen`, once per browser session.
 - **Meta Pixel** `1289553056416593` in `BaseLayout.astro`. Events: `PageView` site-wide; `ViewContent` on `/book/` load; `AddToCart` on the Amazon order buttons; `Lead` on every signup form.
