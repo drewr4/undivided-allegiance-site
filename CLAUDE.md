@@ -131,15 +131,7 @@ When Drew asks a question, answer it and do nothing else. No action, file write,
 
 ### MANDATORY: Universal Save Protocol
 
-When Drew signals end of session, asks to save, or asks to "update everything," do all of this in one pass:
-
-1. **Site repo**: update this file if code, architecture, or tracking changed. `npm run build`. `git add` specific files, commit, `git push origin main` immediately.
-2. **Memory**: update the relevant memory files and MEMORY.md at `~/.claude/projects/-Users-drewr4/memory/` (`uchg`-locked: unlock, edit, re-lock).
-3. **Project file**: update `~/Desktop/undivided-allegiance/CLAUDE.md` for any campaign, conversion, or routing change. Append to `ops/cowork/memory-sync-log.md`. Update `meta-ads-copy.md` for any ad copy, destination, or status change.
-4. **Re-lock** every `uchg` file touched (memory files, both CLAUDE.md files, REMNANT_TEMPLATE.md).
-5. **Name Drew's action items** for external systems (Buffer, Beehiiv, Ads Manager).
-
-Full protocol in memory file `feedback_end_of_session.md`.
+When Drew signals end of session, asks to save, or asks to "update everything," run the close procedure in memory file `feedback_end_of_session.md`, the one authoritative copy. The part that belongs to this repo: if code, architecture, or tracking changed, update this file, run `npm run build`, `git add` the specific files (never `git add .`), commit, and `git push origin main` immediately.
 
 ### Content approval
 
